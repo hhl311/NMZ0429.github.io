@@ -1,0 +1,2247 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
+    
+    
+      
+        <title>画像処理100本ノック答え - Cheep Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2c0c5eaf.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#8bc34b">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjp.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:600,800">
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="light-green" data-md-color-accent="">
+      
+        <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#100" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="Cheep Learning" class="md-header__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cheep Learning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              画像処理100本ノック答え
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="クリア" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Welcome !!
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../intro/" class="md-tabs__link">
+      Artificial Intelligenceを学ぶ方へ
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        100本ノック
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../PyTorch/PyTorch/pytorch/" class="md-tabs__link">
+        PyTorch
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../UofT/game_theory/" class="md-tabs__link">
+        UofT
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-tabs__link">
+        その他
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/tmux/" class="md-tabs__link">
+        ツール
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/GNN/" class="md-tabs__link">
+        ネットワーク解説
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/3dvision/" class="md-tabs__link">
+        深層学習
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Cheep Learning" class="md-nav__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Cheep Learning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Welcome !!
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/" class="md-nav__link">
+        Artificial Intelligenceを学ぶ方へ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        100本ノック
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="100本ノック" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          100本ノック
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          画像処理100本ノック答え
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        画像処理100本ノック答え
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q1" class="md-nav__link">
+    Q1.チャンネル入れ替え
+  </a>
+  
+    <nav class="md-nav" aria-label="Q1.チャンネル入れ替え">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q2" class="md-nav__link">
+    Q2.画像のグレースケール化
+  </a>
+  
+    <nav class="md-nav" aria-label="Q2.画像のグレースケール化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q32" class="md-nav__link">
+    Q3.２値化
+  </a>
+  
+    <nav class="md-nav" aria-label="Q3.２値化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q4" class="md-nav__link">
+    Q4.大津の二値化
+  </a>
+  
+    <nav class="md-nav" aria-label="Q4.大津の二値化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q5hsv" class="md-nav__link">
+    Q5.HSV変換
+  </a>
+  
+    <nav class="md-nav" aria-label="Q5.HSV変換">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q6" class="md-nav__link">
+    Q6.減色処理
+  </a>
+  
+    <nav class="md-nav" aria-label="Q6.減色処理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q7" class="md-nav__link">
+    Q7.平均プーリング
+  </a>
+  
+    <nav class="md-nav" aria-label="Q7.平均プーリング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q8max" class="md-nav__link">
+    Q8.Maxプーリング
+  </a>
+  
+    <nav class="md-nav" aria-label="Q8.Maxプーリング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q9" class="md-nav__link">
+    Q9.ガウシアンフィルタ
+  </a>
+  
+    <nav class="md-nav" aria-label="Q9.ガウシアンフィルタ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q10" class="md-nav__link">
+    Q10.メディアンフィルタ
+  </a>
+  
+    <nav class="md-nav" aria-label="Q10.メディアンフィルタ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q11" class="md-nav__link">
+    Q11.平滑化フィルタ
+  </a>
+  
+    <nav class="md-nav" aria-label="Q11.平滑化フィルタ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q12" class="md-nav__link">
+    Q12.モーションフィルタ
+  </a>
+  
+    <nav class="md-nav" aria-label="Q12.モーションフィルタ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q13max-min" class="md-nav__link">
+    Q13.MAX-MINフィルタ
+  </a>
+  
+    <nav class="md-nav" aria-label="Q13.MAX-MINフィルタ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q14" class="md-nav__link">
+    Q14.微分フィルタ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q20" class="md-nav__link">
+    Q20.ヒストグラム表示
+  </a>
+  
+    <nav class="md-nav" aria-label="Q20.ヒストグラム表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q21" class="md-nav__link">
+    Q21.ヒストグラム正規化
+  </a>
+  
+    <nav class="md-nav" aria-label="Q21.ヒストグラム正規化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q22" class="md-nav__link">
+    Q.22ヒストグラム操作
+  </a>
+  
+    <nav class="md-nav" aria-label="Q.22ヒストグラム操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q23" class="md-nav__link">
+    Q.23ヒストグラム平坦化
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../numpy/" class="md-nav__link">
+        Numpy100本ノック答え
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        PyTorch
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PyTorch" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          PyTorch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" data-md-state="indeterminate" type="checkbox" id="__nav_4_1" checked>
+      
+      <label class="md-nav__link" for="__nav_4_1">
+        PyTorch
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PyTorch" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          PyTorch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch/pytorch/" class="md-nav__link">
+        pytorchによるディープラーニング実装の流れ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch/video/" class="md-nav__link">
+        PyTorch Dataset API で動画データを扱う方法
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2" checked>
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        PyTorch Lightning
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PyTorch Lightning" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          PyTorch Lightning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/checkpoint/" class="md-nav__link">
+        PyTorch LightningのCheckpointCallbackの便利機能
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/data_module/" class="md-nav__link">
+        【PyTorch Lightning】LightningDataModuleについて
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/lightning_bolts/" class="md-nav__link">
+        PyTorch Lightning Boltsの使い方
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/pytorchvideo/" class="md-nav__link">
+        PyTorchVideo 使い方
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        UofT
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="UofT" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          UofT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UofT/game_theory/" class="md-nav__link">
+        Game theory
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UofT/note/" class="md-nav__link">
+        Note
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        その他
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="その他" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          その他
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-nav__link">
+        Pythonのお勉強について
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC/" class="md-nav__link">
+        ワークフロー
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        ツール
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ツール" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          ツール
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/tmux/" class="md-nav__link">
+        tmuxはええぞ
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" data-md-state="indeterminate" type="checkbox" id="__nav_8" checked>
+      
+      <label class="md-nav__link" for="__nav_8">
+        ネットワーク解説
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ネットワーク解説" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          ネットワーク解説
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/GNN/" class="md-nav__link">
+        Graph Attention Network 解説
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/mesh_rcnn/" class="md-nav__link">
+        Mesh RCNNのお気持ちを理解したい
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" data-md-state="indeterminate" type="checkbox" id="__nav_9" checked>
+      
+      <label class="md-nav__link" for="__nav_9">
+        深層学習
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="深層学習" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          深層学習
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/3dvision/" class="md-nav__link">
+        3D vision
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/lstm/" class="md-nav__link">
+        【もうやりたくない】RNNとLSTMの理解とNumPyによる実装
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q1" class="md-nav__link">
+    Q1.チャンネル入れ替え
+  </a>
+  
+    <nav class="md-nav" aria-label="Q1.チャンネル入れ替え">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q2" class="md-nav__link">
+    Q2.画像のグレースケール化
+  </a>
+  
+    <nav class="md-nav" aria-label="Q2.画像のグレースケール化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q32" class="md-nav__link">
+    Q3.２値化
+  </a>
+  
+    <nav class="md-nav" aria-label="Q3.２値化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q4" class="md-nav__link">
+    Q4.大津の二値化
+  </a>
+  
+    <nav class="md-nav" aria-label="Q4.大津の二値化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q5hsv" class="md-nav__link">
+    Q5.HSV変換
+  </a>
+  
+    <nav class="md-nav" aria-label="Q5.HSV変換">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q6" class="md-nav__link">
+    Q6.減色処理
+  </a>
+  
+    <nav class="md-nav" aria-label="Q6.減色処理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q7" class="md-nav__link">
+    Q7.平均プーリング
+  </a>
+  
+    <nav class="md-nav" aria-label="Q7.平均プーリング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q8max" class="md-nav__link">
+    Q8.Maxプーリング
+  </a>
+  
+    <nav class="md-nav" aria-label="Q8.Maxプーリング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q9" class="md-nav__link">
+    Q9.ガウシアンフィルタ
+  </a>
+  
+    <nav class="md-nav" aria-label="Q9.ガウシアンフィルタ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q10" class="md-nav__link">
+    Q10.メディアンフィルタ
+  </a>
+  
+    <nav class="md-nav" aria-label="Q10.メディアンフィルタ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q11" class="md-nav__link">
+    Q11.平滑化フィルタ
+  </a>
+  
+    <nav class="md-nav" aria-label="Q11.平滑化フィルタ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q12" class="md-nav__link">
+    Q12.モーションフィルタ
+  </a>
+  
+    <nav class="md-nav" aria-label="Q12.モーションフィルタ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q13max-min" class="md-nav__link">
+    Q13.MAX-MINフィルタ
+  </a>
+  
+    <nav class="md-nav" aria-label="Q13.MAX-MINフィルタ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q14" class="md-nav__link">
+    Q14.微分フィルタ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q20" class="md-nav__link">
+    Q20.ヒストグラム表示
+  </a>
+  
+    <nav class="md-nav" aria-label="Q20.ヒストグラム表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q21" class="md-nav__link">
+    Q21.ヒストグラム正規化
+  </a>
+  
+    <nav class="md-nav" aria-label="Q21.ヒストグラム正規化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q22" class="md-nav__link">
+    Q.22ヒストグラム操作
+  </a>
+  
+    <nav class="md-nav" aria-label="Q.22ヒストグラム操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q23" class="md-nav__link">
+    Q.23ヒストグラム平坦化
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="100">画像処理100本ノック答え</h1>
+<h2 id="q1">Q1.<a href="https://github.com/yoyoyo-yo/Gasyori100knock/tree/master/Question_01_10#q1-%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB%E5%85%A5%E3%82%8C%E6%9B%BF%E3%81%88">チャンネル入れ替え</a></h2>
+<p>画像を読み込み、BGRからRGBへと変換。</p>
+<h3 id="_1">解答</h3>
+<p><div class="highlight"><pre><span></span><code>import cv2
+img = cv2.imread(&quot;./img/imori.jpeg&quot;)
+rgb_img = img[:, :, [2,1,0]].copy()
+</code></pre></div>
+numpy配列の操作で変換できる。
+<div class="highlight"><pre><span></span><code>cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+</code></pre></div>
+で変換可能</p>
+<h2 id="q2">Q2.<a href="https://github.com/yoyoyo-yo/Gasyori100knock/tree/master/Question_01_10#q2-%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB%E5%8C%96">画像のグレースケール化</a></h2>
+<p>Y= 0.2126 R + 0.7152 G + 0.0722 B、で表される。</p>
+<h3 id="_2">解答</h3>
+<p><div class="highlight"><pre><span></span><code>img = cv2.imread(&quot;./img/imori.jpeg&quot;)
+gray_img = img[:,:,0] * 0.0722 + img[:,:,1] * 0.7152 + img[:,:,2] * 0.2126
+</code></pre></div>
+opencvの機能で
+<div class="highlight"><pre><span></span><code>cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+</code></pre></div>
+で変換できる。
+行列計算でも出来そう。</p>
+<h2 id="q32">Q3.<a href="https://github.com/yoyoyo-yo/Gasyori100knock/blob/master/Question_01_10#q3-%E4%BA%8C%E5%80%A4%E5%8C%96">２値化</a></h2>
+<p>グレースケール画像の２値化。閾値は128</p>
+<h3 id="_3">解答</h3>
+<p><div class="highlight"><pre><span></span><code>img = cv2.imread(&quot;./img/imori.jpeg&quot;)
+gray_img = img[:,:,0] * 0.0722 + img[:,:,1] * 0.7152 + img[:,:,2] * 0.2126
+ret, gray_img = cv2.threshold(gray_img,128,255,cv2.THRESH_BINARY)
+</code></pre></div>
+一個一個条件分岐させると計算量が多そう。</p>
+<h2 id="q4">Q4.<a href="https://github.com/yoyoyo-yo/Gasyori100knock/blob/master/Question_01_10#q4-%E5%A4%A7%E6%B4%A5%E3%81%AE%E4%BA%8C%E5%80%A4%E5%8C%96">大津の二値化</a></h2>
+<p>二値化における分離の閾値を自動決定する手法である。
+クラス間分散が最大となれば良い。
+<div class="highlight"><pre><span></span><code>ret, gray_img = cv2.threshold(gray_img,0,255,cv2.THRESH_OTSU)
+</code></pre></div>
+でうまくいかなかった。
+事前の
+<div class="highlight"><pre><span></span><code>gray_img = img[:,:,0] * 0.0722 + img[:,:,1] * 0.7152 + img[:,:,2] * 0.2126
+</code></pre></div>
+が原因。gray_imgがfloatだとうまくいかない。</p>
+<h3 id="_4">解答</h3>
+<div class="highlight"><pre><span></span><code>gray_img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+ret, th = cv2.threshold(gray_img, 0, 255, cv2.THRESH_OTSU)
+</code></pre></div>
+<h2 id="q5hsv">Q5.<a href="https://github.com/yoyoyo-yo/Gasyori100knock/blob/master/Question_01_10#q5-hsv%E5%A4%89%E6%8F%9B">HSV変換</a></h2>
+<p>HSV変換とは、Hue(色相)、Saturation(彩度)、Value(明度) で色を表現する手法である。
+<div class="highlight"><pre><span></span><code>hsv_img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+hsv_img[:,:,0] = (hsv_img[:,:,0] + 180) % 360
+hsv_img = cv2.cvtColor(hsv_img, cv2.COLOR_HSV2BGR)
+</code></pre></div>
+若干色が違う気がする。
+Hueの範囲が[0:179]らしい。
+<div class="highlight"><pre><span></span><code>hsv[:,:,0] = (hsv[:,:,0] + 90) % 180
+</code></pre></div>
+まだ違う。
+opencvを使わずに実装した。</p>
+<h3 id="_5">解答</h3>
+<p><div class="highlight"><pre><span></span><code>import cv2
+import numpy as np
+img = cv2.imread(&quot;./img/imori.jpeg&quot;)
+h,w,c = img.shape
+hsv = img / 255
+for i in range(w):
+    for j in range(h):
+        b,g,r = img[i,j,:] / 255
+        max_val = max(b,g,r)
+        min_val = min(b,g,r)
+        val = max_val
+        sat = max_val - min_val
+        if max_val == min_val:
+            hue = 0
+        elif min_val == b:
+            hue = 60 * (g-r) / sat + 60
+        elif min_val == r:
+            hue = 60 * (b-g) / sat + 180
+        else:
+            hue = 60 * (r-b) / sat + 300
+        # print(hsv[i,j,:])
+        hsv[i,j,:] = [hue,sat,val]
+        # print(hsv[i,j,:])
+cv2.imwrite(&quot;./img/hsv_moto.jpeg&quot;,hsv)
+hsv[:,:,0] = (hsv[:,:,0] + 180) % 360
+revers_img = img/255
+for i in range(w):
+    for j in range(h):
+        hue,sat,val = hsv[i,j,:]
+        c = sat
+        h_dot = hue / 60
+        x = c * (1 - abs(h_dot % 2 - 1))
+        if (0 &lt;= h_dot) &amp; (h_dot &lt; 1):
+            add_h = [c,x,0]
+        elif (1&lt;= h_dot) &amp; (h_dot &lt; 2):
+            add_h = [x,c,0]
+        elif (2&lt;= h_dot) &amp; (h_dot &lt; 3):
+            add_h = [0,c,x]
+        elif (3&lt;= h_dot) &amp; (h_dot &lt; 4):
+            add_h = [0,x,c]
+        elif (4&lt;= h_dot) &amp; (h_dot &lt; 5):
+            add_h = [x,0,c]
+        elif (5&lt;= h_dot) &amp; (h_dot &lt; 6):
+            add_h = [c,0,x]
+        else:
+            add_h = [0,0,0]
+        revers_img[i,j,:] = np.multiply([1,1,1], (val - c)) + add_h
+
+revers_img = revers_img * 255
+revers_img = revers_img[:, :, [2,1,0]]
+cv2.imwrite(&quot;./img/hsv.jpeg&quot;,revers_img)
+</code></pre></div>
+height,width,channelの順序をもっと意識する必要がある。
+もっとコードを短くできると良いと思う。ifの分岐が多すぎる。</p>
+<h2 id="q6">Q6.<a href="https://github.com/yoyoyo-yo/Gasyori100knock/blob/master/Question_01_10#q6-%E6%B8%9B%E8%89%B2%E5%87%A6%E7%90%86">減色処理</a></h2>
+<p>すなわちR,G,B in {32, 96, 160, 224}の各4値に減色せよ。</p>
+<h3 id="_6">解答</h3>
+<p><div class="highlight"><pre><span></span><code>img = cv2.imread(&quot;./img/imori.jpeg&quot;)
+img = (img // 64 + 1) * 64 - 32
+cv2.imwrite(&quot;./img/result_img.jpeg&quot;,img)
+</code></pre></div>
+if文を使わずに実装してみた。</p>
+<h2 id="q7">Q7.<a href="https://github.com/yoyoyo-yo/Gasyori100knock/blob/master/Question_01_10#q7-%E5%B9%B3%E5%9D%87%E3%83%97%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0">平均プーリング</a></h2>
+<p>画像をグリッド分割(ある固定長の領域に分ける)し、かく領域内(セル)の平均値でその領域内の値を埋める。
+imori.jpgは128x128なので、8x8にグリッド分割し、平均プーリングせよ。</p>
+<h3 id="_7">解答</h3>
+<div class="highlight"><pre><span></span><code>import cv2
+import numpy as np
+img = cv2.imread(&quot;./img/imori.jpeg&quot;)
+
+def average_pooling(img,karnel):
+    pool_img = img.copy()
+    height,width,channel = img.shape
+    for i in range(0,height,karnel[0]):
+        for j in range(0,width,karnel[1]):
+            ave = np.mean(img[i:i+karnel[0],j:j+karnel[1],:],axis = 0)
+            ave = np.mean(ave,axis = 0)
+            pool_img[i:i+karnel[0],j:j+karnel[1],:] = ave
+    return pool_img
+
+
+kar = (8,8)
+img = average_pooling(img,kar)
+cv2.imwrite(&quot;./img/pool_img.jpeg&quot;,img)
+</code></pre></div>
+<p>for文を2回使ってしまっている。これ以上減らす方法が思いつかなかった。
+また行と列の平均を2回に分けて求めてるのでこれを一度にできる方法があればよかった。
+<div class="highlight"><pre><span></span><code>def average_pooling(img,karnel)
+</code></pre></div>
+imgは画像、karnelはグリッドの分割の範囲</p>
+<h2 id="q8max">Q8.<a href="https://github.com/yoyoyo-yo/Gasyori100knock/blob/master/Question_01_10#q8-max%E3%83%97%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0">Maxプーリング</a></h2>
+<p>ここでは平均値でなく最大値でプーリングせよ。</p>
+<h3 id="_8">解答</h3>
+<p><div class="highlight"><pre><span></span><code>import cv2
+import numpy as np
+img = cv2.imread(&quot;./img/imori.jpeg&quot;)
+
+def average_pooling(img,karnel):
+    pool_img = img.copy()
+    height,width,channel = img.shape
+    for i in range(0,height,karnel[0]):
+        for j in range(0,width,karnel[1]):
+            ave = np.max(img[i:i+karnel[0],j:j+karnel[1],:],axis = 0)
+            ave = np.max(ave,axis = 0)
+            pool_img[i:i+karnel[0],j:j+karnel[1],:] = ave
+    return pool_img
+
+
+kar = (8,8)
+img = average_pooling(img,kar)
+cv2.imwrite(&quot;./img/poolmax_img.jpeg&quot;,img)
+</code></pre></div>
+平均を求める部分を、最大値に変更した。</p>
+<h2 id="q9">Q9.<a href="https://github.com/yoyoyo-yo/Gasyori100knock/blob/master/Question_01_10#q9-%E3%82%AC%E3%82%A6%E3%82%B7%E3%82%A2%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF">ガウシアンフィルタ</a></h2>
+<p>ガウシアンフィルタ(3x3、標準偏差1.3)を実装し、imori_noise.jpgのノイズを除去せよ。</p>
+<p>ガウシアンフィルタは注目画素の周辺画素を、ガウス分布による重み付けで平滑化し、次式で定義される。 このような重みはカーネルやフィルタと呼ばれる。</p>
+<h3 id="_9">解答</h3>
+<div class="highlight"><pre><span></span><code>import cv2
+import numpy as np
+img = cv2.imread(&quot;./img/imori_noise.jpeg&quot;)
+
+def gausu_filter(img,karnel,sigma):
+    height,width,channel = img.shape
+    pad = karnel // 2
+    pad_img = np.zeros((height + pad * 2,width + pad * 2, channel))
+    pad_img[pad:pad+height,pad:pad+width] = img
+    weight = gausu(sigma,karnel,pad)
+    gausu_img = img.copy()
+    for i in range(height):
+        for j in range(width):
+            gausu_img[i,j,0] = np.sum(pad_img[i:i+pad*2+1,j:j+pad*2+1,0]*weight)
+            gausu_img[i,j,1] = np.sum(pad_img[i:i+pad*2+1,j:j+pad*2+1,1]*weight)
+            gausu_img[i,j,2] = np.sum(pad_img[i:i+pad*2+1,j:j+pad*2+1,2]*weight)
+            print(gausu_img)
+    return gausu_img
+
+def gausu(sigma,karnel,pading):
+    filt = np.zeros((karnel,karnel))
+    for x in range(pading * -1, pading + 1):
+        for y in range(pading * -1, pading + 1):
+            print(x,y)
+            filt[x+pading,y+pading] = 1 / (2*np.pi*sigma*sigma) * np.exp((-1 * (x*x + y*y))/(2 * (sigma**2)))
+    filt /= filt.sum()
+    return filt
+
+
+
+kar = 3
+sig = 1.3
+img = gausu_filter(img,kar,sig)
+cv2.imwrite(&quot;./img/gausu_img.jpeg&quot;,img)
+</code></pre></div>
+<p>フィルターの作成にも関数を用いた。</p>
+<h2 id="q10">Q10.<a href="https://github.com/yoyoyo-yo/Gasyori100knock/blob/master/Question_01_10#q10-%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF">メディアンフィルタ</a></h2>
+<p>メディアンフィルタ(3x3)を実装し、imori_noise.jpgのノイズを除去せよ。
+これは注目画素の3x3の領域内の、メディアン値(中央値)を出力するフィルタである。 これもゼロパディングせよ。</p>
+<p><a href="https://stackoverflow.com/questions/54962004/implement-max-mean-poolingwith-stride-with-numpy/54966908">サイト</a>を参考にして、for文を少なく書いてみる。</p>
+<h3 id="_10">解答</h3>
+<p><div class="highlight"><pre><span></span><code>import numpy as np
+import cv2
+from numpy.lib.stride_tricks import as_strided
+
+def pool2d(A, kernel_size, stride, padding, pool_mode=&#39;max&#39;):
+    &#39;&#39;&#39;
+    2D Pooling
+
+    Parameters:
+        A: input 2D array
+        kernel_size: int, the size of the window
+        stride: int, the stride of the window
+        padding: int, implicit zero paddings on both sides of the input
+        pool_mode: string, &#39;max&#39; or &#39;avg&#39;
+    &#39;&#39;&#39;
+    # Padding
+    A = np.pad(A, ((padding,padding),(padding,padding),(0,0)), mode=&#39;constant&#39;)
+
+
+    # Window view of A
+    output_shape = ((A.shape[0] - kernel_size)//stride + 1,
+                    (A.shape[1] - kernel_size)//stride + 1,
+                    A.shape[2])
+    kernel_size = (kernel_size, kernel_size)
+
+    A_w = as_strided(A, shape = output_shape + kernel_size,
+                        strides = (stride*A.strides[0],
+                                   stride*A.strides[1],
+                                   stride*A.strides[2]
+                                   ) + A.strides[0:2])
+    A_w = A_w.reshape(-1, *kernel_size)
+
+    # Return the result of pooling
+    if pool_mode == &#39;max&#39;:
+        return A_w.max(axis=(1,2)).reshape(output_shape)
+    elif pool_mode == &#39;avg&#39;:
+        return A_w.mean(axis=(1,2)).reshape(output_shape)
+    elif pool_mode == &quot;med&quot;:
+        return np.median(A_w,axis=(1,2)).reshape(output_shape)
+
+
+
+img = cv2.imread(&quot;./img/imori_noise.jpeg&quot;)
+height,width,channel = img.shape
+karn = 3
+padding = karn // 2
+medhian = pool2d(img, kernel_size=karn, stride=1, padding=padding, pool_mode=&#39;med&#39;)
+
+cv2.imwrite(&quot;./img/medhian_img.jpeg&quot;,medhian)
+</code></pre></div>
+参考にした結果for文を使わないで実装することができた。
+しかしas_stridedの引数stridesの役割がよく分かっていない。調べたところメモリの移動距離のようだった。
+<div class="highlight"><pre><span></span><code>strides = (stride*A.strides[0],stride*A.strides[1],stride*A.strides[2]) + A.strides[0:2])
+</code></pre></div>
+のshapeが
+<div class="highlight"><pre><span></span><code>(390, 3, 1, 390, 3)
+</code></pre></div>
+となっている。前半の(390,3,1)は(height,width,channel)を表していて、動かす(height,width)をもう一度追加しているのか？</p>
+<h2 id="q11">Q11.<a href="https://github.com/yoyoyo-yo/Gasyori100knock/blob/master/Question_11_20#q11-%E5%B9%B3%E6%BB%91%E5%8C%96%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF">平滑化フィルタ</a></h2>
+<p>平滑化フィルタ(3x3)を実装せよ。</p>
+<p>平滑化フィルタはフィルタ内の画素の平均値を出力するフィルタである。</p>
+<h3 id="_11">解答</h3>
+<p><div class="highlight"><pre><span></span><code>import numpy as np
+import cv2
+from numpy.lib.stride_tricks import as_strided
+
+def pool2d(A, kernel_size, stride, padding, pool_mode=&#39;max&#39;):
+    &#39;&#39;&#39;
+    2D Pooling
+
+    Parameters:
+        A: input 2D array
+        kernel_size: int, the size of the window
+        stride: int, the stride of the window
+        padding: int, implicit zero paddings on both sides of the input
+        pool_mode: string, &#39;max&#39; or &#39;avg&#39;
+    &#39;&#39;&#39;
+    # Padding
+    A = np.pad(A, ((padding,padding),(padding,padding),(0,0)), mode=&#39;constant&#39;)
+
+
+    # Window view of A
+    output_shape = ((A.shape[0] - kernel_size)//stride + 1,
+                    (A.shape[1] - kernel_size)//stride + 1,
+                    A.shape[2])
+    kernel_size = (kernel_size, kernel_size)
+    print((stride*A.strides[0],stride*A.strides[1],stride*A.strides[2]) + A.strides[0:2])
+
+    A_w = as_strided(A, shape = output_shape + kernel_size,
+                        strides = (stride*A.strides[0],
+                                   stride*A.strides[1],
+                                   stride*A.strides[2]
+                                   ) + A.strides[0:2])
+    A_w = A_w.reshape(-1, *kernel_size)
+
+    # Return the result of pooling
+    if pool_mode == &#39;max&#39;:
+        return A_w.max(axis=(1,2)).reshape(output_shape)
+    elif pool_mode == &#39;avg&#39;:
+        return A_w.mean(axis=(1,2)).reshape(output_shape)
+    elif pool_mode == &quot;med&quot;:
+        return np.median(A_w,axis=(1,2)).reshape(output_shape)
+
+
+
+img = cv2.imread(&quot;./img/imori.jpeg&quot;)
+height,width,channel = img.shape
+karn = 3
+padding = karn // 2
+mean = pool2d(img, kernel_size=karn, stride=1, padding=padding, pool_mode=&#39;avg&#39;)
+
+cv2.imwrite(&quot;./img/mean_img.jpeg&quot;,mean)
+</code></pre></div>
+メディアンフィルタの最後の部分を平均に変えただけである。</p>
+<h2 id="q12">Q12.<a href="https://github.com/yoyoyo-yo/Gasyori100knock/blob/master/Question_11_20#q12-%E3%83%A2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF">モーションフィルタ</a></h2>
+<p>モーションフィルタ(3x3)を実装せよ。</p>
+<p>モーションフィルタとは対角方向の平均値を取るフィルタであり、次式で定義される.
+<div class="highlight"><pre><span></span><code>[[1/3,0,0]
+ [0,1/3,0]
+ [0,0,1/3]]
+</code></pre></div></p>
+<h3 id="_12">解答</h3>
+<p><div class="highlight"><pre><span></span><code>import numpy as np
+import cv2
+from numpy.lib.stride_tricks import as_strided
+
+def pool2d(A, kernel_size, stride, padding, pool_mode=&#39;max&#39;):
+    &#39;&#39;&#39;
+    2D Pooling
+
+    Parameters:
+        A: input 2D array
+        kernel_size: int, the size of the window
+        stride: int, the stride of the window
+        padding: int, implicit zero paddings on both sides of the input
+        pool_mode: string, &#39;max&#39; or &#39;avg&#39;
+    &#39;&#39;&#39;
+    # Padding
+    A = np.pad(A, ((padding,padding),(padding,padding),(0,0)), mode=&#39;constant&#39;)
+
+
+    # Window view of A
+    output_shape = ((A.shape[0] - kernel_size)//stride + 1,
+                    (A.shape[1] - kernel_size)//stride + 1,
+                    A.shape[2])
+    kernel_size = (kernel_size, kernel_size)
+    print((stride*A.strides[0],stride*A.strides[1],stride*A.strides[2]) + A.strides[0:2])
+
+    A_w = as_strided(A, shape = output_shape + kernel_size,
+                        strides = (stride*A.strides[0],
+                                   stride*A.strides[1],
+                                   stride*A.strides[2]
+                                   ) + A.strides[0:2])
+    A_w = A_w.reshape(-1, *kernel_size)
+    weight = [[1/3,0,0],[0,1/3,0],[0,0,1/3]]
+    weight = np.array(weight).reshape(-1,3,3)
+
+    # Return the result of pooling
+    if pool_mode == &#39;max&#39;:
+        return A_w.max(axis=(1,2)).reshape(output_shape)
+    elif pool_mode == &#39;avg&#39;:
+        return A_w.mean(axis=(1,2)).reshape(output_shape)
+    elif pool_mode == &quot;med&quot;:
+        return np.median(A_w,axis=(1,2)).reshape(output_shape)
+    elif pool_mode == &quot;motion&quot;:
+        return np.sum(A_w*weight,axis = (1,2)).reshape(output_shape)
+
+
+
+img = cv2.imread(&quot;./img/imori.jpeg&quot;)
+height,width,channel = img.shape
+karn = 3
+padding = karn // 2
+motion = pool2d(img, kernel_size=karn, stride=1, padding=padding, pool_mode=&#39;motion&#39;)
+print(motion.shape)
+
+cv2.imwrite(&quot;./img/motion_img.jpeg&quot;,motion)
+</code></pre></div>
+重みを作成してその値をそれぞれにかけた。</p>
+<h2 id="q13max-min">Q13.<a href="https://github.com/yoyoyo-yo/Gasyori100knock/blob/master/Question_11_20#q13-max-min%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF">MAX-MINフィルタ</a></h2>
+<p>MAX-MINフィルタとはフィルタ内の画素の最大値と最小値の差を出力するフィルタであり、エッジ検出のフィルタの一つである。</p>
+<h3 id="_13">解答</h3>
+<p><div class="highlight"><pre><span></span><code>import numpy as np
+import cv2
+from numpy.lib.stride_tricks import as_strided
+
+def pool2d(A, kernel_size, stride, padding, pool_mode=&#39;max&#39;):
+    &#39;&#39;&#39;
+    2D Pooling
+
+    Parameters:
+        A: input 2D array
+        kernel_size: int, the size of the window
+        stride: int, the stride of the window
+        padding: int, implicit zero paddings on both sides of the input
+        pool_mode: string, &#39;max&#39; or &#39;avg&#39;
+    &#39;&#39;&#39;
+    # Padding
+    A = np.pad(A, ((padding,padding),(padding,padding)), mode=&#39;constant&#39;)
+
+
+    # Window view of A
+    output_shape = ((A.shape[0] - kernel_size)//stride + 1,
+                    (A.shape[1] - kernel_size)//stride + 1)
+    kernel_size = (kernel_size, kernel_size)
+    # print((stride*A.strides[0],stride*A.strides[1],stride*A.strides[2]) + A.strides[0:2])
+
+    A_w = as_strided(A, shape = output_shape + kernel_size,
+                        strides = (stride*A.strides[0],
+                                   stride*A.strides[1],
+                                   ) + A.strides)
+    A_w = A_w.reshape(-1, *kernel_size)
+    weight = [[1/3,0,0],[0,1/3,0],[0,0,1/3]]
+    weight = np.array(weight).reshape(-1,3,3)
+
+    # Return the result of pooling
+    if pool_mode == &#39;max&#39;:
+        return A_w.max(axis=(1,2)).reshape(output_shape)
+    elif pool_mode == &#39;min&#39;:
+        return A_w.min(axis=(1,2)).reshape(output_shape)
+    elif pool_mode == &#39;avg&#39;:
+        return A_w.mean(axis=(1,2)).reshape(output_shape)
+    elif pool_mode == &quot;med&quot;:
+        return np.median(A_w,axis=(1,2)).reshape(output_shape)
+    elif pool_mode == &quot;motion&quot;:
+        return np.sum(A_w*weight,axis = (1,2)).reshape(output_shape)
+    elif pool_mode == &quot;max_min&quot;:
+        max_pool = A_w.max(axis=(1,2)).reshape(output_shape)
+        min_pool = A_w.min(axis=(1,2)).reshape(output_shape)
+        return max_pool - min_pool
+
+
+
+img = cv2.imread(&quot;./img/imori.jpeg&quot;)
+img = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+height,width= img.shape
+karn = 3
+padding = karn // 2
+max_min = pool2d(img, kernel_size=karn, stride=1, padding=padding, pool_mode=&#39;max_min&#39;)
+print(max_min.shape)
+
+cv2.imwrite(&quot;./img/min_max_img.jpeg&quot;,max_min)
+</code></pre></div>
+事前にグレースケールにしたが、BGR画像で作成した後にグレースケールにしても同じなのか？</p>
+<h2 id="q14">Q14.<a href="https://github.com/yoyoyo-yo/Gasyori100knock/blob/master/Question_11_20#q14-%E5%BE%AE%E5%88%86%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF">微分フィルタ</a></h2>
+<p>微分フィルタ(3x3)を実装せよ。</p>
+<p>微分フィルタは輝度の急激な変化が起こっている部分のエッジを取り出すフィルタであり、隣り合う画素同士の差を取る。</p>
+<p>縦のフィルタ
+<div class="highlight"><pre><span></span><code>[[0,0,0]
+ [-1,1,0]
+ [0,0,0]]
+</code></pre></div>
+横のフィルタ
+<div class="highlight"><pre><span></span><code>[[0,-1,0]
+ [0,1,0]
+ [0,0,0]]
+</code></pre></div></p>
+<p>### 解答
+<div class="highlight"><pre><span></span><code>import numpy as np
+import cv2
+from numpy.lib.stride_tricks import as_strided
+
+def pool2d(A, kernel_size, stride, padding, pool_mode=&#39;max&#39;):
+    &#39;&#39;&#39;
+    2D Pooling
+
+    Parameters:
+        A: input 2D array
+        kernel_size: int, the size of the window
+        stride: int, the stride of the window
+        padding: int, implicit zero paddings on both sides of the input
+        pool_mode: string, &#39;max&#39; or &#39;avg&#39;
+    &#39;&#39;&#39;
+    # Padding
+    A = np.pad(A, ((padding,padding),(padding,padding),(0,0)), mode=&#39;constant&#39;)
+
+
+    # Window view of A
+    output_shape = ((A.shape[0] - kernel_size)//stride + 1,
+                    (A.shape[1] - kernel_size)//stride + 1,
+                    A.shape[2])
+    kernel_size = (kernel_size, kernel_size)
+    print((stride*A.strides[0],stride*A.strides[1],stride*A.strides[2]) + A.strides[0:2])
+
+    A_w = as_strided(A, shape = output_shape + kernel_size,
+                        strides = (stride*A.strides[0],
+                                   stride*A.strides[1],
+                                   stride*A.strides[2]
+                                   ) + A.strides[0:2])
+    A_w = A_w.reshape(-1, *kernel_size)
+    weight = [[1/3,0,0],[0,1/3,0],[0,0,1/3]]
+    weight = np.array(weight).reshape(-1,3,3)
+    weight_w = [[0,0,0],[-1,1,0],[0,0,0]]
+    weight_h = [[0,-1,0],[0,1,0],[0,0,0]]
+    weight_w = np.array(weight_w).reshape(-1,3,3)
+    weight_h = np.array(weight_h).reshape(-1,3,3)
+
+    # Return the result of pooling
+    if pool_mode == &#39;max&#39;:
+        return A_w.max(axis=(1,2)).reshape(output_shape)
+    elif pool_mode == &#39;min&#39;:
+        return A_w.min(axis=(1,2)).reshape(output_shape)
+    elif pool_mode == &#39;avg&#39;:
+        return A_w.mean(axis=(1,2)).reshape(output_shape)
+    elif pool_mode == &quot;med&quot;:
+        return np.median(A_w,axis=(1,2)).reshape(output_shape)
+    elif pool_mode == &quot;motion&quot;:
+        return np.sum(A_w*weight,axis = (1,2)).reshape(output_shape)
+    elif pool_mode == &quot;max_min&quot;:
+        max_pool = A_w.max(axis=(1,2)).reshape(output_shape)
+        min_pool = A_w.min(axis=(1,2)).reshape(output_shape)
+        return max_pool - min_pool
+    elif pool_mode == &quot;diff_w&quot;:
+        return np.sum(A_w*weight_w,axis = (1,2)).reshape(output_shape)
+    elif pool_mode == &quot;diff_h&quot;:
+        return np.sum(A_w*weight_h,axis = (1,2)).reshape(output_shape)
+
+
+
+img = cv2.imread(&quot;./img/imori.jpeg&quot;)
+height,width,channel = img.shape
+karn = 3
+padding = karn // 2
+diff_w_img = pool2d(img, kernel_size=karn, stride=1, padding=padding, pool_mode=&#39;diff_w&#39;)
+diff_h_img = pool2d(img, kernel_size=karn, stride=1, padding=padding, pool_mode=&#39;diff_h&#39;)
+
+cv2.imwrite(&quot;./img/diff_h_img.jpeg&quot;,diff_h_img)
+cv2.imwrite(&quot;./img/diff_w_img.jpeg&quot;,diff_w_img)
+</code></pre></div></p>
+<p>フィルタごとに分離しておけば処理が簡単にできることが分かった。</p>
+<h2 id="q20">Q20.<a href="https://github.com/yoyoyo-yo/Gasyori100knock/blob/master/Question_11_20#q20-%E3%83%92%E3%82%B9%E3%83%88%E3%82%B0%E3%83%A9%E3%83%A0%E8%A1%A8%E7%A4%BA">ヒストグラム表示</a></h2>
+<p>matplotlibを用いてimori_dark.jpgのヒストグラムを表示せよ。</p>
+<h3 id="_14">解答</h3>
+<p><div class="highlight"><pre><span></span><code>import numpy as np
+import cv2
+import matplotlib.pyplot as plt
+
+img = cv2.imread(&quot;./img/imori_dark.jpeg&quot;)
+gaso = np.array(img).flatten()
+plt.hist(gaso,bins=255,range=(0,255),rwidth=0.8)
+plt.show()
+</code></pre></div>
+ヒストグラムにするときは１次元にしないと処理できない。</p>
+<h2 id="q21">Q21.<a href="https://github.com/yoyoyo-yo/Gasyori100knock/blob/master/Question_21_30#q21-%E3%83%92%E3%82%B9%E3%83%88%E3%82%B0%E3%83%A9%E3%83%A0%E6%AD%A3%E8%A6%8F%E5%8C%96">ヒストグラム正規化</a></h2>
+<p>ヒストグラム正規化を実装せよ。
+[c,d]の画素値を持つ画像を[a,b]のレンジに変換する。</p>
+<h3 id="_15">解答</h3>
+<p><div class="highlight"><pre><span></span><code>import numpy as np
+import cv2
+import matplotlib.pyplot as plt
+
+def gray_scale_trans(img,a=0,b=255):
+    out = img.copy()
+    c = img.min()
+    d = img.max()
+
+    out = (b-a)/(d-c)*(out-c)+a
+
+    np.where(out &lt; a, a, out)
+    np.where(b &lt; out, b, out)
+
+    return out
+
+img = cv2.imread(&quot;./img/imori_dark.jpeg&quot;)
+
+trans_img = gray_scale_trans(img)
+
+gaso = np.array(trans_img).flatten()
+plt.hist(gaso,bins=255,range=(0,255),rwidth=0.8)
+cv2.imwrite(&quot;./img/trans_img.jpeg&quot;,trans_img)
+plt.show()
+</code></pre></div>
+np.whereを用いて実装することができた。
+ヒストグラム正規化を関数として表した。</p>
+<h2 id="q22">Q.22<a href="https://github.com/yoyoyo-yo/Gasyori100knock/blob/master/Question_21_30#q22-%E3%83%92%E3%82%B9%E3%83%88%E3%82%B0%E3%83%A9%E3%83%A0%E6%93%8D%E4%BD%9C">ヒストグラム操作</a></h2>
+<p>ヒストグラムの平均値をm0=128、標準偏差をs0=52になるように操作せよ。
+ヒストグラムを平坦に変更する操作である.</p>
+<h3 id="_16">解答</h3>
+<p><div class="highlight"><pre><span></span><code>import numpy as np
+import cv2
+import matplotlib.pyplot as plt
+
+def hist_heitan(img,m0=128,s0=52):
+    out = img.copy()
+    s = np.std(img)
+    m = np.average(img)
+    out = s0 / s * (out - m) + m0
+    return out
+
+img = cv2.imread(&quot;./img/imori_dark.jpeg&quot;)
+
+trans_img = hist_heitan(img)
+gaso = np.array(trans_img).flatten()
+plt.hist(gaso,bins=255,range=(0,255),rwidth=0.8)
+cv2.imwrite(&quot;./img/trans_img_1.jpeg&quot;,trans_img)
+plt.show()
+</code></pre></div>
+ヒストグラムを平坦にする関数を実装した。</p>
+<h2 id="q23">Q.23<a href="https://github.com/yoyoyo-yo/Gasyori100knock/blob/master/Question_21_30#q23-%E3%83%92%E3%82%B9%E3%83%88%E3%82%B0%E3%83%A9%E3%83%A0%E5%B9%B3%E5%9D%A6%E5%8C%96">ヒストグラム平坦化</a></h2>
+<p>ヒストグラム平坦化を実装せよ。
+ヒストグラム平坦化とはヒストグラムを平坦に変更する操作であり、上記の平均値や標準偏差などを必要とせず、ヒストグラム値を均衡にする操作である。
+<div class="highlight"><pre><span></span><code>import numpy as np
+import cv2
+import matplotlib.pyplot as plt
+
+def hist_heitan_function(img, z_max=255):
+    out = img.copy()
+    height, width, channel = img.shape
+    S = height * width * channel
+
+    sum_h = 0
+
+    for i in range(1, 255):
+        ind = np.where(img == i)
+        sum_h += len(img[ind])
+        z_prime = z_max / S * sum_h
+        out[ind] = z_prime
+
+    return out
+
+
+img = cv2.imread(&quot;./img/imori.jpeg&quot;)
+
+trans_img = hist_heitan_function(img)
+gaso = np.array(trans_img).flatten()
+plt.hist(gaso, bins=255, range=(0, 255), rwidth=0.8)
+cv2.imwrite(&quot;./img/trans_img_3.jpeg&quot;, trans_img)
+plt.show()
+</code></pre></div>
+np.whereを用いてfor文を無くそうとしたが上手く行かなかった。</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tracking", "navigation.expand"], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a1c7c35e.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
