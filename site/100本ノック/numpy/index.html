@@ -1,0 +1,2235 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
+    
+    
+      
+        <title>Numpy100本ノック答え - Cheep Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2c0c5eaf.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#8bc34b">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjp.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:600,800">
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="light-green" data-md-color-accent="">
+      
+        <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#numpy100" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="Cheep Learning" class="md-header__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cheep Learning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Numpy100本ノック答え
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="クリア" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Welcome !!
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../intro/" class="md-tabs__link">
+      Artificial Intelligenceを学ぶ方へ
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../image/" class="md-tabs__link md-tabs__link--active">
+        100本ノック
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../PyTorch/PyTorch/pytorch/" class="md-tabs__link">
+        PyTorch
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../UofT/game_theory/" class="md-tabs__link">
+        UofT
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-tabs__link">
+        その他
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/tmux/" class="md-tabs__link">
+        ツール
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/GNN/" class="md-tabs__link">
+        ネットワーク解説
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/3dvision/" class="md-tabs__link">
+        深層学習
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Cheep Learning" class="md-nav__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Cheep Learning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Welcome !!
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/" class="md-nav__link">
+        Artificial Intelligenceを学ぶ方へ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        100本ノック
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="100本ノック" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          100本ノック
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../image/" class="md-nav__link">
+        画像処理100本ノック答え
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Numpy100本ノック答え
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Numpy100本ノック答え
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q1-import-the-numpy-package-under-the-name-np" class="md-nav__link">
+    Q1. Import the numpy package under the name np
+  </a>
+  
+    <nav class="md-nav" aria-label="Q1. Import the numpy package under the name np">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q2print-the-numpy-version-and-the-configuration" class="md-nav__link">
+    Q2.Print the numpy version and the configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Q2.Print the numpy version and the configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q3create-a-null-vector-of-size-10" class="md-nav__link">
+    Q3.Create a null vector of size 10
+  </a>
+  
+    <nav class="md-nav" aria-label="Q3.Create a null vector of size 10">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q4how-to-find-the-memory-size-of-any-array" class="md-nav__link">
+    Q4.How to find the memory size of any array
+  </a>
+  
+    <nav class="md-nav" aria-label="Q4.How to find the memory size of any array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q5how-to-get-the-documentation-of-the-numpy-add-function-from-the-command-line" class="md-nav__link">
+    Q5.How to get the documentation of the numpy add function from the command line?
+  </a>
+  
+    <nav class="md-nav" aria-label="Q5.How to get the documentation of the numpy add function from the command line?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q6create-a-null-vector-of-size-10-but-the-fifth-value-which-is-1" class="md-nav__link">
+    Q6.Create a null vector of size 10 but the fifth value which is 1
+  </a>
+  
+    <nav class="md-nav" aria-label="Q6.Create a null vector of size 10 but the fifth value which is 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q7create-a-vector-with-values-ranging-from-10-to-49" class="md-nav__link">
+    Q7.Create a vector with values ranging from 10 to 49
+  </a>
+  
+    <nav class="md-nav" aria-label="Q7.Create a vector with values ranging from 10 to 49">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q8-reverse-a-vector-first-element-becomes-last" class="md-nav__link">
+    Q8. Reverse a vector (first element becomes last)
+  </a>
+  
+    <nav class="md-nav" aria-label="Q8. Reverse a vector (first element becomes last)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q9create-a-3x3-matrix-with-values-ranging-from-0-to-8" class="md-nav__link">
+    Q9.Create a 3x3 matrix with values ranging from 0 to 8
+  </a>
+  
+    <nav class="md-nav" aria-label="Q9.Create a 3x3 matrix with values ranging from 0 to 8">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q10-find-indices-of-non-zero-elements-from-120040" class="md-nav__link">
+    Q10. Find indices of non-zero elements from [1,2,0,0,4,0]
+  </a>
+  
+    <nav class="md-nav" aria-label="Q10. Find indices of non-zero elements from [1,2,0,0,4,0]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q11-create-a-3x3-identity-matrix" class="md-nav__link">
+    Q11. Create a 3x3 identity matrix
+  </a>
+  
+    <nav class="md-nav" aria-label="Q11. Create a 3x3 identity matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q12-create-a-3x3x3-array-with-random-values" class="md-nav__link">
+    Q12. Create a 3x3x3 array with random values
+  </a>
+  
+    <nav class="md-nav" aria-label="Q12. Create a 3x3x3 array with random values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q13-create-a-10x10-array-with-random-values-and-find-the-minimum-and-maximum-values" class="md-nav__link">
+    Q13. Create a 10x10 array with random values and find the minimum and maximum values
+  </a>
+  
+    <nav class="md-nav" aria-label="Q13. Create a 10x10 array with random values and find the minimum and maximum values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q14create-a-random-vector-of-size-30-and-find-the-mean-value" class="md-nav__link">
+    Q14.Create a random vector of size 30 and find the mean value
+  </a>
+  
+    <nav class="md-nav" aria-label="Q14.Create a random vector of size 30 and find the mean value">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q15-create-a-2d-array-with-1-on-the-border-and-0-inside" class="md-nav__link">
+    Q15. Create a 2d array with 1 on the border and 0 inside
+  </a>
+  
+    <nav class="md-nav" aria-label="Q15. Create a 2d array with 1 on the border and 0 inside">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q16how-to-add-a-border-filled-with-0s-around-an-existing-array" class="md-nav__link">
+    Q16.How to add a border (filled with 0's) around an existing array?
+  </a>
+  
+    <nav class="md-nav" aria-label="Q16.How to add a border (filled with 0's) around an existing array?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q17what-is-the-result-of-the-following-expression" class="md-nav__link">
+    Q17.What is the result of the following expression?
+  </a>
+  
+    <nav class="md-nav" aria-label="Q17.What is the result of the following expression?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q18create-a-5x5-matrix-with-values-1234-just-below-the-diagonal" class="md-nav__link">
+    Q18.Create a 5x5 matrix with values 1,2,3,4 just below the diagonal
+  </a>
+  
+    <nav class="md-nav" aria-label="Q18.Create a 5x5 matrix with values 1,2,3,4 just below the diagonal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q19create-a-8x8-matrix-and-fill-it-with-a-checkerboard-pattern" class="md-nav__link">
+    Q19.Create a 8x8 matrix and fill it with a checkerboard pattern
+  </a>
+  
+    <nav class="md-nav" aria-label="Q19.Create a 8x8 matrix and fill it with a checkerboard pattern">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q20consider-a-678-shape-array-what-is-the-index-xyz-of-the-100th-element" class="md-nav__link">
+    Q20.Consider a (6,7,8) shape array, what is the index (x,y,z) of the 100th element
+  </a>
+  
+    <nav class="md-nav" aria-label="Q20.Consider a (6,7,8) shape array, what is the index (x,y,z) of the 100th element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q21-create-a-checkerboard-8x8-matrix-using-the-tile-function" class="md-nav__link">
+    Q21. Create a checkerboard 8x8 matrix using the tile function
+  </a>
+  
+    <nav class="md-nav" aria-label="Q21. Create a checkerboard 8x8 matrix using the tile function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q22-normalize-a-5x5-random-matrix" class="md-nav__link">
+    Q22. Normalize a 5x5 random matrix
+  </a>
+  
+    <nav class="md-nav" aria-label="Q22. Normalize a 5x5 random matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q23-create-a-custom-dtype-that-describes-a-color-as-four-unsigned-bytes-rgba" class="md-nav__link">
+    Q23. Create a custom dtype that describes a color as four unsigned bytes (RGBA)
+  </a>
+  
+    <nav class="md-nav" aria-label="Q23. Create a custom dtype that describes a color as four unsigned bytes (RGBA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q24multiply-a-5x3-matrix-by-a-3x2-matrix-real-matrix-product" class="md-nav__link">
+    Q24.Multiply a 5x3 matrix by a 3x2 matrix (real matrix product)
+  </a>
+  
+    <nav class="md-nav" aria-label="Q24.Multiply a 5x3 matrix by a 3x2 matrix (real matrix product)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q25-given-a-1d-array-negate-all-elements-which-are-between-3-and-8-in-place" class="md-nav__link">
+    Q25 Given a 1D array, negate all elements which are between 3 and 8, in place.
+  </a>
+  
+    <nav class="md-nav" aria-label="Q25 Given a 1D array, negate all elements which are between 3 and 8, in place.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q26what-is-the-output-of-the-following-script" class="md-nav__link">
+    Q26.What is the output of the following script?
+  </a>
+  
+    <nav class="md-nav" aria-label="Q26.What is the output of the following script?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    結果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q27consider-an-integer-vector-z-which-of-these-expressions-are-legal" class="md-nav__link">
+    Q27.Consider an integer vector Z, which of these expressions are legal?
+  </a>
+  
+    <nav class="md-nav" aria-label="Q27.Consider an integer vector Z, which of these expressions are legal?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    結果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        PyTorch
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PyTorch" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          PyTorch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" data-md-state="indeterminate" type="checkbox" id="__nav_4_1" checked>
+      
+      <label class="md-nav__link" for="__nav_4_1">
+        PyTorch
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PyTorch" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          PyTorch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch/pytorch/" class="md-nav__link">
+        pytorchによるディープラーニング実装の流れ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch/video/" class="md-nav__link">
+        PyTorch Dataset API で動画データを扱う方法
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2" checked>
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        PyTorch Lightning
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PyTorch Lightning" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          PyTorch Lightning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/checkpoint/" class="md-nav__link">
+        PyTorch LightningのCheckpointCallbackの便利機能
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/data_module/" class="md-nav__link">
+        【PyTorch Lightning】LightningDataModuleについて
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/lightning_bolts/" class="md-nav__link">
+        PyTorch Lightning Boltsの使い方
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/pytorchvideo/" class="md-nav__link">
+        PyTorchVideo 使い方
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        UofT
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="UofT" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          UofT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UofT/game_theory/" class="md-nav__link">
+        Game theory
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UofT/note/" class="md-nav__link">
+        Note
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        その他
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="その他" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          その他
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-nav__link">
+        Pythonのお勉強について
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC/" class="md-nav__link">
+        ワークフロー
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        ツール
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ツール" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          ツール
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/tmux/" class="md-nav__link">
+        tmuxはええぞ
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" data-md-state="indeterminate" type="checkbox" id="__nav_8" checked>
+      
+      <label class="md-nav__link" for="__nav_8">
+        ネットワーク解説
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ネットワーク解説" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          ネットワーク解説
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/GNN/" class="md-nav__link">
+        Graph Attention Network 解説
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/mesh_rcnn/" class="md-nav__link">
+        Mesh RCNNのお気持ちを理解したい
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" data-md-state="indeterminate" type="checkbox" id="__nav_9" checked>
+      
+      <label class="md-nav__link" for="__nav_9">
+        深層学習
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="深層学習" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          深層学習
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/3dvision/" class="md-nav__link">
+        3D vision
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/lstm/" class="md-nav__link">
+        【もうやりたくない】RNNとLSTMの理解とNumPyによる実装
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q1-import-the-numpy-package-under-the-name-np" class="md-nav__link">
+    Q1. Import the numpy package under the name np
+  </a>
+  
+    <nav class="md-nav" aria-label="Q1. Import the numpy package under the name np">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q2print-the-numpy-version-and-the-configuration" class="md-nav__link">
+    Q2.Print the numpy version and the configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Q2.Print the numpy version and the configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q3create-a-null-vector-of-size-10" class="md-nav__link">
+    Q3.Create a null vector of size 10
+  </a>
+  
+    <nav class="md-nav" aria-label="Q3.Create a null vector of size 10">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q4how-to-find-the-memory-size-of-any-array" class="md-nav__link">
+    Q4.How to find the memory size of any array
+  </a>
+  
+    <nav class="md-nav" aria-label="Q4.How to find the memory size of any array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q5how-to-get-the-documentation-of-the-numpy-add-function-from-the-command-line" class="md-nav__link">
+    Q5.How to get the documentation of the numpy add function from the command line?
+  </a>
+  
+    <nav class="md-nav" aria-label="Q5.How to get the documentation of the numpy add function from the command line?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q6create-a-null-vector-of-size-10-but-the-fifth-value-which-is-1" class="md-nav__link">
+    Q6.Create a null vector of size 10 but the fifth value which is 1
+  </a>
+  
+    <nav class="md-nav" aria-label="Q6.Create a null vector of size 10 but the fifth value which is 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q7create-a-vector-with-values-ranging-from-10-to-49" class="md-nav__link">
+    Q7.Create a vector with values ranging from 10 to 49
+  </a>
+  
+    <nav class="md-nav" aria-label="Q7.Create a vector with values ranging from 10 to 49">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q8-reverse-a-vector-first-element-becomes-last" class="md-nav__link">
+    Q8. Reverse a vector (first element becomes last)
+  </a>
+  
+    <nav class="md-nav" aria-label="Q8. Reverse a vector (first element becomes last)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q9create-a-3x3-matrix-with-values-ranging-from-0-to-8" class="md-nav__link">
+    Q9.Create a 3x3 matrix with values ranging from 0 to 8
+  </a>
+  
+    <nav class="md-nav" aria-label="Q9.Create a 3x3 matrix with values ranging from 0 to 8">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q10-find-indices-of-non-zero-elements-from-120040" class="md-nav__link">
+    Q10. Find indices of non-zero elements from [1,2,0,0,4,0]
+  </a>
+  
+    <nav class="md-nav" aria-label="Q10. Find indices of non-zero elements from [1,2,0,0,4,0]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q11-create-a-3x3-identity-matrix" class="md-nav__link">
+    Q11. Create a 3x3 identity matrix
+  </a>
+  
+    <nav class="md-nav" aria-label="Q11. Create a 3x3 identity matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q12-create-a-3x3x3-array-with-random-values" class="md-nav__link">
+    Q12. Create a 3x3x3 array with random values
+  </a>
+  
+    <nav class="md-nav" aria-label="Q12. Create a 3x3x3 array with random values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q13-create-a-10x10-array-with-random-values-and-find-the-minimum-and-maximum-values" class="md-nav__link">
+    Q13. Create a 10x10 array with random values and find the minimum and maximum values
+  </a>
+  
+    <nav class="md-nav" aria-label="Q13. Create a 10x10 array with random values and find the minimum and maximum values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q14create-a-random-vector-of-size-30-and-find-the-mean-value" class="md-nav__link">
+    Q14.Create a random vector of size 30 and find the mean value
+  </a>
+  
+    <nav class="md-nav" aria-label="Q14.Create a random vector of size 30 and find the mean value">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q15-create-a-2d-array-with-1-on-the-border-and-0-inside" class="md-nav__link">
+    Q15. Create a 2d array with 1 on the border and 0 inside
+  </a>
+  
+    <nav class="md-nav" aria-label="Q15. Create a 2d array with 1 on the border and 0 inside">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q16how-to-add-a-border-filled-with-0s-around-an-existing-array" class="md-nav__link">
+    Q16.How to add a border (filled with 0's) around an existing array?
+  </a>
+  
+    <nav class="md-nav" aria-label="Q16.How to add a border (filled with 0's) around an existing array?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q17what-is-the-result-of-the-following-expression" class="md-nav__link">
+    Q17.What is the result of the following expression?
+  </a>
+  
+    <nav class="md-nav" aria-label="Q17.What is the result of the following expression?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q18create-a-5x5-matrix-with-values-1234-just-below-the-diagonal" class="md-nav__link">
+    Q18.Create a 5x5 matrix with values 1,2,3,4 just below the diagonal
+  </a>
+  
+    <nav class="md-nav" aria-label="Q18.Create a 5x5 matrix with values 1,2,3,4 just below the diagonal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q19create-a-8x8-matrix-and-fill-it-with-a-checkerboard-pattern" class="md-nav__link">
+    Q19.Create a 8x8 matrix and fill it with a checkerboard pattern
+  </a>
+  
+    <nav class="md-nav" aria-label="Q19.Create a 8x8 matrix and fill it with a checkerboard pattern">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q20consider-a-678-shape-array-what-is-the-index-xyz-of-the-100th-element" class="md-nav__link">
+    Q20.Consider a (6,7,8) shape array, what is the index (x,y,z) of the 100th element
+  </a>
+  
+    <nav class="md-nav" aria-label="Q20.Consider a (6,7,8) shape array, what is the index (x,y,z) of the 100th element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q21-create-a-checkerboard-8x8-matrix-using-the-tile-function" class="md-nav__link">
+    Q21. Create a checkerboard 8x8 matrix using the tile function
+  </a>
+  
+    <nav class="md-nav" aria-label="Q21. Create a checkerboard 8x8 matrix using the tile function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q22-normalize-a-5x5-random-matrix" class="md-nav__link">
+    Q22. Normalize a 5x5 random matrix
+  </a>
+  
+    <nav class="md-nav" aria-label="Q22. Normalize a 5x5 random matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q23-create-a-custom-dtype-that-describes-a-color-as-four-unsigned-bytes-rgba" class="md-nav__link">
+    Q23. Create a custom dtype that describes a color as four unsigned bytes (RGBA)
+  </a>
+  
+    <nav class="md-nav" aria-label="Q23. Create a custom dtype that describes a color as four unsigned bytes (RGBA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q24multiply-a-5x3-matrix-by-a-3x2-matrix-real-matrix-product" class="md-nav__link">
+    Q24.Multiply a 5x3 matrix by a 3x2 matrix (real matrix product)
+  </a>
+  
+    <nav class="md-nav" aria-label="Q24.Multiply a 5x3 matrix by a 3x2 matrix (real matrix product)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q25-given-a-1d-array-negate-all-elements-which-are-between-3-and-8-in-place" class="md-nav__link">
+    Q25 Given a 1D array, negate all elements which are between 3 and 8, in place.
+  </a>
+  
+    <nav class="md-nav" aria-label="Q25 Given a 1D array, negate all elements which are between 3 and 8, in place.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    解答
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q26what-is-the-output-of-the-following-script" class="md-nav__link">
+    Q26.What is the output of the following script?
+  </a>
+  
+    <nav class="md-nav" aria-label="Q26.What is the output of the following script?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    結果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q27consider-an-integer-vector-z-which-of-these-expressions-are-legal" class="md-nav__link">
+    Q27.Consider an integer vector Z, which of these expressions are legal?
+  </a>
+  
+    <nav class="md-nav" aria-label="Q27.Consider an integer vector Z, which of these expressions are legal?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    結果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="numpy100">Numpy100本ノック答え</h1>
+<p><a href="https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises.md">numpy-100</a>の問題を解いたもの</p>
+<h2 id="q1-import-the-numpy-package-under-the-name-np">Q1. Import the numpy package under the name np</h2>
+<p>numpyをインストールする。</p>
+<h3 id="_1">解答</h3>
+<div class="highlight"><pre><span></span><code>import numpy as np
+</code></pre></div>
+<h2 id="q2print-the-numpy-version-and-the-configuration">Q2.Print the numpy version and the configuration</h2>
+<p>numpyのバージョンを確認する。</p>
+<h3 id="_2">解答</h3>
+<p><div class="highlight"><pre><span></span><code>import numpy as np
+
+print(np.__version__)
+</code></pre></div>
+1.20.2だった。</p>
+<h2 id="q3create-a-null-vector-of-size-10">Q3.Create a null vector of size 10</h2>
+<p>サイズ１０の０の配列作成</p>
+<h3 id="_3">解答</h3>
+<div class="highlight"><pre><span></span><code>import numpy as np
+
+a = np.zeros(10)
+print(a)
+</code></pre></div>
+<h2 id="q4how-to-find-the-memory-size-of-any-array">Q4.How to find the memory size of any array</h2>
+<p>配列のメモリサイズを見る</p>
+<h3 id="_4">解答</h3>
+<p><div class="highlight"><pre><span></span><code>a = np.zeros((10, 10))
+print(a.nbytes)　#800
+</code></pre></div>
+一つの要素のバイト数は
+<div class="highlight"><pre><span></span><code>a.itemsize
+</code></pre></div>
+で得られる。</p>
+<h2 id="q5how-to-get-the-documentation-of-the-numpy-add-function-from-the-command-line">Q5.How to get the documentation of the numpy add function from the command line?</h2>
+<p>numpyのadd関数のドキュメントをコマンドラインから見る方法</p>
+<h3 id="_5">解答</h3>
+<div class="highlight"><pre><span></span><code>python -c &quot;import numpy; numpy.info(numpy.add)&quot;
+</code></pre></div>
+<h2 id="q6create-a-null-vector-of-size-10-but-the-fifth-value-which-is-1">Q6.Create a null vector of size 10 but the fifth value which is 1</h2>
+<p>サイズ10の0ベクトルで5番目の値だけ1のものを作成する。</p>
+<h3 id="_6">解答</h3>
+<div class="highlight"><pre><span></span><code>a = np.zeros((10))
+a[4] = 1
+print(a)
+</code></pre></div>
+<h2 id="q7create-a-vector-with-values-ranging-from-10-to-49">Q7.Create a vector with values ranging from 10 to 49</h2>
+<p>10~49の範囲の値をもつ配列の作成</p>
+<h3 id="_7">解答</h3>
+<div class="highlight"><pre><span></span><code>b = np.arange(10, 50)
+print(b)
+</code></pre></div>
+<h2 id="q8-reverse-a-vector-first-element-becomes-last">Q8. Reverse a vector (first element becomes last)</h2>
+<p>ベクトルを反転</p>
+<h3 id="_8">解答</h3>
+<div class="highlight"><pre><span></span><code>b = np.arange(10, 50)
+print(b[::-1])
+</code></pre></div>
+<h2 id="q9create-a-3x3-matrix-with-values-ranging-from-0-to-8">Q9.Create a 3x3 matrix with values ranging from 0 to 8</h2>
+<p>3×3の行列に0~9を入れる</p>
+<h3 id="_9">解答</h3>
+<p><div class="highlight"><pre><span></span><code>c = np.arange(0, 9)
+print(c.reshape(3, 3))
+</code></pre></div>
+reshapeは重要な気がする</p>
+<h2 id="q10-find-indices-of-non-zero-elements-from-120040">Q10. Find indices of non-zero elements from [1,2,0,0,4,0]</h2>
+<p>ベクトルから０ではないベクトルを見つけろ</p>
+<h3 id="_10">解答</h3>
+<div class="highlight"><pre><span></span><code>d = np.array([1, 2, 0, 0, 4, 0])
+print(np.where(d != 0))
+</code></pre></div>
+<h2 id="q11-create-a-3x3-identity-matrix">Q11. Create a 3x3 identity matrix</h2>
+<p>単位行列を作れ</p>
+<h3 id="_11">解答</h3>
+<div class="highlight"><pre><span></span><code>e = np.eye(3)
+print(e)
+</code></pre></div>
+<h2 id="q12-create-a-3x3x3-array-with-random-values">Q12. Create a 3x3x3 array with random values</h2>
+<p>ランダムな行列を作れ</p>
+<h3 id="_12">解答</h3>
+<div class="highlight"><pre><span></span><code>f = np.random.random((3, 3, 3))
+print(f)
+</code></pre></div>
+<h2 id="q13-create-a-10x10-array-with-random-values-and-find-the-minimum-and-maximum-values">Q13. Create a 10x10 array with random values and find the minimum and maximum values</h2>
+<p>ランダムな行列から最大、最小の値をとれ</p>
+<h3 id="_13">解答</h3>
+<div class="highlight"><pre><span></span><code>f = np.random.random((10, 10))
+print(np.max(f), np.min(f))
+</code></pre></div>
+<h2 id="q14create-a-random-vector-of-size-30-and-find-the-mean-value">Q14.Create a random vector of size 30 and find the mean value</h2>
+<p>ランダムなベクトルから平均値をとれ</p>
+<h3 id="_14">解答</h3>
+<div class="highlight"><pre><span></span><code>g = np.random.random(30)
+print(np.mean(g))
+</code></pre></div>
+<h2 id="q15-create-a-2d-array-with-1-on-the-border-and-0-inside">Q15. Create a 2d array with 1 on the border and 0 inside</h2>
+<p>境界が0、中が１の２次元の行列を作成せよ</p>
+<h3 id="_15">解答</h3>
+<div class="highlight"><pre><span></span><code>size = 5
+h = np.zeros((size, size))
+h[1:size-1, 1:size-1] = 1
+print(h)
+</code></pre></div>
+<h2 id="q16how-to-add-a-border-filled-with-0s-around-an-existing-array">Q16.How to add a border (filled with 0's) around an existing array?</h2>
+<p>周りに0のパディングを追加せよ</p>
+<h3 id="_16">解答</h3>
+<p><div class="highlight"><pre><span></span><code>i = np.ones((5, 5))
+print(np.pad(i, 1))
+</code></pre></div>
+padも慣れていく必要がある</p>
+<h2 id="q17what-is-the-result-of-the-following-expression">Q17.What is the result of the following expression?</h2>
+<h3 id="_17">解答</h3>
+<div class="highlight"><pre><span></span><code>print(0 * np.nan)
+print(np.nan == np.nan)
+print(np.inf &gt; np.nan)
+print(np.nan - np.nan)
+print(np.nan in set([np.nan]))
+print(0.3 == 3 * 0.1)
+</code></pre></div>
+<p>実行結果
+<div class="highlight"><pre><span></span><code>nan
+False
+False
+nan
+True
+False
+</code></pre></div>
+np.nanの特徴をしっかり把握する必要がある</p>
+<h2 id="q18create-a-5x5-matrix-with-values-1234-just-below-the-diagonal">Q18.Create a 5x5 matrix with values 1,2,3,4 just below the diagonal</h2>
+<p>対角の下に1,2,3,4の値を入れる</p>
+<h3 id="_18">解答</h3>
+<div class="highlight"><pre><span></span><code>j = np.diag(np.arange(4) + 1, k=-1)
+print(j)
+</code></pre></div>
+<h2 id="q19create-a-8x8-matrix-and-fill-it-with-a-checkerboard-pattern">Q19.Create a 8x8 matrix and fill it with a checkerboard pattern</h2>
+<p>行列をチェッカーボードパターンにしましょう</p>
+<h3 id="_19">解答</h3>
+<p><div class="highlight"><pre><span></span><code>j = np.zeros((8, 8))
+j[1::2, ::2] = 1
+j[::2, 1::2] = 1
+print(j)
+</code></pre></div>
+配列操作の::の意味を知らなかった。</p>
+<h2 id="q20consider-a-678-shape-array-what-is-the-index-xyz-of-the-100th-element">Q20.Consider a (6,7,8) shape array, what is the index (x,y,z) of the 100<sup>th</sup> element</h2>
+<p>100番目の要素を取り出せ</p>
+<h3 id="_20">解答</h3>
+<div class="highlight"><pre><span></span><code>print(np.unravel_index(99, (6, 7, 8)))
+</code></pre></div>
+<h2 id="q21-create-a-checkerboard-8x8-matrix-using-the-tile-function">Q21. Create a checkerboard 8x8 matrix using the tile function</h2>
+<p>tile関数を使用してチェッカーボードパターンを作成せよ</p>
+<h3 id="_21">解答</h3>
+<div class="highlight"><pre><span></span><code>j = np.tile(((0, 1), (1, 0)), (4, 4))
+print(j)
+</code></pre></div>
+<h2 id="q22-normalize-a-5x5-random-matrix">Q22. Normalize a 5x5 random matrix</h2>
+<p>行列を正規化せよ</p>
+<h3 id="_22">解答</h3>
+<div class="highlight"><pre><span></span><code>k = np.random.random((5, 5))
+k = (k - np.mean(k))/np.std(k)
+print(k)
+</code></pre></div>
+<h2 id="q23-create-a-custom-dtype-that-describes-a-color-as-four-unsigned-bytes-rgba">Q23. Create a custom dtype that describes a color as four unsigned bytes (RGBA)</h2>
+<p>カスタムdtypeを作成せよ</p>
+<h3 id="_23">解答</h3>
+<p><div class="highlight"><pre><span></span><code>color = np.dtype([(&quot;r&quot;, np.ubyte, 1),
+                  (&quot;g&quot;, np.ubyte, 1),
+                  (&quot;b&quot;, np.ubyte, 1),
+                  (&quot;a&quot;, np.ubyte, 1)])
+</code></pre></div>
+自分でdtypeを作成している。この機能を使う機会はあるのだろうか？</p>
+<h2 id="q24multiply-a-5x3-matrix-by-a-3x2-matrix-real-matrix-product">Q24.Multiply a 5x3 matrix by a 3x2 matrix (real matrix product)</h2>
+<p>行列積を行う</p>
+<h3 id="_24">解答</h3>
+<div class="highlight"><pre><span></span><code>p = np.ones((5, 3))
+m = np.ones((3, 2))
+n = np.dot(p, m)
+print(n)
+</code></pre></div>
+<h2 id="q25-given-a-1d-array-negate-all-elements-which-are-between-3-and-8-in-place">Q25 Given a 1D array, negate all elements which are between 3 and 8, in place.</h2>
+<p>3-8までの要素を負の値</p>
+<h3 id="_25">解答</h3>
+<p><div class="highlight"><pre><span></span><code>q = np.arange(10)
+q[(3 &lt; q) &amp; (q &lt;= 8)] *= -1
+print(q)
+</code></pre></div>
+画像処理100本ノックでもよく見た。</p>
+<h2 id="q26what-is-the-output-of-the-following-script">Q26.What is the output of the following script?</h2>
+<p>以下の実行結果を確認せよ
+<div class="highlight"><pre><span></span><code>print(sum(range(5),-1))
+from numpy import *
+print(sum(range(5),-1))
+</code></pre></div></p>
+<h3 id="_26">結果</h3>
+<p><div class="highlight"><pre><span></span><code>9
+10
+</code></pre></div>
+上のsumは-1を計算に入れていて、下のsumは軸を-1に指定しているとなっている</p>
+<h2 id="q27consider-an-integer-vector-z-which-of-these-expressions-are-legal">Q27.Consider an integer vector Z, which of these expressions are legal?</h2>
+<p>以下の式は有効か?(Zは整数)
+<div class="highlight"><pre><span></span><code>Z = np.arange(5)
+Z**Z
+2 &lt;&lt; Z &gt;&gt; 2
+Z &lt;- Z
+1j*Z
+Z/1/1
+Z&lt;Z&gt;Z
+</code></pre></div></p>
+<h3 id="_27">結果</h3>
+<p><div class="highlight"><pre><span></span><code>[  1   1   4  27 256]
+[0 1 2 4 8]
+[False False False False False]
+[0.+0.j 0.+1.j 0.+2.j 0.+3.j 0.+4.j]
+[0. 1. 2. 3. 4.]
+error
+</code></pre></div>
+・各要素値ごとの累乗計算の結果を示している
+<div class="highlight"><pre><span></span><code>[0^0,1^1,2^2,3^3,4^4]
+</code></pre></div>
+・ビット演算をしている</p>
+<p>・各要素の大小関係</p>
+<p>・虚数にしている</p>
+<p>・2回１で割っている</p>
+<p>・2つの計算はできな</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tracking", "navigation.expand"], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a1c7c35e.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
