@@ -1116,8 +1116,8 @@
                 <h1 id="plantuml">PlantUMLのススメ</h1>
 <p>PlantUMLとはUMLダイアグラムをテキストで作成できる言語<br />
 図を書くことがあるならPlantUMLを使おう！っと言うぐらいに図を書くならこれっというツール</p>
-<p>本Wikiではサポートされており、MarkDown内に普通に書くことでレンダリングされる<br />
-たまに未対応の書き方があり、プレビューがエラーするので注意<br />
+<p>Vscode等一部環境ではMarkDown内に普通に書くことでレンダリングされる<br />
+たまに未対応の書き方があり、プレビューがエラーするので注意。
 ※ <code>&lt;</code> は大体うまく出力されない</p>
 <p>VS Codeを開発環境にすると、とても捗る(<a href="#vs-codeで書く">下記参照</a>)</p>
 <h2 id="plantuml_1">PlantUMLでできること</h2>
@@ -1177,70 +1177,6 @@
 <li>大体主要なシーケンス図のパーツは使ってる</li>
 <li><em>mkdocs</em>で表示できないバグがある為コードも載せておきます。</li>
 </ul>
-<div class="highlight"><pre><span></span><code>@startuml
-
-participant &quot;APIサーバー&quot; as A
-
-box &quot;Apache Kafka&quot; #LightBlue
-participant &quot;推論Topic&quot; as B
-participant &quot;停止Topic&quot; as C
-end Box
-
-participant &quot;推論サーバー&quot; as D
-
-[-&gt; A: API受信
-
-A -&gt;&gt; B: 推論のキューイング
-activate B
-
-hnote over B #LightPink: Waiting...
-note right: 推論サーバーが空き次第処理
-
-B -&gt;&gt; D: 推論の実行
-activate D #IndianRed
-note right
-自動終了の条件
-- 回数
-- 時間制限
-- 処理の完了
-end note
-
-D -&gt;&gt; B: キューの受取通知
-deactivate B
-
-D --&gt;&gt; A: 処理段階で随時ステータス送信
-
-alt 手動で終了させる場合
-
-    A -&gt;&gt; C: 停止信号をキューイング
-    activate C
-
-    hnote over C #LightPink: Waiting...
-
-
-    C -&gt;&gt; D: 別プロセスで受信
-    note right
-    複数台の推論サーバーがある場合、
-    すべてのサーバーが受信する
-    end note
-
-    D -&gt;&gt; D: 推論処理の停止
-    note right
-    該当のIDが処理中の場合に停止させる
-    &gt; 推論中の別プロセスへ通信
-    該当していない場合は何もしない
-    end note
-
-    D -&gt;&gt; C: キューの受取通知
-    deactivate C
-
-end
-
-D -&gt;&gt; A: 終了通知
-deactivate D
-
-@enduml
-</code></pre></div>
 <div class="highlight"><pre><span></span><code>@startuml
 
 participant &quot;APIサーバー&quot; as A
