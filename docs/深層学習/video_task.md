@@ -19,28 +19,30 @@
 ## 1. Video Classification
 * 動画をクラス分類するタスク、画像と違い物体が何か当てる以外にも一連の動きから人間の動作を分類したりする。
 
-<img src=./attachment/1.png width=400>
+<figure>
+  <img src="../imgs/1.png" width="400"/>
+</figure>
 
 * 動画の全般的な問題として**データが大きすぎる**。無圧縮だと1エントリー1 byteとしてHD動画１分で10GBくらい。なのでFPSと解像度を下げた動画の一部分だけを学習させる。モデルの評価は動画の一部をオーバーサンプリングして平均精度を取ることで動画全体への精度がわかる。
 
-<img src=./attachment/2.png width=400>
+<figure><img src=../imgs/2.png width=400></figure>
  
 ### 1-1. Single Frame CNN
 各フレームを別々の画像として独立したCNNで分類する手法。長めの動画を学習させて正答率をフレーム数で平均した精度を向上させていく。画像同士の関係を考慮しないので一見するとダメなモデルっぽいが実は普通に実用レベルで性能が良いらしい。動画分類をする時はこれをベースにやるといい。
 
-<img src=./attachment/3.png width=400>
+<figure><figure>img src=../imgs/3.png width=400></figure>
 
 ### 1-2. Late Fusion
 上のモデルをMLPに接続したモデル。フレーム毎の特徴量を一つに統合するので交差エントロピーで学習できてフレーム同士の関係も学習できるがFC層で過学習を起こしやすい。対策として特徴量の統合時に`T, H, W`をPoolingして`D`次元データに落とし込む。これらの手法もシンプルなのでまず試したいモデル。
 
-<img src=./attachment/4.png width=400>
+<figure><img src=../imgs/4.png width=400></figure>
 
 しかし特徴量を統合するのが遅いので、**動画の小さい動きを学習できない**。例えば、人が歩いてるか立っているかは足の小さな動きで判断するが、FC層に来る前にこれらの小さい特徴量は失われやすい。
 
  ### 1-3. Early Fusion
 先に各フレームの特徴量を抽出するのではなく、`(3 x T x H x W)`の動画を`(3T x H x W)`になるように畳み込み（特徴量の統合）してから、3次元テンサーとしてから2DCNNで学習するモデル。ピクセルの細かい変化も２DCNNが学習できるが、時系列データを一回の畳み込みで処理するのでそこら辺の特徴量は上手く表現されない。
  
- <img src=./attachment/5.png width=400>
+ <figure><img src=../imgs/5.png width=400></figure>
 
 
 ### 1-3. Slow Fusion
@@ -53,7 +55,7 @@ Early Fusionでは縦横での畳み込みしか行わなず時系列の情報�
 
 ## 各手法の比較
 
- <img src=./attachment/6.png width=400>
+ <figure><img src=../imgs/6.png width=400></figure>
 
 * Single Frame
   シンプルだが統合系に劣らない性能、とりあえずこれを最初に試そう。
@@ -63,7 +65,7 @@ Early Fusionでは縦横での畳み込みしか行わなず時系列の情報�
   縦横で畳み込む為画像としての学習は強いが、**Time shift invavriant**じゃないという弱点もある。
   これはフィルターの奥行きがそのピクセルの時間による変化を学習しちゃうのが原因で、例えば最初の方で人が立ち上がる動画を学習したとして、その動画を数フレームずらした場合フィルターも奥にそのフレーム分ズレる必要がある。
 
-    <img src=./attachment/7.png width=200>
+    <figure><img src=../imgs/7.png width=200></figure>
 
 * Slow
 
