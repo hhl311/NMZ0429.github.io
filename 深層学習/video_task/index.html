@@ -9,19 +9,19 @@
       
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
     
     
       
-        <title>PyTorch LightningのCheckpointCallbackの便利機能 - Cheep Learning</title>
+        <title>動画を使った深層学習 - Cheep Learning</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2c0c5eaf.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2c0c5eaf.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.7fa14f5b.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
         
           
           
@@ -44,7 +44,7 @@
     
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:600,800">
     
-      <link rel="stylesheet" href="../../../css/custom.css">
+      <link rel="stylesheet" href="../../css/custom.css">
     
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pytorch-lightningcheckpointcallback" class="md-skip">
+        <a href="#_1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -83,7 +83,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="ヘッダー">
-    <a href="../../.." title="Cheep Learning" class="md-header__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
+    <a href="../.." title="Cheep Learning" class="md-header__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PyTorch LightningのCheckpointCallbackの便利機能
+              動画を使った深層学習
             
           </span>
         </div>
@@ -161,7 +161,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../.." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Welcome !!
     </a>
   </li>
@@ -173,7 +173,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../../intro/" class="md-tabs__link">
+    <a href="../../intro/" class="md-tabs__link">
       Artificial Intelligenceを学ぶ方へ
     </a>
   </li>
@@ -188,7 +188,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/image/" class="md-tabs__link">
+      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/image/" class="md-tabs__link">
         100本ノック
       </a>
     </li>
@@ -197,8 +197,6 @@
       
         
   
-  
-    
   
 
 
@@ -211,7 +209,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../PyTorch/pytorch/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../PyTorch/PyTorch/pytorch/" class="md-tabs__link">
         PyTorch
       </a>
     </li>
@@ -229,7 +227,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../UofT/game_theory/" class="md-tabs__link">
+      <a href="../../UofT/game_theory/" class="md-tabs__link">
         UofT
       </a>
     </li>
@@ -245,7 +243,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-tabs__link">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-tabs__link">
         その他
       </a>
     </li>
@@ -261,7 +259,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../%E3%83%84%E3%83%BC%E3%83%AB/heroku_st/" class="md-tabs__link">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/heroku_st/" class="md-tabs__link">
         ツール
       </a>
     </li>
@@ -277,7 +275,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/GNN/" class="md-tabs__link">
+      <a href="../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/GNN/" class="md-tabs__link">
         ネットワーク解説
       </a>
     </li>
@@ -287,13 +285,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/3dvision/" class="md-tabs__link">
+      <a href="../3dvision/" class="md-tabs__link md-tabs__link--active">
         深層学習
       </a>
     </li>
@@ -320,7 +320,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Cheep Learning" class="md-nav__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
+    <a href="../.." title="Cheep Learning" class="md-nav__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -339,7 +339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Welcome !!
       </a>
     </li>
@@ -354,7 +354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../intro/" class="md-nav__link">
+      <a href="../../intro/" class="md-nav__link">
         Artificial Intelligenceを学ぶ方へ
       </a>
     </li>
@@ -390,7 +390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/image/" class="md-nav__link">
+      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/image/" class="md-nav__link">
         画像処理100本ノック答え
       </a>
     </li>
@@ -402,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/numpy/" class="md-nav__link">
+      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/numpy/" class="md-nav__link">
         Numpy100本ノック答え
       </a>
     </li>
@@ -421,14 +421,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         PyTorch
@@ -467,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyTorch/pytorch/" class="md-nav__link">
+      <a href="../../PyTorch/PyTorch/pytorch/" class="md-nav__link">
         pytorchによるディープラーニング実装の流れ
       </a>
     </li>
@@ -479,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyTorch/video/" class="md-nav__link">
+      <a href="../../PyTorch/PyTorch/video/" class="md-nav__link">
         PyTorch Dataset API で動画データを扱う方法
       </a>
     </li>
@@ -495,14 +493,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2" checked>
       
       <label class="md-nav__link" for="__nav_4_2">
         PyTorch Lightning
@@ -518,63 +514,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          PyTorch LightningのCheckpointCallbackの便利機能
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/checkpoint/" class="md-nav__link">
         PyTorch LightningのCheckpointCallbackの便利機能
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#on_save_checkpoint" class="md-nav__link">
-    on_save_checkpoint
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#def-on_load_checkpoint" class="md-nav__link">
-    def on_load_checkpoint
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#use-case" class="md-nav__link">
-    Use case
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -584,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data_module/" class="md-nav__link">
+      <a href="../../PyTorch/PyTorch%20Lightning/data_module/" class="md-nav__link">
         【PyTorch Lightning】LightningDataModuleについて
       </a>
     </li>
@@ -596,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lightning_bolts/" class="md-nav__link">
+      <a href="../../PyTorch/PyTorch%20Lightning/lightning_bolts/" class="md-nav__link">
         PyTorch Lightning Boltsの使い方
       </a>
     </li>
@@ -608,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pytorchvideo/" class="md-nav__link">
+      <a href="../../PyTorch/PyTorch%20Lightning/pytorchvideo/" class="md-nav__link">
         PyTorchVideo 使い方
       </a>
     </li>
@@ -656,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../UofT/game_theory/" class="md-nav__link">
+      <a href="../../UofT/game_theory/" class="md-nav__link">
         Game theory
       </a>
     </li>
@@ -668,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../UofT/note/" class="md-nav__link">
+      <a href="../../UofT/note/" class="md-nav__link">
         Note
       </a>
     </li>
@@ -710,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-nav__link">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-nav__link">
         Pythonのお勉強について
       </a>
     </li>
@@ -722,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E3%81%9D%E3%81%AE%E4%BB%96/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC/" class="md-nav__link">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC/" class="md-nav__link">
         ワークフロー
       </a>
     </li>
@@ -764,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E3%83%84%E3%83%BC%E3%83%AB/heroku_st/" class="md-nav__link">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/heroku_st/" class="md-nav__link">
         StreamlitアプリをHerokuでティプロイする
       </a>
     </li>
@@ -776,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E3%83%84%E3%83%BC%E3%83%AB/plantuml/" class="md-nav__link">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/plantuml/" class="md-nav__link">
         PlantUMLのススメ
       </a>
     </li>
@@ -788,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E3%83%84%E3%83%BC%E3%83%AB/tmux/" class="md-nav__link">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/tmux/" class="md-nav__link">
         tmuxはええぞ
       </a>
     </li>
@@ -830,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/GNN/" class="md-nav__link">
+      <a href="../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/GNN/" class="md-nav__link">
         Graph Attention Network 解説
       </a>
     </li>
@@ -842,7 +786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/mesh_rcnn/" class="md-nav__link">
+      <a href="../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/mesh_rcnn/" class="md-nav__link">
         Mesh RCNNのお気持ちを理解したい
       </a>
     </li>
@@ -861,12 +805,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" data-md-state="indeterminate" type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
       
       <label class="md-nav__link" for="__nav_9">
         深層学習
@@ -884,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/3dvision/" class="md-nav__link">
+      <a href="../3dvision/" class="md-nav__link">
         3D vision
       </a>
     </li>
@@ -896,7 +842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/lstm/" class="md-nav__link">
+      <a href="../lstm/" class="md-nav__link">
         【もうやりたくない】RNNとLSTMの理解とNumPyによる実装
       </a>
     </li>
@@ -906,11 +852,117 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/video_task/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          動画を使った深層学習
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         動画を使った深層学習
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    タスク
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-video-classification" class="md-nav__link">
+    1. Video Classification
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Video Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-1-single-frame-cnn" class="md-nav__link">
+    1-1. Single Frame CNN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-2-late-fusion" class="md-nav__link">
+    1-2. Late Fusion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-3-slow-fusion" class="md-nav__link">
+    1-3. Slow Fusion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-4" class="md-nav__link">
+    1-4.データセット
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    各手法の比較
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 行動認識
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 行動認識">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-1-optical-flow" class="md-nav__link">
+    2-1. Optical Flow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -946,23 +998,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#on_save_checkpoint" class="md-nav__link">
-    on_save_checkpoint
+  <a href="#_2" class="md-nav__link">
+    タスク
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#def-on_load_checkpoint" class="md-nav__link">
-    def on_load_checkpoint
+  <a href="#1-video-classification" class="md-nav__link">
+    1. Video Classification
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Video Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-1-single-frame-cnn" class="md-nav__link">
+    1-1. Single Frame CNN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-2-late-fusion" class="md-nav__link">
+    1-2. Late Fusion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-3-slow-fusion" class="md-nav__link">
+    1-3. Slow Fusion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-4" class="md-nav__link">
+    1-4.データセット
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    各手法の比較
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#use-case" class="md-nav__link">
-    Use case
+  <a href="#2" class="md-nav__link">
+    2. 行動認識
   </a>
+  
+    <nav class="md-nav" aria-label="2. 行動認識">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-1-optical-flow" class="md-nav__link">
+    2-1. Optical Flow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -979,22 +1085,71 @@
               
                 
                 
-                <h1 id="pytorch-lightningcheckpointcallback">PyTorch LightningのCheckpointCallbackの便利機能</h1>
-<p>トレーニング中になんでもチェックポイントファイルに含めてセーブできる機能があるみたいなのでメモ。</p>
-<h2 id="on_save_checkpoint"><code>on_save_checkpoint</code></h2>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">on_save_checkpoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">checkpoint</span><span class="p">):</span>
-    <span class="c1"># 99% of use cases you don&#39;t need to implement this method</span>
-    <span class="n">checkpoint</span><span class="p">[</span><span class="s1">&#39;something_cool_i_want_to_save&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">my_cool_pickable_object</span>
-</code></pre></div>
-<p>コレを使うとparameter以外に推論時に使う情報をcheckpointとして保持できるので推論時に手動でロードしたり別のファイルで保存しておく手間が省ける。</p>
-<h2 id="def-on_load_checkpoint"><code>def on_load_checkpoint</code></h2>
-<p>これでロードできる</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">on_load_checkpoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">checkpoint</span><span class="p">):</span>
-    <span class="c1"># 99% of the time you don&#39;t need to implement this method</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">something_cool_i_want_to_save</span> <span class="o">=</span> <span class="n">checkpoint</span><span class="p">[</span><span class="s1">&#39;something_cool_i_want_to_save&#39;</span><span class="p">]</span>
-</code></pre></div>
-<h2 id="use-case">Use case</h2>
-<p>訓練データの共分散行列とかをモデルの重みと一緒に保存できる。</p>
+                <h1 id="_1">動画を使った深層学習</h1>
+<p>ミシガン大学の公開講義にとても良いクラスがあったので翻訳andまとめておきます。</p>
+<p><a href="https://www.youtube.com/watch?v=A9D6NXBJdwU">Lecture video</a></p>
+<h2 id="_2">タスク</h2>
+<p>動画は画像を時系列データとした<code>(T x 3 x H x W)</code>のテンサーで扱う。<code>(3 x T x H x W)</code>の時もある。</p>
+<p>画像系のタスクは主に</p>
+<ol>
+<li>Classification (whole image)</li>
+<li>Semantic Segmentation (Pixelwise Classification)</li>
+<li>Object Detection (Find bounding box)</li>
+<li>Instance Segmentation (Predict shape)</li>
+</ol>
+<p>があり、動画データはこれを連続的に行う。</p>
+<h2 id="1-video-classification">1. Video Classification</h2>
+<ul>
+<li>動画をクラス分類するタスク、画像と違い物体が何か当てる以外にも一連の動きから人間の動作を分類したりする。</li>
+</ul>
+<p><img src=./attachment/1.png width=400></p>
+<ul>
+<li>動画の全般的な問題として<strong>データが大きすぎる</strong>。無圧縮だと1エントリー1 byteとしてHD動画１分で10GBくらい。なのでFPSと解像度を下げた動画の一部分だけを学習させる。モデルの評価は動画の一部をオーバーサンプリングして平均精度を取ることで動画全体への精度がわかる。</li>
+</ul>
+<p><img src=./attachment/2.png width=400></p>
+<h3 id="1-1-single-frame-cnn">1-1. Single Frame CNN</h3>
+<p>各フレームを別々の画像として独立したCNNで分類する手法。長めの動画を学習させて正答率をフレーム数で平均した精度を向上させていく。画像同士の関係を考慮しないので一見するとダメなモデルっぽいが実は普通に実用レベルで性能が良いらしい。動画分類をする時はこれをベースにやるといい。</p>
+<p><img src=./attachment/3.png width=400></p>
+<h3 id="1-2-late-fusion">1-2. Late Fusion</h3>
+<p>上のモデルをMLPに接続したモデル。フレーム毎の特徴量を一つに統合するので交差エントロピーで学習できてフレーム同士の関係も学習できるがFC層で過学習を起こしやすい。対策として特徴量の統合時に<code>T, H, W</code>をPoolingして<code>D</code>次元データに落とし込む。これらの手法もシンプルなのでまず試したいモデル。</p>
+<p><img src=./attachment/4.png width=400></p>
+<p>しかし特徴量を統合するのが遅いので、<strong>動画の小さい動きを学習できない</strong>。例えば、人が歩いてるか立っているかは足の小さな動きで判断するが、FC層に来る前にこれらの小さい特徴量は失われやすい。</p>
+<p>### 1-3. Early Fusion
+先に各フレームの特徴量を抽出するのではなく、<code>(3 x T x H x W)</code>の動画を<code>(3T x H x W)</code>になるように畳み込み（特徴量の統合）してから、3次元テンサーとしてから2DCNNで学習するモデル。ピクセルの細かい変化も２DCNNが学習できるが、時系列データを一回の畳み込みで処理するのでそこら辺の特徴量は上手く表現されない。</p>
+<p><img src=./attachment/5.png width=400></p>
+<h3 id="1-3-slow-fusion">1-3. Slow Fusion</h3>
+<p>Early Fusionでは縦横での畳み込みしか行わなず時系列の情報は失われていたが、縦横に加え時間軸も加えた3次元で畳み込みを行い、時間と空間の特徴を徐々に統合していく手法。</p>
+<h3 id="1-4">1-4.データセット</h3>
+<ul>
+<li><strong>Sport-1M</strong>: YouTubeの100万枚の動画に487のスポーツのカテゴリーが付与されている</li>
+</ul>
+<hr />
+<h2 id="_3">各手法の比較</h2>
+<p><img src=./attachment/6.png width=400></p>
+<ul>
+<li>
+<p>Single Frame
+  シンプルだが統合系に劣らない性能、とりあえずこれを最初に試そう。</p>
+</li>
+<li>
+<p>Early</p>
+</li>
+</ul>
+<p>縦横で畳み込む為画像としての学習は強いが、<strong>Time shift invavriant</strong>じゃないという弱点もある。
+  これはフィルターの奥行きがそのピクセルの時間による変化を学習しちゃうのが原因で、例えば最初の方で人が立ち上がる動画を学習したとして、その動画を数フレームずらした場合フィルターも奥にそのフレーム分ズレる必要がある。</p>
+<pre><code>&lt;img src=./attachment/7.png width=200&gt;
+</code></pre>
+<ul>
+<li>
+<p>Slow</p>
+<p>縦横と時間軸でフィルターを動かすのでtime shift-invariantになる。入力<code>(Cin x T x H x W)</code>を<code>(Cin x Cout x 3 x 3 x 3)</code>フィルターで処理すれば(三つの３はTHW用)同じ形で出力するので出力も見える化できる。3DCNNは絶賛進化中な模様。Conv2DをConv3DにしたVGG<strong>C3D</strong>が高性能だが計算量は非常に多い。3D-ResNetで一気にディープに。</p>
+</li>
+</ul>
+<h2 id="2">2. 行動認識</h2>
+<p>人の動きから何をしているか予測するタスク。</p>
+<h3 id="2-1-optical-flow">2-1. Optical Flow</h3>
+<p>各フレームの画像特徴量に追加で連続した2フレーム間の物体の動きの見え方のパターンを学習する（ピクセルの動きと言うべきか）。前者をSpatial stream, 後者をTemporal streamという別のネットワークで学習しクラススコアを平均で統合する。
+層が深いモデルがこのアーキテクチャーに対応したらやばいらしい。</p>
                 
               
               
@@ -1013,12 +1168,12 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tracking", "navigation.expand"], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044"}, "search": "../../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tracking", "navigation.expand"], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.a1c7c35e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a1c7c35e.min.js"></script>
       
-        <script src="../../../js/extra.js"></script>
+        <script src="../../js/extra.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
