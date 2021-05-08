@@ -8,8 +8,18 @@ theme:
     - navigation.tracking
     - navigation.expand
   palette:
-    primary: light green
-    scheme: preference
+    - media: "(prefers-color-scheme: light)"
+      primary: light green
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: light green
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
   custom_dir: overrides
 
 markdown_extensions:
