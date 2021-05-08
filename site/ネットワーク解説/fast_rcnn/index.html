@@ -9,19 +9,19 @@
       
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
     
     
       
-        <title>pytorchによるディープラーニング実装の流れ - Cheep Learning</title>
+        <title>Faster R-CNN まとめ - Cheep Learning</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.bde7dde4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bde7dde4.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
         
           
           
@@ -44,7 +44,7 @@
     
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:600,800">
     
-      <link rel="stylesheet" href="../../../css/custom.css">
+      <link rel="stylesheet" href="../../css/custom.css">
     
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     
@@ -63,7 +63,7 @@
     <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="light-green" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pytorch" class="md-skip">
+        <a href="#faster-r-cnn" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -82,7 +82,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="ヘッダー">
-    <a href="../../.." title="Cheep Learning" class="md-header__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
+    <a href="../.." title="Cheep Learning" class="md-header__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              pytorchによるディープラーニング実装の流れ
+              Faster R-CNN まとめ
             
           </span>
         </div>
@@ -159,7 +159,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../.." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Welcome !!
     </a>
   </li>
@@ -171,7 +171,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../../intro/" class="md-tabs__link">
+    <a href="../../intro/" class="md-tabs__link">
       Artificial Intelligenceを学ぶ方へ
     </a>
   </li>
@@ -186,7 +186,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/image/" class="md-tabs__link">
+      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/image/" class="md-tabs__link">
         100本ノック
       </a>
     </li>
@@ -195,8 +195,6 @@
       
         
   
-  
-    
   
 
 
@@ -209,7 +207,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../PyTorch/PyTorch/pytorch/" class="md-tabs__link">
         PyTorch
       </a>
     </li>
@@ -227,7 +225,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../UofT/game_theory/" class="md-tabs__link">
+      <a href="../../UofT/game_theory/" class="md-tabs__link">
         UofT
       </a>
     </li>
@@ -243,7 +241,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-tabs__link">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-tabs__link">
         その他
       </a>
     </li>
@@ -259,7 +257,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../%E3%83%84%E3%83%BC%E3%83%AB/heroku_st/" class="md-tabs__link">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/heroku_st/" class="md-tabs__link">
         ツール
       </a>
     </li>
@@ -269,13 +267,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/GNN/" class="md-tabs__link">
+      <a href="../GNN/" class="md-tabs__link md-tabs__link--active">
         ネットワーク解説
       </a>
     </li>
@@ -291,7 +291,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/3dvision/" class="md-tabs__link">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/3dvision/" class="md-tabs__link">
         深層学習
       </a>
     </li>
@@ -318,7 +318,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Cheep Learning" class="md-nav__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
+    <a href="../.." title="Cheep Learning" class="md-nav__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -337,7 +337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Welcome !!
       </a>
     </li>
@@ -352,7 +352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../intro/" class="md-nav__link">
+      <a href="../../intro/" class="md-nav__link">
         Artificial Intelligenceを学ぶ方へ
       </a>
     </li>
@@ -388,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/image/" class="md-nav__link">
+      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/image/" class="md-nav__link">
         画像処理100本ノック答え
       </a>
     </li>
@@ -400,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/numpy/" class="md-nav__link">
+      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/numpy/" class="md-nav__link">
         Numpy100本ノック答え
       </a>
     </li>
@@ -419,14 +419,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         PyTorch
@@ -442,14 +440,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" data-md-state="indeterminate" type="checkbox" id="__nav_4_1" checked>
       
       <label class="md-nav__link" for="__nav_4_1">
         PyTorch
@@ -465,141 +461,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          pytorchによるディープラーニング実装の流れ
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch/pytorch/" class="md-nav__link">
         pytorchによるディープラーニング実装の流れ
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#datasetdataloader" class="md-nav__link">
-    DatasetとDataLoaderについて
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    ネットワークモデルについて
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#forward" class="md-nav__link">
-    順伝播(forward)について
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    損失関数について
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    最適化手法について
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    学習と検証、推論について
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    転移学習の実装
-  </a>
-  
-    <nav class="md-nav" aria-label="転移学習の実装">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dataset" class="md-nav__link">
-    Datasetを作成
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dataloader" class="md-nav__link">
-    DataLoaderを作成
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    損失関数を定義
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    最適化手法を設定
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    学習・検証を実施
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    ファインチューニングの実装
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -609,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../video/" class="md-nav__link">
+      <a href="../../PyTorch/PyTorch/video/" class="md-nav__link">
         PyTorch Dataset API で動画データを扱う方法
       </a>
     </li>
@@ -648,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyTorch%20Lightning/checkpoint/" class="md-nav__link">
+      <a href="../../PyTorch/PyTorch%20Lightning/checkpoint/" class="md-nav__link">
         PyTorch LightningのCheckpointCallbackの便利機能
       </a>
     </li>
@@ -660,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyTorch%20Lightning/data_module/" class="md-nav__link">
+      <a href="../../PyTorch/PyTorch%20Lightning/data_module/" class="md-nav__link">
         【PyTorch Lightning】LightningDataModuleについて
       </a>
     </li>
@@ -672,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyTorch%20Lightning/lightning_bolts/" class="md-nav__link">
+      <a href="../../PyTorch/PyTorch%20Lightning/lightning_bolts/" class="md-nav__link">
         PyTorch Lightning Boltsの使い方
       </a>
     </li>
@@ -684,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyTorch%20Lightning/pytorchvideo/" class="md-nav__link">
+      <a href="../../PyTorch/PyTorch%20Lightning/pytorchvideo/" class="md-nav__link">
         PyTorchVideo 使い方
       </a>
     </li>
@@ -732,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../UofT/game_theory/" class="md-nav__link">
+      <a href="../../UofT/game_theory/" class="md-nav__link">
         Game theory
       </a>
     </li>
@@ -744,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../UofT/note/" class="md-nav__link">
+      <a href="../../UofT/note/" class="md-nav__link">
         Note
       </a>
     </li>
@@ -786,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-nav__link">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-nav__link">
         Pythonのお勉強について
       </a>
     </li>
@@ -798,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E3%81%9D%E3%81%AE%E4%BB%96/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC/" class="md-nav__link">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC/" class="md-nav__link">
         ワークフロー
       </a>
     </li>
@@ -840,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E3%83%84%E3%83%BC%E3%83%AB/heroku_st/" class="md-nav__link">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/heroku_st/" class="md-nav__link">
         StreamlitアプリをHerokuでティプロイする
       </a>
     </li>
@@ -852,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E3%83%84%E3%83%BC%E3%83%AB/plantuml/" class="md-nav__link">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/plantuml/" class="md-nav__link">
         PlantUMLのススメ
       </a>
     </li>
@@ -864,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E3%83%84%E3%83%BC%E3%83%AB/tmux/" class="md-nav__link">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/tmux/" class="md-nav__link">
         tmuxはええぞ
       </a>
     </li>
@@ -883,12 +749,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" data-md-state="indeterminate" type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
       <label class="md-nav__link" for="__nav_8">
         ネットワーク解説
@@ -906,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/GNN/" class="md-nav__link">
+      <a href="../GNN/" class="md-nav__link">
         Graph Attention Network 解説
       </a>
     </li>
@@ -916,11 +784,173 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/fast_rcnn/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Faster R-CNN まとめ
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Faster R-CNN まとめ
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    他の物体検出のモデルとの比較
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    歴史
+  </a>
+  
+    <nav class="md-nav" aria-label="歴史">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#r-cnn" class="md-nav__link">
+    R-CNN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fast-r-cnn" class="md-nav__link">
+    Fast R-CNN
+  </a>
+  
+    <nav class="md-nav" aria-label="Fast R-CNN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#r-cnn_1" class="md-nav__link">
+    R-CNNの問題点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    改善方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faster-r-cnn_1" class="md-nav__link">
+    Faster R-CNN
+  </a>
+  
+    <nav class="md-nav" aria-label="Faster R-CNN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fast-r-cnn_1" class="md-nav__link">
+    Fast R-CNNの問題点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    改善点
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    類似モデルなど（詳細は割愛）
+  </a>
+  
+    <nav class="md-nav" aria-label="類似モデルなど（詳細は割愛）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yolo" class="md-nav__link">
+    Yolo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sgd" class="md-nav__link">
+    SGD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cascade-r-cnn" class="md-nav__link">
+    Cascade R-CNN
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    モデルの構造
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    論文での工夫点
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -930,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/mesh_rcnn/" class="md-nav__link">
+      <a href="../mesh_rcnn/" class="md-nav__link">
         Mesh RCNNのお気持ちを理解したい
       </a>
     </li>
@@ -942,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/posenet/" class="md-nav__link">
+      <a href="../posenet/" class="md-nav__link">
         Posenet
       </a>
     </li>
@@ -984,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/3dvision/" class="md-nav__link">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/3dvision/" class="md-nav__link">
         3D vision
       </a>
     </li>
@@ -996,7 +1026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/lstm/" class="md-nav__link">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/lstm/" class="md-nav__link">
         【もうやりたくない】RNNとLSTMの理解とNumPyによる実装
       </a>
     </li>
@@ -1008,7 +1038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/video_task/" class="md-nav__link">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/video_task/" class="md-nav__link">
         動画を使った深層学習
       </a>
     </li>
@@ -1047,87 +1077,112 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#datasetdataloader" class="md-nav__link">
-    DatasetとDataLoaderについて
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    ネットワークモデルについて
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#forward" class="md-nav__link">
-    順伝播(forward)について
+    他の物体検出のモデルとの比較
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    損失関数について
+    歴史
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    最適化手法について
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    学習と検証、推論について
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    転移学習の実装
-  </a>
-  
-    <nav class="md-nav" aria-label="転移学習の実装">
+    <nav class="md-nav" aria-label="歴史">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dataset" class="md-nav__link">
-    Datasetを作成
+  <a href="#r-cnn" class="md-nav__link">
+    R-CNN
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#dataloader" class="md-nav__link">
-    DataLoaderを作成
+  <a href="#fast-r-cnn" class="md-nav__link">
+    Fast R-CNN
+  </a>
+  
+    <nav class="md-nav" aria-label="Fast R-CNN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#r-cnn_1" class="md-nav__link">
+    R-CNNの問題点
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    損失関数を定義
+  <a href="#_3" class="md-nav__link">
+    改善方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faster-r-cnn_1" class="md-nav__link">
+    Faster R-CNN
+  </a>
+  
+    <nav class="md-nav" aria-label="Faster R-CNN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fast-r-cnn_1" class="md-nav__link">
+    Fast R-CNNの問題点
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    最適化手法を設定
+  <a href="#_4" class="md-nav__link">
+    改善点
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    類似モデルなど（詳細は割愛）
+  </a>
+  
+    <nav class="md-nav" aria-label="類似モデルなど（詳細は割愛）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yolo" class="md-nav__link">
+    Yolo
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    学習・検証を実施
+  <a href="#sgd" class="md-nav__link">
+    SGD
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cascade-r-cnn" class="md-nav__link">
+    Cascade R-CNN
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1137,8 +1192,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    ファインチューニングの実装
+  <a href="#_6" class="md-nav__link">
+    モデルの構造
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    論文での工夫点
   </a>
   
 </li>
@@ -1156,165 +1218,155 @@
               
                 
                 
-                <h1 id="pytorch">pytorchによるディープラーニング実装の流れ</h1>
+                <h1 id="faster-r-cnn">Faster R-CNN まとめ</h1>
+<ul>
+<li>物体検出のモデルの一つ</li>
+<li>精度が高く速度が遅い<ul>
+<li>速度が必要なく、精度が欲しい時に使うモデル</li>
+</ul>
+</li>
+</ul>
+<h2 id="_1">他の物体検出のモデルとの比較</h2>
+<p><img alt="物体検出モデルの精度x速さ" src="../attachment/モデルの比較.png" /></p>
+<table>
+<thead>
+<tr>
+<th>モデル名</th>
+<th>Yolo v3</th>
+<th>SSD</th>
+<th>Faster R-CNN</th>
+<th>CenterNet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>精度</td>
+<td>悪い</td>
+<td>少し悪い</td>
+<td>少し良い</td>
+<td>良い</td>
+</tr>
+<tr>
+<td>速さ</td>
+<td>早い</td>
+<td>少し早い</td>
+<td>少し遅い</td>
+<td>遅い</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">歴史</h2>
+<h3 id="r-cnn">R-CNN</h3>
 <ol>
-<li>前処理、後処理、ネットワークモデルの出力を確認</li>
-<li>Datasetの作成</li>
-<li>DataLoaderの作成</li>
-<li>ネットワークモデルの作成</li>
-<li>順伝播(forward)の定義</li>
-<li>損失関数の定義</li>
-<li>最適化手法の設定</li>
-<li>学習検証の実施</li>
-<li>テストデータで推論</li>
+<li>Selective Searchを用いて物体らしいところを2000個ほど検出<ul>
+<li>ここは人が作ったアルゴリズム</li>
+<li>テクスチャ、色などで物体を識別する</li>
+</ul>
+</li>
+<li>検出したところをクロップし、一定の大きさにしてCNNで特徴量抽出</li>
+<li>SVMでクラス分類、回帰でBBOXの位置調整</li>
 </ol>
-<p><strong>1~9までざっくりとまとめとくで</strong></p>
-<h2 id="datasetdataloader">DatasetとDataLoaderについて</h2>
+<h3 id="fast-r-cnn">Fast R-CNN</h3>
+<h4 id="r-cnn_1">R-CNNの問題点</h4>
 <ul>
-<li><strong>Datasetクラス</strong><ul>
-<li>入力するデータとそのラベルなどをペアにして保持したクラス</li>
-<li>データに対する前処理クラスのインスタンスを与え、対象データのファイルを読み込む際に前処理を自動で適用することができる</li>
+<li>R-CNNはCNN,SVM,BBOX回帰を別々に学習しなければならない</li>
+<li>実行時間が遅い</li>
+</ul>
+<h4 id="_3">改善方法</h4>
+<ul>
+<li>RoI poolingを導入することで、Selective Search→CNN時の重複部分を無くす<ul>
+<li>特徴抽出のためのCNNの後に、幅の大きさが可変的なPooling層を入れる</li>
+<li>こうすることで、不均一なサイズの入力に対し固定サイズの特徴ベクトルを得る</li>
 </ul>
 </li>
-<li><strong>DataLoaderクラス</strong><ul>
-<li>Datasetからどのようにデータを取り出すのかを設定するクラス</li>
-<li>Datasetからミニバッチを取り出しやすい</li>
+<li>CNN,SVM,BBOX回帰を単一のモデルにする</li>
+<li>流れはR-CNNと同じ</li>
+</ul>
+<h3 id="faster-r-cnn_1">Faster R-CNN</h3>
+<h4 id="fast-r-cnn_1">Fast R-CNNの問題点</h4>
+<ul>
+<li>Selective Searchが遅い</li>
+<li>Selective Search（候補領域の提案）は学習しない</li>
+</ul>
+<h4 id="_4">改善点</h4>
+<ul>
+<li>Selective SearchをRegion Proposal Networkに置換<ul>
+<li>小さなCNNをかけた後、縦横比・サイズが異なるAnchorBOX（BBOX）で特徴抽出</li>
+<li>その後、FC層で物体か否かとBBOXの位置を回帰</li>
 </ul>
 </li>
+<li>高速化・完全なEnd2Endによる高精度化を達成</li>
 </ul>
-<h2 id="_1">ネットワークモデルについて</h2>
+<h3 id="_5">類似モデルなど（詳細は割愛）</h3>
+<h4 id="yolo">Yolo</h4>
 <ul>
-<li><strong>ネットワークモデルの作成</strong><ul>
-<li>ゼロから全て自分で作成するケース</li>
-<li>学習済みモデルをロードして用いるケース</li>
-<li>学習済みモデルをベースに自分で改変するケース</li>
+<li>画像をグリッド状に分割する</li>
+<li>リアルタイム性が必要なものに使用</li>
 </ul>
-</li>
-<li>ディープラーニングの応用手法では学習済みモデルをベースに自分で改変するケースが多い</li>
-</ul>
-<h2 id="forward">順伝播(forward)について</h2>
+<h4 id="sgd">SGD</h4>
 <ul>
-<li>ディープラーニングの応用手法はネットワークのモデルが途中で分岐したりするため、順伝播が複雑な場合が多い</li>
-<li>単純なネットークモデルは前から後ろに流れるだけだが、そうはいかないのできちんと順伝播関数(forward)を定義すること</li>
+<li>畳み込みの異なる段階の特徴量を使用する</li>
+<li>低解像度・小さな画像に強い</li>
 </ul>
-<h2 id="_2">損失関数について</h2>
+<h4 id="cascade-r-cnn">Cascade R-CNN</h4>
 <ul>
-<li>誤差逆伝播(Backpropagation)をするために定義する</li>
-<li>単純なディープラーニングの手法であれば２乗誤差など単純な関数だが、ディープラーニングの応用手法ではもっと複雑なものが使われる</li>
+<li>Faster R-CNNの改良</li>
+<li>IoUの閾値を段階的に上げていく</li>
+<li>精度は良いが、計算資源を要求</li>
 </ul>
-<h2 id="_3">最適化手法について</h2>
-<ul>
-<li>ネットワークモデルの結合パラメータを学習させる際に使うもの</li>
-<li>誤差逆伝播によって結合パラメータの誤差に対する勾配が求まるので、その勾配を使って、結合パラメータの修正量をどのように計算するのかを設定する</li>
-<li>Momentum SGD、Adamなどがある</li>
-</ul>
-<h2 id="_4">学習と検証、推論について</h2>
-<ul>
-<li>基本的にはepochごとに訓練データでの性能と検証データでの性能を確認する</li>
-<li>検証データの性能が向上しなくなったら、その後は訓練データに対してか学習に陥っていくため、そのタイミングで学習を終了させることが多い<ul>
-<li>early stopping</li>
-</ul>
-</li>
-<li>学習が終了後にテストデータに対して推論を行う</li>
-</ul>
-<h2 id="_5">転移学習の実装</h2>
+<h2 id="_6">モデルの構造</h2>
+<p><img alt="論文画像" src="../attachment/FasterRCNNの構造.png" /></p>
 <ol>
-<li>画像データからDatasetを作成する</li>
-<li>DatasetからDataLoaderを作成</li>
-<li>学習済みモデルの出力層を任意の形に変更</li>
-<li>
-<p>出力層の結合パラメータのみを学習させ、転移学習を実装</p>
-</li>
-<li>
-<p><strong>転移学習</strong></p>
-<ul>
-<li>学習済みモデルをベースに、最終の出力層を付け替えて学習させる手法</li>
-<li>最終出力層を自前のデータに対応した出力層に付け替えて、付け替えた出力層への結合パラメータを手元にある少量のデータで学習し直すということ</li>
-<li>学習済みモデルをベースとするので自前のデータが少量でも性能のいいディープラーニングを実現しやすいというメリットが！</li>
+<li>画像を畳み込み層に入れ、特徴マップを出す<ul>
+<li>image - conv_layers - feature_maps</li>
 </ul>
 </li>
-<li><strong>ファインチューニング</strong><ul>
-<li>学習済みモデルをベースに出力層などを変更したモデルを構築し、自前のデータでニューラルネットワーク・モデルの結合パラメータを学習させる手法</li>
-<li>結合パラメータの初期値には学習済みのモデルのパラメータを利用する</li>
-<li>転移学習とは異なり、出力層・出力層に近い部分だけでなく、全層のパラメータを再学習させる</li>
-<li>入力層に近い部分のパラメータは学習率を小さく設定し、出力層に近い部分のパラメータは学習率を大きく設定することが一般的</li>
-<li>転移学習と同じで、自前のデータが少量でも性能のいいでディープラーニングを実現しやすいというメリットがある</li>
-<li>最適化手法の設定部分が転移学習と異なる</li>
+<li>特徴マップにnxn（論文ではn=3）のConv層をかけた後、FC層のような畳み込み層（kernel=1,stride=1にすることで総結合っぽくする）で物体らしさと位置（x1,x2,w,h）を出力<ul>
+<li>Region Proposal Network</li>
+</ul>
+</li>
+<li>1の特徴マップと2の提案領域から、BBOXを計算・分類する<ul>
+<li>RoI pooling</li>
+<li>classifier</li>
 </ul>
 </li>
 </ol>
-<h3 id="dataset">Datasetを作成</h3>
+<h2 id="_7">論文での工夫点</h2>
 <ul>
-<li>Datasetを作成する場合、torchvision.datasets.ImageFolderクラスを利用する手法が簡単</li>
-<li>上のやり方は簡単だが、Datasetは自分でも作れる</li>
-<li><strong>Data Augmentation</strong><ul>
-<li>トレーニングデータに対してランダムに異なる画像変換を適用し、データを水増しする手法。以下のようなクラスが用いられる。</li>
-<li><strong>randomresizedcrop</strong>：指定されたPILイメージをランダムなサイズとアスペクト比にトリミングするクラス</li>
-<li>（使用例）<strong>RandomResizedCrop(resize, scale=(0.5~1.0))</strong><ul>
-<li>0.5~1.0の大きさで拡大縮小</li>
-<li>さらにアスペクト比を&frac34;から4/3の間のいずれかで変更して画像を横もしくは縦に引き伸ばす</li>
-<li>最後にresizeで指定した大きさで画像を切り出す</li>
-</ul>
-</li>
-<li><strong>RandomHorizontalFlip</strong>：指定された確率で、指定されたPIL画像を水平方向にランダムに反転するクラス</li>
-<li>（使用例）<strong>RandomHorizontalFlip()</strong><ul>
-<li>画像の左右を50%の確率で反転させる操作</li>
-</ul>
-</li>
-<li><a href="https://pytorch.org/docs/stable/torchvision/transforms.html">torchvision.transforms</a></li>
-<li>albumentationsもええぞ</li>
+<li>RPN部分では、そのまま学習すると負のサンプルの影響が大きいため、正負の割合が１対１になるようにサンプリングする</li>
+<li>上記のモデルの構造だと、厳密な学習ではなく近似解になる<ul>
+<li>こちらの方が学習は早い</li>
+<li>論文ではRPNとFast R-CNN部分を交互に学習していた</li>
 </ul>
 </li>
 </ul>
-<p>データの水増しを行い多様なデータを学習することでテストデータに対する性能（汎化性能）が向上しやすくなる！</p>
-<h3 id="dataloader">DataLoaderを作成</h3>
+<h1 id="centernet">CenterNetとは</h1>
 <ul>
-<li>Datasetを利用して作成する</li>
-<li><a href="https://pytorch.org/docs/stable/data.html">torch.utils.data.DataLoader</a></li>
-<li><strong>shuffle=True</strong><ul>
-<li>画像を取り出す順番がランダムになるようにする</li>
+<li>CenterNetという名前の2種類モデルがあるが、Object as Pointsの方</li>
 </ul>
-</li>
-</ul>
-<h3 id="_6">損失関数を定義</h3>
+<h2 id="_8">歴史</h2>
 <ul>
-<li>通常のクラス分類はクロスエントロピー誤差関数を使用</li>
-<li><strong>クロスエントロピー誤差関数</strong><ul>
-<li>全結合層からの出力に対してソフトマックス関数を適用したあと、クラス分類の損失関数であるThe negative log likelihood loss(負の対数尤度損失?)を計算する</li>
+<li>Heatmapベースの手法<ul>
+<li>Faster R-CNNなどより後</li>
+<li>アンカーの代わりにHeatmapを用いる</li>
+</ul>
+</li>
+<li>CornerNet（2018/8）が源流<ul>
+<li>アンカー→BBOX回帰ではなく、Heatmapで左上・右下をキーポイントとして学習する</li>
 </ul>
 </li>
 </ul>
-<h3 id="_7">最適化手法を設定</h3>
+<h2 id="_9">モデルの構造</h2>
 <ul>
-<li>(深層学習の最適化アルゴリズム)[https://qiita.com/ZoneTsuyoshi/items/8ef6fa1e154d176e25b8]</li>
-<li>requires_grad<ul>
-<li>自動微分の対象の勾配の計算をするかしないかを設定するもの</li>
-</ul>
+<li>アンカーではなく、ヒートマップでクラスごとに物体の中心を予測</li>
+<li>
+<p>高さ・幅・クラス・などの特性は、各位置で回帰する</p>
 </li>
-<li><strong>requires_grad = True</strong><ul>
-<li>誤差逆伝播で勾配が計算され、学習時に値が変化する(自動微分を行う)</li>
-</ul>
+<li>
+<p>画像を畳み込み層のみで出来たネットワークに入れ、ヒートマップを作成する</p>
 </li>
-<li><strong>requires_grad = False</strong><ul>
-<li>パラメータを固定させ、更新したくない時に使う(自動微分を行わない)</li>
-</ul>
-</li>
-</ul>
-<h3 id="_8">学習・検証を実施</h3>
-<ul>
-<li>Dropoutや勾配計算は訓練時にのみ行い、予測時には使用しないのが通常<ul>
-<li>なので、ネットワークを訓練モード、検証モードにしてわける</li>
-<li>（例）net.train(), net.eval()</li>
-</ul>
-</li>
-<li>検証時には勾配を計算する必要がないので、if文で場合分けを行う</li>
-</ul>
-<h2 id="_9">ファインチューニングの実装</h2>
-<ul>
-<li>最適化の方法が転移学習と異なる<ul>
-<li>全層のパラメータを学習できるようにoptimizerを設定</li>
-</ul>
-</li>
+<li>ヒートマップのピーク（周囲8箇所と比較して）を物体の中心とする</li>
+<li>必要に応じて、物体の中心の特徴ベクトルから、物体のサイズ・奥行き・向き・姿勢などを推定する</li>
 </ul>
                 
               
@@ -1335,12 +1387,12 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tracking", "navigation.expand"], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044"}, "search": "../../../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tracking", "navigation.expand"], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044"}, "search": "../../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
       
-        <script src="../../../js/extra.js"></script>
+        <script src="../../js/extra.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
