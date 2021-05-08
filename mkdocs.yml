@@ -22,6 +22,10 @@ theme:
         name: Switch to light mode
   custom_dir: overrides
 
+google_analytics:
+  - G-8JSVH7S4KX
+  - auto
+
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
