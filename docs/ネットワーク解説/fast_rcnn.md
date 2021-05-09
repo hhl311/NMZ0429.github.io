@@ -5,7 +5,7 @@
     - 速度が必要なく、精度が欲しい時に使うモデル
 
 ## 他の物体検出のモデルとの比較
-![物体検出モデルの精度x速さ](../attachment/モデルの比較.png)
+![物体検出モデルの精度x速さ](./attachment/モデルの比較.png)
 
 | モデル名 | Yolo v3 | SSD      | Faster R-CNN  | CenterNet |
 | -------- | ------- | -------- | -------- | --------- |
@@ -54,7 +54,7 @@
 - 精度は良いが、計算資源を要求
 
 ## モデルの構造
-![論文画像](../attachment/FasterRCNNの構造.png)
+![論文画像](./attachment/FasterRCNNの構造.png)
 
 1. 画像を畳み込み層に入れ、特徴マップを出す
     - image - conv_layers - feature_maps

@@ -14,7 +14,7 @@
     
     
       
-        <title>PyTorch Dataset API で動画データを扱う方法 - Cheep Learning</title>
+        <title>PyTorchの分散計算処理を使う - Cheep Learning</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pytorch-dataset-api" class="md-skip">
+        <a href="#pytorch" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PyTorch Dataset API で動画データを扱う方法
+              PyTorchの分散計算処理を使う
             
           </span>
         </div>
@@ -235,7 +235,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../dp/" class="md-tabs__link md-tabs__link--active">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         PyTorch
       </a>
     </li>
@@ -507,11 +507,113 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../dp/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          PyTorchの分散計算処理を使う
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         PyTorchの分散計算処理を使う
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    実験環境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    使用するAPI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    注意
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributed-rpc-frameworkhttpspytorchorgdocsstablerpchtmlbasics" class="md-nav__link">
+    Distributed RPC Framework(https://pytorch.org/docs/stable/rpc.html#basics)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributed-autograd" class="md-nav__link">
+    Distributed Autograd
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributed-optimizer" class="md-nav__link">
+    Distributed Optimizer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    使用例
+  </a>
+  
+    <nav class="md-nav" aria-label="使用例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synconpolicy" class="md-nav__link">
+    SyncOnPolicy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asynconpolicyparameterserver" class="md-nav__link">
+    AsyncOnPolicy(ParameterServer)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -531,58 +633,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          PyTorch Dataset API で動画データを扱う方法
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../video/" class="md-nav__link">
         PyTorch Dataset API で動画データを扱う方法
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#video-recognition" class="md-nav__link">
-    今Video Recognitionの分野がアツい？
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    やり方
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1072,16 +1127,71 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#video-recognition" class="md-nav__link">
-    今Video Recognitionの分野がアツい？
+  <a href="#_1" class="md-nav__link">
+    実験環境
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    やり方
+  <a href="#api" class="md-nav__link">
+    使用するAPI
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    注意
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributed-rpc-frameworkhttpspytorchorgdocsstablerpchtmlbasics" class="md-nav__link">
+    Distributed RPC Framework(https://pytorch.org/docs/stable/rpc.html#basics)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributed-autograd" class="md-nav__link">
+    Distributed Autograd
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributed-optimizer" class="md-nav__link">
+    Distributed Optimizer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    使用例
+  </a>
+  
+    <nav class="md-nav" aria-label="使用例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synconpolicy" class="md-nav__link">
+    SyncOnPolicy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asynconpolicyparameterserver" class="md-nav__link">
+    AsyncOnPolicy(ParameterServer)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1098,44 +1208,137 @@
               
                 
                 
-                <h1 id="pytorch-dataset-api">PyTorch Dataset API で動画データを扱う方法</h1>
-<h2 id="video-recognition">今Video Recognitionの分野がアツい？</h2>
-<p>YouTubeやTikTok等大規模な動画データを収集しやすくなった昨今、<code>3DCNN</code>や <code>ViT</code>を用いた動画内での姿勢推定やクラス分類が盛んに研究されています。SoTAモデルだと実装が大変ですが実は既存のCNN+LSTMなどでも結構いい精度がだせたりします。<br />
-今回はそんなVideo Recognitionをお手軽に試す上で以外と面倒くさいデータセットの作り方を書いていきます。</p>
-<p>なお、動画データは各フレームを画像データとしてそれらの集合として扱うのが一般的ですのでそこまでの変換は別途行っておいてください。<code>ffmpeg</code>や<code>torchvision.io</code>等で調べると幸せになれます。</p>
-<h2 id="_1">やり方</h2>
-<p>今回は、<strong>数フレームの動画を学習し、それがなんの動作か予測する</strong>というタスクを仮定します。例えば動画の3フレームを受け取り、それがなんの動作なのかを推論します。つまり任意の一連の4フレームと対応するラベルを出力できればおk。</p>
+                <h1 id="pytorch">PyTorchの分散計算処理を使う</h1>
+<h2 id="_1">実験環境</h2>
+<p>CUDNNインストール済みLinuxで動作確認、winはわからん</p>
+<h2 id="api">使用するAPI</h2>
+<p>torch.distributedの中の<a href="https://pytorch.org/tutorials/intermediate/rpc_tutorial.html">Distributed RPC Framework</a>というライブラリを使用する。 <br>
+torch.distributedのバックエンドは、実行時にgloo, mpi, ncclの３通りから選ぶことができる。<br>
+バックエンドによって、関数ごとに扱えるテンソル(cpu, gpu)の種類が違ってくる. <br>
+具体的にはCPU使用時にはGloo、GPU使用時にはncclを使うと良いそうだ。 <br>
+しかし、ncclを使う場合にはcpu上のテンソルは扱えず、さらに一部メソッドが使えなくなることに注意。</p>
+<p>どのメソッドが使えなくなるのか？については<a href="https://pytorch.org/docs/stable/distributed.html">公式doc</a>を参照。</p>
+<p><a href="https://pytorch.org/tutorials/beginner/dist_overview.html#data-parallel-training">Pytorchのドキュメント</a>では、</p>
+<blockquote>
+<p>Use multi-machine <strong>DistributedDataParallel</strong> and the <strong>launching script</strong>, if the application needs to scale across machine boundaries.</p>
+</blockquote>
+<p>とあり、一見するとRPCでなくこちらが使えそうに見えるが <br>
+DistributedDataParallelなどのデータ並列用APIはどちらかと言えば教師あり学習用のものであり、例えば<br></p>
+<blockquote>
+<p>In reinforcement learning, it might be relatively expensive to acquire training data from environments while the model itself can be quite small. In this case, it might be useful to spawn multiple observers running in parallel and share a single agent. In this case, the agent takes care of the training locally, but the application would still need libraries to send and receive data between observers and the trainer.</p>
+</blockquote>
+<p>といったSyncOnPolicyのシチュエーションに対応できないそうだ。
+こういったものに対応できる、より一般的なAPIとしてRPCが推奨されている。<br>
+(https://pytorch.org/tutorials/beginner/dist_overview.html#general-distributed-training)</p>
+<h2 id="_2">注意</h2>
+<p><em>RPC</em>という言葉は公式ドキュメントにおいて文脈次第で以下の事柄のいずれかを指す。混同しやすいので、注意が必要。</p>
+<ol>
+<li><a href="#anchor1">Distributed RPC Framework</a><ul>
+<li>torch.distriutedの中のライブラリ。</li>
+</ul>
+</li>
+<li>1の中のRPCという機能</li>
+<li>遠隔呼び出し一般を指す言葉 </li>
+</ol>
+<h2 id="distributed-rpc-frameworkhttpspytorchorgdocsstablerpchtmlbasics">Distributed RPC Framework(https://pytorch.org/docs/stable/rpc.html#basics)<div id='anchor1'></div></h2>
+<p>torch.distributedの中の、強化学習でメインで用いられるであろうAPI。
+上の
+windowsではサポートされていない(次の次のバージョンから部分的にサポートされる)</p>
+<p><a href="https://pytorch.org/tutorials/intermediate/rpc_param_server_tutorial.html">RPCを使ってParameter Serverを作るチュートリアル</a></p>
+<ol>
+<li>Remote Procedure Call(RPC)<ul>
+<li>リモートの関数を引数を指定して返り値を受け取るAPI<ul>
+<li>呼び出し元のユーザが返り値を受け取るまでつぎの処理に写らない（rpc_sync）</li>
+<li>呼び出し元のユーザが必要に応じて、返り値を待つ(rpc_async)</li>
+<li>呼び出し元のユーザが必要に応じて返り値への参照を待つ。(remote)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Remote Reference(RRef)<ul>
+<li>他のマシン上のオブジェクトへの参照</li>
+</ul>
+</li>
+<li>Distributed Autograd <br>
+      -　複数マシンでgradを送り合う機能を提供 <br>
+      -　複数マシン上のgradの流れを把握してgradを取ってくれるAPI</li>
+<li>Distributed Optimizer<ul>
+<li>Distributed Autogradで計算したgradで各マシンのワーカを更新してくれるAPI</li>
+</ul>
+</li>
+</ol>
+<h2 id="distributed-autograd">Distributed Autograd</h2>
+<p>リモートのマシンから送られてきたデータの計算グラフを把握し、各マシンの重みに対して勾配を計算、逆伝播させられる。</p>
+<ul>
+<li>使用例</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">torch.distributed.autograd</span> <span class="k">as</span> <span class="nn">dist_autograd</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">with</span> <span class="n">dist_autograd</span><span class="o">.</span><span class="n">context</span><span class="p">()</span> <span class="k">as</span> <span class="n">context_id</span><span class="p">:</span>
+<span class="o">&gt;&gt;&gt;</span>   <span class="n">t1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span>   <span class="n">t2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span>   <span class="n">loss</span> <span class="o">=</span> <span class="n">rpc</span><span class="o">.</span><span class="n">rpc_sync</span><span class="p">(</span><span class="s2">&quot;worker1&quot;</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span>   <span class="n">dist_autograd</span><span class="o">.</span><span class="n">backward</span><span class="p">(</span><span class="n">context_id</span><span class="p">,</span> <span class="p">[</span><span class="n">loss</span><span class="p">])</span>
+</code></pre></div>
+<h2 id="distributed-optimizer">Distributed Optimizer</h2>
+<p>https://pytorch.org/docs/master/rpc.html#module-torch.distributed.optim
+渡されたリモート/ローカル両方のパラメータ（への参照 = rrefs）に対する勾配を計算する。 <br>
+例</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.multiprocessing</span> <span class="k">as</span> <span class="nn">mp</span>
+<span class="kn">import</span> <span class="nn">torch.distributed.autograd</span> <span class="k">as</span> <span class="nn">dist_autograd</span>
+<span class="kn">from</span> <span class="nn">torch.distributed</span> <span class="kn">import</span> <span class="n">rpc</span>
+<span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">optim</span>
+<span class="kn">from</span> <span class="nn">torch.distributed.optim</span> <span class="kn">import</span> <span class="n">DistributedOptimizer</span>
 
-<span class="k">class</span> <span class="nc">VideoDataset</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frames</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">idxs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;a b c d e&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="s2">&quot;a b c d e&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">frames</span> <span class="o">=</span> <span class="n">frames</span>
+<span class="k">def</span> <span class="nf">random_tensor</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">5</span> <span class="o">-</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frames</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_run_process</span><span class="p">(</span><span class="n">rank</span><span class="p">,</span> <span class="n">dst_rank</span><span class="p">,</span> <span class="n">world_size</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;worker</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rank</span><span class="p">)</span>
+    <span class="n">dst_name</span> <span class="o">=</span> <span class="s2">&quot;worker</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dst_rank</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
-        <span class="n">res</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">idx</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">frames</span><span class="p">)]</span>
-        <span class="k">return</span> <span class="n">res</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="n">idx</span> <span class="o">+</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frames</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)]</span>
+    <span class="c1"># Initialize RPC.</span>
+    <span class="n">rpc</span><span class="o">.</span><span class="n">init_rpc</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">rank</span><span class="o">=</span><span class="n">rank</span><span class="p">,</span>
+        <span class="n">world_size</span><span class="o">=</span><span class="n">world_size</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Use a distributed autograd context.</span>
+    <span class="k">with</span> <span class="n">dist_autograd</span><span class="o">.</span><span class="n">context</span><span class="p">()</span> <span class="k">as</span> <span class="n">context_id</span><span class="p">:</span>
+        <span class="c1"># Forward pass (create references on remote nodes).</span>
+        <span class="n">rref1</span> <span class="o">=</span> <span class="n">rpc</span><span class="o">.</span><span class="n">remote</span><span class="p">(</span><span class="n">dst_name</span><span class="p">,</span> <span class="n">random_tensor</span><span class="p">)</span>
+        <span class="n">rref2</span> <span class="o">=</span> <span class="n">rpc</span><span class="o">.</span><span class="n">remote</span><span class="p">(</span><span class="n">dst_name</span><span class="p">,</span> <span class="n">random_tensor</span><span class="p">)</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="n">rref1</span><span class="o">.</span><span class="n">to_here</span><span class="p">()</span> <span class="o">+</span> <span class="n">rref2</span><span class="o">.</span><span class="n">to_here</span><span class="p">()</span>
+
+        <span class="c1"># Backward pass (run distributed autograd).</span>
+        <span class="n">dist_autograd</span><span class="o">.</span><span class="n">backward</span><span class="p">(</span><span class="n">context_id</span><span class="p">,</span> <span class="p">[</span><span class="n">loss</span><span class="o">.</span><span class="n">sum</span><span class="p">()])</span>
+
+        <span class="c1"># Build DistributedOptimizer.</span>
+        <span class="n">dist_optim</span> <span class="o">=</span> <span class="n">DistributedOptimizer</span><span class="p">(</span>
+        <span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">rref1</span><span class="p">,</span> <span class="n">rref2</span><span class="p">],</span>
+        <span class="n">lr</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Run the distributed optimizer step.</span>
+        <span class="n">dist_optim</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">context_id</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">run_process</span><span class="p">(</span><span class="n">rank</span><span class="p">,</span> <span class="n">world_size</span><span class="p">):</span>
+    <span class="n">dst_rank</span> <span class="o">=</span> <span class="p">(</span><span class="n">rank</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="n">world_size</span>
+    <span class="n">_run_process</span><span class="p">(</span><span class="n">rank</span><span class="p">,</span> <span class="n">dst_rank</span><span class="p">,</span> <span class="n">world_size</span><span class="p">)</span>
+    <span class="n">rpc</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+  <span class="c1"># Run world_size workers</span>
+  <span class="n">world_size</span> <span class="o">=</span> <span class="mi">2</span>
+  <span class="n">mp</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="n">run_process</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">world_size</span><span class="p">,),</span> <span class="n">nprocs</span><span class="o">=</span><span class="n">world_size</span><span class="p">)</span>
 </code></pre></div>
-<p>上記の例では動画の各フレーム画像のパスをabcdeとして一連の三枚と、その3枚目に対応するラベルを出力します。</p>
-<div class="highlight"><pre><span></span><code><span class="n">train</span> <span class="o">=</span> <span class="n">VideoDataset</span><span class="p">(</span><span class="n">frames</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">train</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
-
-<span class="c1"># out</span>
-<span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span> <span class="n">c</span>
-<span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="n">d</span>
-<span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span> <span class="n">e</span>
-</code></pre></div>
-<p><code>__getitem__</code>の最終行を帰れば出力するラベルの位置を変更することができます。<br />
-一連のフレームに対してどこをラベルとするかは問題設定によって変わって来ますが、最初のフレームをラベルにしてしまうとある意味未来のデータを学習させていることになるので大抵の場合は最後のフレームを教師データにします。<br />
-ここら辺は時系列データに関する記事で改めて触れます。</p>
-<p>次回はこのデータセットを使ったクラス分類モデルを書きます。</p>
+<h2 id="_3">使用例</h2>
+<h3 id="synconpolicy">SyncOnPolicy</h3>
+<p>https://pytorch.org/tutorials/intermediate/rpc_tutorial.html#distributed-reinforcement-learning-using-rpc-and-rref</p>
+<h3 id="asynconpolicyparameterserver">AsyncOnPolicy(ParameterServer)</h3>
+<p>https://pytorch.org/tutorials/intermediate/rpc_param_server_tutorial.html</p>
                 
               
               

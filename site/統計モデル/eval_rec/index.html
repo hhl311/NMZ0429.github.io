@@ -1,0 +1,2927 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
+    
+    
+      
+        <title>推薦システムの評価指標 - Cheep Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bde7dde4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjp.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:600,800">
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-196492429-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="Cheep Learning" class="md-header__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cheep Learning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              推薦システムの評価指標
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="" type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="light-green" data-md-color-accent="" type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="クリア" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Welcome !!
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../intro/" class="md-tabs__link">
+      Artificial Intelligenceを学ぶ方へ
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/image/" class="md-tabs__link">
+        100本ノック
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../PyTorch/PyTorch/dp/" class="md-tabs__link">
+        PyTorch
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../UofT/game_theory/" class="md-tabs__link">
+        UofT
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-tabs__link">
+        その他
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/heroku_st/" class="md-tabs__link">
+        ツール
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/GNN/" class="md-tabs__link">
+        ネットワーク解説
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/3dvision/" class="md-tabs__link">
+        深層学習
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        統計モデル
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Cheep Learning" class="md-nav__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Cheep Learning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Welcome !!
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/" class="md-nav__link">
+        Artificial Intelligenceを学ぶ方へ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        100本ノック
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="100本ノック" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          100本ノック
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/image/" class="md-nav__link">
+        画像処理100本ノック答え
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/numpy/" class="md-nav__link">
+        Numpy100本ノック答え
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        PyTorch
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PyTorch" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          PyTorch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" data-md-state="indeterminate" type="checkbox" id="__nav_4_1" checked>
+      
+      <label class="md-nav__link" for="__nav_4_1">
+        PyTorch
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PyTorch" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          PyTorch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch/dp/" class="md-nav__link">
+        PyTorchの分散計算処理を使う
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch/pytorch/" class="md-nav__link">
+        pytorchによるディープラーニング実装の流れ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch/video/" class="md-nav__link">
+        PyTorch Dataset API で動画データを扱う方法
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2" checked>
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        PyTorch Lightning
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PyTorch Lightning" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          PyTorch Lightning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/checkpoint/" class="md-nav__link">
+        PyTorch LightningのCheckpointCallbackの便利機能
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/data_module/" class="md-nav__link">
+        【PyTorch Lightning】LightningDataModuleについて
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/lightning_bolts/" class="md-nav__link">
+        PyTorch Lightning Boltsの使い方
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/pytorchvideo/" class="md-nav__link">
+        PyTorchVideo 使い方
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        UofT
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="UofT" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          UofT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UofT/game_theory/" class="md-nav__link">
+        Game theory
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UofT/note/" class="md-nav__link">
+        Note
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        その他
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="その他" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          その他
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-nav__link">
+        Pythonのお勉強について
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC/" class="md-nav__link">
+        ワークフロー
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        ツール
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ツール" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          ツール
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/heroku_st/" class="md-nav__link">
+        StreamlitアプリをHerokuでティプロイする
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/plantuml/" class="md-nav__link">
+        PlantUMLのススメ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/tmux/" class="md-nav__link">
+        tmuxはええぞ
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" data-md-state="indeterminate" type="checkbox" id="__nav_8" checked>
+      
+      <label class="md-nav__link" for="__nav_8">
+        ネットワーク解説
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ネットワーク解説" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          ネットワーク解説
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/GNN/" class="md-nav__link">
+        Graph Attention Network 解説
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/fast_rcnn/" class="md-nav__link">
+        Faster R-CNN まとめ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/mesh_rcnn/" class="md-nav__link">
+        Mesh RCNNのお気持ちを理解したい
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/posenet/" class="md-nav__link">
+        Posenet
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" data-md-state="indeterminate" type="checkbox" id="__nav_9" checked>
+      
+      <label class="md-nav__link" for="__nav_9">
+        深層学習
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="深層学習" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          深層学習
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/3dvision/" class="md-nav__link">
+        3D vision
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/lstm/" class="md-nav__link">
+        【もうやりたくない】RNNとLSTMの理解とNumPyによる実装
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/video_task/" class="md-nav__link">
+        動画を使った深層学習
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      <label class="md-nav__link" for="__nav_10">
+        統計モデル
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="統計モデル" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          統計モデル
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          推薦システムの評価指標
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        推薦システムの評価指標
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    分類・使い分け
+  </a>
+  
+    <nav class="md-nav" aria-label="分類・使い分け">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    回帰精度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    分類精度（二値分類が主）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    リストの関連性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    ランク付けされたリストの関連性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    その他
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    回帰精度
+  </a>
+  
+    <nav class="md-nav" aria-label="回帰精度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mae" class="md-nav__link">
+    MAE（平均絶対誤差）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mse" class="md-nav__link">
+    MSE（平均二乗誤差）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maek-rmsek" class="md-nav__link">
+    MAE@{k}, RMSE@{k}
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    分類精度（2値分類が主）
+  </a>
+  
+    <nav class="md-nav" aria-label="分類精度（2値分類が主）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acc" class="md-nav__link">
+    正解率（Acc）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precisionrecallfroc" class="md-nav__link">
+    適合率（Precision）と再現率（Recall）、F尺度、ROC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n-points-interpolated-precision" class="md-nav__link">
+    n-points Interpolated Precision
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roc-auc" class="md-nav__link">
+    ROC AUC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hit-rate" class="md-nav__link">
+    Hit-rate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    リストの関連性の指標
+  </a>
+  
+    <nav class="md-nav" aria-label="リストの関連性の指標">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rank-correlation" class="md-nav__link">
+    順位相関（rank correlation）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spearmans-rank" class="md-nav__link">
+    スピアマン順位相関（Spearman's rank）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kendalls-rank" class="md-nav__link">
+    ケンドールランク（Kendall's rank）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ndmpnormalized-distance-based-performance-measure" class="md-nav__link">
+    NDMP（Normalized distance-based performance measure）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    ランク付けされた推薦の評価指標
+  </a>
+  
+    <nav class="md-nav" aria-label="ランク付けされた推薦の評価指標">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ap" class="md-nav__link">
+    AP（平均適合率）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapmean-average-precision" class="md-nav__link">
+    MAP（Mean Average Precision）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrr" class="md-nav__link">
+    MRR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cg" class="md-nav__link">
+    CG（減損しない累積利得）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ndcg" class="md-nav__link">
+    nDCG（多値適合性に基づく評価指標）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arhr-average-reciprocal-hit-rank" class="md-nav__link">
+    ARHR (Average reciprocal hit rank)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#half-life-utility-metric" class="md-nav__link">
+    Half-life Utility Metric
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rbp-rank-biased-precision" class="md-nav__link">
+    RBP (Rank biased precision)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#err-expected-reciprocal-rank" class="md-nav__link">
+    ERR (Expected reciprocal rank)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-measure-gapgraded-average-precision" class="md-nav__link">
+    Q-measure, GAP(Graded Average Precision)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    精度面以外での、新しい評価指標
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    探索思考ではないが有用な指標
+  </a>
+  
+    <nav class="md-nav" aria-label="探索思考ではないが有用な指標">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coverage" class="md-nav__link">
+    カバレッジ・被覆率（coverage）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    カタログカバレッジ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    ユーザーカバレッジ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    学習率
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    確信度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    信頼性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    探索思考の指標
+  </a>
+  
+    <nav class="md-nav" aria-label="探索思考の指標">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    注意点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serendipity" class="md-nav__link">
+    セレンディピティ（Serendipity）
+  </a>
+  
+    <nav class="md-nav" aria-label="セレンディピティ（Serendipity）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    予想外さ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    エントロピーペースの多様性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#novelty" class="md-nav__link">
+    ノベルティ（Novelty）
+  </a>
+  
+    <nav class="md-nav" aria-label="ノベルティ（Novelty）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    測り方
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    発見率
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    ノベルティの精度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    アイテムノベルティ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    テンポラリーノベルティ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    半減期ベースのノベルティ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    ロングテールに基づくノベルティ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diversity" class="md-nav__link">
+    多様性（Diversity）
+  </a>
+  
+    <nav class="md-nav" aria-label="多様性（Diversity）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aggregate-diversity" class="md-nav__link">
+    Aggregate diversity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inter-user-diversity" class="md-nav__link">
+    Inter-user diversity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-personalization-metric" class="md-nav__link">
+    List personalization metric
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gini" class="md-nav__link">
+    Gini係数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    時間的多様性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    推薦リスト内の多様性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mmrmaximal-marginal-relevance" class="md-nav__link">
+    MMR（Maximal marginal relevance）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    推薦システムの評価指標の注意点など
+  </a>
+  
+    <nav class="md-nav" aria-label="推薦システムの評価指標の注意点など">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    MAP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gmapmap" class="md-nav__link">
+    GMAP（幾何平均を用いたMAP）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infapinferred-average-precision" class="md-nav__link">
+    infAP（inferred Average Precision）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    施策に対する評価指標
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interleaving" class="md-nav__link">
+    interleaving
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2017recsys-2017-conference" class="md-nav__link">
+    2017年での企業の状況（RecSys 2017 Conference）
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../silimarity/" class="md-nav__link">
+        サンプル間の類似性指標
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    分類・使い分け
+  </a>
+  
+    <nav class="md-nav" aria-label="分類・使い分け">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    回帰精度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    分類精度（二値分類が主）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    リストの関連性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    ランク付けされたリストの関連性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    その他
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    回帰精度
+  </a>
+  
+    <nav class="md-nav" aria-label="回帰精度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mae" class="md-nav__link">
+    MAE（平均絶対誤差）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mse" class="md-nav__link">
+    MSE（平均二乗誤差）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maek-rmsek" class="md-nav__link">
+    MAE@{k}, RMSE@{k}
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    分類精度（2値分類が主）
+  </a>
+  
+    <nav class="md-nav" aria-label="分類精度（2値分類が主）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acc" class="md-nav__link">
+    正解率（Acc）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precisionrecallfroc" class="md-nav__link">
+    適合率（Precision）と再現率（Recall）、F尺度、ROC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n-points-interpolated-precision" class="md-nav__link">
+    n-points Interpolated Precision
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roc-auc" class="md-nav__link">
+    ROC AUC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hit-rate" class="md-nav__link">
+    Hit-rate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    リストの関連性の指標
+  </a>
+  
+    <nav class="md-nav" aria-label="リストの関連性の指標">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rank-correlation" class="md-nav__link">
+    順位相関（rank correlation）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spearmans-rank" class="md-nav__link">
+    スピアマン順位相関（Spearman's rank）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kendalls-rank" class="md-nav__link">
+    ケンドールランク（Kendall's rank）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ndmpnormalized-distance-based-performance-measure" class="md-nav__link">
+    NDMP（Normalized distance-based performance measure）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    ランク付けされた推薦の評価指標
+  </a>
+  
+    <nav class="md-nav" aria-label="ランク付けされた推薦の評価指標">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ap" class="md-nav__link">
+    AP（平均適合率）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapmean-average-precision" class="md-nav__link">
+    MAP（Mean Average Precision）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrr" class="md-nav__link">
+    MRR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cg" class="md-nav__link">
+    CG（減損しない累積利得）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ndcg" class="md-nav__link">
+    nDCG（多値適合性に基づく評価指標）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arhr-average-reciprocal-hit-rank" class="md-nav__link">
+    ARHR (Average reciprocal hit rank)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#half-life-utility-metric" class="md-nav__link">
+    Half-life Utility Metric
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rbp-rank-biased-precision" class="md-nav__link">
+    RBP (Rank biased precision)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#err-expected-reciprocal-rank" class="md-nav__link">
+    ERR (Expected reciprocal rank)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-measure-gapgraded-average-precision" class="md-nav__link">
+    Q-measure, GAP(Graded Average Precision)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    精度面以外での、新しい評価指標
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    探索思考ではないが有用な指標
+  </a>
+  
+    <nav class="md-nav" aria-label="探索思考ではないが有用な指標">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coverage" class="md-nav__link">
+    カバレッジ・被覆率（coverage）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    カタログカバレッジ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    ユーザーカバレッジ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    学習率
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    確信度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    信頼性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    探索思考の指標
+  </a>
+  
+    <nav class="md-nav" aria-label="探索思考の指標">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    注意点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serendipity" class="md-nav__link">
+    セレンディピティ（Serendipity）
+  </a>
+  
+    <nav class="md-nav" aria-label="セレンディピティ（Serendipity）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    予想外さ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    エントロピーペースの多様性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#novelty" class="md-nav__link">
+    ノベルティ（Novelty）
+  </a>
+  
+    <nav class="md-nav" aria-label="ノベルティ（Novelty）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    測り方
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    発見率
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    ノベルティの精度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    アイテムノベルティ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    テンポラリーノベルティ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    半減期ベースのノベルティ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    ロングテールに基づくノベルティ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diversity" class="md-nav__link">
+    多様性（Diversity）
+  </a>
+  
+    <nav class="md-nav" aria-label="多様性（Diversity）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aggregate-diversity" class="md-nav__link">
+    Aggregate diversity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inter-user-diversity" class="md-nav__link">
+    Inter-user diversity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-personalization-metric" class="md-nav__link">
+    List personalization metric
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gini" class="md-nav__link">
+    Gini係数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    時間的多様性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    推薦リスト内の多様性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mmrmaximal-marginal-relevance" class="md-nav__link">
+    MMR（Maximal marginal relevance）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    推薦システムの評価指標の注意点など
+  </a>
+  
+    <nav class="md-nav" aria-label="推薦システムの評価指標の注意点など">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    MAP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gmapmap" class="md-nav__link">
+    GMAP（幾何平均を用いたMAP）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infapinferred-average-precision" class="md-nav__link">
+    infAP（inferred Average Precision）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    施策に対する評価指標
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interleaving" class="md-nav__link">
+    interleaving
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2017recsys-2017-conference" class="md-nav__link">
+    2017年での企業の状況（RecSys 2017 Conference）
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">推薦システムの評価指標</h1>
+<p>推薦システムの性能評価に関する研究のまとです。</p>
+<h2 id="_2">分類・使い分け</h2>
+<h3 id="_3">回帰精度</h3>
+<ul>
+<li>ユーザー評価の予測に用いられる<ul>
+<li>1~5や、1~10の評価の予測</li>
+</ul>
+</li>
+<li>分類問題としても解けるが序列性があるので、回帰問題として解ける<ul>
+<li>連続値で予測した方が、その後のソートなどに使いやすい</li>
+</ul>
+</li>
+</ul>
+<h3 id="_4">分類精度（二値分類が主）</h3>
+<ul>
+<li>ユーザーの評価・購買・閲覧の有無の予測に用いられる<ul>
+<li>0か1か、好きか嫌いか、やったかやらないかの予測</li>
+</ul>
+</li>
+</ul>
+<h3 id="_5">リストの関連性</h3>
+<ul>
+<li>推薦したリストの評価に用いられる</li>
+<li>リストの序列性は考慮されるが、位置が考慮されない古い指標<ul>
+<li>{2,1,3,4,5}と推薦したものと、{1,2,3,5,4}と推薦したものを評価した場合を考える</li>
+<li>リストでの推薦は、順位が小さいものが相対的に大きく評価されるべきだが、ここで紹介する評価指標は区別がつけられない</li>
+<li>一つ後で紹介する、『ランク付けされたリストの関連性』では区別できる（前者が悪く、後者が良く出る）</li>
+</ul>
+</li>
+</ul>
+<h3 id="_6">ランク付けされたリストの関連性</h3>
+<ul>
+<li>推薦したリストの評価に用いられる</li>
+<li>リストの序列性・位置が考慮される新しい指標</li>
+<li>リストの序盤の序列の間違いに対し、大きなペナルティを与える</li>
+</ul>
+<h3 id="_7">その他</h3>
+<ul>
+<li>推薦システムのリストの評価や、推薦システム全体の評価などに用いられる新しい評価指標<ul>
+<li>アイテム・ユーザーのカバー率</li>
+<li>新しいアイテムの推薦や、推薦するが買われないものにペナルティを与えるなど</li>
+</ul>
+</li>
+<li>評価するためのデータの入手が難しいのが課題</li>
+</ul>
+<h2 id="_8">回帰精度</h2>
+<ul>
+<li>レーティングの評価に用いられる</li>
+<li>
+<p>正確にユーザーのレーティングを予測する能力を持っているか</p>
+</li>
+<li>
+<p>テスト用データの評価値と、予測した評価値の差</p>
+</li>
+<li>評価閲覧タスク（評価順など）では、評価値そのものを利用者は見る</li>
+<li>そのような場合、評価値の予測精度のズレを重視すべき</li>
+</ul>
+<h3 id="mae">MAE（平均絶対誤差）</h3>
+<div class="arithmatex">\[
+MAE = \frac{1}{N}\sum^{N}_{i=1}|\hat{r_{i}}-r_{i}|
+\]</div>
+<h3 id="mse">MSE（平均二乗誤差）</h3>
+<div class="arithmatex">\[
+MSE = \frac{1}{N}\sum^{N}_{i=1}(\hat{r_{i}}-r_{i})^{2}
+\]</div>
+<h3 id="maek-rmsek">MAE@{k}, RMSE@{k}</h3>
+<ul>
+<li>実際には、ユーザーに表示されるのはモデルの予測値が高い上位数個</li>
+<li>上位数アイテム（TopK）を対象にMAE, RMSEを算出し、評価する</li>
+</ul>
+<div class="arithmatex">\[
+MAE@k = \frac{1}{K}\sum^{K}_{i=1}MAE_{i}
+\]</div>
+<h2 id="2">分類精度（2値分類が主）</h2>
+<ul>
+<li>クリック・購入の有無などの２値の評価に用いられる</li>
+</ul>
+<h3 id="acc">正解率（Acc）</h3>
+<ul>
+<li>
+<p>利用者の関心が、予測結果とテストデータで一致した割合</p>
+</li>
+<li>
+<p>評価値ならば、高評価か低評価かなど</p>
+</li>
+</ul>
+<h3 id="precisionrecallfroc">適合率（Precision）と再現率（Recall）、F尺度、ROC</h3>
+<div class="arithmatex">\[
+Rrecision = \frac{推薦に含まれる適合アイテムの数}{推薦に含まれる全アイテムの数}
+\]</div>
+<div class="arithmatex">\[
+Recall = \frac{検索結果に含まれる適合アイテムの数}{全ての適合アイテムの数}
+\]</div>
+<ul>
+<li>適合アイテムを一つ見つければ良い適合アイテム発見タスクでは、適合率</li>
+<li>推薦誤りの少なさ</li>
+<li>推薦したアイテム上位n件の内、実際に目的を果たしたものの割合</li>
+<li>全ての適合アイテムを見つけたい適合アイテム列挙タスクでは、再現率を重視する</li>
+<li>推薦漏れの少なさ</li>
+<li>目的を果たしたもののうち、推薦で上位n件に含まれている割合</li>
+<li>総合的な判断をしたい場合はE-measureやF-measureやROC</li>
+</ul>
+<div class="arithmatex">\[
+F = \frac{1}{\frac{\alpha}{Precision}+\frac{1-\alpha}{Recall}}
+\]</div>
+<p>alpha = 0.5の時はF1値</p>
+<h3 id="n-points-interpolated-precision">n-points Interpolated Precision</h3>
+<ul>
+<li>N点のRecallの平均を取る</li>
+<li>通常、N=11(recall 0.0, 0.1, 0.2, ..., 0.9, 1.0)</li>
+</ul>
+<div class="arithmatex">\[
+nAIP = \frac{1}{N}\sum_{i}InterPrecision_{i}
+\]</div>
+<h3 id="roc-auc">ROC AUC</h3>
+<div class="arithmatex">\[
+AUC(f) = \frac{\sum_{t_{0}\in D^{0}}\sum_{t_{1}\in D^{1}}1|f(t_{0})&lt;f(t_{1})|}{|D^{0}||D^{1}|}
+\]</div>
+<p>where</p>
+<ul>
+<li>1|f(t_{0})&lt;f(t_{1})|は、もしf(t0) &lt; f(t1)ならば1、それ以外ならば0を取る</li>
+<li>D0とは負例のサンプル集合</li>
+<li>D1とは精霊のサンプル集合</li>
+</ul>
+<h3 id="hit-rate">Hit-rate</h3>
+<ul>
+<li>
+<p>対象となる単項のデータに対する指標（2値データ向け）</p>
+</li>
+<li>
+<p>ユーザーのテストデータから、0でない項目を検索</p>
+</li>
+<li>アイテムが推薦リストに含まれるか確かめる</li>
+<li>Hit-rateを計算する</li>
+</ul>
+<div class="arithmatex">\[
+hit-rate = \frac{num_{hits}}{n}
+\]</div>
+<p>num_{hits}: 推薦リストの中に含まれていたアイテムの数</p>
+<p>n:全ユーザーのアイテム数</p>
+<h2 id="_9">リストの関連性の指標</h2>
+<ul>
+<li>
+<p>比較的古いランキング指標</p>
+</li>
+<li>
+<p>序列は考慮されているが、ランクの位置そのものは考慮されていない場合が多い</p>
+</li>
+</ul>
+<h3 id="rank-correlation">順位相関（rank correlation）</h3>
+<h3 id="spearmans-rank">スピアマン順位相関（Spearman's rank）</h3>
+<div class="arithmatex">\[
+r_{Spearman}= 1 - \frac{6}{n(n^{2}-1)}\sum^{n}_{i=1}(x_{i}-y{i})^{2}
+\]</div>
+<p>x_i: 推薦システムによってランク付されたアイテムiの順位</p>
+<p>y_i: ユーザーによってランク付されたアイテムiの順位</p>
+<p>係数の6/{n*(n^2-1)}の出し方については、二変量正規分布をいじれば出てくる？</p>
+<ul>
+<li>正しくランク付けされていれば１</li>
+<li>数値の大小は関係なし</li>
+</ul>
+<h3 id="kendalls-rank">ケンドールランク（Kendall's rank）</h3>
+<ul>
+<li>
+<p>二つの項目間の大きさの関係について、ユーザー間の一致を確認する</p>
+</li>
+<li>
+<p>全てのペアがn*(n-1)/2個</p>
+</li>
+<li>もし、「ユーザーSのAの評価＜ユーザーSのBの評価」かつ「ユーザーTのAの評価＜ユーザーTのBの評価」ならばP+=1</li>
+<li>もし、「ユーザーSのAの評価＞ユーザーSのBの評価」かつ「ユーザーTのAの評価＞ユーザーTのBの評価」ならばP+=1</li>
+<li>それ以外は、Q+=1として、以下を計算する</li>
+</ul>
+<div class="arithmatex">\[
+\tau = \frac{P-Q}{\frac{1}{2}n(n-1)}=\frac{2P}{\frac{1}{2}n(n-1)}-1
+\]</div>
+<h3 id="ndmpnormalized-distance-based-performance-measure">NDMP（Normalized distance-based performance measure）</h3>
+<ul>
+<li>C-：矛盾した選好関係の数</li>
+<li>ユーザーはアイテムAの評価＞アイテムBの評価に対し、推薦がアイテムBの評価＞アイテムAの評価のようになっている数</li>
+<li>下の表のD-E</li>
+<li>Cu：推薦とユーザーで同一の選好関係の数</li>
+<li>下の表のB-Cなど</li>
+<li>Ci：推薦とユーザーのランキング間のアイテムペアの優先関係数の合計</li>
+</ul>
+<div class="arithmatex">\[
+NDMP = \frac{2C^{-}+C^{u}}{2C^{i}}
+\]</div>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Recommend</th>
+<th>User</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>A</td>
+</tr>
+<tr>
+<td>2</td>
+<td>B</td>
+<td>B</td>
+</tr>
+<tr>
+<td>3</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>4</td>
+<td>D</td>
+<td>E</td>
+</tr>
+<tr>
+<td>5</td>
+<td>E</td>
+<td>D</td>
+</tr>
+</tbody>
+</table>
+<div class="arithmatex">\[
+上の表のNDMP = \frac{2*1+9}{2*10}=\frac{11}{20}=0.55
+\]</div>
+<h2 id="_10">ランク付けされた推薦の評価指標</h2>
+<ul>
+<li>推薦するアイテムの並び方の良さを評価する</li>
+<li>
+<p>最も関連するN個のアイテムを正しい順番で予測しているか</p>
+</li>
+<li>
+<p>適合アイテム発見を目的とする場合、推薦システムには意思決定支援の側面が要求される</p>
+</li>
+<li>
+<p>こうした場合は、評価値の大小よりも評価の代償を重視すべき</p>
+</li>
+<li>
+<p>アクティブユーザーの完全なランキングを取得すのは難しい</p>
+</li>
+<li>大体ここで問題となっているのは、序列に対する重み</li>
+</ul>
+<h3 id="ap">AP（平均適合率）</h3>
+<ul>
+<li>ランク付された推薦において、適合アイテムが見つかるたびにその位置での適合率を求め、その算術平均を取った値</li>
+</ul>
+<div class="arithmatex">\[
+AP = \frac{1}{R}\sum^{n}_{r=1}Prec(r)I(r)
+\]</div>
+<ul>
+<li>ここで、Prec&reg;は適合率Precision、I&reg;はr位が適合文書の場合1、そうでない場合は0を取る関数</li>
+<li>しかし、これでは単純に適合したか否かの二値適合性に基づく評価になる</li>
+<li>実際の推薦の評価では、部分適合・多値適合性に基づく評価指標を用いる</li>
+</ul>
+<h3 id="mapmean-average-precision">MAP（Mean Average Precision）</h3>
+<ul>
+<li>MAP@{k}ならば、上位K個のAPの平均を取る</li>
+</ul>
+<div class="arithmatex">\[
+MAP = \frac{1}{N}\sum^{N}_{i=1}AP_{i}
+\]</div>
+<h3 id="mrr">MRR</h3>
+<ul>
+<li>
+<p>最初に現れた適合アイテムの順位の逆数の平均をとったもの</p>
+</li>
+<li>
+<p>全対象ユーザーに対して推薦リストを作成</p>
+</li>
+<li>ユーザーが嗜好する適合アイテムが上位何番目で現れたか調べる</li>
+<li>この順位の逆数を取る（リストに正解が含まれない場合は、逆をとらずに0となる）</li>
+<li>全ユーザーで平均を取る</li>
+</ul>
+<div class="arithmatex">\[
+MRR = \frac{1}{N}\sum^{N}_{i=1}\frac{1}{i番目のアイテムの適合順位}
+\]</div>
+<ul>
+<li>ランキング下位での順位の差はあまり指標に影響しない</li>
+</ul>
+<h3 id="cg">CG（減損しない累積利得）</h3>
+<ul>
+<li>DCGの原型</li>
+<li>正解したアイテムの利得（スコア）を足し合わせていく</li>
+</ul>
+<div class="arithmatex">\[
+CG = \sum^{n}_{r=1}g(r)
+\]</div>
+<h3 id="ndcg">nDCG（多値適合性に基づく評価指標）</h3>
+<ul>
+<li>適合アイテムの数を加算していく際に、適合アイテムが下位に来るほど減点されるようにする</li>
+<li>ランキングの上位ほど大きく、下位ほど小さくなるような係数をかけた上で合計する</li>
+<li>
+<p>この際の係数を減損利得discounted gainという</p>
+</li>
+<li>
+<p>適合度に応じた価値を利得gainとして考え、ランクが下位になるほどその価値を下げる減損利得discounted gainを導入し、その累積話を正規化した値</p>
+</li>
+<li>DCG（減損累計利得）は下記</li>
+<li>g&reg;はr位における利得</li>
+<li>ユーザーの実際の評価値などを使用する</li>
+<li>1位なら５点、2位なら４点、3位なら３点、4位なら２点、……と適当に重み付けを行っても計算できる</li>
+</ul>
+<div class="arithmatex">\[
+DCG = \sum^{n}_{r=1}\frac{g(r)}{log_{2}(r+1)}
+\]</div>
+<ul>
+<li>
+<p>IDCGは理想的推薦における減損利得の推薦話</p>
+</li>
+<li>
+<p>正規化されたnDCGは以下のようになる</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+nDCG = \frac{DCG}{IDCG}
+\]</div>
+<h3 id="arhr-average-reciprocal-hit-rank">ARHR (Average reciprocal hit rank)</h3>
+<ul>
+<li>２値データ</li>
+</ul>
+<div class="arithmatex">\[
+ARHR = \frac{1}{n}\sum_{i \in Z_{l}}\frac{1}{pos(i)}
+\]</div>
+<p>Z_{l}: ユーザーの推薦リスト内のゼロでない項目</p>
+<p>pos: アイテムのランキングの位置</p>
+<h3 id="half-life-utility-metric">Half-life Utility Metric</h3>
+<ul>
+<li>アイテムの序列による重要度を半減期パラメータで半減させていく</li>
+</ul>
+<div class="arithmatex">\[
+R_{u} = \sum_{j}\frac{max(r_{u,j}-default, 0)}{2^{(j-1)/(\alpha -1)}}
+\]</div>
+<p>r_{u, j}: ランクj時点での、ユーザーuの実際のアイテムの評価</p>
+<p>default: デフォルトの評価値（通常は評価値の平均）</p>
+<p>alpha: 半減期をコントロールするパラメータ</p>
+<h3 id="rbp-rank-biased-precision">RBP (Rank biased precision)</h3>
+<ul>
+<li>ユーザーモデルを組み込む？</li>
+</ul>
+<div class="arithmatex">\[
+RBP = (1-p)\sum^{n}_{i=1}g_{i}p^{i-1}
+\]</div>
+<p>gi: ランクiの項目の、ユーザーの好みとの関連性の度合い</p>
+<p>p: ランク付されたリストを見ている間のユーザーの持続性をモデル化するパラメータ（通常はクリックログなどから推定）</p>
+<h3 id="err-expected-reciprocal-rank">ERR (Expected reciprocal rank)</h3>
+<ul>
+<li>Cascade user model</li>
+<li>上位に存在する項目の関連性に考慮するモデル</li>
+<li>ユーザーは通常、満足すればそこで検索を終了する</li>
+<li>この場合、検索を終了した時に下にあるものは全てクリックされない</li>
+<li>カスケードモデルの一つ</li>
+<li>rの位置でユーザーが推薦したランキングの閲覧を止める確率の合計を取る</li>
+<li>この確率は、上位の順位に影響される</li>
+</ul>
+<div class="arithmatex">\[
+ERR = \sum^{n}_{r=1}\zeta(r)P(user~stops~at~position~r) \\
+\zeta(r) = \frac{1}{r} ~~~or~~~ \zeta(r) = \frac{1}{log_{2}(r+1)}
+\]</div>
+<p>もしくは
+$$
+ERR = \sum^{n}<em i="1">{r=1}\zeta&reg;\prod^{r-1}</em>(1-R_{i})R_{r} \
+R_{i} = \frac{2^{g}-1}{2^{g_{max}}}
+$$
+g: ユーザーの好みとの関連性の投球</p>
+<p>gmax: スケールで最大等級（１〜５の評価がある時の５）</p>
+<h3 id="q-measure-gapgraded-average-precision">Q-measure, GAP(Graded Average Precision)</h3>
+<ul>
+<li>平均適合率を拡張したもの</li>
+</ul>
+<h2 id="_11">精度面以外での、新しい評価指標</h2>
+<ul>
+<li>探索思考ではないが、ユーザーに役立つ指標</li>
+<li>カバレッジ、学習率、信頼率、信頼性、</li>
+<li>探索思考で、ユーザーに役立つ指標</li>
+<li>推薦がユーザーにとって新しいものか測定する</li>
+<li>セレンディピティメトリクス</li>
+<li>ノベルティメトリクス</li>
+<li>ダイバーシティメトリクス</li>
+</ul>
+<h2 id="_12">探索思考ではないが有用な指標</h2>
+<h3 id="coverage">カバレッジ・被覆率（coverage）</h3>
+<ul>
+<li>推薦内容がどの程度のユーザー・アイテムをカバーできているか評価する</li>
+<li>協調フィルタリングでは、ユーザーから評価がないアイテムについては、予測を行うことができない</li>
+<li>コンテンツベースフィルタリングでは、いくつかの特徴量が不足しているアイテムを予測することはできない</li>
+<li>予測精度とのトレードオフが存在する</li>
+<li>牛乳や卵などのほとんどの顧客が購入するものを推薦すれば予測精度は高くなるが、カバレッジは低くなる</li>
+</ul>
+<h3 id="_13">カタログカバレッジ</h3>
+<ul>
+<li>利用可能な全アイテムのうち、１回の推薦でどれくらい多くのアイテムを推薦できたか</li>
+<li>推薦したアイテムの幅広さを示す</li>
+</ul>
+<div class="arithmatex">\[
+Catalogue Coverage = \frac{|S_{r}|}{|S_{a}|}\\where~S_{a}:アイテム全て\\S_{r}:推薦できるアイテム
+\]</div>
+<ul>
+<li>推薦の範囲を適合アイテムのみに絞った適合カタログカバレッジ</li>
+</ul>
+<div class="arithmatex">\[
+Weighted Catalogue Coverage = \frac{|S_{r}\cap S_{s}|}{|S_{a}|}
+\]</div>
+<h3 id="_14">ユーザーカバレッジ</h3>
+<ul>
+<li>全対象ユーザーのうち、直近１回の推薦のうち、どれほど多くのユーザーに対して推薦できたかを示す</li>
+</ul>
+<div class="arithmatex">\[
+PredictionCoverage = \frac{|S_{p}|}{|S_{u}|}\\where~S_{p}:少なくとも１つのアイテムは推薦システムにより推薦できたユーザー\\S_{u}:全てのユーザー
+\]</div>
+<h3 id="_15">学習率</h3>
+<ul>
+<li>ユーザーの嗜好が変化した後、どれほど早く推薦システムが適切な推薦を提供できるか</li>
+<li>コールドスタート問題に関連する</li>
+<li>システムが素早く適切な推薦を行えないと、ユーザーの満足度は減少する</li>
+<li>嗜好が変わったあとの時間</li>
+<li>ユーザーが推薦受けて始めてから、精度を監視し続ける必要がある</li>
+</ul>
+<h3 id="_16">確信度</h3>
+<ul>
+<li>推薦にどれほどの確信を持っているか</li>
+<li>推薦システムを作成するために、どれほどの数のユーザーやアイテムを使っているか計算する<ul>
+<li>システム構築時のデータのカバー率</li>
+</ul>
+</li>
+<li>協調フィルタリング時に予測で用いるK-NNの類似性を計算する<ul>
+<li>類似性が低い時、K-NNの距離が遠くなるので、それを監視する？</li>
+</ul>
+</li>
+</ul>
+<h3 id="_17">信頼性</h3>
+<ul>
+<li>ユーザーの推薦システムへの信頼</li>
+<li>推薦システムは、ユーザーの嗜好と関心を予測する能力があることを示さなければならない</li>
+<li>ユーザーがよく知っているアイテムを表示しないと、（信頼を？）得るのが困難</li>
+<li>推薦システムを信頼できなければ、ユーザーは推薦システムを使わなくなる</li>
+<li>推薦結果が良ければ信頼が増す</li>
+<li>ユーザーにオンライン評価で直接尋ねる</li>
+<li>ユーザーの使用頻度で推定する</li>
+</ul>
+<h2 id="_18">探索思考の指標</h2>
+<ul>
+<li>似た商品ばかり推薦していると、ユーザーは推薦に飽きる</li>
+<li>
+<p>既知の商品を推薦されても、意思決定の手助けにはならない</p>
+</li>
+<li>
+<p>評価対象：ユーザーセット、アイテムセット、アイテムのペアなど</p>
+</li>
+<li>必要なデータ：評価行列（ユーザー＊アイテム）、オンとロジー（アイテムカテゴリ）、他の新規性・セレンディピティに関するデータセット</li>
+</ul>
+<h3 id="_19">注意点</h3>
+<ul>
+<li>目新しさだけを推奨すると、ユーザーの満足度は低下する</li>
+<li>ユーザーは一般的に、既知のものを好む</li>
+<li>総合的に評価すると、新規性は利用者の満足度を下げる</li>
+<li>斬新なアイテムを推薦する際には注意が必要</li>
+<li>推薦システムでのユーザーの経験を考慮する</li>
+<li>事前に、推薦システムの新奇性を説明する</li>
+<li>おすすめの新奇項目をそれぞれ説明する</li>
+</ul>
+<h3 id="serendipity">セレンディピティ（Serendipity）</h3>
+<ul>
+<li>推薦がユーザーに驚きを与えるか否か</li>
+<li>（ユーザーがアイテムを自身では検索できない）</li>
+<li>特定のアイテムを推薦られた時の驚き</li>
+<li>他のシステムを利用して計算する？</li>
+</ul>
+<h4 id="_20">予想外さ</h4>
+<div class="arithmatex">\[
+EXEXP = \frac{1}{|L_{i}|}\sum^{|L_i|}_{i=1}max(P(s_i)-prim(s_i),0)・rel(s_i) \\where ~ s_i:i番目のアイテム \\L_i: 評価済みの推薦リスト \\rel(s_i):ユーザーのアイテムs_iにたいする評価 \\P(s_i): ターゲットシステムで予測された評価 \\prim(s_i): プリミティブシステムで予測された評価
+\]</div>
+<hr />
+<div class="arithmatex">\[
+UNEXP = RS / PM \\SRDP = \frac{|UNEXP \cap USEFUL|}{N} \\where ~ RS: 推薦システムによるアイテムの集合 \\PM: Primitiveシステムによるアイテムの集合 \\UNEXP: 予想外のアイテムの集合 \\USEFUL: 有用なアイテムの集合
+\]</div>
+<h4 id="_21">エントロピーペースの多様性</h4>
+<ul>
+<li>ある推薦システムによるアイテム群は、他の推薦システムも推薦しているかどうか</li>
+</ul>
+<div class="arithmatex">\[
+div_{a,v} = -\sum_{i \in L_{a,u \cap R_{u}}}p_{u,i}logp_{u,i} \\p_{u,i} = \frac{\sum_{a \in A}\delta(a,u,i)}{|A|} \\where ~ A: 推薦した集合 \\a: Targetシステムの評価 \\L_{a,u}: ユーザーuのために推薦システムaにより提供された推薦リスト \\R_u: ユーザーuに関連するアイテム \\\delta :1 if i \in L_{a,u}\cap R_u~and~0~otherwise
+\]</div>
+<h3 id="novelty">ノベルティ（Novelty）</h3>
+<ul>
+<li>
+<p>推薦されたアイテムがユーザーにとって未知であるか否か</p>
+</li>
+<li>
+<p>Discovery ratio, Presicion of novelty, Item novelty, Temporal novelty, Novelty based on HLU, Long tail metric, Generalized novelty model, Unexpectedness, Entropy-based diversity, Unserendipity, HLU of serendipity</p>
+</li>
+</ul>
+<h4 id="_22">測り方</h4>
+<ul>
+<li>特定アイテムとの付き合い方を聞く</li>
+<li>
+<p>アイテム間の一般的な人気度や類似度を計算する</p>
+</li>
+<li>
+<p>ユーザーXアイテムの評価行列において、0か1か（知っているか知らないか）になる</p>
+</li>
+</ul>
+<h4 id="_23">発見率</h4>
+<ul>
+<li>推薦リストの中に、どれだけユーザーが知らないアイテムがあるか</li>
+</ul>
+<div class="arithmatex">\[
+Discovery = \frac{|D_{i} \cap L_{i}|}{|L_{i}|} \\where~D_{i}:ユーザーiが知らないアイテムのリスト \\L_{i}:ユーザーiに対する推薦リスト
+\]</div>
+<h4 id="_24">ノベルティの精度</h4>
+<div class="arithmatex">\[
+Precision(novelty) = \frac{|C_{i} \cap L_{i}|}{|L_{i}|} \\Recall(novelty) = \frac{|C_{i} \cap L_{i}|}{|C_{i}|} \\where~C_{i}:ユーザーiが知らないかつ、好むアイテムのリスト \\L_{i}:ユーザーiに対する推薦リスト
+\]</div>
+<h4 id="_25">アイテムノベルティ</h4>
+<ul>
+<li>おすすめアイテムの新規性を測る</li>
+<li>リスト内の多様性を利用する</li>
+</ul>
+<div class="arithmatex">\[
+Nov_{item}(i) = N(Div(L)-Div(L-(i))) \\= \frac{1}{N-1}\sum_{j \in L}d(i,j) \\where ~ |L| = N \\d(i,j):アイテム間の距離を測る関数 \\Div(): 推薦リストの多様性を測る関数\\
+\]</div>
+<h4 id="_26">テンポラリーノベルティ</h4>
+<ul>
+<li>過去の推薦リストとは異なる推薦を行なっているかを測定する</li>
+</ul>
+<div class="arithmatex">\[
+Nov_{tmp}(L_{i}) = \frac{|\{ x \in L_{i}|x \not= S_{past}\}}{|L_{i}|} \\where~S{past} = \bigcup^{i-1}_{j=1}L_{i}
+\]</div>
+<h4 id="_27">半減期ベースのノベルティ</h4>
+<ul>
+<li>あるアイテムのレーティングの、通常のレーティングからのゲインを、パラメータを元に減少させていく<ul>
+<li>推薦しているが買われないアイテムは、評価を割り引いていく</li>
+</ul>
+</li>
+<li>半減期評価関数</li>
+</ul>
+<div class="arithmatex">\[
+R_{u} = \sum_{j}\frac{max(r_{u,j}-default, 0)}{2^{(j-1)/(\alpha-1)}} \\where~r_{u,j}：ユーザuがjと評価したアイテム \\default:デフォルトの評価値（通常は平均値）\\\alpha : 半減期パラメータ
+\]</div>
+<ul>
+<li>NHLU</li>
+</ul>
+<div class="arithmatex">\[
+f(i) = log_{2}(\frac{n}{n_{i}}) \\NHLU_{u} = \sum^{N}_{i}f(i)\frac{max(r_{u,i}-default, 0)}{2^{(i-1)/(\alpha-1)}} \\where~n:ユーザー数 \\n_{i}: アイテムiを選んだユーザー数
+\]</div>
+<h4 id="_28">ロングテールに基づくノベルティ</h4>
+<ul>
+<li>項目を人気に合わせて３つのカテゴリー（HEAD, MID, TAIL）に合わせる</li>
+<li>上位N個の推薦から、アイテムa_iとa_jを抽出する</li>
+<li>斬新なアイテムを推薦する能力を、以下の評価マトリクスで評価する</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>ai→aj</th>
+<th>HEAD</th>
+<th>MID</th>
+<th>TAIL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HEAD</td>
+<td>45%</td>
+<td>55%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>MID</td>
+<td>5%</td>
+<td>70%</td>
+<td>25%</td>
+</tr>
+<tr>
+<td>TAIL</td>
+<td>0%</td>
+<td>15%</td>
+<td>85%</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>もし、HEAD→HEADが大きければ、ノベルティは低い</li>
+<li>人気アイテムが入れ替わっているかどうかの指標？</li>
+</ul>
+<h3 id="diversity">多様性（Diversity）</h3>
+<ul>
+<li>
+<p>様々なタイプのアイテムをユーザーに推薦できるかどうか</p>
+</li>
+<li>
+<p>Aggregate diversity, Inter-user diversity, List personalization metric, Gini codfficient, Temporal diversity, Intra-list similarity, Subtopic retrieval, MMR, alpha-nDCG</p>
+</li>
+</ul>
+<h4 id="aggregate-diversity">Aggregate diversity</h4>
+<ul>
+<li>
+<p>推薦システム自体の多様性</p>
+</li>
+<li>
+<p>全てのユーザーに推薦されるアイテムの種類を集計する</p>
+</li>
+<li>この値が高いことは、推薦システムが利用者に異なる項目を提供していることを示す</li>
+</ul>
+<div class="arithmatex">\[
+Aggdiv = |\bigcup_{n \in U}L_{u}|\\ where~U:ユーザーの集合\\ ~L_{u}: ユーザーuに推薦したアイテムのリスト
+\]</div>
+<ul>
+<li>分母に全アイテム集合をとることで、全体のアイテムのうちどれだけユーザーに推薦できたかを測っている研究も存在</li>
+<li>アイテムの種類→サブカテゴリ・サブトピックなどにすることで、カテゴリ・トピックの多様性を図ることもできる（Subtopic retrieval metric）</li>
+</ul>
+<h4 id="inter-user-diversity">Inter-user diversity</h4>
+<ul>
+<li>ユーザー間の多様性</li>
+<li>ユーザー間で異なる推薦システムを提供する仕組み</li>
+<li>推薦システムがどれほどユーザー個人個人に合わせられているか(IUD)</li>
+</ul>
+<div class="arithmatex">\[
+d_{u,v} = 1 - \frac{|L_{u} \cap L_{v}|}{N}\\IUD = \frac{1}{N_{U}}\sum_{u,v \in U}d_{u,v}\\where ~ U~(and~V?): ユーザー集合\\ N =|L_{u}|=|L_{v}|,\\ N_{U}: Uの中の２つのペア数\\ L_{u}:ユーザーuに推薦したアイテムリスト
+\]</div>
+<h4 id="list-personalization-metric">List personalization metric</h4>
+<ul>
+<li>リストが個人に最適化されているか</li>
+</ul>
+<div class="arithmatex">\[
+p_{b} = \frac{U_{b}}{U} \\I_{b} = log_{2}(\frac{|U|}{U_{b}}) \\Per(L_{i}) = \frac{\sum_{b_{j} \in L_{i}}log\frac{|U|}{|U_{b}|}}{|L_{i}|} \\where ~ p_{b}: アイテムbがユーザーにより選択される確率\\I_{b}: アイテムbの自己エントロピー\\Per(L_{i}): アイテムの個人化の度合い\\U_{b}: アイテムbをせたんkすいたユーザーの数
+\]</div>
+<h4 id="gini">Gini係数</h4>
+<ul>
+<li>所得のアンバランスさの指標などに使われる</li>
+<li>
+<p>アイテムの推薦頻度がどれだけ偏っているか</p>
+</li>
+<li>
+<p>x軸：推薦リスト内の合計頻度の高い順に並べられたx%の割合</p>
+</li>
+<li>y軸：リスト内の項目のx%の合計頻度</li>
+</ul>
+<div class="arithmatex">\[
+G = \frac{B}{A+B} \\where: A:グラフを書いた時、45％の線と曲線の間の面積 \\B:それ以外の面積（曲線の下の面積）
+\]</div>
+<h4 id="_29">時間的多様性</h4>
+<ul>
+<li>時刻が違うと、システムが出力する項目が異なる場合の測定</li>
+</ul>
+<div class="arithmatex">\[
+div_{tmp}(L_{1},L_{2},N) = \frac{|(x \in L_{2}|x! \ in L_{1})|}{N} \\where~ N=|L_{1}|=|L_{2}|
+\]</div>
+<h4 id="_30">推薦リスト内の多様性</h4>
+<ul>
+<li>推薦リストの内容に応じた多様性</li>
+<li>２つのアイテムの類似度で計算される</li>
+<li>通常、特徴ベクトルまたはカテゴリが使われる</li>
+</ul>
+<div class="arithmatex">\[
+Diversity = \sum_{l \in L_{i},m \in L_{i}}\frac{1}{similarity(l,m)} \\where~L_{i}:ユーザーiに推薦したアイテムリスト
+\]</div>
+<div class="arithmatex">\[
+ILS(L_{i}) = \frac{\sum_{b_{k} \in L_{i}} \sum_{b_{e} \in L_{i},b_{k} \not= b_{e}} similarity(b_{k},b_{e})}{{}_{|L_{i}|}C_{2}}
+\]</div>
+<h4 id="mmrmaximal-marginal-relevance">MMR（Maximal marginal relevance）</h4>
+<ul>
+<li>本来は検索結果に文書を選択するための項目選択法</li>
+<li>この考え方を、推薦結果のリストの評価に利用する</li>
+</ul>
+<div class="arithmatex">\[
+MMR_{List} = \sum_{d_{i} \in L}(\alpha rel(d_{i})-(1-\alpha )max_{d_{i}\in L^{j-1}}sim(d_{i},d_{j})) \\where ~ L: 推薦リスト \\d_{i}: リスト内のアイテム \\rel: そのアイテムをユーザーが好むか否か \\L^{i-1}:J番目までの推薦リスト
+\]</div>
+<h2 id="_31">推薦システムの評価指標の注意点など</h2>
+<ul>
+<li>APやnDCGにより、特定のユーザーに対するランク付された推薦を評価できる</li>
+<li>システムを評価する場合、複数ユーザーに対する平均的な良さを評価する必要がある</li>
+</ul>
+<h4 id="map">MAP</h4>
+<ul>
+<li>ユーザー集合Nに対し、APを算術平均した値</li>
+</ul>
+<div class="arithmatex">\[
+MAP = \frac{1}{N}\sum^{N}_{i=1}AP_{i}
+\]</div>
+<ul>
+<li>できるだけ多くのユーザーにある程度適合する推薦を提示したい場合、MAPだけでは不十分</li>
+</ul>
+<h4 id="gmapmap">GMAP（幾何平均を用いたMAP）</h4>
+<div class="arithmatex">\[
+GMAP = \sqrt[n]{\prod_{n}AP_{n}}
+\]</div>
+<p>便宜上変形すると、以下の形になる</p>
+<p>ただし、εは非常に小さい値（10^(-5)程度）
+$$
+GMAP = exp(\frac{1}{N}\sum^{N}<em i="i">{i=1}ln(AP</em>+\epsilon))-\epsilon
+$$
+一部のユーザーへの推薦で、適合アイテムが一つもない場合、GMAPはMAPより低く評価する</p>
+<ul>
+<li>上位10位までのように測定長が短い場合、MAPやGMAPの値は不安定なものになりやすい</li>
+</ul>
+<h4 id="infapinferred-average-precision">infAP（inferred Average Precision）</h4>
+<ul>
+<li>不完全性なテストコレクションから真の平均適合率を推定する</li>
+</ul>
+<h2 id="_32">施策に対する評価指標</h2>
+<ul>
+<li>アイテムの特定項目分布</li>
+<li>プッシュしたいカテゴリが存在する場合などは、提供されたアイテムの特定項目に関する分布を基に評価を行うことができる</li>
+<li>NGアイテムの出現頻度</li>
+<li>基本的には0を目指す</li>
+<li>目的のアイテム・カテゴリ等への遷移率</li>
+<li>ユーザーの遷移先をコントロールしたい場合に計測</li>
+<li>アイテムごとのPV数のジニ係数</li>
+<li>システムによるアイテムビューが偏らないような仕組みを導入した際に、偏りが是正されるか計測</li>
+</ul>
+<h2 id="interleaving">interleaving</h2>
+<ul>
+<li>新しいアルゴリズムと古いアルゴリズムを交互に出し、どちらが良い反応か評価する</li>
+<li>https://www.wantedly.com/companies/wantedly/post_articles/155593</li>
+<li>ABテストより10倍以上早く、アルゴリズムの有意差を評価できる</li>
+<li>影響が小さい場合は、使える</li>
+</ul>
+<h2 id="2017recsys-2017-conference">2017年での企業の状況（RecSys 2017 Conference）</h2>
+<p><img alt="RecSys_2017_Conference" src="../imgs/2.jpg" />
+- 推薦システムの学会で、2017年現在での企業で使われている指標は、多い順に以下の通り
+1. MRR（序列を考慮した推薦リスト指標・重みは序列の逆比）
+2. AUC（分類問題）
+3. Precision（適合アイテム1つ発見）
+4. nDCG（序列を考慮した推薦リスト指標・重みを調整可能）
+5. Recall（適合アイテム全列挙）</p>
+<ul>
+<li>論文では探索重視の評価指標などは提案されてはいるが、実環境では答えのデータが取得しにくく、現場ではまだあまり使われていない。</li>
+<li>MRRやnDCGは、比較的新しい手法だがよく使われている。</li>
+</ul>
+<h1 id="_33">参考文献</h1>
+<ul>
+<li>推薦システムについて：http://www.kamishima.net/archive/recsysdoc.pdf</li>
+<li>評価指標について：https://techblog.nhn-techorus.com/archives/4778</li>
+<li>検索・推薦の評価方法や評価指標：https://qiita.com/rilmayer/items/4c2c40640c0892e13257</li>
+<li>評価指標の分類：https://blog.brainpad.co.jp/entry/2017/08/25/140000</li>
+<li>推薦システムのオフライン評価：http://soc-research.org/wp-content/uploads/2014/11/OfflineTest4RS.pdf</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tracking", "navigation.expand"], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044"}, "search": "../../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

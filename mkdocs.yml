@@ -23,7 +23,7 @@ theme:
   custom_dir: overrides
 
 google_analytics:
-  - G-8JSVH7S4KX
+  - UA-196492429-1
   - auto
 
 markdown_extensions:
