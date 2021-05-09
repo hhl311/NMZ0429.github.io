@@ -1,0 +1,2381 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
+    
+    
+      
+        <title>推薦モデル - Cheep Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bde7dde4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjp.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:600,800">
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-196492429-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="Cheep Learning" class="md-header__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cheep Learning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              推薦モデル
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="" type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="light-green" data-md-color-accent="" type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="クリア" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Welcome !!
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../intro/" class="md-tabs__link">
+      Artificial Intelligenceを学ぶ方へ
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/image/" class="md-tabs__link">
+        100本ノック
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../PyTorch/PyTorch/dp/" class="md-tabs__link">
+        PyTorch
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../UofT/game_theory/" class="md-tabs__link">
+        UofT
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-tabs__link">
+        その他
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/heroku_st/" class="md-tabs__link">
+        ツール
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/GNN/" class="md-tabs__link">
+        ネットワーク解説
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/3dvision/" class="md-tabs__link">
+        深層学習
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../eval_rec/" class="md-tabs__link md-tabs__link--active">
+        統計モデル
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Cheep Learning" class="md-nav__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Cheep Learning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Welcome !!
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/" class="md-nav__link">
+        Artificial Intelligenceを学ぶ方へ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        100本ノック
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="100本ノック" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          100本ノック
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/image/" class="md-nav__link">
+        画像処理100本ノック答え
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/numpy/" class="md-nav__link">
+        Numpy100本ノック答え
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        PyTorch
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PyTorch" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          PyTorch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" data-md-state="indeterminate" type="checkbox" id="__nav_4_1" checked>
+      
+      <label class="md-nav__link" for="__nav_4_1">
+        PyTorch
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PyTorch" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          PyTorch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch/dp/" class="md-nav__link">
+        PyTorchの分散計算処理を使う
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch/pytorch/" class="md-nav__link">
+        pytorchによるディープラーニング実装の流れ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch/video/" class="md-nav__link">
+        PyTorch Dataset API で動画データを扱う方法
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2" checked>
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        PyTorch Lightning
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PyTorch Lightning" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          PyTorch Lightning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/checkpoint/" class="md-nav__link">
+        PyTorch LightningのCheckpointCallbackの便利機能
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/data_module/" class="md-nav__link">
+        【PyTorch Lightning】LightningDataModuleについて
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/lightning_bolts/" class="md-nav__link">
+        PyTorch Lightning Boltsの使い方
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/pytorchvideo/" class="md-nav__link">
+        PyTorchVideo 使い方
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        UofT
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="UofT" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          UofT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UofT/game_theory/" class="md-nav__link">
+        Game theory
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UofT/note/" class="md-nav__link">
+        Note
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        その他
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="その他" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          その他
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-nav__link">
+        Pythonのお勉強について
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC/" class="md-nav__link">
+        ワークフロー
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        ツール
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ツール" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          ツール
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/heroku_st/" class="md-nav__link">
+        StreamlitアプリをHerokuでティプロイする
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/plantuml/" class="md-nav__link">
+        PlantUMLのススメ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/tmux/" class="md-nav__link">
+        tmuxはええぞ
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" data-md-state="indeterminate" type="checkbox" id="__nav_8" checked>
+      
+      <label class="md-nav__link" for="__nav_8">
+        ネットワーク解説
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ネットワーク解説" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          ネットワーク解説
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/GNN/" class="md-nav__link">
+        Graph Attention Network 解説
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/fast_rcnn/" class="md-nav__link">
+        Faster R-CNN まとめ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/mesh_rcnn/" class="md-nav__link">
+        Mesh RCNNのお気持ちを理解したい
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A7%A3%E8%AA%AC/posenet/" class="md-nav__link">
+        Posenet
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" data-md-state="indeterminate" type="checkbox" id="__nav_9" checked>
+      
+      <label class="md-nav__link" for="__nav_9">
+        深層学習
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="深層学習" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          深層学習
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/3dvision/" class="md-nav__link">
+        3D vision
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/lstm/" class="md-nav__link">
+        【もうやりたくない】RNNとLSTMの理解とNumPyによる実装
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/video_task/" class="md-nav__link">
+        動画を使った深層学習
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      <label class="md-nav__link" for="__nav_10">
+        統計モデル
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="統計モデル" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          統計モデル
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eval_rec/" class="md-nav__link">
+        推薦システムの評価指標
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          推薦モデル
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        推薦モデル
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    分類
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../silimarity/" class="md-nav__link">
+        サンプル間の類似性指標
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../use_case/" class="md-nav__link">
+        学習ベース推薦システムの活用事例
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    分類
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">推薦モデル</h1>
+<p>推薦モデル、所謂リコメンデーションモデルの最近の同行をまとめました。</p>
+<ul>
+<li>
+<p>様々な記述があり、書き手により単語が指す範囲が異なる場合がある</p>
+</li>
+<li>
+<p>〈w, x〉とはw,xの内積を表す</p>
+</li>
+</ul>
+<h2 id="_2">分類</h2>
+<ul>
+<li>推薦システムは大きく分けて3種類</li>
+<li>ルールベース：推論時に他のユーザーの情報を利用しない</li>
+<li>メモリベース：学習・推論時共に他のユーザーの情報を利用する</li>
+<li>モデルベース：学習時に他のユーザーの情報を利用するが、推論時には他のユーザーの情報を利用しない</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>ルールベース</th>
+<th>メモリベース</th>
+<th>モデルベース</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>個人化の度合い</td>
+<td>低い</td>
+<td>高い</td>
+<td>モデルによる</td>
+</tr>
+<tr>
+<td>方法</td>
+<td>ルールに従って推薦する</td>
+<td>推薦の度に、全体的なアイテム・ユーザーの情報から計算する</td>
+<td>推薦の度に、モデルに対象者の情報をいれ計算する</td>
+</tr>
+<tr>
+<td>手法</td>
+<td></td>
+<td>協調フィルタリング</td>
+<td>クラスタモデル、関数系、ベイズ</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>その他の分類</li>
+<li>個人化なし：全てのユーザーに対し同じ推薦を行う</li>
+<li>一時的個人化：そのセッションのデータ（一時的なデータ）のみ用いて推薦を行う</li>
+<li>永続的個人化：長期的なデータ（履歴など）を用いて推薦を行う</li>
+<li>更新しない個人化：ユーザーが登録した基本的には更新されない情報や、そのセッションでのみ有効なデータなどを用いて推論する</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>個人化なし</th>
+<th>一時的個人化</th>
+<th>永続的個人化</th>
+<th>更新しない個人化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>アイテム</td>
+<td>スペックランキング（価格順）</td>
+<td>カゴ内の類似商品・代替材補完残</td>
+<td>履歴からの類似傾向商品</td>
+<td>相互的でないチャットボット・販売員のおすすめ？</td>
+</tr>
+<tr>
+<td>人</td>
+<td>人気ランキング</td>
+<td>よく一緒に買われるもの</td>
+<td>協調フィルタリング（評価・行動からの類似傾向商品）</td>
+<td>アンケートなど</td>
+</tr>
+<tr>
+<td>知識</td>
+<td>店・時期ごとのおすすめ</td>
+<td>会計時のおすすめ</td>
+<td>あまりなし・個人に対する専門家のおすすめ</td>
+<td>チャットボット・販売員のおすすめ</td>
+</tr>
+</tbody>
+</table>
+<h1 id="_3">協調フィルタリング</h1>
+<ul>
+<li>ユーザーの評価（行動）情報を使い、対象ユーザーに類似した他のユーザーの情報を用いて推薦を行う手法</li>
+</ul>
+<h3 id="_4">利点</h3>
+<ul>
+<li>ドメイン知識が不要</li>
+<li>異なるジャンル間で推薦可能（セレンディピティ）</li>
+</ul>
+<h3 id="_5">欠点</h3>
+<ul>
+<li>コールドスタート問題</li>
+<li>
+<p>サービス初期、購入（行動）回数が少ない利用者やアイテムは推薦できない</p>
+</li>
+<li>
+<p>カバレッジ（被覆率）が低くなる</p>
+</li>
+<li>推薦されるアイテムが多く買われているものになりやすい</li>
+<li>買われていないアイテムは推薦できない</li>
+<li>類似アイテムは推薦できない</li>
+<li>アイテムの類似度はわからない</li>
+</ul>
+<h3 id="_6">手順</h3>
+<ol>
+<li>ユーザーの評価（行動）情報を蓄積する</li>
+<li>蓄積できていない場合は、ルールベースやコンテンツベースのシステムを用いる</li>
+<li>評価（行動）情報から、嗜好が似ているユーザーを探す</li>
+<li>どのように嗜好が似ているかを算出するかは、類似性指標のサーベイを参照</li>
+<li>ユーザーが多い場合、あらかじめユーザーを行動履歴などによりクラスタリングすることで、計算資源を節約できる</li>
+<li>嗜好が似ているユーザーが好んでおり、そのユーザーにとって評価が高いと思われるものを推薦する</li>
+<li>ここでは、k-NNなどを用いる</li>
+</ol>
+<h2 id="_7">問題</h2>
+<h3 id="_8">データのスパース性</h3>
+<ul>
+<li>アイテムが非常に多い場合、ユーザーは大半の商品を買わない</li>
+<li>そのため、実際は類似しているユーザーであっても、全く同じアイテムをともに評価しないと類似であると判別できない（同類推移問題）</li>
+<li>解決するためには以下の手法が存在</li>
+<li>特異値分解（SVD）による次元削減</li>
+<li>行列分解による次元削減（モデル.関数系.回帰の欄参照）</li>
+<li>ハイブリッド協調フィルタリングによる補完<ul>
+<li>ユーザーの履歴を用いない、アイテムベース・ユーザーベースで類似度を計算</li>
+</ul>
+</li>
+<li>予測モデル構築によるデータの補完<ul>
+<li>未評価のアイテムの評価値を予測して埋める</li>
+</ul>
+</li>
+</ul>
+<h3 id="_9">スケーラビリティ</h3>
+<ul>
+<li>アイテム数やユーザー数が非常に速いスピードで増大した場合、計算量が大きくなる</li>
+<li>解決するためには以下の手法が存在</li>
+<li>CFを使う前に、アイテムベース・ユーザーベースで類似するアイテム・ユーザーをクラスタリングし、計算対象を絞り込む（ハイブリッド協調フィルタリングのようなもの）</li>
+</ul>
+<h3 id="_10">灰色の羊</h3>
+<ul>
+<li>複数パターンの趣向と一致する、あるいはどれとも一致しないために、フィルタリングの恩恵にあずかれないユーザー群のこと</li>
+<li>解決するためには以下の手法が存在</li>
+<li>ハイブリッド協調フィルタリングによる行動パターン以外での差別化</li>
+</ul>
+<h3 id="_11">シリングアタック</h3>
+<ul>
+<li>評価システムに対する攻撃を指す（サクラレビューなど）</li>
+<li>解決するためには以下の手法が存在</li>
+<li>アイテムベースの協調フィルタリングを用いる<ul>
+<li>ユーザーベースより影響を受けにくい</li>
+</ul>
+</li>
+<li>アイテムベース＋CFのハイブリッド協調フィルタリングを用いる</li>
+</ul>
+<h2 id="_12">分類</h2>
+<ul>
+<li>メモリベースか、モデルベースか、ハイブリッドかに分類できる</li>
+</ul>
+<h3 id="cf">メモリベースのCF</h3>
+<ul>
+<li>ユーザーとアイテムの相関関係により、類似したユーザー同士の評価をもとに推薦を行う</li>
+</ul>
+<h4 id="_13">代表的な手法</h4>
+<ul>
+<li>ユーザーベース</li>
+<li>ユーザーの行動履歴を元に、ユーザー間の類似性を解析し、評価が高いアイテムを推薦する</li>
+<li>アイテムベース</li>
+<li>ユーザーの行動履歴を元に、アイテム間の類似性を解析し、関連性の高いアイテムを推薦する</li>
+</ul>
+<h4 id="_14">長所</h4>
+<ul>
+<li>実装が容易</li>
+<li>データの追加が容易</li>
+<li>コンテンツの内容について考慮が不要</li>
+<li>ともに評価されたアイテムのスケーリングが不要</li>
+</ul>
+<h4 id="_15">短所</h4>
+<ul>
+<li>
+<p>人の評価への依存</p>
+</li>
+<li>
+<p>評価を標準化することで精度が上がる</p>
+</li>
+<li>
+<p>疎なデータでの性能悪化</p>
+</li>
+<li>
+<p>コールドスタート</p>
+</li>
+<li>
+<p>スケーラビリティ</p>
+</li>
+<li>
+<p>ユーザーやアイテムを事前にクラスタリングしていれば、ある程度は改善可能</p>
+</li>
+<li>
+<p>ただし、ある程度の頻度で更新する必要がある</p>
+</li>
+</ul>
+<h3 id="cf_1">モデルベースのCF</h3>
+<ul>
+<li>統計的なアルゴリズムによりユーザーの購買行動をモデル化し、モデルをもとに推薦を行う</li>
+</ul>
+<h4 id="_16">代表的な手法</h4>
+<ul>
+<li>ベイジアンネットワークCF</li>
+<li>クラスタリングCF</li>
+<li>潜在意味CF</li>
+<li>素因子分析</li>
+<li>次元削減を用いたCF</li>
+</ul>
+<h4 id="_17">長所</h4>
+<ul>
+<li>疎なデータでの性能</li>
+<li>予測性能向上</li>
+<li>直感的な説明</li>
+</ul>
+<h4 id="_18">短所</h4>
+<ul>
+<li>モデルの構築が複雑</li>
+<li>スケーラビリティ（メモリベースよりは速い）</li>
+<li>夜間や、月・週ごとに更新すれば良い</li>
+<li>適応性</li>
+<li>ユーザーやアイテムの変化に弱い<ul>
+<li>モデルを更新しないと対応できない</li>
+</ul>
+</li>
+<li>次元削減による有益な情報の損失</li>
+</ul>
+<h3 id="cf_2">ハイブリッドなCF</h3>
+<ul>
+<li>（CFではない）コンテンツベースと、CFの双方を用いて推薦を行う</li>
+</ul>
+<h4 id="_19">代表的な手法</h4>
+<ul>
+<li>コンテンツベースCF</li>
+<li>メモリベース＋モデルベースのCF</li>
+</ul>
+<h4 id="_20">長所</h4>
+<ul>
+<li>単体での問題を克服可能</li>
+<li>予測性能向上</li>
+<li>スパース性、灰色の羊に対応</li>
+</ul>
+<h4 id="_21">短所</h4>
+<ul>
+<li>構築が複雑</li>
+<li>場合により外部データ（ユーザーの行動情報以外の情報）が必要</li>
+</ul>
+<h2 id="_22">使うデータ</h2>
+<h3 id="_23">明示的なデータ</h3>
+<ul>
+<li>ユーザーに明示的に評価させる</li>
+<li>Good/Bad, n段階評価</li>
+<li>データ量は少ないが、正確で、未評価と不支持の区別は明確</li>
+</ul>
+<h3 id="_24">暗黙的データ</h3>
+<ul>
+<li>閲覧データ、購買データなどの自動的に取得できる情報</li>
+<li>データ量は多いが、不正確で、未評価と不支持の区別は明確でない</li>
+</ul>
+<h2 id="_25">テクニック</h2>
+<h3 id="svd">SVD</h3>
+<h4 id="_26">定義など</h4>
+<ul>
+<li>任意のm x nの実数行列A（rank=k）があるとき、次元m x mの直行行列U, 次元n x nの直行行列V, 非対角成分が0で、対角成分が0より大きい（もし列がk以下なら）か0と等しい（もし列がkより大きいなら）行列Sが存在し、以下のように分解できる</li>
+<li>
+<p>下の行列との差（行列Uだと、r行〜m行の部分）の部分の成分は全て0</p>
+</li>
+<li>
+<p>このとき、Aの特異値分解は以下のように表される</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+A = U \Gamma V^T \\
+A:m*n, ~U:m*r,~ \Gamma:r*r,~ V^T:r*n
+\]</div>
+<ul>
+<li>U, Vは直行行列、\Gammaは対角行列で、\Gammaの対角成分の行列がAの特異値（＞0）</li>
+<li>対角成分の大きさが一定値以下の\Gammaを切り捨てることで、次元を削減する</li>
+</ul>
+<h4 id="_27">性質</h4>
+<ul>
+<li>以下の行列Aj*は、Aのランクjの最小二乗近似</li>
+</ul>
+<div class="arithmatex">\[
+A_{j*} = \sum^j_{i=1}\lambda_ju_iv_i
+\]</div>
+<ul>
+<li>Aに対して\Gammaは一位に定まるが、U,Vは一意に定まるとは限らない</li>
+</ul>
+<h4 id="svd_1">SVD ++</h4>
+<ul>
+<li>次元削減手法としてのMFを正則があるSVDとみなし、それの進化系という位置付け</li>
+<li>→メモリベース.Factorization Machines.SVD++参照</li>
+</ul>
+<h4 id="_28">他の次元削減手法との比較</h4>
+<ul>
+<li>NMF</li>
+<li>係数が0以上であるという制約がある手法</li>
+<li>分解後の係数が疎になってしまうので適していない</li>
+<li>PCA</li>
+<li>0以下をとる場合がある</li>
+<li>しかし、実際には閲覧や評価、行動などは非負であり、0以下にになることはない</li>
+<li>LDA</li>
+<li>データが多変量正規分布でないので前提条件が満たされない</li>
+<li>ICA</li>
+<li>評価・行動履歴は相互に統計的に独立でないので仮定が満たされない</li>
+</ul>
+<h1 id="_29">メモリベース</h1>
+<h2 id="_30">協調フィルタリング→推薦の流れ</h2>
+<ol>
+<li>ユーザー・アイテム同士の類似性スコアを算出する</li>
+<li>何を持って類似しているとするか定義</li>
+<li>定義に合わせ、データを用意</li>
+<li>定義に合わせ、算出手法を算出し実装</li>
+<li>実際に類似性スコアを算出</li>
+<li>類似性スコアで重みをつけて推薦</li>
+<li>類似性スコアで重み付け（似ているユーザー・アイテムの影響度を大きくする）</li>
+<li>正規化する</li>
+<li>適切にソートして、スコアが高い順に結果を表示</li>
+</ol>
+<h2 id="_31">例</h2>
+<h3 id="_32">ユーザーベース</h3>
+<table>
+<thead>
+<tr>
+<th>---</th>
+<th>アイテム1</th>
+<th>アイテム2</th>
+<th>アイテム3</th>
+<th>アイテム4</th>
+<th>アイテム5</th>
+<th>アイテム6</th>
+<th>アイテム7</th>
+<th>アイテム8</th>
+<th>類似度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ユーザーA</td>
+<td>1</td>
+<td>0</td>
+<td>x</td>
+<td>1</td>
+<td>0</td>
+<td>x</td>
+<td>1</td>
+<td>0</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>ユーザーB</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>ユーザーC</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>x</td>
+<td>0.25</td>
+</tr>
+<tr>
+<td>ユーザーD</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>x</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>推薦される人</td>
+<td>1</td>
+<td>0</td>
+<td>x</td>
+<td>1</td>
+<td>0</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>-</td>
+</tr>
+<tr>
+<td>評価(n=1)</td>
+<td>-</td>
+<td>-</td>
+<td>x</td>
+<td>-</td>
+<td>-</td>
+<td>x</td>
+<td>1</td>
+<td>0</td>
+<td>ref A</td>
+</tr>
+<tr>
+<td>n=2</td>
+<td>-</td>
+<td>-</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>0</td>
+<td>0.5</td>
+<td>0.5</td>
+<td>ref A&amp;B</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>簡略化のために類似度は一致率（同じ値の割合）を使った</li>
+<li>
+<p>簡略化のために評価は{0,1}（購買したか否か、好きか否か）</p>
+</li>
+<li>
+<p>K-NN(n=1)ならば、一番似ているユーザーAの評価が高いアイテム7を推薦する</p>
+</li>
+<li>K-NN(n=2)ならば、似ているユーザーAとBの評価の平均が高いアイテム3を推薦する</li>
+</ul>
+<h4 id="_33">共通の改善点</h4>
+<ul>
+<li>ユーザー間の類似度の計算、似ているユーザーからの推薦するアイテムの計算に改善点が多い</li>
+<li>類似度に閲覧したか否かなどを含める</li>
+<li>推薦するアイテムの計算時に類似度による重み付けを行う</li>
+<li>評価者の多さにより重み付けを行う　など</li>
+<li>また、疎なデータを扱う場合、次元圧縮を行う</li>
+<li>PCAを使う場合は、欠損値をデフォルト投票値（下参照）やEMアルゴリズムで保管する</li>
+<li>評価値への依存を低めたい場合は、ランキング化した後、ランキングに対する類似指標などを用いる</li>
+</ul>
+<h4 id="_34">ユーザーベース独自の改善点</h4>
+<ul>
+<li>一人当たりの共通の評価者が少ない場合、あるユーザーの未評価アイテムの評価値を、全利用のそのアイテムの評価値で埋める（デフォルト投票値）</li>
+<li>最低、最高などの両端に近い評価値をより重視する</li>
+</ul>
+<h3 id="_35">アイテムベース</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>アイテム1</th>
+<th>アイテム2</th>
+<th>アイテム3</th>
+<th>アイテム4</th>
+<th>アイテム5</th>
+<th>アイテム6</th>
+<th>アイテム7</th>
+<th>アイテム8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ユーザーA</td>
+<td>1</td>
+<td>0</td>
+<td>x</td>
+<td>1</td>
+<td>0</td>
+<td>x</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ユーザーB</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ユーザーC</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>x</td>
+</tr>
+<tr>
+<td>ユーザーD</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>x</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>推薦される人</td>
+<td>1</td>
+<td>0</td>
+<td>x</td>
+<td>1</td>
+<td>0</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>アイテム1の類似度</td>
+<td>-</td>
+<td>-</td>
+<td>0.33</td>
+<td>-</td>
+<td>-</td>
+<td>1.00</td>
+<td>0.75</td>
+<td>0.33</td>
+</tr>
+<tr>
+<td>アイテム4の類似度</td>
+<td>-</td>
+<td>-</td>
+<td>0.5</td>
+<td>-</td>
+<td>-</td>
+<td>0.5</td>
+<td>0.67</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>高評価アイテムの類似度</td>
+<td>-</td>
+<td>-</td>
+<td>0.42</td>
+<td>-</td>
+<td>-</td>
+<td>0.75</td>
+<td>0.71</td>
+<td>0.42</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>簡略化のため、ユーザーベースと同じ計算方法を用いた</li>
+<li>
+<p>改善手法もユーザーベスと同様</p>
+</li>
+<li>
+<p>推薦したいユーザーが高評価をしたアイテム{1,4}を使い、未評価のアイテムの類似度を計算</p>
+</li>
+<li>類似度が高いアイテム6を推薦する</li>
+</ul>
+<h4 id="_36">アイテムベース独自の改善点</h4>
+<ul>
+<li>
+<p>共起性や、閲覧・買い物・直近の利用履歴と類似しているアイテムを推薦することで、一時的個人化の推薦を行える</p>
+</li>
+<li>
+<p>プライバシー保護においてユーザーベースより優位</p>
+</li>
+</ul>
+<h4 id="_37">問題</h4>
+<ul>
+<li>映画・コンサートのように、推薦対象のアイテムが頻繁に入れ替わる状況では、頻繁な近傍の更新が必要になる</li>
+<li>実験的に特定のアイテムに偏る傾向が強い（理論的根拠はないが）</li>
+</ul>
+<h2 id="_38">ユーザーベースとアイテムベースの差別化</h2>
+<ul>
+<li>ユーザーベース</li>
+<li>メモリに収まるサイズで変更が頻繁に行われる</li>
+<li>ユーザーごとの趣向が独自の値を持っている<ul>
+<li>〜を推薦するサイト</li>
+</ul>
+</li>
+<li>セレンディピティ（予想外のものを見つけること）が高い</li>
+<li>アイテムベース</li>
+<li>巨大なデータが対象</li>
+<li>アイテムが多いと、ユーザー同士の類似度を出しにくい<ul>
+<li>同じアイテムを買う人が少なかったり、行列が疎になったりする</li>
+</ul>
+</li>
+<li>アイテム同士の類似度は事前に計算可能なので、運用環境での推薦が楽</li>
+<li>アイテム同士の類似度は変化しづらいので再計算が少なくて済む</li>
+<li>説明しやすい</li>
+</ul>
+<h2 id="factorization-machines">Factorization Machines</h2>
+<ul>
+<li>
+<p>2010年にICDMで出された汎用的なモデル</p>
+</li>
+<li>
+<p>特徴量の交互作用をうまく計算する</p>
+</li>
+<li>年齢を表す特徴量と、性別を表す特徴量があった場合、年齢＋性別のAND条件の特徴量を、年齢と性別の交互作用で表現する</li>
+<li>交互作用の重みを各特徴に対応するベクトルの内積で表現することで学習する</li>
+<li>
+<p>より高次なFMも提案されているが、2018年時点では、3次くらいまでしか精度が上がっていかない</p>
+</li>
+<li>
+<p>CFとは考え方がやや異なる</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>user A</th>
+<th>user B</th>
+<th>user C</th>
+<th>-</th>
+<th>Item a</th>
+<th>Item b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td></td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>このように、1評価を1行で示し、取り出すのはユーザーとアイテムの相互作用の特徴ベクトル</li>
+<li>相互作用を時間やコンテキストなど自由に入れられる</li>
+<li>例えばAgeを入れれば、UserxItemxAgeの交互作用をモデルで扱える</li>
+</ul>
+<h3 id="_39">予測式</h3>
+<ul>
+<li>2次のFM</li>
+</ul>
+<div class="arithmatex">\[
+\hat y(x) := w_0 + \sum^n_{i=1}w_ix_i+\sum^n_{i=1}\sum^n_{j=i+1}〈v_i,v_j〉x_ix_j \\
+   where~ w_0 \in \mathbb{R},~ w \in \mathbb{R}^n,~ V \in \mathbb{R}^{n\times k} \\
+   &lt;v_i,v_j&gt; := \sum^k_{f=1}v_{i,f} v_{j,f}
+\]</div>
+<p>V内の行v_iは、k個の因子を持つi番目の変数</p>
+<p>k in N+0は因子分解の次元性を定義するハイパーパラメータ</p>
+<ul>
+<li>参照：通常の交互作用がある2次までの線形モデル</li>
+<li>そのまま推薦のデータに持っていくと、<strong><span class="arithmatex">\(x_ix_j\)</span></strong>が疎であるため<em><span class="arithmatex">\(w_{i,j}\)</span></em>部分が学習しにくい</li>
+<li>よって、そこの部分をベクトルの内積として学習する<ul>
+<li>ついでに、学習パラメータが減らせる</li>
+</ul>
+</li>
+</ul>
+<div class="arithmatex">\[
+\hat y(x) := w_0 + \sum^n_{i=1}w_ix_i+\sum^n_{i}\sum^n_{j=i+1}w_{i,j}x_ix_j
+\]</div>
+<ul>
+<li>2way FMは、変数間の変数単一＋ペアワイズ相互作用を捉える</li>
+<li>w0はグローバルバイアス</li>
+<li>wiは、i番目の変数の強さをモデル化する</li>
+<li>w^i,j := <v_i,v_j>はi番目とj番目の変数間の相互作用をモデル化する</li>
+<li>相互作用ごとにパラメータw_i,jを使用する代わりに、FMモデルは因数分解（Factorize）することで相互作用をモデル化する</li>
+<li>疎なベクトルでは、これが重要</li>
+</ul>
+<h3 id="_40">予測</h3>
+<ul>
+<li>回帰</li>
+<li>y^(x)を直接予測対象として使用し、MSEなどで学習させる</li>
+<li>2値分類</li>
+<li>y^(x)をラベルとして、ロジット回帰やヒンジロスで学習させる</li>
+<li>ランキング</li>
+<li>ベクトルxを<strong><span class="arithmatex">\(y^{(x)}\)</span></strong>で順位付けし、<strong><span class="arithmatex">\(x(a), x(b) \in D\)</span></strong>のペアに対してペアワイズ分類損失を用いて学習する</li>
+</ul>
+<h3 id="_41">最適化手法</h3>
+<ul>
+<li>SGD, ALS, MCMCなど</li>
+<li>MSE, ロジット損失、ヒンジロスなど様々な損失を学習できる</li>
+<li>L2正則化で過学習を防ぐ</li>
+<li>Early stoppingの方が精度が良い？</li>
+<li>勾配は以下の式で表される（１次の場合？）</li>
+</ul>
+<p>$$
+\begin{equation}
+    \frac{d}{d\theta}\hat y(x)= \Biggl{
+        \begin{array}{1}
+            1, ~if~\theta~is~w_0\
+            x_i, ~if~\theta~is~w_i\
+            x_i\sum^n_{i=1}v_{i,f}x_j- v_{i,f}x^2_i,~if~\theta~is~v_{i,f}
+    \end{array}
+\end{equation}
+$$
+数式にエラーが出るため、パーシャルdをただのdとして書いています。</p>
+<h3 id="svd_2">SVD++</h3>
+<h4 id="mfsvd">元のMF（SVD）</h4>
+<div class="arithmatex">\[
+\hat r_{ui} = \mu + b_{user}(u)+b_{item}(i)+U_uI_i \\
+where ~ \hat r_{ui}:評価の予測 ~,~ b_{user}:個人の影響（バイアス） \\
+  ~I:商品の属性(I \in R^{k\times m}) ~,~ \mu:全体平均 \\
+  ~b_{item}:商品の影響（バイアス） ~,~ U:商品の属性（U \in R^{u \times k}
+\]</div>
+<div class="arithmatex">\[
+loss = \min_{b,U,I}\sum_{u,i\in R}(r_{ui}-\hat r_{ui})^2 + \lambda(|b_{user}|^2+|b_{item}|^2+|U^T_u|^2+|I_i|^2)
+\]</div>
+<h4 id="svd_3">SVD++</h4>
+<div class="arithmatex">\[
+\hat r_{ui} = \mu + b_{user}(u)+b_{item}(i)+(U_u+|R(u)|^{-0.5}\sum_{j \in R(u)}y_j)I_i \\
+ where ~ R(u):ユーザーuが評価したアイテム集合 \\
+ y:商品へのあるアクションの効果(y\in R^{k \times m})(アクション：商品を評価した、閲覧した等)
+\]</div>
+<div class="arithmatex">\[
+loss = min_{b,U,I}\sum_{(u,i)\in R}(r_{ui}-\hat r_{ui})^2+\lambda_1(|b_{user}|^2+|b_{item}|^2)+ \\\lambda_2(|U^T_u|^2+|I_i|^2+|y_j|^2)
+\]</div>
+<h2 id="field-aware-fm-ffm">Field-aware FM; FFM</h2>
+<ul>
+<li>元論文：https://www.csie.ntu.edu.tw/~cjlin/papers/ffm.pdf</li>
+<li>このモデルで優勝したコンペ（論文の筆者が使用）</li>
+<li>https://www.kaggle.com/c/criteo-display-ad-challenge</li>
+<li>https://www.kaggle.com/c/avazu-ctr-prediction</li>
+</ul>
+<p>### 予測式</p>
+<ul>
+<li>FMの発展型</li>
+<li>FMでは各特徴量につき一つの埋め込みベクトルを学習した</li>
+<li>FFMでは、Field（元のカテゴリ分類）の単位に分け、各特徴量につきField分の埋め込みベクトルを学習するように改善した</li>
+<li>FMはカテゴリ変数をone-hot encodingして特徴量とするのが前提だったため、異なる属性情報が一律で{0,1}の値にされてしまった</li>
+<li>各特徴量は、元がどのようなカテゴリ変数に属するかという情報が抜け落ちてしまっている</li>
+<li>FFMにより、フィールドごとに特有の要因である相互作用を表現できる</li>
+</ul>
+<div class="arithmatex">\[
+\hat y(x) := w_0 + \sum^n_{i=1}w_ix_i + \sum^n_{i=1}\sum^n_{j=i+1}&lt;v_{i,f(j)},v_{j,f(i)}&gt;x_ix_j \\
+where ~ f(j)):jが属するフィールド
+\]</div>
+<h3 id="_42">学習方法</h3>
+<ul>
+<li>FMと同じ</li>
+<li>ただしパラメータが増大した分、過学習しやすいので、Early stoppingを用いる</li>
+</ul>
+<h2 id="deepfm">DeepなFM</h2>
+<ul>
+<li>https://data.gunosy.io/entry/deep-factorization-machines-2018#f-95055ec5</li>
+<li>ベクトルごとの交互作用を用いると良い</li>
+<li>高次の特徴を学習するためには、明示的なアーキテクチャが必要</li>
+<li>通常のDNNとは違う性質を持つ</li>
+<li>（通常のDNNとは別の性質を持ったネットワークが必要）</li>
+</ul>
+<h3 id="factorization-machine-supported-neural-network-fnn">Factorization-machine supported Neural Network (FNN)</h3>
+<ul>
+<li>
+<p>ECIR2016</p>
+</li>
+<li>
+<p>普通のMLP</p>
+</li>
+<li>カテゴリカルな入力データを、各変数ごとにOne-Hot→EmbeddingしてDenseなNetworkに入れる</li>
+<li>レイヤーの重みの初期化にFMの重みやベクトルを使う</li>
+</ul>
+<h3 id="deep-crossing-network-dcn">Deep Crossing Network (DCN)</h3>
+<ul>
+<li>KDD2016</li>
+<li>FNNのMLP部分をResNetのようなskip-connectionにして、残差を予測</li>
+<li>内部データに対する実験なので、あまり引用されていないが、後発の研究だとFNNより精度が高い</li>
+</ul>
+<h3 id="wide-deep-arxiv160607792">Wide &amp; Deep (arXiv:1606.07792)</h3>
+<ul>
+<li>2016</li>
+<li>カテゴリカルな値をEmbedして使うのは、FNNやDCNと同じ</li>
+<li>線形モデルを出力層でくっつける</li>
+<li>FNNやDCNより精度が良い上、TensorflowにAPIがある</li>
+</ul>
+<h3 id="product-based-neural-network-pnn">Product-based Neural Network (PNN)</h3>
+<ul>
+<li>
+<p>ICDM2017</p>
+</li>
+<li>
+<p>CategoricalEmbeddingしてしまうと、カテゴリ変数同士の明示的な相互作用が扱いにくい</p>
+</li>
+<li>モデルのアーキテクチャに、カテゴリ変数の交互作用項を組み込む</li>
+<li>カテゴリ変数同士の交互作用項の層を作る</li>
+<li>Embeddingを積み上げたFNNより、PNNの方が精度が良い</li>
+<li>（Wide&amp;Deepよりは弱い？）</li>
+</ul>
+<h3 id="deepfm_1">DeepFM</h3>
+<ul>
+<li>
+<p>IJCAI2017</p>
+</li>
+<li>
+<p>Wide&amp;Deepの発展系？</p>
+</li>
+<li>スパースな特徴量をEmbedding層に入れる</li>
+<li>分岐１：Factorization Machineに入れる</li>
+<li>分岐２：DenseなNetworkに入れる</li>
+<li>分岐１、分岐２を結合して出力</li>
+<li>FM&amp;Deep（FMへの入力をEmbedしない版）より精度が良い</li>
+</ul>
+<h3 id="deep-cross-network-crossnet">Deep &amp; Cross Network (CrossNet)</h3>
+<ul>
+<li>
+<p>ADKDD2017</p>
+</li>
+<li>
+<p>連続値はそのまま、カテゴリ変数はEmbedして特徴にする</p>
+</li>
+<li>以下の分岐を行う</li>
+<li>分岐１：交互作用項を考慮したようなCross Networkに入れる</li>
+<li>分岐２：DenseなNetworkに入れる</li>
+<li>分岐１、２を結合し、FC後、Sigmoidで出力</li>
+</ul>
+<h3 id="xdeepfm">xDeepFM</h3>
+<ul>
+<li>KDD2018</li>
+<li>
+<p>Compressed Interaction Network(CIN)というアーキテクチャでベクトル単位で明示的に高次の特徴を学習する</p>
+</li>
+<li>
+<p>分岐する</p>
+</li>
+<li>Linear層</li>
+<li>Embedding</li>
+<li>1-2のEmbeddingから分岐する</li>
+<li>CIN</li>
+<li>Plain DNN</li>
+<li>1-1, 2-1, 2-2を結合し出力</li>
+</ul>
+<h2 id="ffm">FFMの発展系</h2>
+<ul>
+<li>https://qiita.com/guglilac/items/6c8971d27c143e2567a4</li>
+<li>FMの発展系より、FFMを元に発展しているため比較的新しい</li>
+<li>少し理解が浅め</li>
+</ul>
+<h3 id="field-aware-probabilistic-embedding-neural-networkfpenn">Field-aware Probabilistic Embedding Neural Network(FPENN)</h3>
+<ul>
+<li>RecSys2018</li>
+<li>過学習を防ぐ＋NNの導入</li>
+<li>Field分のEmbeddingを学習するのは同様</li>
+<li>ただし、Embeddingが従う確率密度のパラメータを推定する</li>
+<li>こうすることで、学習時に含まれるノイズに頑健に学習できる</li>
+<li>Deepとの組み合わせ型などはDeepFMを参考にしている（？）</li>
+</ul>
+<h3 id="field-weighted-factorization-machinefwfm">Field-weighted Factorization Machine(FwFM)</h3>
+<ul>
+<li>WWW2018</li>
+<li>Fieldの組み毎に、予測に対する重要度は変わってくる</li>
+<li>なので、Fieldの組毎の重要度も定式化する</li>
+</ul>
+<h3 id="interaction-aware-factorization-machines-ifm">Interaction-aware Factorization Machines (IFM)</h3>
+<ul>
+<li>AAAI 2019</li>
+<li>Attention + FM</li>
+<li>feature levelとfield levelのattentionを考慮する</li>
+<li>attentionについてよくわかっていないので、このモデルと下のモデルはあまり理解できていない</li>
+</ul>
+<h3 id="field-attention-deep-field-aware-factorization-machine-fat-deepffm">Field Attention Deep Field-aware Factorization Machine (FAT-DeepFFM)</h3>
+<ul>
+<li>
+<p>ICDM 2019</p>
+</li>
+<li>
+<p>Attention + FFM</p>
+</li>
+<li>Embedding入れる段階でAttentionを考慮する</li>
+</ul>
+<h1 id="_43">モデルベース</h1>
+<h2 id="_44">クラスタモデル</h2>
+<h3 id="_45">手法</h3>
+<ol>
+<li>嗜好パターンが類似している利用者のクラスタを作成</li>
+<li>アイテムの評価値などを用いる</li>
+<li>利用者に対し、最も似ているクラスタを探す</li>
+<li>クラスタ内で最も平均評価値が高いアイテムを順に推薦する</li>
+</ol>
+<h3 id="_46">性質</h3>
+<ul>
+<li>クラスタ数によって、推薦の性質が大きく異なる</li>
+<li>目的に合わせてクラスタ数を調整する必要がある</li>
+<li>推薦の種類はクラスタ数に制限される</li>
+<li>クラスタ数が小さいと、大まかであまり個人化されていない推薦が行われる<ul>
+<li>一方、コールドスタート問題には強くなる</li>
+</ul>
+</li>
+<li>クラスタ数が多いと、安定したクラスタを求めるのが難しい<ul>
+<li>一方、推薦の個人化の度合いは高まる</li>
+</ul>
+</li>
+<li>灰色の羊問題に対応できない<ul>
+<li>利用者を特定のクラスタに分けてしまうため、複数クラスタに跨がるような推薦はできない</li>
+</ul>
+</li>
+<li>実装が容易で、実行速度も速い</li>
+</ul>
+<h2 id="_47">関数系</h2>
+<ul>
+<li>利用者が好きなほど大きな値を取る効用関数や、評価値を予測する関数を用いるモデル全般</li>
+<li>回帰、分類、ランク回帰などに帰着する</li>
+</ul>
+<h3 id="_48">回帰</h3>
+<h4 id="_49">モデルについて</h4>
+<ul>
+<li>
+<p>評価値行列R（欠損なし）を、以下のように分解する</p>
+</li>
+<li>
+<p>Uはk x n, Vはk x m次元である（k&lt;&lt;m, n）</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+R^* \approx U^T V
+\]</div>
+<ul>
+<li>Uのx列は利用者xの特徴を、Vのy列はアイテムyの特徴を表す</li>
+<li>よって、利用者xのアイテムyへの評価値は以下のようになる</li>
+</ul>
+<div class="arithmatex">\[
+r^*_{xy} \approx u^T_x v_y
+\]</div>
+<ul>
+<li>これはユーザーベース協調フィルタリングで、u_x=1/|v|, v_y=アイテムの評価とみなした場合、類似したモデルとみなせる</li>
+</ul>
+<h4 id="_50">学習方法</h4>
+<ul>
+<li>RとR*との期待的な損失を最小化するように、UとVを分解して学習する</li>
+<li>行列分解の手法を用いる</li>
+<li>R-R*の残差が正規分布に従うと仮定し、観測された評価値の生成確率が高くなるようにUとVを計算する（因子分析）</li>
+<li>目的関数を最小化する</li>
+<li>λは過学習防止用のパラメータ</li>
+<li>SGDやALS（他の値を固定し、逐次的にパラメータを更新する）で学習する</li>
+</ul>
+<div class="arithmatex">\[
+loss = min_{p^*,q^*} \sum_{(u,i) \in k}(r_{ui}-q^T_ip_u)^2+\lambda (||q_i||^2+||p_u||^2)
+\]</div>
+<ul>
+<li>欠損値については以下の対応が考えられる</li>
+<li>潜在変数とみなしてEMアルゴリズムを用いて解く</li>
+<li>欠損値がないデータのみで計算する</li>
+<li>平均値などで補完する</li>
+<li>欠損値は無視して損失を計算する</li>
+</ul>
+<h4 id="_51">その他</h4>
+<ul>
+<li>
+<p>単純なので、プライバシー保護フィルタリングや、非線形回帰を導入した予測精度向上などの拡張が可能</p>
+</li>
+<li>
+<p>全体を1つの線形モデルで表すと、大まかすぎて予測精度が低くなる場合がある</p>
+</li>
+<li>嗜好が類似している利用者間で、局所的に線形モデルを構築するHorting法などで対応可能</li>
+</ul>
+<h3 id="_52">クラス分類</h3>
+<ul>
+<li>評価値の大小関係を無視し、クラスと見なす</li>
+<li>大小関係を考慮する工夫も為せる</li>
+<li>特徴量には、対象アイテムの他の利用者による評価値や、対象者の他のアイテムへの評価値が利用できる</li>
+</ul>
+<h4 id="_53">逐次型二項関係学習法</h4>
+<ul>
+<li>各クラスごとに、対象の分類されやすさを表す関数を獲得</li>
+<li>関数の値が最大となるクラスに対象を分類</li>
+</ul>
+<div class="arithmatex">\[
+\hat r_{xy} = argmax_{r \in R}\bigl( \sum_{i s.t.r_{iy}=r}u_{xi}+\sum_{j s.t.r_{xj}=r}w_{yj} \bigr) \\
+where~u_{xi}:アイテムyについての評価が同じrである利用者iについての利用者間の重み \\
+w_{yj}:利用者xが同じrと評価しているアイテムjについてのアイテム間の重み
+\]</div>
+<ul>
+<li>
+<p>u, wはオンライン学習の枠組みで求める</p>
+</li>
+<li>
+<p>学習率を収束させないSGD（Momentum）など</p>
+</li>
+<li>
+<p>最初にu, wを初期化する</p>
+</li>
+<li>rが観測されるたびに、利用者x以外でアイテムyを評価済みの全てのユーザーiについて、<ul>
+<li>評価が同じならvを増やし、そうでないなら減らす</li>
+</ul>
+</li>
+<li>また、利用者xが評価しているy以外のアイテム全てについて、<ul>
+<li>評価が同じなら重みwを増やし、そうでないなら減らす</li>
+</ul>
+</li>
+</ul>
+<h4 id="_54">その他</h4>
+<ul>
+<li>
+<p>オンライン学習なので、モデルベースだがアイテムや利用者の追加に対応できる</p>
+</li>
+<li>
+<p>アイテムや利用者の削除に対応できない</p>
+</li>
+</ul>
+<h3 id="_55">ランキング</h3>
+<ul>
+<li>RankBoostで推薦する研究がある</li>
+</ul>
+<h2 id="k-nn">k-NN</h2>
+<ul>
+<li>モデルを使うが、モデルベースではない？</li>
+<li>
+<p>CFの文脈で使われている</p>
+</li>
+<li>
+<p>K個の近いアイテム・ユーザーの評価から、推薦を行う</p>
+</li>
+<li>近いユーザーほど重み付けして和を取る場合もある</li>
+</ul>
+<h2 id="_56">ルールベース</h2>
+<ul>
+<li>モデルといえばモデルだが、エキスパートモデルを指す？</li>
+</ul>
+<h2 id="_57">ベイズ分類器（確率モデル）</h2>
+<h3 id="_58">履歴条件型</h3>
+<ul>
+<li>対象者の過去の嗜好データが与えられたときの、対象者のアイテムyへの評価値の条件付き期待値</li>
+<li>確率分布は未知なので、推定した関数を利用する</li>
+<li>式中では他の標本利用者の嗜好データは参照されていないが、確率分布の推定過程で利用するため、協調フィルタリングによる推薦と言える</li>
+</ul>
+<div class="arithmatex">\[
+\hat r_{ay} = E \bigl[ r_{ay} ~s.t.~ j \in Y_a\bigr] \\
+  = \sum_{r \in R}Pr \bigl[ r_{ay}=r|r_{aj} ~s.t.~j \in Y_a \bigr] \\
+ where ~ r_{ay}: 評価者aのアイテムyへの評価\\
+    Y_a: 利用者aが評価したアイテムの集合
+\]</div>
+<ul>
+<li>R = {0, 1}の嗜好データの場合は、条件つき確率分布になる</li>
+<li>訓練するためのデータが必要だが、暗黙的評価ではr_ay=0となるノイズが多くなり、不利になる</li>
+<li>また、この形では個々の利用者についてモデルが必要になり、現実的でない</li>
+</ul>
+<div class="arithmatex">\[
+\hat r_{ay} = Pr \bigl[ r_{ay}=1 | s_{aj} ~s.t.~ j \in Y_a \bigr]
+\]</div>
+<ul>
+<li>実際には、利用者に依存しない全アイテムへの評価の同時分布を求める</li>
+</ul>
+<div class="arithmatex">\[
+Pr \bigl[ r_{.y}~s.t.~ y \in Y \bigr] \\
+where ~ r_{.y}:全ユーザーのアイテムyに対する評価
+\]</div>
+<ul>
+<li>最初の式の条件付き分布はベイズ則と不要な変数の周辺かで消去することで計算する</li>
+<li>ただし、|Y| = mで、R^&reg; = R1xR2xR3x...xRmとパラメータ数はmに対して指数関数的に増加する</li>
+<li>そこで、変数r.yの間に部分的な条件付き独立性を仮定し学習すべきパラメータを減らす</li>
+<li>条件付き独立性を導入した確立モデルは、依存関係をグラフで示すため、グラフィカルモデルという<ul>
+<li>ベイジアンネットワークはその一つ</li>
+</ul>
+</li>
+</ul>
+<h3 id="_59">ベイジアンネットワーク</h3>
+<ul>
+<li>過去のユーザーの行動データから、予めベイジアンネットワークを作成する</li>
+<li>実環境で、事象発生した際に推薦するアイテムを決定する</li>
+<li>閲覧したページをベイジアンネットワークに与え推論、閲覧確率を算出</li>
+<li>ユーザーのセグメントを作成するために使用している研究あり</li>
+<li>この場合、各セグメントに所属する確率が得られる</li>
+<li>クラスタリングなどでも、各クラスタの中心からの距離などが得られるはず</li>
+<li>
+<p>ベイジアンネットワークは、全てのノードに対してデータを与える必要がない</p>
+</li>
+<li>
+<p>Maximum Weighted Spanning Tree (MWST) Algorithm</p>
+</li>
+<li>大規模データに適し、予測効果が良いとされる計算量がノード数に対しO(n^2)</li>
+<li>条件付き確立が一番大きくなるSpanning Treeを構築する</li>
+<li>
+<p>別項（下）で扱う</p>
+</li>
+<li>
+<p>Pearl's Passage Passing Algorithm</p>
+</li>
+<li>高速にネットワーク上の全ノードの周辺自己確率を求める手法</li>
+<li>ユーザーアイテムベイジアン</li>
+<li>ユーザーが評価したアイテムのメタデータと、他アイテムのメタデータを比較する</li>
+<li>他アイテムを選ぶ確率を算出する</li>
+<li>ユーザーユーザーベイジアン</li>
+<li>ユーザーが好むアイテム同士のメタデータを比較</li>
+<li>ユーザー同士の好みの近さを算出</li>
+<li>アイテムアイテムベイジアン</li>
+<li>アイテムメタデータを比較</li>
+<li>アイテム同士の近さを算出</li>
+</ul>
+<h3 id="_60">ナイーブベイズ</h3>
+<h3 id="_61">共起型</h3>
+<ul>
+<li>ある利用者があるアイテムを評価したことを、その利用者がxであるという事象と、そのアイテムがyであるという事象が共起していると捉える</li>
+<li>この共起確率をモデル化する</li>
+<li>確率的潜在意味解析（pLSA）を利用する</li>
+<li>非常に柔軟で、評価の揺らぎ、アイテムの情報、コンテキスト情報、個人属性情報などの要因を導入するといった拡張が可能</li>
+<li>新規の利用者に対応するために、ベイズの枠組みに拡張すると潜在的ディリクレ配分法（Latent Dirichelt allocation; LDA）となる</li>
+<li>詳細はhttp://www.kamishima.net/archive/recsysdoc.pdf　P70</li>
+</ul>
+<h2 id="mwst-algorithm">MWST algorithm</h2>
+<ul>
+<li>各変数間の相互情報量を基準として木を構築する手法</li>
+<li>
+<p>以下のようなステップからなる</p>
+</li>
+<li>
+<p>与えられたデータより、Nx(N-1)/2個の枝について、全ての枝の相互情報量I(xi; xj)を求める</p>
+</li>
+<li>最も大きな相互情報量を示す枝を取り出し、木を構築する枝とする</li>
+<li>次に大きな相互情報量を示す枝を木に加える</li>
+<li>ただし、ループができるならその枝を捨てる</li>
+<li>ステップ3を、N-1個の枝が木に加わるまで繰り返す</li>
+<li>最後に根ノードを決定し、根から葉に向かうように枝に方向をつける</li>
+<li>Webページ（ページ数10万以上）を推薦する論文では、根ノードを最も多くのユーザーが閲覧したページとしていた</li>
+<li>サイト全Webページに対するベイジアンネットワークの構築は計算量が膨大になり実行できず、構築するネットワークのページ数は5000程度が限界としていた</li>
+<li>サイト内の各ページを数十個のカテゴリに分け、各カテゴリ変数としてベイジアンネットワークを構築し、ユーザーに対してカテゴリを推論を行なっていた</li>
+</ul>
+<h3 id="_62">利点</h3>
+<ul>
+<li>二次統計量までしか用いないため、データからの演算が容易で信頼できる</li>
+<li>計算量がノード数nに対して高々O(n^2)</li>
+<li>統計的には一致性が全くないが、予測効率が良い</li>
+</ul>
+<h3 id="pearls-message-passing-algorithm">Pearl's Message Passing Algorithm</h3>
+<ul>
+<li>高速に確率推論を行うための手法</li>
+<li>一般的に、ベイジアンネットワークではネットワークを構築した後や、ノードにデータを与えた場合、あるノードの事後確立を求めるのに周辺化を行う必要がある</li>
+<li>
+<p>この周辺化を一般的にネットワーク構造を利用して効率的に計算するアルゴリズム</p>
+</li>
+<li>
+<p>データを与えられたノードから、その周辺ノードへ向けてメッセージの送信を行う</p>
+</li>
+<li>メッセージを受信したノードは、受信したメッセージを用いて自分の周辺事後確率を更新する</li>
+<li>周辺自己確率を更新したノードは、メッセージの送信元以外に自分の周辺ノードにメッセージを送信する</li>
+<li>2,3を繰り返し、全てのノードの周辺事後確率を更新する</li>
+</ul>
+<h3 id="_63">推論時</h3>
+<ul>
+<li>ユーザーが閲覧したページをデータとしてベイジアンネットワークに入れ推論を行い、そのユーザーにおけるアイテムの嗜好確率を求める</li>
+<li>推論アルゴリズムにはPearl’sMessage Passingアルゴリズムを用い高速化する</li>
+<li>計算された嗜好確率が大きい順に並べていく</li>
+</ul>
+<h2 id="_64">時系列モデル</h2>
+<h3 id="_65">最大エントロピーモデル</h3>
+<div class="arithmatex">\[
+Pr[y^{(t+1)}|&lt;Y^{(t)}&gt;] = \frac{1}{Z}exp \bigl[ \sum^K_{k=1}\lambda_kf_k(y^{t+1},&lt;Y^{(t)}&gt;) \bigr] \\
+where ~ Z:正規化定数 \\
+  \lambda_k: 重みパラメータ \\
+  f_k(y^{t+1},&lt;Y^{(t)}&gt;):素性関数 \\
+\]</div>
+<ul>
+<li>素性関数とは、購入履歴<Y^(t)>をにある特徴があるとき、次回に購入するアイテムが特定のものになるなら1を取り、それ以外では0となるような関数</li>
+<li>購入履歴中にアイテムyがあるとき、次にアイテムy`を購入する確率</li>
+</ul>
+<div class="arithmatex">\[
+Pr[y^{(t+1)}=y^{,}|y \in &lt;Y^{(t)}&gt;]-Pr[y^{(t+1)}=y^{,}]
+\]</div>
+<p>が大きなものを選ぶ</p>
+<ul>
+<li>こうして素性関数を選択すれば、モデルのパラメータlamda_kは最大エントロピー原理に基づいて推定できる</li>
+<li>この素性関数には様々なものが利用できる</li>
+</ul>
+<h3 id="_66">マルコフ過程モデル</h3>
+<ul>
+<li>直近K個のアイテム系列を用いて予測する</li>
+<li>強化学習を使うなどする</li>
+</ul>
+<h3 id="_67">定期購入</h3>
+<ul>
+<li>生存時間解析などの手法を用いる</li>
+<li>Cox比率ハザードモデル</li>
+</ul>
+<h1 id="_68">コンテンツベースフィルタリング</h1>
+<h2 id="_69">データの形式</h2>
+<ul>
+<li>嗜好データと検索質問がある</li>
+<li>嗜好データの場合は、ユーザーの属性、コンテキストの属性を特徴に、アイテムを機械学習アルゴリズムで予測する</li>
+</ul>
+<h1 id="_70">参考文献</h1>
+<ul>
+<li>推薦システム全般のこと：http://www.kamishima.net/archive/recsysdoc.pdf</li>
+<li>協調フィルタリングの分類など：https://eulerdijkstra.hatenadiary.org/entry/20130407/1365349866</li>
+<li>
+<p>CFを用いた推薦システム構築：https://www.slideshare.net/masayuki1986/recommendation-ml</p>
+</li>
+<li>
+<p>Webページの推薦にベイジアンネットワークを使った日本語研究：https://www.ai-gakkai.or.jp/jsai2007/data/pdf/100205.pdf</p>
+</li>
+<li>
+<p>FM, FFM、FM+NNについて：https://qiita.com/s_katagiri/items/d630685dd2fe2627ecd3</p>
+</li>
+<li>
+<p>FMの元論文：https://www.csie.ntu.edu.tw/~b97053/paper/Rendle2010FM.pdf</p>
+</li>
+<li>
+<p>DeepFMの動向(2018)：https://data.gunosy.io/entry/deep-factorization-machines-2018#f-95055ec5</p>
+</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tracking", "navigation.expand"], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044"}, "search": "../../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
