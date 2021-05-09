@@ -14,7 +14,7 @@
     
     
       
-        <title>Graph Attention Network 解説 - Cheep Learning</title>
+        <title>SGD最適化モデルに対するデータクレンジング手法 - Cheep Learning</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#graph-attention-network" class="md-skip">
+        <a href="#sgd" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Graph Attention Network 解説
+              SGD最適化モデルに対するデータクレンジング手法
             
           </span>
         </div>
@@ -293,24 +293,6 @@
         
   
   
-    
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
-        ネットワーク解説
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
 
 
   
@@ -335,6 +317,24 @@
     <li class="md-tabs__item">
       <a href="../../%E7%B5%B1%E8%A8%88%E3%83%A2%E3%83%87%E3%83%AB/eval_rec/" class="md-tabs__link">
         統計モデル
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../GNN/" class="md-tabs__link md-tabs__link--active">
+        論文解説
       </a>
     </li>
   
@@ -803,109 +803,19 @@
 
   
   
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
-      
-      <label class="md-nav__link" for="__nav_8">
-        ネットワーク解説
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="ネットワーク解説" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
-          <span class="md-nav__icon md-icon"></span>
-          ネットワーク解説
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Graph Attention Network 解説
-      </a>
-      
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../fast_rcnn/" class="md-nav__link">
-        Faster R-CNN まとめ
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../mesh_rcnn/" class="md-nav__link">
-        Mesh RCNNのお気持ちを理解したい
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../posenet/" class="md-nav__link">
-        Posenet
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
   
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" data-md-state="indeterminate" type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" data-md-state="indeterminate" type="checkbox" id="__nav_8" checked>
       
-      <label class="md-nav__link" for="__nav_9">
+      <label class="md-nav__link" for="__nav_8">
         深層学習
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="深層学習" data-md-level="1">
-        <label class="md-nav__title" for="__nav_9">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           深層学習
         </label>
@@ -964,14 +874,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" data-md-state="indeterminate" type="checkbox" id="__nav_10" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" data-md-state="indeterminate" type="checkbox" id="__nav_9" checked>
       
-      <label class="md-nav__link" for="__nav_10">
+      <label class="md-nav__link" for="__nav_9">
         統計モデル
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="統計モデル" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           統計モデル
         </label>
@@ -1031,6 +941,213 @@
   
 
     
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      <label class="md-nav__link" for="__nav_10">
+        論文解説
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="論文解説" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          論文解説
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GNN/" class="md-nav__link">
+        Graph Attention Network 解説
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SGD最適化モデルに対するデータクレンジング手法
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        SGD最適化モデルに対するデータクレンジング手法
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-cleansing-for-models-trained-with-sgd" class="md-nav__link">
+    Data Cleansing for Models Trained with SGD
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Cleansing for Models Trained with SGD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概要
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-preliminaries" class="md-nav__link">
+    2. Preliminaries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sgd-influence" class="md-nav__link">
+    3. SGD-Influence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-estimating-sgd-influence" class="md-nav__link">
+    4. Estimating SGD-Influence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-proposed-method-for-lie" class="md-nav__link">
+    5. Proposed Method for LIE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-related-studies" class="md-nav__link">
+    6. Related Studies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-experiments" class="md-nav__link">
+    7. Experiments
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Experiments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-evaluation-of-lie" class="md-nav__link">
+    7.1 Evaluation of LIE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-evaluation-of-data-cleansing" class="md-nav__link">
+    7.2 Evaluation of Data Cleansing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fast_rcnn/" class="md-nav__link">
+        Faster R-CNN まとめ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mesh_rcnn/" class="md-nav__link">
+        Mesh RCNNのお気持ちを理解したい
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../posenet/" class="md-nav__link">
+        Posenet
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1050,6 +1167,96 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-cleansing-for-models-trained-with-sgd" class="md-nav__link">
+    Data Cleansing for Models Trained with SGD
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Cleansing for Models Trained with SGD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概要
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-preliminaries" class="md-nav__link">
+    2. Preliminaries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sgd-influence" class="md-nav__link">
+    3. SGD-Influence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-estimating-sgd-influence" class="md-nav__link">
+    4. Estimating SGD-Influence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-proposed-method-for-lie" class="md-nav__link">
+    5. Proposed Method for LIE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-related-studies" class="md-nav__link">
+    6. Related Studies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-experiments" class="md-nav__link">
+    7. Experiments
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Experiments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-evaluation-of-lie" class="md-nav__link">
+    7.1 Evaluation of LIE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-evaluation-of-data-cleansing" class="md-nav__link">
+    7.2 Evaluation of Data Cleansing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1061,63 +1268,70 @@
               
                 
                 
-                <h1 id="graph-attention-network">Graph Attention Network 解説</h1>
-<h1 id="_1">どんなモデル？</h1>
-<p><strong>ノードの特徴表現を通常の畳み込みではなく，周辺ノードの重み付き和で表現</strong>する</p>
-<p>---&gt; 要するに，<strong>エッジ表現をシンプルにattention weight で表現</strong></p>
-<p>異なるサイズの近傍を扱いながら、近傍内の異なるノードに異なる重要度を（暗黙的に）割り当てることができる
-グラフ構造全体を事前に知ることに依存しないなど、<strong>従来のスペクトルベース</strong>のアプローチの理論的な問題の多くを解決
-エッジを単純に表現できるため計算速度もそこそこ改善</p>
-<h2 id="_2">目的</h2>
-<p>GNN で近年頻繁に使われている <strong>GATs(Gragh Attention Networks)</strong> について理解する</p>
-<h2 id="_3">前提</h2>
-<p><a href="https://arxiv.org/pdf/1710.10903.pdf">論文はこちら ICLR 2018</a></p>
-<h2 id="_4">背景</h2>
-<p>graphはノードに加えてエッジの情報も重要
-しかしながら，エッジの潜在表現を作っていては計算速度が遅い
--&gt; エッジを単純にattentionの重みで表現する</p>
-<h2 id="_5">手法</h2>
-<p>GATs の概要図を以下に示す</p>
-<p><img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/a71d363f2a2cb9a982115d927ecc6bdd-300x192.png" /></p>
-<p>ノードの更新式は以下の式で表現</p>
-<p><img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/52afea8f9df1224d6401c01a09dbdf4c-300x53.png" /></p>
-<p>実際には Multi-Head Attention (head数=K) を計算する (|| は concat を意味する)</p>
-<p><img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/87601e2ca45b477c1263251ad607bb84-300x45.png" /></p>
-<h2 id="_6">もう少し噛み砕いて</h2>
-<p><img src="https://data.dgl.ai/tutorial/gat/gat.png" width=500></p>
-<p><img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/b67394fa07b0df3ef633a34a6a4fb7b2-300x178.png" /></p>
-<p>各々の式の解釈</p>
-<pre><code>(1) node i の特徴量を linear層で変換
-
-(2) 隣接するnode i と j を concatenate (式の || は concatenate) し，linear + LeReLU でエネルギー関数を計算
-    dot-product attentionではなく additive attention(加法注意) と呼ばれるもの
-
-(3) 重みに変換
-
-(4) node i の Layer (l+1) の特徴量は attentionにより計算した(3) と (1) の重み付き和で表現
-</code></pre>
-<h2 id="_7">実験</h2>
-<h3 id="transductive-learning">Transductive Learning</h3>
-<p>学習に使うグラフとテストに使うグラフが同じ
-(すでに存在しているが，ラベルが未知のノードを予測するなど)
-- 3つのcitation  network  benchmark  datasetを使用</p>
-<h3 id="inductive-learning">Inductive Learning</h3>
-<p>学習に使うグラフとテストに使うグラフが異なる場合がある
-(新しいエッジやノードの予測，別のグラフでの評価など)
-- タンパク質の相互作用を表すdataset (PPI dataset)</p>
-<p><strong>一般的にInductiveな設定の方が汎化性能が求められる</strong></p>
-<p><img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/b67394fa07b0df3ef633a34a6a4fb7b2-1-300x178.png" /></p>
-<ul>
-<li>可視化例</li>
-</ul>
-<p><strong>node間の強い結び付きは大きい重みで表現するというシンプルな方法が表現できている</strong></p>
-<p><img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/7930aee3e0d195686475ceff67a6d077-300x192.png" /></p>
-<ul>
-<li>epochs毎の node classification の可視化例(余談)</li>
-</ul>
-<p><img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/4083b1cdb8ddbe4870faecc1766cc509-300x200.gif" /></p>
-<h2 id="_8">参考資料</h2>
-<p>https://www.slideshare.net/takahirokubo7792/graph-attention-network</p>
+                <h1 id="sgd">SGD最適化モデルに対するデータクレンジング手法</h1>
+<h2 id="data-cleansing-for-models-trained-with-sgd">Data Cleansing for Models Trained with SGD</h2>
+<p>https://arxiv.org/abs/1906.08473</p>
+<p>github実装<br>
+https://github.com/sato9hara/sgd-influence</p>
+<h3 id="_1">概要</h3>
+<p>学習がうまくいかなかったときに元データを分析することがあるが、データのError Analysisをする際に、どのインスタンス(データセット)が学習に強く影響しているのかを考察するためにはドメイン知識が必要。
+この論文では、学習に悪影響を及ぼしているインスタンスをドメイン知識なしでCleanseする方法を提示している。</p>
+<p>Keyword: 
+- influence estimation
+- counterfactual SGD
+- Linear Influence Estimation (LIE)
+- Kendall's tau
+- Jaccard index</p>
+<h3 id="2-preliminaries">2. Preliminaries</h3>
+<p>SGDのおさらい</p>
+<h3 id="3-sgd-influence">3. SGD-Influence</h3>
+<p>training step <span class="arithmatex">\(t\)</span>において、インスタンス<span class="arithmatex">\(z_{j}\)</span>を除いた時のgradientを<span class="arithmatex">\(\theta_{-j}^{[t]}\)</span>としたとき、SGD-influenceを以下のように定義する。
+<span class="arithmatex">\(<span class="arithmatex">\(\theta_{-j}^{[t]} - \theta^{[t]}\)</span>\)</span>
+つまり、j番目のインスタンスをdropした時の<span class="arithmatex">\(\theta\)</span>と何もしていない時の<span class="arithmatex">\(\theta\)</span>の差が大きい場合、そのインスタンスの学習への影響が大きいと言える。
+このように、結果からデータを振り返る通常とは逆の視点で使っているのでこれをCounterfactual SGD（反実仮想: もしなかったらどうなるか）と呼んでいる。</p>
+<p>Linear Influence Estimation (LIE)</p>
+<div class="arithmatex">\[
+L_{-j}^{[T]}(u) = \langle u, \theta_{-j}^{[t]} - \theta^{[t]}\rangle
+\]</div>
+<p><span class="arithmatex">\(u\)</span>に prediction functionの1階微分<span class="arithmatex">\(\nabla_{\theta}f(x,\theta)\)</span>や、loss関数の1階微分<span class="arithmatex">\(\nabla_{\theta}l(x,\theta)\)</span>を入れて用いる。後者では、インスタンス<span class="arithmatex">\(z_i\)</span>が学習(loss)に及ぼす影響を測れる</p>
+<p>実際は、テイラー展開で近似して</p>
+<p>$$
+L_{-j}^{[T]}(\nabla_{\theta}l(x,\theta)) \approx \nabla_{\theta}l(x,\theta_{-j}^{[t]}) - \nabla_{\theta}l(x,\theta^{[t]})
+$$
+として計算できる。</p>
+<p>ただし、正直に計算してしまうとインスタンスの個数N回のSGD計算をやることになり計算コストが高いので効率的に行う方法を本論文で提案した。</p>
+<h3 id="4-estimating-sgd-influence">4. Estimating SGD-Influence</h3>
+<p>今のところよくわからない。
+変形すると<span class="arithmatex">\(\Delta\theta_{-j}\)</span>(2階微分)になる。</p>
+<p>Eq(2) は漸化式繰り返し使って変形している\
+Eq(3), (4)は、この辺の微積分の連続性の概念を元に不等式が成立しているっぽい。
+https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%97%E3%82%B7%E3%83%83%E3%83%84%E9%80%A3%E7%B6%9A</p>
+<h3 id="5-proposed-method-for-lie">5. Proposed Method for LIE</h3>
+<p>計算コスト本来なら<span class="arithmatex">\(O(p^2)\)</span> かかるところを <span class="arithmatex">\(O(TM\delta)\)</span>にできている
+- p: データの次元?
+- T: total SGD steps
+- M: the largest batch size in SGD
+- <span class="arithmatex">\(\delta\)</span>: complexity for computing the parameter gradient (どのOptimizerを使うかで決まる?)</p>
+<h3 id="6-related-studies">6. Related Studies</h3>
+<p>過去の同様のアプローチとの違い</p>
+<ol>
+<li>最適化されたモデルを想定しなくてもいい（学習の各ステップの状態でのモデルを用いることができる）</li>
+<li>lossがconvexでなく、non-convexでも良い</li>
+</ol>
+<p>比較されてる論文
+<a href="https://arxiv.org/abs/1703.04730">Understanding Black-box Predictions via Influence Functions</a>
+とか</p>
+<p>典型的なデータクレンジングである外れ値検出（テーブルデータなら<a href="https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/icdm08b.pdf?q=isolation-forest">Isolation forest</a>, 画像ならVAEやGANとかでの再構成）で外れ値と判断されたものは、必ずしもそれが学習に悪影響を及ぼすというわけでもない（が、本手法で外れ値と判断したものが実際に学習への影響度とリンクしている）</p>
+<h3 id="7-experiments">7. Experiments</h3>
+<h4 id="71-evaluation-of-lie">7.1 Evaluation of LIE</h4>
+<p>Kendall's tau
+Jaccard index
+で評価している。これが何か調べる。</p>
+<p>Fig1, Table1
+x, yの見方がわからないが、y=xの線上に乗るほど、正確にインスタンスの影響を評価できているということ。過去の手法（赤のK&amp;L）よりも青の提案手法の方が良い。
+convexな例であるlinear logistic regressionと、non-convexな例であるDNNどちらにおいても、インスタンスの影響を正しく評価できているというのも重要。 </p>
+<h4 id="72-evaluation-of-data-cleansing">7.2 Evaluation of Data Cleansing</h4>
+<p>Autoencoderの場合はvivid colorな背景を異常と見做しがちだが、それを除いても学習への影響は少ない（改善しない）。一方、画像内のインスタンスと背景の境界がぼやけているものはAutoencoderでは異常とみなされないが、学習への影響は大きかった（改善した）。提案手法は後者のパターンを異常を見抜けていた</p>
                 
               
               
