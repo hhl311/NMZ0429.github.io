@@ -14,7 +14,7 @@
     
     
       
-        <title>PyTorch Lightning Boltsの使い方 - Cheep Learning</title>
+        <title>PyTorchの分散計算処理を使う - Cheep Learning</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pytorch-lightning-bolts" class="md-skip">
+        <a href="#pytorch" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PyTorch Lightning Boltsの使い方
+              PyTorchの分散計算処理を使う
             
           </span>
         </div>
@@ -235,7 +235,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../PyTorch/dp/" class="md-tabs__link md-tabs__link--active">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         PyTorch
       </a>
     </li>
@@ -468,12 +468,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" data-md-state="indeterminate" type="checkbox" id="__nav_4_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
       
       <label class="md-nav__link" for="__nav_4_1">
         PyTorch
@@ -485,95 +487,6 @@
           PyTorch
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../PyTorch/dp/" class="md-nav__link">
-        PyTorchの分散計算処理を使う
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../PyTorch/pytorch/" class="md-nav__link">
-        pytorchによるディープラーニング実装の流れ
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../PyTorch/video/" class="md-nav__link">
-        PyTorch Dataset API で動画データを扱う方法
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
-      
-      <label class="md-nav__link" for="__nav_4_2">
-        PyTorch Lightning
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="PyTorch Lightning" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_2">
-          <span class="md-nav__icon md-icon"></span>
-          PyTorch Lightning
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../checkpoint/" class="md-nav__link">
-        PyTorch LightningのCheckpointCallbackの便利機能
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data_module/" class="md-nav__link">
-        【PyTorch Lightning】LightningDataModuleについて
-      </a>
-    </li>
-  
-
           
             
   
@@ -590,12 +503,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          PyTorch Lightning Boltsの使い方
+          PyTorchの分散計算処理を使う
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        PyTorch Lightning Boltsの使い方
+        PyTorchの分散計算処理を使う
       </a>
       
         
@@ -613,44 +526,71 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bolts" class="md-nav__link">
-    Boltsとは？
+  <a href="#_1" class="md-nav__link">
+    実験環境
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1.訓練済みモデルをそのまま使う
+  <a href="#api" class="md-nav__link">
+    使用するAPI
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2.コンポネート単位で使う
+  <a href="#_2" class="md-nav__link">
+    注意
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3.コールバックを使う
+  <a href="#distributed-rpc-frameworkhttpspytorchorgdocsstablerpchtmlbasics" class="md-nav__link">
+    Distributed RPC Framework(https://pytorch.org/docs/stable/rpc.html#basics)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4.ロス関数を使う
+  <a href="#distributed-autograd" class="md-nav__link">
+    Distributed Autograd
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5.データモジュールを使う
+  <a href="#distributed-optimizer" class="md-nav__link">
+    Distributed Optimizer
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    使用例
+  </a>
+  
+    <nav class="md-nav" aria-label="使用例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synconpolicy" class="md-nav__link">
+    SyncOnPolicy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asynconpolicyparameterserver" class="md-nav__link">
+    AsyncOnPolicy(ParameterServer)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -667,7 +607,94 @@
   
   
     <li class="md-nav__item">
-      <a href="../pytorchvideo/" class="md-nav__link">
+      <a href="../pytorch/" class="md-nav__link">
+        pytorchによるディープラーニング実装の流れ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../video/" class="md-nav__link">
+        PyTorch Dataset API で動画データを扱う方法
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2" checked>
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        PyTorch Lightning
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PyTorch Lightning" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          PyTorch Lightning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch%20Lightning/checkpoint/" class="md-nav__link">
+        PyTorch LightningのCheckpointCallbackの便利機能
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch%20Lightning/data_module/" class="md-nav__link">
+        【PyTorch Lightning】LightningDataModuleについて
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch%20Lightning/lightning_bolts/" class="md-nav__link">
+        PyTorch Lightning Boltsの使い方
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch%20Lightning/pytorchvideo/" class="md-nav__link">
         PyTorchVideo 使い方
       </a>
     </li>
@@ -1030,44 +1057,71 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bolts" class="md-nav__link">
-    Boltsとは？
+  <a href="#_1" class="md-nav__link">
+    実験環境
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1.訓練済みモデルをそのまま使う
+  <a href="#api" class="md-nav__link">
+    使用するAPI
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2.コンポネート単位で使う
+  <a href="#_2" class="md-nav__link">
+    注意
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3.コールバックを使う
+  <a href="#distributed-rpc-frameworkhttpspytorchorgdocsstablerpchtmlbasics" class="md-nav__link">
+    Distributed RPC Framework(https://pytorch.org/docs/stable/rpc.html#basics)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4.ロス関数を使う
+  <a href="#distributed-autograd" class="md-nav__link">
+    Distributed Autograd
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5.データモジュールを使う
+  <a href="#distributed-optimizer" class="md-nav__link">
+    Distributed Optimizer
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    使用例
+  </a>
+  
+    <nav class="md-nav" aria-label="使用例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synconpolicy" class="md-nav__link">
+    SyncOnPolicy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asynconpolicyparameterserver" class="md-nav__link">
+    AsyncOnPolicy(ParameterServer)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1084,105 +1138,137 @@
               
                 
                 
-                <h1 id="pytorch-lightning-bolts">PyTorch Lightning Boltsの使い方</h1>
-<p>便利な時代になりましたね。</p>
-<h2 id="bolts">Boltsとは？</h2>
-<p>PyTorch Lightning用の便利コードが詰まった公式ライブラリ。</p>
-<ul>
-<li>訓練済みSOTAモデル</li>
-<li>よく使うモデルコンポネート</li>
-<li>Callback用のフォワード、バックフック</li>
-<li>ロス関数</li>
-<li>有名なデータセット</li>
-</ul>
-<p>これらがPyTorch Lightningで直ぐに使えるようになっていてとっても便利。
-以下、使い方の例</p>
-<h2 id="1">1.訓練済みモデルをそのまま使う</h2>
-<p>最新のクラスタリングを使ってみたい時などは
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pl_bolts.models.self_supervised</span> <span class="kn">import</span> <span class="n">SwAV</span>
-
-<span class="n">weight_path</span> <span class="o">=</span> <span class="s1">&#39;https://pl-bolts-weights.s3.us-east-2.amazonaws.com/swav/swav_imagenet/swav_imagenet.pth.tar&#39;</span> <span class="c1"># weight file of ImageNet</span>
-<span class="n">swav</span> <span class="o">=</span> <span class="n">SwAV</span><span class="o">.</span><span class="n">load_from_checkpoint</span><span class="p">(</span><span class="n">weight_path</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="n">swav</span><span class="o">.</span><span class="n">freeze</span><span class="p">()</span>
-</code></pre></div></p>
-<p>以降<code>swav</code>は通常の<code>nn.Module</code>として扱うことができる。</p>
-<h2 id="2">2.コンポネート単位で使う</h2>
-<p>訓練済みモデルをバックボーンにしたりエンコーダー部分だけ採用したりもできる。
-今回は<code>ResNet152</code>の入力チャンネル数を3から4にしてみた。</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pl_bolts.models.self_supervised.resnets</span> <span class="kn">import</span> <span class="n">resnet152</span>
-
-<span class="n">model</span> <span class="o">=</span> <span class="n">resnet152</span><span class="p">(</span><span class="n">pretrained</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="n">temp_weight</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">conv1</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span> <span class="c1"># 既存の重みを退避</span>
-<span class="n">model</span><span class="o">.</span><span class="n">conv1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># input_channelだけ増やす</span>
-<span class="n">model</span><span class="o">.</span><span class="n">conv1</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp_weight</span> <span class="c1"># 3 channelまでは既存の重み</span>
-<span class="n">model</span><span class="o">.</span><span class="n">conv1</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">conv1</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="c1"># Rの重みを4つめの重みとして採用</span>
-</code></pre></div>
-<p>逆に<code>model.conv1</code>だけを別のモデルに使ったりもできる。</p>
-<h2 id="3">3.コールバックを使う</h2>
-<p>PyTorch Lightning の<code>Callback</code>　API用の便利な処理が色々揃ってる。
-<strong>必要なCallbackオブジェクトを宣言してそれらのリストをトレイナーに渡すだけで使える</strong>。
-ここでは二つ紹介。</p>
+                <h1 id="pytorch">PyTorchの分散計算処理を使う</h1>
+<h2 id="_1">実験環境</h2>
+<p>CUDNNインストール済みLinuxで動作確認、winはわからん</p>
+<h2 id="api">使用するAPI</h2>
+<p>torch.distributedの中の<a href="https://pytorch.org/tutorials/intermediate/rpc_tutorial.html">Distributed RPC Framework</a>というライブラリを使用する。 <br>
+torch.distributedのバックエンドは、実行時にgloo, mpi, ncclの３通りから選ぶことができる。<br>
+バックエンドによって、関数ごとに扱えるテンソル(cpu, gpu)の種類が違ってくる. <br>
+具体的にはCPU使用時にはGloo、GPU使用時にはncclを使うと良いそうだ。 <br>
+しかし、ncclを使う場合にはcpu上のテンソルは扱えず、さらに一部メソッドが使えなくなることに注意。</p>
+<p>どのメソッドが使えなくなるのか？については<a href="https://pytorch.org/docs/stable/distributed.html">公式doc</a>を参照。</p>
+<p><a href="https://pytorch.org/tutorials/beginner/dist_overview.html#data-parallel-training">Pytorchのドキュメント</a>では、</p>
+<blockquote>
+<p>Use multi-machine <strong>DistributedDataParallel</strong> and the <strong>launching script</strong>, if the application needs to scale across machine boundaries.</p>
+</blockquote>
+<p>とあり、一見するとRPCでなくこちらが使えそうに見えるが <br>
+DistributedDataParallelなどのデータ並列用APIはどちらかと言えば教師あり学習用のものであり、例えば<br></p>
+<blockquote>
+<p>In reinforcement learning, it might be relatively expensive to acquire training data from environments while the model itself can be quite small. In this case, it might be useful to spawn multiple observers running in parallel and share a single agent. In this case, the agent takes care of the training locally, but the application would still need libraries to send and receive data between observers and the trainer.</p>
+</blockquote>
+<p>といったSyncOnPolicyのシチュエーションに対応できないそうだ。
+こういったものに対応できる、より一般的なAPIとしてRPCが推奨されている。<br>
+(https://pytorch.org/tutorials/beginner/dist_overview.html#general-distributed-training)</p>
+<h2 id="_2">注意</h2>
+<p><em>RPC</em>という言葉は公式ドキュメントにおいて文脈次第で以下の事柄のいずれかを指す。混同しやすいので、注意が必要。</p>
 <ol>
-<li>エポック毎にロスを表示する</li>
+<li><a href="#anchor1">Distributed RPC Framework</a><ul>
+<li>torch.distriutedの中のライブラリ。</li>
+</ul>
+</li>
+<li>1の中のRPCという機能</li>
+<li>遠隔呼び出し一般を指す言葉 </li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pl_bolts.callbacks</span> <span class="kn">import</span> <span class="n">PrintTableMetricsCallback</span>
-
-<span class="n">print_callback</span> <span class="o">=</span> <span class="n">PrintTableMetricsCallback</span><span class="p">()</span>
-<span class="n">trainer</span> <span class="n">pl</span><span class="o">.</span><span class="n">Trainer</span><span class="p">(</span><span class="n">callback</span><span class="o">=</span><span class="p">[</span><span class="n">print_callback</span><span class="p">])</span>
-<span class="n">trainer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
-</code></pre></div>
+<h2 id="distributed-rpc-frameworkhttpspytorchorgdocsstablerpchtmlbasics">Distributed RPC Framework(https://pytorch.org/docs/stable/rpc.html#basics)<div id='anchor1'></div></h2>
+<p>torch.distributedの中の、強化学習でメインで用いられるであろうAPI。
+上の
+windowsではサポートされていない(次の次のバージョンから部分的にサポートされる)</p>
+<p><a href="https://pytorch.org/tutorials/intermediate/rpc_param_server_tutorial.html">RPCを使ってParameter Serverを作るチュートリアル</a></p>
 <ol>
-<li>GANのforward時に生成した画像をTensorBoardに表示する</li>
+<li>Remote Procedure Call(RPC)<ul>
+<li>リモートの関数を引数を指定して返り値を受け取るAPI<ul>
+<li>呼び出し元のユーザが返り値を受け取るまでつぎの処理に写らない（rpc_sync）</li>
+<li>呼び出し元のユーザが必要に応じて、返り値を待つ(rpc_async)</li>
+<li>呼び出し元のユーザが必要に応じて返り値への参照を待つ。(remote)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Remote Reference(RRef)<ul>
+<li>他のマシン上のオブジェクトへの参照</li>
+</ul>
+</li>
+<li>Distributed Autograd <br>
+      -　複数マシンでgradを送り合う機能を提供 <br>
+      -　複数マシン上のgradの流れを把握してgradを取ってくれるAPI</li>
+<li>Distributed Optimizer<ul>
+<li>Distributed Autogradで計算したgradで各マシンのワーカを更新してくれるAPI</li>
+</ul>
+</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">img_dim</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">)</span>
-
-<span class="c1"># model forward must work for sampling</span>
-<span class="n">z</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">latent_dim</span><span class="p">)</span>
-<span class="n">img_samples</span> <span class="o">=</span> <span class="n">GAN</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
-
-<span class="kn">from</span> <span class="nn">pl_bolts.callbacks</span> <span class="kn">import</span> <span class="n">TensorboardGenerativeModelImageSampler</span>
-
-<span class="n">trainer</span> <span class="o">=</span> <span class="n">Trainer</span><span class="p">(</span><span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">TensorboardGenerativeModelImageSampler</span><span class="p">()])</span>
-<span class="n">trainer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">GAN</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="4">4.ロス関数を使う</h2>
-<p>タスク毎にいくつかの関数が実装されているがまだ数が少ない。
-インポートするとPyTorchのロス関数になるのでモデルクラスを作成する時に<code>lossfun</code>メソッドに渡してあげればいい。
-下記は物体検知用のGeneralizedIoU。</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">torch</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pl_bolts.losses.object_detection</span> <span class="kn">import</span> <span class="n">giou_loss</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">preds</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">]])</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">target</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">150</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">250</span><span class="p">]])</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">giou_loss</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
-<span class="n">tensor</span><span class="p">([[</span><span class="mf">1.0794</span><span class="p">]])</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">lossfun</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span> <span class="c1"># method of a network</span>
-        <span class="k">return</span> <span class="n">giou_loss</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="5">5.データモジュールを使う</h2>
-<p><code>LightningDataModule</code>化されたデータセットが揃っている。
-指定したディレクトリにダウンロードする機能もあるのでモデルのテストを直ぐに始められる。マルチGPU対応。</p>
+<h2 id="distributed-autograd">Distributed Autograd</h2>
+<p>リモートのマシンから送られてきたデータの計算グラフを把握し、各マシンの重みに対して勾配を計算、逆伝播させられる。</p>
 <ul>
-<li>DAを自分で変更したりできる</li>
+<li>使用例</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pl_bolts.datamodules</span> <span class="kn">import</span> <span class="n">CIFAR10DataModule</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">torch.distributed.autograd</span> <span class="k">as</span> <span class="nn">dist_autograd</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">with</span> <span class="n">dist_autograd</span><span class="o">.</span><span class="n">context</span><span class="p">()</span> <span class="k">as</span> <span class="n">context_id</span><span class="p">:</span>
+<span class="o">&gt;&gt;&gt;</span>   <span class="n">t1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span>   <span class="n">t2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span>   <span class="n">loss</span> <span class="o">=</span> <span class="n">rpc</span><span class="o">.</span><span class="n">rpc_sync</span><span class="p">(</span><span class="s2">&quot;worker1&quot;</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span>   <span class="n">dist_autograd</span><span class="o">.</span><span class="n">backward</span><span class="p">(</span><span class="n">context_id</span><span class="p">,</span> <span class="p">[</span><span class="n">loss</span><span class="p">])</span>
+</code></pre></div>
+<h2 id="distributed-optimizer">Distributed Optimizer</h2>
+<p>https://pytorch.org/docs/master/rpc.html#module-torch.distributed.optim
+渡されたリモート/ローカル両方のパラメータ（への参照 = rrefs）に対する勾配を計算する。 <br>
+例</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.multiprocessing</span> <span class="k">as</span> <span class="nn">mp</span>
+<span class="kn">import</span> <span class="nn">torch.distributed.autograd</span> <span class="k">as</span> <span class="nn">dist_autograd</span>
+<span class="kn">from</span> <span class="nn">torch.distributed</span> <span class="kn">import</span> <span class="n">rpc</span>
+<span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">optim</span>
+<span class="kn">from</span> <span class="nn">torch.distributed.optim</span> <span class="kn">import</span> <span class="n">DistributedOptimizer</span>
 
-<span class="n">dm</span> <span class="o">=</span> <span class="n">CIFAR10DataModule</span><span class="p">(</span><span class="s1">&#39;PATH_to_download/to_load&#39;</span><span class="p">)</span>
-<span class="n">dm</span><span class="o">.</span><span class="n">train_transforms</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># ここにComposeオブジェクトを渡せばおk</span>
-<span class="n">dm</span><span class="o">.</span><span class="n">test_transforms</span> <span class="o">=</span> <span class="o">...</span>
-<span class="n">dm</span><span class="o">.</span><span class="n">val_transforms</span>  <span class="o">=</span> <span class="o">...</span>
+<span class="k">def</span> <span class="nf">random_tensor</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">_run_process</span><span class="p">(</span><span class="n">rank</span><span class="p">,</span> <span class="n">dst_rank</span><span class="p">,</span> <span class="n">world_size</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;worker</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rank</span><span class="p">)</span>
+    <span class="n">dst_name</span> <span class="o">=</span> <span class="s2">&quot;worker</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dst_rank</span><span class="p">)</span>
+
+    <span class="c1"># Initialize RPC.</span>
+    <span class="n">rpc</span><span class="o">.</span><span class="n">init_rpc</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">rank</span><span class="o">=</span><span class="n">rank</span><span class="p">,</span>
+        <span class="n">world_size</span><span class="o">=</span><span class="n">world_size</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Use a distributed autograd context.</span>
+    <span class="k">with</span> <span class="n">dist_autograd</span><span class="o">.</span><span class="n">context</span><span class="p">()</span> <span class="k">as</span> <span class="n">context_id</span><span class="p">:</span>
+        <span class="c1"># Forward pass (create references on remote nodes).</span>
+        <span class="n">rref1</span> <span class="o">=</span> <span class="n">rpc</span><span class="o">.</span><span class="n">remote</span><span class="p">(</span><span class="n">dst_name</span><span class="p">,</span> <span class="n">random_tensor</span><span class="p">)</span>
+        <span class="n">rref2</span> <span class="o">=</span> <span class="n">rpc</span><span class="o">.</span><span class="n">remote</span><span class="p">(</span><span class="n">dst_name</span><span class="p">,</span> <span class="n">random_tensor</span><span class="p">)</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="n">rref1</span><span class="o">.</span><span class="n">to_here</span><span class="p">()</span> <span class="o">+</span> <span class="n">rref2</span><span class="o">.</span><span class="n">to_here</span><span class="p">()</span>
+
+        <span class="c1"># Backward pass (run distributed autograd).</span>
+        <span class="n">dist_autograd</span><span class="o">.</span><span class="n">backward</span><span class="p">(</span><span class="n">context_id</span><span class="p">,</span> <span class="p">[</span><span class="n">loss</span><span class="o">.</span><span class="n">sum</span><span class="p">()])</span>
+
+        <span class="c1"># Build DistributedOptimizer.</span>
+        <span class="n">dist_optim</span> <span class="o">=</span> <span class="n">DistributedOptimizer</span><span class="p">(</span>
+        <span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">rref1</span><span class="p">,</span> <span class="n">rref2</span><span class="p">],</span>
+        <span class="n">lr</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Run the distributed optimizer step.</span>
+        <span class="n">dist_optim</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">context_id</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">run_process</span><span class="p">(</span><span class="n">rank</span><span class="p">,</span> <span class="n">world_size</span><span class="p">):</span>
+    <span class="n">dst_rank</span> <span class="o">=</span> <span class="p">(</span><span class="n">rank</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="n">world_size</span>
+    <span class="n">_run_process</span><span class="p">(</span><span class="n">rank</span><span class="p">,</span> <span class="n">dst_rank</span><span class="p">,</span> <span class="n">world_size</span><span class="p">)</span>
+    <span class="n">rpc</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+  <span class="c1"># Run world_size workers</span>
+  <span class="n">world_size</span> <span class="o">=</span> <span class="mi">2</span>
+  <span class="n">mp</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="n">run_process</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">world_size</span><span class="p">,),</span> <span class="n">nprocs</span><span class="o">=</span><span class="n">world_size</span><span class="p">)</span>
 </code></pre></div>
-<ul>
-<li>Numpyでx,yを渡すだけで<code>LightningDataModule</code>化してくれて凄いと思いました（語彙力）</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_boston</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pl_bolts.datamodules</span> <span class="kn">import</span> <span class="n">SklearnDataset</span>
-<span class="o">...</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">load_boston</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">dataset</span> <span class="o">=</span> <span class="n">SklearnDataset</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># シェイプがあってればなんでも渡せる</span>
-</code></pre></div>
+<h2 id="_3">使用例</h2>
+<h3 id="synconpolicy">SyncOnPolicy</h3>
+<p>https://pytorch.org/tutorials/intermediate/rpc_tutorial.html#distributed-reinforcement-learning-using-rpc-and-rref</p>
+<h3 id="asynconpolicyparameterserver">AsyncOnPolicy(ParameterServer)</h3>
+<p>https://pytorch.org/tutorials/intermediate/rpc_param_server_tutorial.html</p>
                 
               
               
