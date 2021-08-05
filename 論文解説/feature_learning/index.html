@@ -1993,7 +1993,7 @@
 また、<strong>Adversarial machine learning</strong>に示されるように実際には高度な意味で特徴を捉えているわけではないという考えもあり、表現学習としての精度を上げるタスクを通して、その途中のNNから特徴表現を得る方法は個人的には現段階ではまだ難しいのかなと思った。</p>
 <hr />
 <h4 id="2-2-1-semantic-segmentation">2-2-1. Semantic Segmentation</h4>
-<p><img src=fl_imgs/1.png width="300px"></p>
+<p><img src=./fl_imgs/1.png width="300px"></p>
 <ul>
 <li><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Long_Fully_Convolutional_Networks_2015_CVPR_paper.pdf">Fully Convolutional Networks for Semantic Segmentation[Jonathan Long, Evan Shelhamer, Trevor Darrell]</a></li>
 </ul>
@@ -2004,26 +2004,26 @@
 <li><a href="http://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf">Faster R-CNN</br> Towards Real-Time Object Detection with Region Proposal Networks</a></br>
   検出部分と識別部分を分けていると、検出された部分を毎回毎回ConvNetに入力する必要があるのでこれだとロスが大きいのでまずConv layersにかけて、そこからproposalsを検出することによってロスを小さくした。つまり検出と識別を一つのニューラルネットで完結することができ、最適化することができた。</li>
 </ul>
-<p><img src="fl_imgs/2.png" width="300px"></p>
+<p><img src="./fl_imgs/2.png" width="300px"></p>
 <ul>
 <li><a href="https://arxiv.org/pdf/1506.02640.pdf">YOLO</br>You Only Look Once: Unified, Real-Time Object Detection</a></br>
   Faster R-CNNでは検出部分の出力を受けて識別部分が処理を行っていたが、これでは処理系が直列に並んでいるので同時に処理ができないので遅延を生んでいると考えられ、YOLOではこれを改善し処理を並列に行うことができるように改良された。</li>
 </ul>
-<p><img src="fl_imgs/3.png" width="400px"></p>
+<p><img src="./fl_imgs/3.png" width="400px"></p>
 <hr />
 <h4 id="2-2-3-image-cptioning">2-2-3. Image Cptioning</h4>
 <p>正直ここはかなり色々な手法があって外観を掴めなかったので以下に<a href="https://github.com/zhjohnchan/awesome-image-captioning">よくまとまったサイト</a>とリンクに<a href="https://arxiv.org/pdf/1810.04020.pdf">survey論文</a>などを挙げておきます。</p>
 <ul>
 <li><a href="https://arxiv.org/pdf/1502.03044.pdf">Show, Attend and Tell: Neural Image Caption Generation with Visual Attention</a></li>
 </ul>
-<p><img src="fl_imgs/4.png" width="600px"></p>
+<p><img src="./fl_imgs/4.png" width="600px"></p>
 <hr />
 <h4 id="2-2-4-action-recognition">2-2-4. Action Recognition</h4>
 <p>Action Estimationと調べても出てきそう。一枚の静止画について行っているものもあるがそれはImage Captioningと重なる部分ではありそう。以下で紹介するものは動画などの連続した入力データに対して何が行われているかを推定する。</p>
 <ul>
 <li><a href="https://arxiv.org/abs/1802.09232">2D/3D Pose Estimation and Action Recognition using Multitask Deep Learning [Diogo C. Luvizon, David Picard, Hedi Tabia]</a></li>
 </ul>
-<p><img src="fl_imgs/5.png" width="300px"></p>
+<p><img src="./fl_imgs/5.png" width="300px"></p>
 <h3 id="2-3-unsupervised">2-3. Unsupervised</h3>
 <p><strong>以下はConvNetの利用を想定して記述する。</strong></br>
 ここではUnsupervisedと言いながら、Self-supervisedについて扱っている。UnsupervisedにはGANなどの生成モデルが考えられるがこれは個別に扱っている。</p>
@@ -2059,19 +2059,19 @@
   <a href="https://arxiv.org/abs/1807.05520">Deep Clustering for Unsupervised Learning of Visual Features [Mathilde Caron+, ECCV2018]</a></br>
   まず入力画像をConvnetに入力して特徴量マップを得る。特徴量マップはConvnetのみを用い、全結合層はここまででは用いない。特徴量マップ上でPCA,L2正則化を行い次元圧縮を行なったものにk-meansを実行してPseudo-labelを付与する。このPseudo-labelを元にしてClassificationを行い学習を行う。</li>
 </ul>
-<p><img src="fl_imgs/6.png" width="400px"></p>
+<p><img src="./fl_imgs/6.png" width="400px"></p>
 <ul>
 <li>Jigsaw Puzzle++</br>
   <a href="https://arxiv.org/abs/1805.00385">Noroozi et al., “Boosting Self-Supervised Learning via Knowledge Transfer ”, CVPR 2018.</a></br>
   二枚の画像を組み合わせたパズルを解かせる</li>
 </ul>
-<p><img src="fl_imgs/7.png" width="240px"></p>
+<p><img src="./fl_imgs/7.png" width="240px"></p>
 <ul>
 <li>Learning and Using the Arrow of Time</br>
   <a href="https://vcg.seas.harvard.edu/publications/learning-and-using-the-arrow-of-time/paper">Donglai Wei, Joseph Lim, Andrew Zisserman and William T. Freeman Harvard University University of Southern California University of Oxford Massachusetts Institute of Technology Google Research</a></br>
   動画において時間が進んでいるのか戻っているのか判断させる</li>
 </ul>
-<p><img src="fl_imgs/8.png" width="500px"></p>
+<p><img src="./fl_imgs/8.png" width="500px"></p>
 <hr />
 <h4 id="2-3-2-generation-based">2-3-2. Generation-Based</h4>
 <p>参考にした論文ではVAEやGANを含めてGeneration-Basedとしていたがここではそれらは以下で生成モデルとして個別に扱う。ここでいうGeneration-Basedとは入力データから何かしらの情報をなくしたものに対してNNを用いて再構成させるものを指す。</p>
@@ -2079,23 +2079,23 @@
 <li><a href="https://arxiv.org/pdf/1604.07379.pdf">Context Encoders: Feature Learning by Inpainting</a></br>
   画像の一部分をくり抜いたものをNNに再構成させる</li>
 </ul>
-<p><img src="fl_imgs/9.png" width="240px"></p>
+<p><img src="./fl_imgs/9.png" width="240px"></p>
 <ul>
 <li><a href="https://arxiv.org/pdf/1603.08511.pdf">Colorful Image Colorization</a></br>
   色の情報をなくした入力に対してNNに色を塗らせる</li>
 </ul>
-<p><img src="fl_imgs/10.png" width="400px"></p>
+<p><img src="./fl_imgs/10.png" width="400px"></p>
 <hr />
 <h4 id="2-3-3-free-semantic-lavel-based">2-3-3. Free Semantic Lavel-Based</h4>
 <p>人間の解釈を介入させないラベルデータを用いて学習させる方法。(これを教師なし学習というのはちょっとずるいのでは？）人間の解釈を介入させないラベルとは、Depthやセグメンテーションマスク、法線情報などがある。これらの情報は普通ゲームなどのレンダリングによって得る。</br>
 利点としては他のself-supervisedの方法よりも特徴を捉えさせやすい。</br>
 問題点としてはまずそのようなレンダリングできるハードウェアを作る必要がある。また、ハードウェアにレンダリングさせて作らせたラベルにはノイズが多いことが挙げられる。</p>
-<p><img src="fl_imgs/11.png" width="500px"></p>
+<p><img src="./fl_imgs/11.png" width="500px"></p>
 <ul>
 <li><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Ren_Cross-Domain_Self-Supervised_Multi-Task_CVPR_2018_paper.pdf">Cross-Domain Self-supervised Multi-task Feature Learning using Synthetic Imagery[Zhongzheng Ren and Yong Jae Lee University of California, Davis]</a></br>
   ハードにレンダリングさせたものによって生成した合成画像で学習させて、実世界のリアル画像でドメイン学習させる</li>
 </ul>
-<p><img src="fl_imgs/12.png" width="400px"></p>
+<p><img src="./fl_imgs/12.png" width="400px"></p>
 <hr />
 <h4 id="2-3-4-cross-modal-based-learning">2-3-4. Cross Modal-based Learning</h4>
 <p>動画の入力データに対して、連続的となっているものを制約として学習を進める方式。具体的に動画で連続的になっているデータとは、<strong>RGBの値、<a href="http://labs.eecs.tottori-u.ac.jp/sd/Member/oyamada/OpenCV/html/py_tutorials/py_video/py_lucas_kanade/py_lucas_kanade.html">オプティカルフロー</a>、音のデータ、カメラのポーズ</strong> などが挙げれられる。</p>
@@ -2103,7 +2103,7 @@
 <li><a href="https://arxiv.org/pdf/1806.09594.pdf">Tracking Emerges by Colorizing Videos[Carl Vondrick, Abhinav Shrivastava, Alireza Fathi, Sergio Guadarrama, Kevin Murphy]</a></br>
   ある物体は連続したフレーム間で動くが、色は同じであるということを前提にして人間がレベルをつけることなく物体の動きを学習することができる。</li>
 </ul>
-<p><img src="fl_imgs/13.png" width="400px"></p>
+<p><img src="./fl_imgs/13.png" width="400px"></p>
 <h2 id="3">3. 距離学習</h2>
 <h3 id="3-1">3-1. 分類</h3>
 <ul>
@@ -2126,20 +2126,20 @@
   <a href="https://arxiv.org/pdf/2002.05709.pdf">A Simple Framework for Contrastive Learning of Visual Representations</a></br>
   単に画像を入力するだけではなくデータオーギュメンテーションを行なった画像を利用する。また、contrastive lossについても改良を加えて単位超球面で表現される埋め込み空間での距離によって表現されるSelf-supervised contrastive lossと呼べれるものになっている。</li>
 </ul>
-<p><img src="fl_imgs/14.png" width="300px"></p>
+<p><img src="./fl_imgs/14.png" width="300px"></p>
 <ul>
 <li>Supervised SimCLR</br>
   <a href="https://arxiv.org/pdf/2004.11362.pdf">Supervised Contrastive Learning</a></br>
   上のSimCLRを改良したもので、普通のSimCLRはSelf-supervisedに行われるのでその埋め込み空間での表現はもともと同じクラスに属しているかなどは考慮されない。しかし直感で考えれば、同じ犬の画像であれば少なくとも猫の画像よりは近い関係になっていてほしい。この直感を組み込んだのがこの論文である。</li>
 </ul>
-<p><img src="fl_imgs/15.png" width="500px"></p>
+<p><img src="./fl_imgs/15.png" width="500px"></p>
 <ul>
 <li>Prototypical Contrastive Learning</br>
   <a href="https://arxiv.org/abs/2005.04966">Prototypical Contrastive Learning of Unsupervised Representations</a></br>
   これは先ほどのSupervised SimCLRと同じ思想でかつ、完全なUnspervisedな方法によるものである。つまり元々の入力画像として似ている画像は埋め込み空間でも似てるはずだという思想に基づいている。先に入力画像をk-meansでプロトタイプとしてクラスタリングしてそのプロトタイプによって距離学習を行うことによって精度が上がった。</li>
 </ul>
 <p>馬の画像群がちゃんと鳥の画像と比較して近くなっているだけではなく、馬に関する画像群の中でもちゃんと人が馬に乗ったものと馬単体のものは区別されている。</p>
-<p><img src="fl_imgs/16.png" width="600px"></p>
+<p><img src="./fl_imgs/16.png" width="600px"></p>
 <h4 id="3-2-2-triplet-loss-alpha">3-2-2. Triplet loss + <span class="arithmatex">\(\\alpha\)</span></h4>
 <p>深層距離学習の始まりとして用いられていたContrasive Lossの問題点を改善するために出てきた手法。ただしこれはこれで以前にはなかった問題を生み出すことになりさらなる改善をする必要が出てきた。詳しくは<a href="https://qiita.com/gesogeso/items/547079f967d9bbf9aca8">このサイト</a>にまとまっているので確認してほしい。</p>
 <ul>
@@ -2147,29 +2147,29 @@
   <a href="https://arxiv.org/abs/1503.03832">A Unified Embedding for Face Recognition and Clustering</a></br>
   一番基本的なTriplet lossを用いる手法</li>
 </ul>
-<p><img src="fl_imgs/17.png" width="400px"></p>
+<p><img src="./fl_imgs/17.png" width="400px"></p>
 <ul>
 <li>N+1 Tuplet</br>
   <a href="https://papers.nips.cc/paper/6200-improved-deep-metric-learning-with-multi-class-n-pair-loss-objective">Improved Deep Metric Learning with Multi-class N-pair Loss Objective</a></br>
   Tripletを一般のNまで拡大した手法
   より多くの点と比較するので挙動としてはより安定するはず。</li>
 </ul>
-<p><img src="fl_imgs/18.png" width="400px"></p>
+<p><img src="./fl_imgs/18.png" width="400px"></p>
 <ul>
 <li>Ranked List Loss</br>
   <a href="https://arxiv.org/abs/1903.03238">Ranked List Loss for Deep Metric Learning</a></br>
   特定のサンプルを選ぶわけではなく全てのサンプルについて考慮するので学習に有効なペアを取りこぼすことがなくなることに加えて、従来はpositive pairについてはどこまでも近くなるように更新されていたが、ここまで近くなればそれ以上近くしなくて良いという基準を作った。(この手法はどちらかと言えばContrasive lossの進化系に含めた方がいいのかもしれない。)</li>
 </ul>
-<p><img src="fl_imgs/19.png" width="400px"></br></p>
-<p><img src="fl_imgs/20.png" width="500px"></p>
+<p><img src="./fl_imgs/19.png" width="400px"></br></p>
+<p><img src="./fl_imgs/20.png" width="500px"></p>
 <p>Ranked List Lossまでのものとの比較図</p>
 <h3 id="3-3">3-3. その他</h3>
 <p>距離学習の中で"positive pair"であったり"negative pair"という文言が出てこないものをその他に含めて扱う。つまりcontrastive lossやtriplet lossによる学習を行わないものをまとめる。これは僕の調査不足かもしれないが、距離学習の多くがcontrastive learningの文脈で扱われている気がする。。。</p>
 <h4 id="3-3-1-arcface">3-3-1. ArcFace</h4>
 <p><a href="https://arxiv.org/pdf/1801.07698.pdf">Additive Angular Margin Loss for Deep Face Recognition</a></br>
 埋め込み空間を超球面で表現することによってそれぞれの潜在変数の位置を埋め込み空間での角度で表すことができる。それぞれのクラスを表現するWとのなす角を<span class="arithmatex">\(\\cos\\theta\)</span>で表現している。この<span class="arithmatex">\(\\theta\)</span>について、それぞれのクラスが遠くなるように更新する.</p>
-<p><img src="fl_imgs/21.png" width="350px"></br></p>
-<p><img src="fl_imgs/22.png" width="450px"></br></p>
+<p><img src="./fl_imgs/21.png" width="350px"></br></p>
+<p><img src="./fl_imgs/22.png" width="450px"></br></p>
 <h2 id="4">4. 深層生成</h2>
 <p>生成モデルはUnsupervisedのモデルの一種である。ここでは生成モデルを上のSemi-supervisedのモデルの枠組みとは別に扱う。その理由は生成モデルのエンコーダによって得られる潜在変数は高度に抽象化されたデータであり、この潜在空間がDisentangledな関係になるように設計できるからである。</p>
 <h3 id="4-1">4-1. 分類</h3>
@@ -2229,7 +2229,7 @@ $$
 <p>$$
   L(x,z) := \mathbb{E}<em KL="KL">{q(z|X)}[\log p(x|z)]-\beta\cdot D</em>[q(z|x)||p(z)]
   $$</p>
-<p><img src="fl_imgs/23.png" width="400px"></p>
+<p><img src="./fl_imgs/23.png" width="400px"></p>
 <ul>
 <li>FactorVAE</br>
   <a href="https://arxiv.org/abs/1802.05983">Disentangling by Factorising [Hyunjik Kim, Andriy Mnih]</a></br>
@@ -2240,7 +2240,7 @@ $$
   <span class="arithmatex">\(\\rm (i)\)</span>: 入力<span class="arithmatex">\(X\)</span>と潜在変数<span class="arithmatex">\(z\)</span>の依存関係, <span class="arithmatex">\(\\rm (ii)\)</span>: z単体の分布と事前分布の不一致度合</br>
   ここから<span class="arithmatex">\(\\beta\)</span>-VAEでエビデンス下界を大きくするために第二項の部分を小さくしていたのは <span class="arithmatex">\(\\rm (i)\)</span> から二つの相互情報量を小さくし、再構成誤差を増大させていた。そこでこれを補正する項を目的関数に組み込んだ。具体的には<strong>Total Correlation制約</strong>という制約項を加えた。以下のように<span class="arithmatex">\(\\beta\)</span>-VAEよりも多くの特徴を互いに独立して取り出せてる。ただし顔以外のデータにはあまりうまくいかないという意見もある。(顔は特徴を分類しやすい？)</li>
 </ul>
-<p><img src="fl_imgs/24.png" width="400px"></p>
+<p><img src="./fl_imgs/24.png" width="400px"></p>
 <h4 id="4-5-2">4-5-2. 異なる深さで抽出された階層潜在表現を使用する手法</h4>
 <ul>
 <li>LVAE</br>
@@ -2248,15 +2248,15 @@ $$
 </ul>
 <p>従来のVAEが最終層からのみ潜在変数を獲得していたのに対して、LVAEでは各深さから抽象度の異なる潜在変数を獲得している。VAEでは最終層のみから潜在変数を獲得すると、その潜在変数を調整しようとしてもその間に何層もあるとそれは難しかったが、各層から獲得するように改善することで表現力を増すことに成功している。</br>
 また、本論文では<span class="arithmatex">\(\\beta\)</span>-VAEと同様に正則化項<span class="arithmatex">\(\\beta\)</span>を利用しているがこの<span class="arithmatex">\(\\beta\)</span>を学習の進度に応じて<span class="arithmatex">\([0,1]\)</span>の範囲で徐々に大きくする <strong>(Warm-Up)</strong> ことによって性能が改善されることを示している。</p>
-<p><img src="fl_imgs/25.png" width="500px"></p>
+<p><img src="./fl_imgs/25.png" width="500px"></p>
 <ul>
 <li>pro-VAE</br>
   <a href="https://arxiv.org/abs/2002.10549">Progressive Learning and Disentanglement of Hierarchical Representations[Zhiyuan Li, Jaideep Vitthal Murkute, Prashnna Kumar Gyawali, Linwei Wang]</a>
   pro-VAEは上のLVAEにProgressive Learningを導入したもの。最初は層が深く抽象度が高いものだけを潜在変数として取り出して、学習の進度に合わせてより浅い層の特徴量も潜在変数として取り入れるように学習を進めていく。</li>
 </ul>
-<p><img src="fl_imgs/26.png" width="400px"></p>
+<p><img src="./fl_imgs/26.png" width="400px"></p>
 <p>以下の図はpro-VAEとpro-VAEからLadderという要素を取り除いたものとして考えることのできるteacher-student modelの性能を比較している。pro-VAEの各層から得られた潜在変数を変化させた時の生成画像の変化と、teature-student modelの最終層から得られた潜在変数を変化させた時の生成画像の変化比較すると、pro-VAEの方が学習が進み、より多くの層を生成に用いるようになるとdisentangledな潜在変数を取り出すことに成功していることがわかる。</p>
-<p><img src="fl_imgs/27.png" width="600px"></p>
+<p><img src="./fl_imgs/27.png" width="600px"></p>
 <h3 id="4-6-gan">4-6. GAN</h3>
 <p>GANによるDisentangledな表現を得る表現学習については以下のように分類をして紹介する。
 GANによるDisentangledな表現を得るという試みは<strong>InfoGAN</strong>から始まった。InfoGAN自体は学習が不安定なので現在は使われていないがDisentangledな表現学習の先駆けとなった。</p>
@@ -2287,18 +2287,18 @@ Interpretable Representation Learning by Information Maximizing Generative Adver
   <a href="https://arxiv.org/abs/1907.10786">AInterpreting the Latent Space of GANs for Semantic Face Editing[Yujun Shen, et al]</a></br>
   それぞれの潜在変数について、あらかじめ想定してクラス分類器を学習する必要がある。よって学習する前からどのような潜在空間の特徴が出てくるか想定したものが出てくる？のならこれはこれで便利では？ただ、すごく慎重に設計しないと再現性は低そう。</li>
 </ul>
-<p><img src="fl_imgs/28.png" width="400px"></p>
+<p><img src="./fl_imgs/28.png" width="400px"></p>
 <h4 id="4-6-2-self-supervised-gan">4-6-2. Self-supervised GAN</h4>
 <ul>
 <li><a href="https://arxiv.org/abs/1907.07171">ON THE “STEERABILITY” OF GENERATIVE ADVERSARIAL NETWORKS[Ali Jahanian, Lucy Chai, Phillip Isola]</a></br>
   ズームや、色合いなどの簡単な画像編集で獲得できる特徴についてのdisentangledな潜在空間での表現はSelf-supervisedな手法で獲得することができる。また、それぞれの潜在変数がどこまで変化させることができるかは入力データの分散に依存する。</li>
 </ul>
-<p><img src="fl_imgs/29.png" width="400px"></p>
+<p><img src="./fl_imgs/29.png" width="400px"></p>
 <h4 id="4-6-3-unsupervised-gan">4-6-3. Unsupervised GAN</h4>
 <ul>
 <li><a href="https://arxiv.org/abs/2002.03754">Unsupervised Discovery of Interpretable Directions in the GAN Latent Space [Andrey Voynov Artem Babenko]</a></br>
   他のsupervisedな方法と同様にRotatinoなどの特徴を捉えていることに加えて、どこが背景かも捉えていて筆者らはこれは他のGANを用いた手法より表現力があると主張していた。また、この背景を捉えたりしているものがweakly-supervisedなセマンティックなどに応用できるといった例も出していた。
-  <img src="fl_imgs/30.png" width="900px"></li>
+  <img src="./fl_imgs/30.png" width="900px"></li>
 </ul>
 <h2 id="_10">参考</h2>
 <h3 id="_11">サイト</h3>
