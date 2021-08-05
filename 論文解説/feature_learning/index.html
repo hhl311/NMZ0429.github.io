@@ -1,0 +1,2357 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
+    
+    
+      
+        <title>表現学習についてまとめのまとめのまとめ - Cheep Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bde7dde4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjp.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:600,800">
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-196492429-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="Cheep Learning" class="md-header__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cheep Learning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              表現学習についてまとめのまとめのまとめ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="" type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="light-green" data-md-color-accent="" type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="クリア" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Welcome !!
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../intro/" class="md-tabs__link">
+      Artificial Intelligenceを学ぶ方へ
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/image/" class="md-tabs__link">
+        100本ノック
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../PyTorch/PyTorch/dp/" class="md-tabs__link">
+        PyTorch
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../UofT/game_theory/" class="md-tabs__link">
+        UofT
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/multiprocess_in_python/" class="md-tabs__link">
+        その他
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/heroku_st/" class="md-tabs__link">
+        ツール
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/3dvision/" class="md-tabs__link">
+        深層学習
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E7%B5%B1%E8%A8%88%E3%83%A2%E3%83%87%E3%83%AB/eval_rec/" class="md-tabs__link">
+        統計モデル
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../GNN/" class="md-tabs__link md-tabs__link--active">
+        論文解説
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Cheep Learning" class="md-nav__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Cheep Learning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Welcome !!
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/" class="md-nav__link">
+        Artificial Intelligenceを学ぶ方へ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        100本ノック
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="100本ノック" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          100本ノック
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/image/" class="md-nav__link">
+        画像処理100本ノック答え
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/numpy/" class="md-nav__link">
+        Numpy100本ノック答え
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        PyTorch
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PyTorch" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          PyTorch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" data-md-state="indeterminate" type="checkbox" id="__nav_4_1" checked>
+      
+      <label class="md-nav__link" for="__nav_4_1">
+        PyTorch
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PyTorch" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          PyTorch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch/dp/" class="md-nav__link">
+        PyTorchの分散計算処理を使う
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch/pytorch/" class="md-nav__link">
+        pytorchによるディープラーニング実装の流れ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch/video/" class="md-nav__link">
+        PyTorch Dataset API で動画データを扱う方法
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2" checked>
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        PyTorch Lightning
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PyTorch Lightning" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          PyTorch Lightning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/checkpoint/" class="md-nav__link">
+        PyTorch LightningのCheckpointCallbackの便利機能
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/data_module/" class="md-nav__link">
+        【PyTorch Lightning】LightningDataModuleについて
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/lightning_bolts/" class="md-nav__link">
+        PyTorch Lightning Boltsの使い方
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/pytorchvideo/" class="md-nav__link">
+        PyTorchVideo 使い方
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        UofT
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="UofT" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          UofT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UofT/game_theory/" class="md-nav__link">
+        Game theory
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UofT/note/" class="md-nav__link">
+        Note
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        その他
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="その他" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          その他
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/multiprocess_in_python/" class="md-nav__link">
+        Pythonの並列処理のまとめ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-nav__link">
+        Pythonのお勉強に使える書籍のまとめ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC/" class="md-nav__link">
+        ワークフロー
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        ツール
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ツール" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          ツール
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/heroku_st/" class="md-nav__link">
+        StreamlitアプリをHerokuでティプロイする
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/plantuml/" class="md-nav__link">
+        PlantUMLのススメ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/tmux/" class="md-nav__link">
+        tmuxはええぞ
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" data-md-state="indeterminate" type="checkbox" id="__nav_8" checked>
+      
+      <label class="md-nav__link" for="__nav_8">
+        深層学習
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="深層学習" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          深層学習
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/3dvision/" class="md-nav__link">
+        3D vision
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/lstm/" class="md-nav__link">
+        【もうやりたくない】RNNとLSTMの理解とNumPyによる実装
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/video_task/" class="md-nav__link">
+        動画を使った深層学習
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" data-md-state="indeterminate" type="checkbox" id="__nav_9" checked>
+      
+      <label class="md-nav__link" for="__nav_9">
+        統計モデル
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="統計モデル" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          統計モデル
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%B5%B1%E8%A8%88%E3%83%A2%E3%83%87%E3%83%AB/eval_rec/" class="md-nav__link">
+        推薦システムの評価指標
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%B5%B1%E8%A8%88%E3%83%A2%E3%83%87%E3%83%AB/method/" class="md-nav__link">
+        推薦モデル
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%B5%B1%E8%A8%88%E3%83%A2%E3%83%87%E3%83%AB/silimarity/" class="md-nav__link">
+        サンプル間の類似性指標
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%B5%B1%E8%A8%88%E3%83%A2%E3%83%87%E3%83%AB/use_case/" class="md-nav__link">
+        学習ベース推薦システムの活用事例
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      <label class="md-nav__link" for="__nav_10">
+        論文解説
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="論文解説" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          論文解説
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GNN/" class="md-nav__link">
+        Graph Attention Network 解説
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SGD%E6%9C%80%E9%81%A9%E5%8C%96%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E3%83%87%E3%83%BC%E3%82%BF%E3%82%AF%E3%83%AC%E3%83%B3%E3%82%B8%E3%83%B3%E3%82%B0%E6%89%8B%E6%B3%95/" class="md-nav__link">
+        SGD最適化モデルに対するデータクレンジング手法
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fast_rcnn/" class="md-nav__link">
+        Faster R-CNN まとめ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          表現学習についてまとめのまとめのまとめ
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        表現学習についてまとめのまとめのまとめ
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 表現学習
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 表現学習">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-1" class="md-nav__link">
+    1-1. 表現学習の分類
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-2" class="md-nav__link">
+    1-2. 学習を用いない特徴抽出
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 精度を高めるタスク
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 精度を高めるタスク">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-1" class="md-nav__link">
+    2-1. 分類
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2-supervised" class="md-nav__link">
+    2-2. Supervised
+  </a>
+  
+    <nav class="md-nav" aria-label="2-2. Supervised">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    分類
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2-0" class="md-nav__link">
+    2-2-0. まとめ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2-1-semantic-segmentation" class="md-nav__link">
+    2-2-1. Semantic Segmentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2-2-object-detection" class="md-nav__link">
+    2-2-2. Object Detection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2-3-image-cptioning" class="md-nav__link">
+    2-2-3. Image Cptioning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2-4-action-recognition" class="md-nav__link">
+    2-2-4. Action Recognition
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-unsupervised" class="md-nav__link">
+    2-3. Unsupervised
+  </a>
+  
+    <nav class="md-nav" aria-label="2-3. Unsupervised">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    簡単な説明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    メリット・デメリット
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    具体的な手法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-0" class="md-nav__link">
+    2-3-0. まとめ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-1-context-based" class="md-nav__link">
+    2-3-1. Context-Based
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-2-generation-based" class="md-nav__link">
+    2-3-2. Generation-Based
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-3-free-semantic-lavel-based" class="md-nav__link">
+    2-3-3. Free Semantic Lavel-Based
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-4-cross-modal-based-learning" class="md-nav__link">
+    2-3-4. Cross Modal-based Learning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 距離学習
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 距離学習">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-1" class="md-nav__link">
+    3-1. 分類
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-contrastive-learning" class="md-nav__link">
+    3-2. Contrastive Learning
+  </a>
+  
+    <nav class="md-nav" aria-label="3-2. Contrastive Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    分類
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-1-contrastive-loss" class="md-nav__link">
+    3-2-1. Contrastive loss
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-2-triplet-loss-alpha" class="md-nav__link">
+    3-2-2. Triplet loss + \(\\alpha\)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-3" class="md-nav__link">
+    3-3. その他
+  </a>
+  
+    <nav class="md-nav" aria-label="3-3. その他">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-3-1-arcface" class="md-nav__link">
+    3-3-1. ArcFace
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 深層生成
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 深層生成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-1" class="md-nav__link">
+    4-1. 分類
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-2-disentangled" class="md-nav__link">
+    4-2. Disentangledな表現と分散表現
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-3-disentaglementdecomposition" class="md-nav__link">
+    4-3. Disentaglementの評価とDecomposition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-4" class="md-nav__link">
+    4-4. 深層生成のメリット・デメリット
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-5-vae" class="md-nav__link">
+    4-5. VAE
+  </a>
+  
+    <nav class="md-nav" aria-label="4-5. VAE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    分類
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    簡単な説明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-5-1" class="md-nav__link">
+    4-5-1. 正則化項を加える
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-5-2" class="md-nav__link">
+    4-5-2. 異なる深さで抽出された階層潜在表現を使用する手法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-6-gan" class="md-nav__link">
+    4-6. GAN
+  </a>
+  
+    <nav class="md-nav" aria-label="4-6. GAN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    分類
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-6-0" class="md-nav__link">
+    4-6-0. まとめ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-6-1-supervised-gan" class="md-nav__link">
+    4-6-1. Supervised GAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-6-2-self-supervised-gan" class="md-nav__link">
+    4-6-2. Self-supervised GAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-6-3-unsupervised-gan" class="md-nav__link">
+    4-6-3. Unsupervised GAN
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    参考
+  </a>
+  
+    <nav class="md-nav" aria-label="参考">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    サイト
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    論文
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mesh_rcnn/" class="md-nav__link">
+        Mesh RCNNのお気持ちを理解したい
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../paper_list/" class="md-nav__link">
+        List of nice papers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../posenet/" class="md-nav__link">
+        Posenet
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 表現学習
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 表現学習">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-1" class="md-nav__link">
+    1-1. 表現学習の分類
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-2" class="md-nav__link">
+    1-2. 学習を用いない特徴抽出
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 精度を高めるタスク
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 精度を高めるタスク">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-1" class="md-nav__link">
+    2-1. 分類
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2-supervised" class="md-nav__link">
+    2-2. Supervised
+  </a>
+  
+    <nav class="md-nav" aria-label="2-2. Supervised">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    分類
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2-0" class="md-nav__link">
+    2-2-0. まとめ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2-1-semantic-segmentation" class="md-nav__link">
+    2-2-1. Semantic Segmentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2-2-object-detection" class="md-nav__link">
+    2-2-2. Object Detection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2-3-image-cptioning" class="md-nav__link">
+    2-2-3. Image Cptioning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2-4-action-recognition" class="md-nav__link">
+    2-2-4. Action Recognition
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-unsupervised" class="md-nav__link">
+    2-3. Unsupervised
+  </a>
+  
+    <nav class="md-nav" aria-label="2-3. Unsupervised">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    簡単な説明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    メリット・デメリット
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    具体的な手法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-0" class="md-nav__link">
+    2-3-0. まとめ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-1-context-based" class="md-nav__link">
+    2-3-1. Context-Based
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-2-generation-based" class="md-nav__link">
+    2-3-2. Generation-Based
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-3-free-semantic-lavel-based" class="md-nav__link">
+    2-3-3. Free Semantic Lavel-Based
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-4-cross-modal-based-learning" class="md-nav__link">
+    2-3-4. Cross Modal-based Learning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 距離学習
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 距離学習">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-1" class="md-nav__link">
+    3-1. 分類
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-contrastive-learning" class="md-nav__link">
+    3-2. Contrastive Learning
+  </a>
+  
+    <nav class="md-nav" aria-label="3-2. Contrastive Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    分類
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-1-contrastive-loss" class="md-nav__link">
+    3-2-1. Contrastive loss
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-2-triplet-loss-alpha" class="md-nav__link">
+    3-2-2. Triplet loss + \(\\alpha\)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-3" class="md-nav__link">
+    3-3. その他
+  </a>
+  
+    <nav class="md-nav" aria-label="3-3. その他">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-3-1-arcface" class="md-nav__link">
+    3-3-1. ArcFace
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 深層生成
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 深層生成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-1" class="md-nav__link">
+    4-1. 分類
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-2-disentangled" class="md-nav__link">
+    4-2. Disentangledな表現と分散表現
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-3-disentaglementdecomposition" class="md-nav__link">
+    4-3. Disentaglementの評価とDecomposition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-4" class="md-nav__link">
+    4-4. 深層生成のメリット・デメリット
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-5-vae" class="md-nav__link">
+    4-5. VAE
+  </a>
+  
+    <nav class="md-nav" aria-label="4-5. VAE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    分類
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    簡単な説明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-5-1" class="md-nav__link">
+    4-5-1. 正則化項を加える
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-5-2" class="md-nav__link">
+    4-5-2. 異なる深さで抽出された階層潜在表現を使用する手法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-6-gan" class="md-nav__link">
+    4-6. GAN
+  </a>
+  
+    <nav class="md-nav" aria-label="4-6. GAN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    分類
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-6-0" class="md-nav__link">
+    4-6-0. まとめ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-6-1-supervised-gan" class="md-nav__link">
+    4-6-1. Supervised GAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-6-2-self-supervised-gan" class="md-nav__link">
+    4-6-2. Self-supervised GAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-6-3-unsupervised-gan" class="md-nav__link">
+    4-6-3. Unsupervised GAN
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    参考
+  </a>
+  
+    <nav class="md-nav" aria-label="参考">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    サイト
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    論文
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">表現学習についてまとめのまとめのまとめ</h1>
+<p>表現学習のまとめです。表現学習は最近流行りの自己教師あり学習を含む非常に応用性の高い学習手法であり、様々なタスクに対応できる可能性を秘めています。とりあえず勉強するかちありかも？？</p>
+<h2 id="1">1. 表現学習</h2>
+<p>画像等の高次なデータをより低次な表現に変換する(低次元空間に埋め込む)をする。このときにできるだけ情報を失わないかつ、それぞれの圧縮された表現がなにか高度な意味を持つように変換する。その目的はとしては以下が挙げられる。</p>
+<ol>
+<li>表現を低次元な表現にすることによって処理を軽くする</li>
+<li>より本質的な情報を抽象化して取り出すことによってさらに他のタスクを行いやすくする</li>
+<li>上記特性によるTransfer Learningへの適応性を高める</li>
+</ol>
+<h3 id="1-1">1-1. 表現学習の分類</h3>
+<ul>
+<li>精度を高めるタスクによる学習</li>
+<li>距離学習</li>
+<li>深層生成</li>
+</ul>
+<h3 id="1-2">1-2. 学習を用いない特徴抽出</h3>
+<p>表現学習から得られる情報は研究は進んできているが、それぞれが何を意味しているか明確にするのは難しい。求めたい画像の中の特徴量によっては学習によらないもので済む可能性がある。これらの最近の動向をまとめたsurvey論文が以下である。</p>
+<ul>
+<li><a href="https://arxiv.org/pdf/1703.06376.pdf">Recent Advances in Features Extraction and Description Algorithms: A Comprehensive Survey. Ehab Salahat, Member, IEEE, and Murad Qasaimeh, Member, IEEE</a></li>
+</ul>
+<h2 id="2">2. 精度を高めるタスク</h2>
+<h3 id="2-1">2-1. 分類</h3>
+<ul>
+<li>Supervised</li>
+<li>"Full"-supervised</li>
+<li>Semi-supervised</li>
+<li>
+<p>Weakly-supervised</p>
+</li>
+<li>
+<p>UnSupervised</p>
+</li>
+<li>Self-Supervised</li>
+</ul>
+<h3 id="2-2-supervised">2-2. Supervised</h3>
+<p>ここでは全てラベルありで学習を行ういわゆるSupervised learning とその他のSemi-supervised learningやWeakly-supervised learningを区別することなく、何かしらのラベルありの学習を行うことでNNの任意の層から特徴量を取り出すことのできる手法としてよく使われるものを挙げる。</p>
+<h4 id="_2">分類</h4>
+<ol>
+<li>Semantic Segmentation</li>
+<li>Object Detection</li>
+<li>Image Cpationing</li>
+<li>Action Recognition</li>
+</ol>
+<h4 id="2-2-0">2-2-0. まとめ</h4>
+<p>supervisedな方法で特徴を取得する方法は本当に多種多様なものがあり、現状ではそのタスクのground truthに対する精度でNNが特徴を捉えているか判断しているが実際にはNNがどのような特徴に注目して学習しているかは明らかにできていない。</p>
+<p>特徴抽出という観点から見ればそれぞれの層(その中のそれぞれのチャネル)がどのような特徴に注目しているかを明らかにするのは簡単ではない。</br>
+また、<strong>Adversarial machine learning</strong>に示されるように実際には高度な意味で特徴を捉えているわけではないという考えもあり、表現学習としての精度を上げるタスクを通して、その途中のNNから特徴表現を得る方法は個人的には現段階ではまだ難しいのかなと思った。</p>
+<hr />
+<h4 id="2-2-1-semantic-segmentation">2-2-1. Semantic Segmentation</h4>
+<p><img src=fl_imgs/1.png width="300px"></p>
+<ul>
+<li><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Long_Fully_Convolutional_Networks_2015_CVPR_paper.pdf">Fully Convolutional Networks for Semantic Segmentation[Jonathan Long, Evan Shelhamer, Trevor Darrell]</a></li>
+</ul>
+<hr />
+<h4 id="2-2-2-object-detection">2-2-2. Object Detection</h4>
+<p>Object Detectionは物体がありそうな領域を取り出してくる<strong>検出</strong>部分と、実際にその領域に物体が存在するかを判断する<strong>識別</strong>部分に分かれている。この検出部分の構造によって以下のように分類され、改良されてきた。</p>
+<ul>
+<li><a href="http://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf">Faster R-CNN</br> Towards Real-Time Object Detection with Region Proposal Networks</a></br>
+  検出部分と識別部分を分けていると、検出された部分を毎回毎回ConvNetに入力する必要があるのでこれだとロスが大きいのでまずConv layersにかけて、そこからproposalsを検出することによってロスを小さくした。つまり検出と識別を一つのニューラルネットで完結することができ、最適化することができた。</li>
+</ul>
+<p><img src="fl_imgs/2.png" width="300px"></p>
+<ul>
+<li><a href="https://arxiv.org/pdf/1506.02640.pdf">YOLO</br>You Only Look Once: Unified, Real-Time Object Detection</a></br>
+  Faster R-CNNでは検出部分の出力を受けて識別部分が処理を行っていたが、これでは処理系が直列に並んでいるので同時に処理ができないので遅延を生んでいると考えられ、YOLOではこれを改善し処理を並列に行うことができるように改良された。</li>
+</ul>
+<p><img src="fl_imgs/3.png" width="400px"></p>
+<hr />
+<h4 id="2-2-3-image-cptioning">2-2-3. Image Cptioning</h4>
+<p>正直ここはかなり色々な手法があって外観を掴めなかったので以下に<a href="https://github.com/zhjohnchan/awesome-image-captioning">よくまとまったサイト</a>とリンクに<a href="https://arxiv.org/pdf/1810.04020.pdf">survey論文</a>などを挙げておきます。</p>
+<ul>
+<li><a href="https://arxiv.org/pdf/1502.03044.pdf">Show, Attend and Tell: Neural Image Caption Generation with Visual Attention</a></li>
+</ul>
+<p><img src="fl_imgs/4.png" width="600px"></p>
+<hr />
+<h4 id="2-2-4-action-recognition">2-2-4. Action Recognition</h4>
+<p>Action Estimationと調べても出てきそう。一枚の静止画について行っているものもあるがそれはImage Captioningと重なる部分ではありそう。以下で紹介するものは動画などの連続した入力データに対して何が行われているかを推定する。</p>
+<ul>
+<li><a href="https://arxiv.org/abs/1802.09232">2D/3D Pose Estimation and Action Recognition using Multitask Deep Learning [Diogo C. Luvizon, David Picard, Hedi Tabia]</a></li>
+</ul>
+<p><img src="fl_imgs/5.png" width="300px"></p>
+<h3 id="2-3-unsupervised">2-3. Unsupervised</h3>
+<p><strong>以下はConvNetの利用を想定して記述する。</strong></br>
+ここではUnsupervisedと言いながら、Self-supervisedについて扱っている。UnsupervisedにはGANなどの生成モデルが考えられるがこれは個別に扱っている。</p>
+<h4 id="_3">簡単な説明</h4>
+<p>Self-supervisedは入力データに対してラベルがついていないものを使う。Self-supervisedは <strong>達成したいタスク(target tasks)</strong> に有効なデータの特徴表現を得るために <strong>擬似的なタスク(pretext tasks)</strong> を行う。このpretext tasksについて様々な手法が提案されているので以下に簡単にまとめる。</p>
+<p>またSelf-supervisedで学習した値をNNの重みの初期値として用いることで過学習を防ぎ、分類器の精度を上げる効果がある。</p>
+<h4 id="_4">メリット・デメリット</h4>
+<ul>
+<li>メリット</li>
+<li>ラベル付きのデータを用意する必要がない</li>
+<li>生成モデルと比較して理解しやすい(構造を複雑にしやすい)</li>
+<li>デメリット</li>
+<li>得られた表現が実際に良い表現なのかそれ自体で評価するのは難しい</li>
+<li>target tasksに入力して評価するには現状target taskをやらせるが、結局ground truthが必要となる</li>
+</ul>
+<h4 id="_5">具体的な手法</h4>
+<p>具体的な手法は以下の４つに大別する</br>
+1. Context-Based</br>
+2. Free Semantic Label-Based</br>
+3. Cross Modal-Based</br>
+4. Generation-Based</p>
+<h4 id="2-3-0">2-3-0. まとめ</h4>
+<p>参考にした論文をまとめると、静止画像について最もよく特徴を捉えることができた方法は<strong>DeepClustering</strong>であった。これはクラス分類・検出・セマンティックセグメンテーションのすべてのタスクでsupervisedに近い精度を達成した。</br>
+一方で動画については<strong>CubicPuzzle</strong>が最も高い精度を達成したがそれでもsupervisedなものとは精度に大きな差があった。</p>
+<p>表現学習という観点から見れば、それぞれのself-supervisedな手法がどのような特徴に注目しているかはsupervisedな手法と同様でわからない。またself-supervisedにはそれとは別に、そもそも良い特徴に注目できてるかどうかが、学習したパラメータを転移したネットワークによるsupervisedな手法によるタスクをやってみることで評価されていて、それ自体で確かに良い特徴に注目できているのかがわからない。</p>
+<hr />
+<h4 id="2-3-1-context-based">2-3-1. Context-Based</h4>
+<p>動画像の内容を理解するしようとする方法。</br>
+利点としては実装が簡単で意味も理解しやすい。また、どのタスクとも親和性が高く行いやすい。</br>
+問題点としては、高次で意味のある情報を元に意味を理解してpretext tasksを行なっているかはわからない。例えばパズルを並べ替える問題にしても、そのパズルの色や端の繋がりだけを気にして解いているかもしれない。</p>
+<ul>
+<li>DeepCluster</br>
+  <a href="https://arxiv.org/abs/1807.05520">Deep Clustering for Unsupervised Learning of Visual Features [Mathilde Caron+, ECCV2018]</a></br>
+  まず入力画像をConvnetに入力して特徴量マップを得る。特徴量マップはConvnetのみを用い、全結合層はここまででは用いない。特徴量マップ上でPCA,L2正則化を行い次元圧縮を行なったものにk-meansを実行してPseudo-labelを付与する。このPseudo-labelを元にしてClassificationを行い学習を行う。</li>
+</ul>
+<p><img src="fl_imgs/6.png" width="400px"></p>
+<ul>
+<li>Jigsaw Puzzle++</br>
+  <a href="https://arxiv.org/abs/1805.00385">Noroozi et al., “Boosting Self-Supervised Learning via Knowledge Transfer ”, CVPR 2018.</a></br>
+  二枚の画像を組み合わせたパズルを解かせる</li>
+</ul>
+<p><img src="fl_imgs/7.png" width="240px"></p>
+<ul>
+<li>Learning and Using the Arrow of Time</br>
+  <a href="https://vcg.seas.harvard.edu/publications/learning-and-using-the-arrow-of-time/paper">Donglai Wei, Joseph Lim, Andrew Zisserman and William T. Freeman Harvard University University of Southern California University of Oxford Massachusetts Institute of Technology Google Research</a></br>
+  動画において時間が進んでいるのか戻っているのか判断させる</li>
+</ul>
+<p><img src="fl_imgs/8.png" width="500px"></p>
+<hr />
+<h4 id="2-3-2-generation-based">2-3-2. Generation-Based</h4>
+<p>参考にした論文ではVAEやGANを含めてGeneration-Basedとしていたがここではそれらは以下で生成モデルとして個別に扱う。ここでいうGeneration-Basedとは入力データから何かしらの情報をなくしたものに対してNNを用いて再構成させるものを指す。</p>
+<ul>
+<li><a href="https://arxiv.org/pdf/1604.07379.pdf">Context Encoders: Feature Learning by Inpainting</a></br>
+  画像の一部分をくり抜いたものをNNに再構成させる</li>
+</ul>
+<p><img src="fl_imgs/9.png" width="240px"></p>
+<ul>
+<li><a href="https://arxiv.org/pdf/1603.08511.pdf">Colorful Image Colorization</a></br>
+  色の情報をなくした入力に対してNNに色を塗らせる</li>
+</ul>
+<p><img src="fl_imgs/10.png" width="400px"></p>
+<hr />
+<h4 id="2-3-3-free-semantic-lavel-based">2-3-3. Free Semantic Lavel-Based</h4>
+<p>人間の解釈を介入させないラベルデータを用いて学習させる方法。(これを教師なし学習というのはちょっとずるいのでは？）人間の解釈を介入させないラベルとは、Depthやセグメンテーションマスク、法線情報などがある。これらの情報は普通ゲームなどのレンダリングによって得る。</br>
+利点としては他のself-supervisedの方法よりも特徴を捉えさせやすい。</br>
+問題点としてはまずそのようなレンダリングできるハードウェアを作る必要がある。また、ハードウェアにレンダリングさせて作らせたラベルにはノイズが多いことが挙げられる。</p>
+<p><img src="fl_imgs/11.png" width="500px"></p>
+<ul>
+<li><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Ren_Cross-Domain_Self-Supervised_Multi-Task_CVPR_2018_paper.pdf">Cross-Domain Self-supervised Multi-task Feature Learning using Synthetic Imagery[Zhongzheng Ren and Yong Jae Lee University of California, Davis]</a></br>
+  ハードにレンダリングさせたものによって生成した合成画像で学習させて、実世界のリアル画像でドメイン学習させる</li>
+</ul>
+<p><img src="fl_imgs/12.png" width="400px"></p>
+<hr />
+<h4 id="2-3-4-cross-modal-based-learning">2-3-4. Cross Modal-based Learning</h4>
+<p>動画の入力データに対して、連続的となっているものを制約として学習を進める方式。具体的に動画で連続的になっているデータとは、<strong>RGBの値、<a href="http://labs.eecs.tottori-u.ac.jp/sd/Member/oyamada/OpenCV/html/py_tutorials/py_video/py_lucas_kanade/py_lucas_kanade.html">オプティカルフロー</a>、音のデータ、カメラのポーズ</strong> などが挙げれられる。</p>
+<ul>
+<li><a href="https://arxiv.org/pdf/1806.09594.pdf">Tracking Emerges by Colorizing Videos[Carl Vondrick, Abhinav Shrivastava, Alireza Fathi, Sergio Guadarrama, Kevin Murphy]</a></br>
+  ある物体は連続したフレーム間で動くが、色は同じであるということを前提にして人間がレベルをつけることなく物体の動きを学習することができる。</li>
+</ul>
+<p><img src="fl_imgs/13.png" width="400px"></p>
+<h2 id="3">3. 距離学習</h2>
+<h3 id="3-1">3-1. 分類</h3>
+<ul>
+<li>距離学習(Metric Learning)</li>
+<li>Contrastive Learning</li>
+<li>その他</li>
+</ul>
+<h3 id="3-2-contrastive-learning">3-2. Contrastive Learning</h3>
+<p>ここではContrasive Learningの定義としては"positive pair"や"negative pair"といった概念が出てくるものを距離学習におけるContrastive learningとする。</p>
+<p>人によってはContrastive learningはself-supervisedの文脈で使われる用語で、より広い意味でMetric learningをやってる人は"Contrastive learning"という用語は用いないとあったが厳密な定義みたいなものは見つからなかった。</p>
+<h4 id="_6">分類</h4>
+<ul>
+<li>Contrastive loss</li>
+<li>Triplet loss + <span class="arithmatex">\(\\alpha\)</span></li>
+</ul>
+<h4 id="3-2-1-contrastive-loss">3-2-1. Contrastive loss</h4>
+<p>深層距離学習はこのcontrastive lossの考案からスタートし、そのcontrstive lossを組み込んだネットワークが <strong>siamese network(シャムネットワーク)</strong> である。しかし現在はcontrastive lossが使われているわけではなく、以下に示すようなtriplet lossやその発展的なものが使われていたり、contrastive lossについても単に２枚の画像を入れてそれらの埋め込み空間での距離が遠くなるようにするだけではなく様々な工夫がされている。</p>
+<ul>
+<li>SimCLR</br>
+  <a href="https://arxiv.org/pdf/2002.05709.pdf">A Simple Framework for Contrastive Learning of Visual Representations</a></br>
+  単に画像を入力するだけではなくデータオーギュメンテーションを行なった画像を利用する。また、contrastive lossについても改良を加えて単位超球面で表現される埋め込み空間での距離によって表現されるSelf-supervised contrastive lossと呼べれるものになっている。</li>
+</ul>
+<p><img src="fl_imgs/14.png" width="300px"></p>
+<ul>
+<li>Supervised SimCLR</br>
+  <a href="https://arxiv.org/pdf/2004.11362.pdf">Supervised Contrastive Learning</a></br>
+  上のSimCLRを改良したもので、普通のSimCLRはSelf-supervisedに行われるのでその埋め込み空間での表現はもともと同じクラスに属しているかなどは考慮されない。しかし直感で考えれば、同じ犬の画像であれば少なくとも猫の画像よりは近い関係になっていてほしい。この直感を組み込んだのがこの論文である。</li>
+</ul>
+<p><img src="fl_imgs/15.png" width="500px"></p>
+<ul>
+<li>Prototypical Contrastive Learning</br>
+  <a href="https://arxiv.org/abs/2005.04966">Prototypical Contrastive Learning of Unsupervised Representations</a></br>
+  これは先ほどのSupervised SimCLRと同じ思想でかつ、完全なUnspervisedな方法によるものである。つまり元々の入力画像として似ている画像は埋め込み空間でも似てるはずだという思想に基づいている。先に入力画像をk-meansでプロトタイプとしてクラスタリングしてそのプロトタイプによって距離学習を行うことによって精度が上がった。</li>
+</ul>
+<p>馬の画像群がちゃんと鳥の画像と比較して近くなっているだけではなく、馬に関する画像群の中でもちゃんと人が馬に乗ったものと馬単体のものは区別されている。</p>
+<p><img src="fl_imgs/16.png" width="600px"></p>
+<h4 id="3-2-2-triplet-loss-alpha">3-2-2. Triplet loss + <span class="arithmatex">\(\\alpha\)</span></h4>
+<p>深層距離学習の始まりとして用いられていたContrasive Lossの問題点を改善するために出てきた手法。ただしこれはこれで以前にはなかった問題を生み出すことになりさらなる改善をする必要が出てきた。詳しくは<a href="https://qiita.com/gesogeso/items/547079f967d9bbf9aca8">このサイト</a>にまとまっているので確認してほしい。</p>
+<ul>
+<li>FaceNet</br>
+  <a href="https://arxiv.org/abs/1503.03832">A Unified Embedding for Face Recognition and Clustering</a></br>
+  一番基本的なTriplet lossを用いる手法</li>
+</ul>
+<p><img src="fl_imgs/17.png" width="400px"></p>
+<ul>
+<li>N+1 Tuplet</br>
+  <a href="https://papers.nips.cc/paper/6200-improved-deep-metric-learning-with-multi-class-n-pair-loss-objective">Improved Deep Metric Learning with Multi-class N-pair Loss Objective</a></br>
+  Tripletを一般のNまで拡大した手法
+  より多くの点と比較するので挙動としてはより安定するはず。</li>
+</ul>
+<p><img src="fl_imgs/18.png" width="400px"></p>
+<ul>
+<li>Ranked List Loss</br>
+  <a href="https://arxiv.org/abs/1903.03238">Ranked List Loss for Deep Metric Learning</a></br>
+  特定のサンプルを選ぶわけではなく全てのサンプルについて考慮するので学習に有効なペアを取りこぼすことがなくなることに加えて、従来はpositive pairについてはどこまでも近くなるように更新されていたが、ここまで近くなればそれ以上近くしなくて良いという基準を作った。(この手法はどちらかと言えばContrasive lossの進化系に含めた方がいいのかもしれない。)</li>
+</ul>
+<p><img src="fl_imgs/19.png" width="400px"></br></p>
+<p><img src="fl_imgs/20.png" width="500px"></p>
+<p>Ranked List Lossまでのものとの比較図</p>
+<h3 id="3-3">3-3. その他</h3>
+<p>距離学習の中で"positive pair"であったり"negative pair"という文言が出てこないものをその他に含めて扱う。つまりcontrastive lossやtriplet lossによる学習を行わないものをまとめる。これは僕の調査不足かもしれないが、距離学習の多くがcontrastive learningの文脈で扱われている気がする。。。</p>
+<h4 id="3-3-1-arcface">3-3-1. ArcFace</h4>
+<p><a href="https://arxiv.org/pdf/1801.07698.pdf">Additive Angular Margin Loss for Deep Face Recognition</a></br>
+埋め込み空間を超球面で表現することによってそれぞれの潜在変数の位置を埋め込み空間での角度で表すことができる。それぞれのクラスを表現するWとのなす角を<span class="arithmatex">\(\\cos\\theta\)</span>で表現している。この<span class="arithmatex">\(\\theta\)</span>について、それぞれのクラスが遠くなるように更新する.</p>
+<p><img src="fl_imgs/21.png" width="350px"></br></p>
+<p><img src="fl_imgs/22.png" width="450px"></br></p>
+<h2 id="4">4. 深層生成</h2>
+<p>生成モデルはUnsupervisedのモデルの一種である。ここでは生成モデルを上のSemi-supervisedのモデルの枠組みとは別に扱う。その理由は生成モデルのエンコーダによって得られる潜在変数は高度に抽象化されたデータであり、この潜在空間がDisentangledな関係になるように設計できるからである。</p>
+<h3 id="4-1">4-1. 分類</h3>
+<ul>
+<li>VAE</li>
+<li>GAN</li>
+</ul>
+<h3 id="4-2-disentangled">4-2. Disentangledな表現と分散表現</h3>
+<p>入力データの次元数を削減しより高次な意味を持つ表現に変換するときに、得られたそれぞれの表現は入力された次元よりも小さくする。すると新しく得られた表現は入力データの成分を分配して組み合わせることでできる新たな情報となり、これを分散表現という。この分散表現は必ずしもそれぞれの表現が独立に出力に関係する訳ではない。</p>
+<p>一方でこのような新たに得る表現について、それぞれの表現が出力に対して独立な関係にあるものをDisentangledな表現という。つまり何か一つの潜在変数を動かすと理想的には出力は何か一つの特徴についてのみ変化するはずである。このようにDisentangledな表現であれば出力においてそれぞれの潜在変数が何を支配している変数なのかが理解しやすくなる。このようにそれぞれの変数が出力のなんの特徴に関わっているか理解できるものをInterpretableな表現という。</p>
+<h3 id="4-3-disentaglementdecomposition">4-3. Disentaglementの評価とDecomposition</h3>
+<p>現状ではdisentangledであることに対する絶対的な評価法は存在していない上に、新たなdisentangledな表現学習が出てくる度に新たな評価法も提案されており、様々な評価方が乱立している。</p>
+<p>ここでDisentanglementとは本来どうあってほしいかということを考えると以下の二つによって主に構成されると考えることができる。
+1. Disentanglementされた潜在変数がどのような特徴に紐づいているのか理解でき、扱うことができる
+2. 潜在空間の構造を正しく抽出してそれらを扱うことができる。</p>
+<p>1はつまり、潜在変数<span class="arithmatex">\(z_i\)</span>を変化させると生成画像の何が変わるかということを理解できるということであり現在ある評価指標はこの部分については注力している。個人的にはこの１については<strong>Interpretable</strong>ということもできると思う。</p>
+<p>一方で2が意味するところは、例えば人種などの複数の要素で構成されるような情報については潜在空間においても複数の要素から構成されるはずである。よって我々がこのような複数の要素で構成されるような情報を扱いたかったら潜在空間がどのような構造をしているか理解したい。現在ある評価指標はこの部分については注力をできていない。</p>
+<p>この2まで含めた概念として<strong>Decomposition</strong>という用語が提言されている。</p>
+<h3 id="4-4">4-4. 深層生成のメリット・デメリット</h3>
+<ul>
+<li>メリット</li>
+<li>ラベル付きの教師データを用意する必要がない(supervised GANを除く)</li>
+<li>Disentangledな表現を得ることができれば他のタスクに転用できる可能性がある</li>
+<li>デメリット</li>
+<li>層を深くして表現能力を高めることが難しい</li>
+</ul>
+<h3 id="4-5-vae">4-5. VAE</h3>
+<h4 id="_7">分類</h4>
+<ul>
+<li>正則化項を加える</li>
+<li>異なる深さで抽出された階層潜在表現を使用する手法</li>
+</ul>
+<h4 id="_8">簡単な説明</h4>
+<p>VAEの目的関数は以下のように表される
+$$
+\log p(x)=D_{KL}[q(z|x)||p(z|x)] + L(x,z)
+$$
+ここで<span class="arithmatex">\(L(x,z)\)</span>はエビデンス下界であり、以下のように求まる。
+$$
+L(x,z) := \underbrace{\mathbb{E}<em _92_rm="\rm" _i_="(i)">{q(z|X)}[\log p(x|z)]}</em> \ \underbrace{-\ D_{KL}[q(z|x)||p(z)]}_{\rm (ii)}
+$$
+このエビデンス下界を大きくすることが、データの分布<span class="arithmatex">\(p(x)\)</span>を表現する良いモデルを構築することを意味する。エビデンス下界は<span class="arithmatex">\({\\rm (i), (ii)}\)</span>の二つの要素から構成される。</p>
+<p>これらのそれぞれを大きくすることが目標である。
+1. <span class="arithmatex">\(\\mathbb{E}\_{q(z|X)}[\log p(x|z)]\)</span>: 再構成誤差</br>
+この一つ目の式はAE自体の精度を表した項と考えることができ、入力データ<span class="arithmatex">\(X\)</span>がEncoderとDecoderを通過して出てくる出力<span class="arithmatex">\(X'\)</span>にどれぐらい近いかを表す。</p>
+<ol>
+<li><span class="arithmatex">\(-D_{KL}[q(z|x)||p(z)]\)</span>: KLD項</br>
+   これは確率分布<span class="arithmatex">\(q(z|x)\)</span>と<span class="arithmatex">\(P(z)\)</span>がどれだけ近いかを表すKLダイバージェンスの項であり、二つの確率分布が近いほどこの<span class="arithmatex">\(-D_{KL}[q(z|x)||p(z)]\)</span>の部分は全体として大きな値となる(マイナスがついてることに注意)。VAEでは<span class="arithmatex">\(p(z)\)</span>が標準正規分布になることを仮定しており、<strong>つまり入力データ<span class="arithmatex">\(X\)</span>が写像される潜在空間がどれだけ標準正規分布に近いかを評価している</strong>。</li>
+</ol>
+<h4 id="4-5-1">4-5-1. 正則化項を加える</h4>
+<p>disentangledな表現を得たいという視点から見た時にVAEをどのように設計したら良いか考ると、この第二項目で考えている近似事後分布<span class="arithmatex">\(q(z|x)\)</span>が標準正規分布に近いとdisentangledな表現を持っていると考える。正則化を与える方法として以下のような方法が考えられた。</p>
+<ul>
+<li>β-VAE</br>
+  <a href="https://openreview.net/references/pdf?id=Sy2fzU9gl">LEARNING BASIC VISUAL CONCEPTS WITH A CONSTRAINED VARIATIONAL FRAMEWORK[Irina Higgins, et al.]</a></br>
+  エビデンス下界の第二項に正則化項<span class="arithmatex">\(\\beta\)</span>足して以下のようになった。これによって"Vanilla" VAEよりも近似事後分布が標準正規分布に近いくないと<span class="arithmatex">\(L(x,z)\)</span>が大きくならないように設計した。"Vanilla" VAEでは一つの要素(角度や笑顔の度合い)を変えたいのに人相や髪などの他の要素についても変化してしまっているが<span class="arithmatex">\(\\beta\)</span>-VAEの方は他の要素への影響が少なくなっている。</li>
+</ul>
+<p>$$
+  L(x,z) := \mathbb{E}<em KL="KL">{q(z|X)}[\log p(x|z)]-\beta\cdot D</em>[q(z|x)||p(z)]
+  $$</p>
+<p><img src="fl_imgs/23.png" width="400px"></p>
+<ul>
+<li>FactorVAE</br>
+  <a href="https://arxiv.org/abs/1802.05983">Disentangling by Factorising [Hyunjik Kim, Andriy Mnih]</a></br>
+  エビデンス下界の第二項を重要視しすぎると <strong>再構成誤差</strong>が軽視されてしまい、生成画像がぼやけている問題があった。そこで<span class="arithmatex">\(\\beta\)</span>-VAEの第二項について注目すると以下のようにさらに分解できる。
+  $$
+  -\beta\cdot D_{KL}[q(z|x)||p(z)]= -\beta\cdot\bigl{ \underbrace{-I\bigl(x;z\bigr)}<em KL="KL">{\rm (i)} + \underbrace{L</em>\bigl(q(z),p(z)\bigr)}_{\rm (ii)}\bigr}
+  $$
+  <span class="arithmatex">\(\\rm (i)\)</span>: 入力<span class="arithmatex">\(X\)</span>と潜在変数<span class="arithmatex">\(z\)</span>の依存関係, <span class="arithmatex">\(\\rm (ii)\)</span>: z単体の分布と事前分布の不一致度合</br>
+  ここから<span class="arithmatex">\(\\beta\)</span>-VAEでエビデンス下界を大きくするために第二項の部分を小さくしていたのは <span class="arithmatex">\(\\rm (i)\)</span> から二つの相互情報量を小さくし、再構成誤差を増大させていた。そこでこれを補正する項を目的関数に組み込んだ。具体的には<strong>Total Correlation制約</strong>という制約項を加えた。以下のように<span class="arithmatex">\(\\beta\)</span>-VAEよりも多くの特徴を互いに独立して取り出せてる。ただし顔以外のデータにはあまりうまくいかないという意見もある。(顔は特徴を分類しやすい？)</li>
+</ul>
+<p><img src="fl_imgs/24.png" width="400px"></p>
+<h4 id="4-5-2">4-5-2. 異なる深さで抽出された階層潜在表現を使用する手法</h4>
+<ul>
+<li>LVAE</br>
+  <a href="https://arxiv.org/abs/1602.02282">Ladder Variational Autoencoders(Casper Kaae Sønderby, Tapani Raiko, Lars Maaløe, Søren Kaae Sønderby, Ole Winther)</a></li>
+</ul>
+<p>従来のVAEが最終層からのみ潜在変数を獲得していたのに対して、LVAEでは各深さから抽象度の異なる潜在変数を獲得している。VAEでは最終層のみから潜在変数を獲得すると、その潜在変数を調整しようとしてもその間に何層もあるとそれは難しかったが、各層から獲得するように改善することで表現力を増すことに成功している。</br>
+また、本論文では<span class="arithmatex">\(\\beta\)</span>-VAEと同様に正則化項<span class="arithmatex">\(\\beta\)</span>を利用しているがこの<span class="arithmatex">\(\\beta\)</span>を学習の進度に応じて<span class="arithmatex">\([0,1]\)</span>の範囲で徐々に大きくする <strong>(Warm-Up)</strong> ことによって性能が改善されることを示している。</p>
+<p><img src="fl_imgs/25.png" width="500px"></p>
+<ul>
+<li>pro-VAE</br>
+  <a href="https://arxiv.org/abs/2002.10549">Progressive Learning and Disentanglement of Hierarchical Representations[Zhiyuan Li, Jaideep Vitthal Murkute, Prashnna Kumar Gyawali, Linwei Wang]</a>
+  pro-VAEは上のLVAEにProgressive Learningを導入したもの。最初は層が深く抽象度が高いものだけを潜在変数として取り出して、学習の進度に合わせてより浅い層の特徴量も潜在変数として取り入れるように学習を進めていく。</li>
+</ul>
+<p><img src="fl_imgs/26.png" width="400px"></p>
+<p>以下の図はpro-VAEとpro-VAEからLadderという要素を取り除いたものとして考えることのできるteacher-student modelの性能を比較している。pro-VAEの各層から得られた潜在変数を変化させた時の生成画像の変化と、teature-student modelの最終層から得られた潜在変数を変化させた時の生成画像の変化比較すると、pro-VAEの方が学習が進み、より多くの層を生成に用いるようになるとdisentangledな潜在変数を取り出すことに成功していることがわかる。</p>
+<p><img src="fl_imgs/27.png" width="600px"></p>
+<h3 id="4-6-gan">4-6. GAN</h3>
+<p>GANによるDisentangledな表現を得る表現学習については以下のように分類をして紹介する。
+GANによるDisentangledな表現を得るという試みは<strong>InfoGAN</strong>から始まった。InfoGAN自体は学習が不安定なので現在は使われていないがDisentangledな表現学習の先駆けとなった。</p>
+<blockquote>
+<p><a href="https://arxiv.org/abs/1606.03657"><strong>InfoGAN</strong></a></br>
+Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets [Xi Chen, Yan Duan, Rein Houthooft, John Schulman, Ilya Sutskever, Pieter Abbeel]</p>
+</blockquote>
+<h4 id="_9">分類</h4>
+<p>GANなのにSupervisedになっているのは、それぞれの潜在空間での変化がDisentangledなものになっているかを判断するのにそのデータセットで学習クラス分類器が必要とされたりするからである。</br></p>
+<ul>
+<li>Supervised</li>
+<li>Self-supervised</li>
+<li>Unsupervised</li>
+</ul>
+<h4 id="4-6-0">4-6-0. まとめ</h4>
+<p>そもそもGANでのdisentangledな表現学習という分野が最近始まった研究分野なのでどの手法も新しくそれほど多くの研究がまだされていないのでどれが一番いいということは今の段階では断言することができないが現時点の論文を見ると以下のように感じます。ただそれぞれの論文が自分の研究が比較して優れていると主張するので、、、</p>
+<ul>
+<li>Supervised
+  コスト×, 表現力△</li>
+<li>Self-supervised
+  コスト△, 表現力△</li>
+<li>Unsupervised
+  コスト○, 表現力○</li>
+</ul>
+<h4 id="4-6-1-supervised-gan">4-6-1. Supervised GAN</h4>
+<ul>
+<li>Style GAN</br>
+  <a href="https://arxiv.org/abs/1907.10786">AInterpreting the Latent Space of GANs for Semantic Face Editing[Yujun Shen, et al]</a></br>
+  それぞれの潜在変数について、あらかじめ想定してクラス分類器を学習する必要がある。よって学習する前からどのような潜在空間の特徴が出てくるか想定したものが出てくる？のならこれはこれで便利では？ただ、すごく慎重に設計しないと再現性は低そう。</li>
+</ul>
+<p><img src="fl_imgs/28.png" width="400px"></p>
+<h4 id="4-6-2-self-supervised-gan">4-6-2. Self-supervised GAN</h4>
+<ul>
+<li><a href="https://arxiv.org/abs/1907.07171">ON THE “STEERABILITY” OF GENERATIVE ADVERSARIAL NETWORKS[Ali Jahanian, Lucy Chai, Phillip Isola]</a></br>
+  ズームや、色合いなどの簡単な画像編集で獲得できる特徴についてのdisentangledな潜在空間での表現はSelf-supervisedな手法で獲得することができる。また、それぞれの潜在変数がどこまで変化させることができるかは入力データの分散に依存する。</li>
+</ul>
+<p><img src="fl_imgs/29.png" width="400px"></p>
+<h4 id="4-6-3-unsupervised-gan">4-6-3. Unsupervised GAN</h4>
+<ul>
+<li><a href="https://arxiv.org/abs/2002.03754">Unsupervised Discovery of Interpretable Directions in the GAN Latent Space [Andrey Voynov Artem Babenko]</a></br>
+  他のsupervisedな方法と同様にRotatinoなどの特徴を捉えていることに加えて、どこが背景かも捉えていて筆者らはこれは他のGANを用いた手法より表現力があると主張していた。また、この背景を捉えたりしているものがweakly-supervisedなセマンティックなどに応用できるといった例も出していた。
+  <img src="fl_imgs/30.png" width="900px"></li>
+</ul>
+<h2 id="_10">参考</h2>
+<h3 id="_11">サイト</h3>
+<ul>
+<li><a href="https://medium.com/@akichan_f/個人的に面白かったmachine-learning論文-in-2019-part-1-ec35d2863c70">個人的に面白かったMachine Learning論文 in 2019</a></li>
+<li><a href="https://qiita.com/bukei_student/items/5d0ec0e7cc36d211e17a">Deep Learning: A Survey of Surveys</a></li>
+<li><a href="https://lilianweng.github.io/lil-log/2019/11/10/self-supervised-learning.html">Self-Supervised Representation Learning</a></li>
+<li><a href="http://hirokatsukataoka.net/temp/cvpaper.challenge/SSL_0929_final.pdf">Self-supervised Learningによる特徴表現学習</a></li>
+<li><a href="https://ai-scholar.tech/articles/vae/progressive-vlae-ai-385">Disentangleな表現学習の新手法：Progressive VLAEを解説！</a></li>
+<li><a href="https://tech.preferred.jp/ja/blog/disentangled-represetation/">Disentangled な表現の教師なし学習手法の検証</a></li>
+<li><a href="https://qiita.com/ymd_/items/2bdb06c979c64c65b608">相互情報量からみるDeep Learning</a></li>
+<li><a href="https://github.com/zhjohnchan/awesome-image-captioning">Awesome Image Captioning</a></li>
+<li><a href="https://www.slideshare.net/HidekiTsunashima/disentanglement-surveycan-you-explain-how-much-are-generative-models-disentangled">Disentanglement Survey:Can You Explain How Much Are Generative models Disentangled?</a></li>
+<li><a href="http://www.ccn.yamanashi.ac.jp/~tmiyamoto/img/variational_bayes1.pdf">変分推論の理論</a></li>
+<li><a href="https://www.slideshare.net/ssuser8672d7/ss-147555894">PRML学習者から入る深層生成モデル入門</a></li>
+</ul>
+<h3 id="_12">論文</h3>
+<ul>
+<li><a href="https://arxiv.org/pdf/1703.06376.pdf">Recent Advances in Features Extraction and Description Algorithms: A Comprehensive Survey [
+  Ehab Salahat, Member, IEEE, and Murad Qasaimeh, Member, IEEE]</a></li>
+<li><a href="https://arxiv.org/pdf/1902.06162.pdf">Self-supervised Visual Feature Learning with Deep Neural Networks: A Survey [Longlong Jing and Yingli Tian⇤, Fellow, IEEE]</a></li>
+<li><a href="https://arxiv.org/pdf/1810.04020.pdf">A Comprehensive Survey of Deep Learning for Image Captioning</a></li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tracking", "navigation.expand"], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044"}, "search": "../../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
