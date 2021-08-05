@@ -14,7 +14,7 @@
     
     
       
-        <title>PyTorch Dataset API で動画データを扱う方法 - Cheep Learning</title>
+        <title>BLiTZ_+_PyTorch_Lightning - Cheep Learning</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pytorch-dataset-api" class="md-skip">
+        <a href="#blitz__pytorch_lightning" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PyTorch Dataset API で動画データを扱う方法
+              BLiTZ_+_PyTorch_Lightning
             
           </span>
         </div>
@@ -235,7 +235,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../BLiTZ/" class="md-tabs__link md-tabs__link--active">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         PyTorch
       </a>
     </li>
@@ -507,11 +507,98 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../BLiTZ/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          BLiTZ_+_PyTorch_Lightning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         BLiTZ_+_PyTorch_Lightning
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    簡単4ステップで組み込み
+  </a>
+  
+    <nav class="md-nav" aria-label="簡単4ステップで組み込み">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.ベイズ化するレイヤーを決める
+  </a>
+  
+    <nav class="md-nav" aria-label="1.ベイズ化するレイヤーを決める">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    組み込み済みのレイヤー
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2blitz" class="md-nav__link">
+    2.ベイズ化するレイヤーをBlitzモジュールに置き換える、デコレーターも忘れずに
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3elbo" class="md-nav__link">
+    3.ロス計算をELBO推定に変える
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4optional" class="md-nav__link">
+    4.Optional: 評価用関数を作成
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -543,58 +630,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          PyTorch Dataset API で動画データを扱う方法
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../video/" class="md-nav__link">
         PyTorch Dataset API で動画データを扱う方法
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#video-recognition" class="md-nav__link">
-    今Video Recognitionの分野がアツい？
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    やり方
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1132,16 +1172,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#video-recognition" class="md-nav__link">
-    今Video Recognitionの分野がアツい？
+  <a href="#4" class="md-nav__link">
+    簡単4ステップで組み込み
+  </a>
+  
+    <nav class="md-nav" aria-label="簡単4ステップで組み込み">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.ベイズ化するレイヤーを決める
+  </a>
+  
+    <nav class="md-nav" aria-label="1.ベイズ化するレイヤーを決める">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    組み込み済みのレイヤー
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    やり方
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2blitz" class="md-nav__link">
+    2.ベイズ化するレイヤーをBlitzモジュールに置き換える、デコレーターも忘れずに
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3elbo" class="md-nav__link">
+    3.ロス計算をELBO推定に変える
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4optional" class="md-nav__link">
+    4.Optional: 評価用関数を作成
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1158,44 +1238,167 @@
               
                 
                 
-                <h1 id="pytorch-dataset-api">PyTorch Dataset API で動画データを扱う方法</h1>
-<h2 id="video-recognition">今Video Recognitionの分野がアツい？</h2>
-<p>YouTubeやTikTok等大規模な動画データを収集しやすくなった昨今、<code>3DCNN</code>や <code>ViT</code>を用いた動画内での姿勢推定やクラス分類が盛んに研究されています。SoTAモデルだと実装が大変ですが実は既存のCNN+LSTMなどでも結構いい精度がだせたりします。<br />
-今回はそんなVideo Recognitionをお手軽に試す上で以外と面倒くさいデータセットの作り方を書いていきます。</p>
-<p>なお、動画データは各フレームを画像データとしてそれらの集合として扱うのが一般的ですのでそこまでの変換は別途行っておいてください。<code>ffmpeg</code>や<code>torchvision.io</code>等で調べると幸せになれます。</p>
-<h2 id="_1">やり方</h2>
-<p>今回は、<strong>数フレームの動画を学習し、それがなんの動作か予測する</strong>というタスクを仮定します。例えば動画の3フレームを受け取り、それがなんの動作なのかを推論します。つまり任意の一連の4フレームと対応するラベルを出力できればおk。</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">torch</span>
+                <h1 id="blitz__pytorch_lightning">BLiTZ_+_PyTorch_Lightning</h1>
+<p>ここではライトニングで組み込みから推論までの一連の流れを説明します、理論は別ページにて追記。</p>
+<h2 id="4">簡単4ステップで組み込み</h2>
+<ol>
+<li><a href="#ベイズ化するレイヤーを決める">ベイズ化するレイヤーを決める</a></li>
+<li><a href="#ベイズ化するレイヤーをBlitzモジュールに置き換える、デコレーターも忘れずに">ベイズ化するレイヤーをBlitzモジュールに置き換える、デコレーターも忘れずに</a></li>
+<li><a href="#ロス計算をELBO推定に変える">ロス計算をELBO推定に変える</a></li>
+<li><a href="#Optional:-評価用関数を作成">Optional: 評価用関数を作成</a></li>
+</ol>
+<h3 id="1">1.ベイズ化するレイヤーを決める</h3>
+<h4 id="_1">組み込み済みのレイヤー</h4>
+<ul>
+<li><a href="https://github.com/piEsposito/blitz-bayesian-deep-learning/blob/master/doc/layers.md">BayesianModule</a></li>
+<li><a href="#class-BayesianLinear">BayesianLinear</a></li>
+<li><a href="#class-BayesianConv1d">BayesianConv1d</a></li>
+<li><a href="#class-BayesianConv2d">BayesianConv2d</a></li>
+<li><a href="#class-BayesianConv3d">BayesianConv3d</a></li>
+<li><a href="#class-BayesianLSTM">BayesianLSTM</a></li>
+<li><a href="#class-BayesianGRU">BayesianGRU</a></li>
+<li><a href="#class-BayesianEmbedding">BayesianEmbedding</a></li>
+</ul>
+<p>上記以外の処理をベイズ化する場合は<code>BayesianModule</code>を継承したモジュールを自分で作る必要があります。</p>
+<h3 id="2blitz">2.ベイズ化するレイヤーをBlitzモジュールに置き換える、デコレーターも忘れずに</h3>
+<ol>
+<li>モデルのフォワードを定義する<code>nn.Module</code>に<code>@variational_estimator</code>をつける</li>
+<li>モジュール内のレイヤーを置き換える</li>
+<li>必要であれば重みの事前分布を明記する。デフォルトは混合ガウス分布。</li>
+</ol>
+<p>下記例は動画認識モデル<code>CNNLSTM</code>をベイズ化する。<code>forward</code>関数は変更する必要は無い。</p>
+<p><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
+<span class="kn">from</span> <span class="nn">blitz.modules</span> <span class="kn">import</span> <span class="n">BayesianLSTM</span><span class="p">,</span> <span class="n">BayesianLinear</span>
+<span class="kn">from</span> <span class="nn">blitz.utils</span> <span class="kn">import</span> <span class="n">variational_estimator</span>
 
-<span class="k">class</span> <span class="nc">VideoDataset</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frames</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">idxs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;a b c d e&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="s2">&quot;a b c d e&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">frames</span> <span class="o">=</span> <span class="n">frames</span>
+<span class="nd">@variational_estimator</span>
+<span class="k">class</span> <span class="nc">BayesianCNNLSTM</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv1</span> <span class="o">=</span> <span class="n">BayesianConv2d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv2</span> <span class="o">=</span> <span class="n">BayesianConv2d</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc1</span>   <span class="o">=</span> <span class="n">BayesianLinear</span><span class="p">(</span><span class="mi">1024</span><span class="p">,</span> <span class="mi">512</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc2</span>   <span class="o">=</span> <span class="n">BayesianLinear</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc3</span>   <span class="o">=</span> <span class="n">BayesianLinear</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lstm</span> <span class="o">=</span> <span class="n">BayesianLSTM</span><span class="p">(</span>
+                    <span class="n">in_features</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span>
+                    <span class="n">out_features</span><span class="o">=</span><span class="mi">1024</span>
+                    <span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">5</span> <span class="o">-</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frames</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
-        <span class="n">res</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">idx</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">frames</span><span class="p">)]</span>
-        <span class="k">return</span> <span class="n">res</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="n">idx</span> <span class="o">+</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frames</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)]</span>
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">n</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">shape</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv1</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">max_pool2d</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv2</span><span class="p">(</span><span class="n">out</span><span class="p">))</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">max_pool2d</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">view</span><span class="p">([</span><span class="n">n</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">])</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lstm</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">batch_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">out</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fc1</span><span class="p">(</span><span class="n">out</span><span class="p">))</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fc2</span><span class="p">(</span><span class="n">out</span><span class="p">))</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc3</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">out</span>
 </code></pre></div>
-<p>上記の例では動画の各フレーム画像のパスをabcdeとして一連の三枚と、その3枚目に対応するラベルを出力します。</p>
-<div class="highlight"><pre><span></span><code><span class="n">train</span> <span class="o">=</span> <span class="n">VideoDataset</span><span class="p">(</span><span class="n">frames</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+デコレーターによってモジュールに訓練時に必要になるメソッドを追加する。
+この二点を守ればモデル側で重みのサンプリングを行ってくれる。計算量は増えます。</p>
+<p>別のベイジアンモデルからファインチューニングする時や重み共有など、重みの事前分布を知っている時は</p>
+<p><div class="highlight"><pre><span></span><code> <span class="bp">self</span><span class="o">.</span><span class="n">weight_prior_dist</span> <span class="o">=</span> <span class="n">PriorWeightDistribution</span><span class="p">(</span>
+                          <span class="bp">self</span><span class="o">.</span><span class="n">prior_pi</span><span class="p">,</span>
+                          <span class="bp">self</span><span class="o">.</span><span class="n">prior_sigma_1</span><span class="p">,</span>
+                          <span class="bp">self</span><span class="o">.</span><span class="n">prior_sigma_2</span><span class="p">,</span>
+                          <span class="n">dist</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">prior_dist</span> <span class="c1"># PriorWeightDistribution インスタンス</span>
+                          <span class="p">)</span>
 
-<span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">train</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
-
-<span class="c1"># out</span>
-<span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span> <span class="n">c</span>
-<span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="n">d</span>
-<span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span> <span class="n">e</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">fc1</span>   <span class="o">=</span> <span class="n">BayesianLinear</span><span class="p">(</span><span class="mi">1024</span><span class="p">,</span> <span class="mi">512</span><span class="p">,</span> <span class="n">prior_dist</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight_prior_dist</span><span class="p">)</span>
 </code></pre></div>
-<p><code>__getitem__</code>の最終行を帰れば出力するラベルの位置を変更することができます。<br />
-一連のフレームに対してどこをラベルとするかは問題設定によって変わって来ますが、最初のフレームをラベルにしてしまうとある意味未来のデータを学習させていることになるので大抵の場合は最後のフレームを教師データにします。<br />
-ここら辺は時系列データに関する記事で改めて触れます。</p>
-<p>次回はこのデータセットを使ったクラス分類モデルを書きます。</p>
+として分布をインスタンス化して渡すことができる。が、使うことは無い。</p>
+<h3 id="3elbo">3.ロス計算をELBO推定に変える</h3>
+<p>ここからは<code>Lightning</code>のコードを変える。前提として<strong>自動最適化をオフにする必要がある</strong>。</p>
+<div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">automatic_optimization</span> <span class="o">=</span> <span class="kc">False</span>
+</code></pre></div>
+<p>次に、<code>training_step</code>内のロス計算コード、例えば</p>
+<div class="highlight"><pre><span></span><code><span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># self.model()は上記のCNNLSTM</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">cross_entropy</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+</code></pre></div>
+<p>の部分を</p>
+<div class="highlight"><pre><span></span><code><span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># self.model()は上記のCNNLSTM</span>
+
+<span class="n">opt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimizers</span><span class="p">()</span>
+<span class="n">opt</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">sample_elbo</span><span class="p">(</span>
+          <span class="n">inputs</span><span class="o">=</span><span class="n">out</span><span class="p">,</span>
+          <span class="n">labels</span><span class="o">=</span><span class="n">target</span><span class="p">,</span>
+          <span class="n">criterion</span><span class="o">=</span><span class="n">F</span><span class="o">.</span><span class="n">cross_entropy</span><span class="p">,</span>
+          <span class="n">sample_nbr</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+          <span class="n">complexity_cost_weight</span><span class="o">=</span><span class="mi">1</span> <span class="o">/</span> <span class="n">out</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+      <span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">manual_backward</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
+<span class="n">opt</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+</code></pre></div>
+<p>とする。これは</p>
+<ol>
+<li><code>Lightning</code>の自動最適化をオフにし、手動最適化する</li>
+<li><code>loss = self.model.sample_elbo(...)</code>で複数回推論を実行しELBOを推定する。</li>
+</ol>
+<p>を行っている。注意点として<code>sample_elbo()</code>メソッドの</p>
+<ol>
+<li><code>criterion</code>: 最適化する損失関数、tensorを返す関数ならなんでも良い。</li>
+<li><code>sample_nbr</code>: トライする回数、増やしすぎると遅くなるが多い方が<code>weight complecity loss</code>の計算が正確になり推論に現実的なばらつきを出すことができる。少なすぎると安定して学習できない。</li>
+<li><code>complexity_cost_weight</code>: コンスタント値で、<code>criterion</code>に合わせて変える必要がある。通常の<code>CrossEntropy</code> or <code>MSE</code>ならバッチサイズの逆数にします。ここの理論は後述。</li>
+</ol>
+<p>下記は<code>sample_nbr</code>と<code>complexity_cost_weight</code>を正しく設定した場合とそうで無い場合の比較、sample_nbrは多めにしよう。</p>
+<p><img src="/attachment/60b49733ca6fcd0048f33f91" width=400></p>
+<p><img src="/attachment/60b49723ca6fcd0048f33f90" width=350></p>
+<p>これで<code>Lightning</code>のtrainerでの学習が可能になります。</p>
+<h3 id="4optional">4.Optional: 評価用関数を作成</h3>
+<p>ベイジアンDNNの特徴として予測値の<strong>区間推定</strong>ができるので、推論結果が何%の確率で正しいかを好きな信頼区間で求めることができる。<br />
+通常のNNだとSoftmaxの出力の眺めることになるが<a href="https://stats.stackexchange.com/questions/309642/why-is-softmax-output-not-a-good-uncertainty-measure-for-deep-learning-models">extrapolation問題</a>がありよろしく無い。<br />
+ベイジアンモデルは重みが確率変数として毎回生成されるので、同じクエリに対して複数回推論し、結果のばらつき（分散、平均）から区間推定を行える。回帰問題の場合、</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">evaluate_regression</span><span class="p">(</span><span class="n">model</span><span class="p">,</span>
+                        <span class="n">X</span><span class="p">,</span>
+                        <span class="n">y</span><span class="p">,</span>
+                        <span class="n">samples</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+                        <span class="n">std_multiplier</span> <span class="o">=</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="n">preds</span> <span class="o">=</span> <span class="p">[</span><span class="n">model</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">samples</span><span class="p">)]</span> <span class="c1"># 複数回同じクエリを推論する</span>
+    <span class="n">preds</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">preds</span><span class="p">)</span>
+    <span class="n">means</span> <span class="o">=</span> <span class="n">preds</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">stds</span> <span class="o">=</span> <span class="n">preds</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">ci_upper</span> <span class="o">=</span> <span class="n">means</span> <span class="o">+</span> <span class="p">(</span><span class="n">std_multiplier</span> <span class="o">*</span> <span class="n">stds</span><span class="p">)</span>
+    <span class="n">ci_lower</span> <span class="o">=</span> <span class="n">means</span> <span class="o">-</span> <span class="p">(</span><span class="n">std_multiplier</span> <span class="o">*</span> <span class="n">stds</span><span class="p">)</span>
+    <span class="n">ic_acc</span> <span class="o">=</span> <span class="p">(</span><span class="n">ci_lower</span> <span class="o">&lt;=</span> <span class="n">y</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">ci_upper</span> <span class="o">&gt;=</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">ic_acc</span> <span class="o">=</span> <span class="n">ic_acc</span><span class="o">.</span><span class="n">float</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">ic_acc</span><span class="p">,</span> <span class="p">(</span><span class="n">ci_upper</span> <span class="o">&gt;=</span> <span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">float</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="p">(</span><span class="n">ci_lower</span> <span class="o">&lt;=</span> <span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">float</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</code></pre></div>
+<p>と簡単に求められる。上記コードは公式コードそのまま。</p>
+<p><img alt="1*pqUSAVHQLislxZNW7M6WxA.png" src="/attachment/60b4962dca6fcd0048f33f09" /></p>
+<p><strong>問題はクラス分類における区間推定</strong>で、Blitzはベイズ回帰を想定したライブラリなのでここら辺は自分で計算する。推定は仮説検定として行う。</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span> <span class="c1"># Xに対応する正解ラベルをn個よういする</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mf">1.64</span>
+
+<span class="n">logits</span> <span class="o">=</span> <span class="p">[</span><span class="n">model</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="c1"># 同クエリを分類しまくる</span>
+<span class="n">logits</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">logits</span><span class="p">)</span>
+<span class="n">preds</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">acc</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">target</span> <span class="o">==</span> <span class="n">preds</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">n</span>
+
+<span class="n">interval</span> <span class="o">=</span> <span class="n">z</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span> <span class="p">(</span><span class="n">acc</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">acc</span><span class="p">))</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span>
+</code></pre></div>
+ここで<code>z</code>はガウス分布の信頼区間として設定する。良く使うのは</p>
+<ul>
+<li>1.64 (90%)</li>
+<li>1.96 (95%)</li>
+<li>2.33 (98%)</li>
+<li>2.58 (99%)</li>
+</ul>
+<p>これで信頼区間が計算できる。例えば<code>acc = 0.8</code>つまりクエリ<code>X</code>に対して100回中80回正解できた場合の信頼係数95%のときの信頼区間は</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">interval</span> <span class="o">=</span> <span class="mf">1.96</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span> <span class="p">(</span><span class="mf">0.2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mf">0.2</span><span class="p">))</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span>
+<span class="c1"># interval = 0.0784</span>
+</code></pre></div>
+としてこの推論結果を棄却する判断ができる。</p>
+<p>逆に信頼係数99%だと<code>acc = 0.9</code>でも<code>interval = 0.0774</code>と棄却するべきである。信頼係数99%だと<code>acc = 0.999</code>くらいでやっと p値が0.0081くらいになって推論結果に一定の信頼を置くことができる様になる。</p>
+<p>これが通常の分類モデルだとaccは常に1か0（Xへの推論結果は常に同じ）なのでp値は常に0になってしまうので計算できない。ベイズ最高。</p>
                 
               
               
