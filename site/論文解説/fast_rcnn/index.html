@@ -233,7 +233,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../PyTorch/PyTorch/BLiTZ/" class="md-tabs__link">
+      <a href="../../PyTorch/PyTorch/dp/" class="md-tabs__link">
         PyTorch
       </a>
     </li>
@@ -267,7 +267,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-tabs__link">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/multiprocess_in_python/" class="md-tabs__link">
         その他
       </a>
     </li>
@@ -505,18 +505,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyTorch/PyTorch/BLiTZ/" class="md-nav__link">
-        BLiTZ_+_PyTorch_Lightning
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../PyTorch/PyTorch/dp/" class="md-nav__link">
         PyTorchの分散計算処理を使う
       </a>
@@ -718,8 +706,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/multiprocess_in_python/" class="md-nav__link">
+        Pythonの並列処理のまとめ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-nav__link">
-        Pythonのお勉強について
+        Pythonのお勉強に使える書籍のまとめ
       </a>
     </li>
   
@@ -1182,6 +1182,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../feature_learning/" class="md-nav__link">
+        表現学習についてまとめのまとめのまとめ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../mesh_rcnn/" class="md-nav__link">
         Mesh RCNNのお気持ちを理解したい
       </a>
@@ -1389,10 +1401,8 @@
                 <h1 id="faster-r-cnn">Faster R-CNN まとめ</h1>
 <ul>
 <li>物体検出のモデルの一つ</li>
-<li>精度が高く速度が遅い<ul>
+<li>精度が高く速度が遅い</li>
 <li>速度が必要なく、精度が欲しい時に使うモデル</li>
-</ul>
-</li>
 </ul>
 <h2 id="_1">他の物体検出のモデルとの比較</h2>
 <p><img alt="物体検出モデルの精度x速さ" src="../attachment/%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E6%AF%94%E8%BC%83.png" /></p>
@@ -1426,11 +1436,9 @@
 <h2 id="_2">歴史</h2>
 <h3 id="r-cnn">R-CNN</h3>
 <ol>
-<li>Selective Searchを用いて物体らしいところを2000個ほど検出<ul>
+<li>Selective Searchを用いて物体らしいところを2000個ほど検出</li>
 <li>ここは人が作ったアルゴリズム</li>
 <li>テクスチャ、色などで物体を識別する</li>
-</ul>
-</li>
 <li>検出したところをクロップし、一定の大きさにしてCNNで特徴量抽出</li>
 <li>SVMでクラス分類、回帰でBBOXの位置調整</li>
 </ol>
@@ -1442,11 +1450,9 @@
 </ul>
 <h4 id="_3">改善方法</h4>
 <ul>
-<li>RoI poolingを導入することで、Selective Search→CNN時の重複部分を無くす<ul>
+<li>RoI poolingを導入することで、Selective Search→CNN時の重複部分を無くす</li>
 <li>特徴抽出のためのCNNの後に、幅の大きさが可変的なPooling層を入れる</li>
 <li>こうすることで、不均一なサイズの入力に対し固定サイズの特徴ベクトルを得る</li>
-</ul>
-</li>
 <li>CNN,SVM,BBOX回帰を単一のモデルにする</li>
 <li>流れはR-CNNと同じ</li>
 </ul>
@@ -1458,11 +1464,9 @@
 </ul>
 <h4 id="_4">改善点</h4>
 <ul>
-<li>Selective SearchをRegion Proposal Networkに置換<ul>
+<li>Selective SearchをRegion Proposal Networkに置換</li>
 <li>小さなCNNをかけた後、縦横比・サイズが異なるAnchorBOX（BBOX）で特徴抽出</li>
 <li>その後、FC層で物体か否かとBBOXの位置を回帰</li>
-</ul>
-</li>
 <li>高速化・完全なEnd2Endによる高精度化を達成</li>
 </ul>
 <h3 id="_5">類似モデルなど（詳細は割愛）</h3>
@@ -1485,28 +1489,20 @@
 <h2 id="_6">モデルの構造</h2>
 <p><img alt="論文画像" src="../attachment/FasterRCNN%E3%81%AE%E6%A7%8B%E9%80%A0.png" /></p>
 <ol>
-<li>画像を畳み込み層に入れ、特徴マップを出す<ul>
+<li>画像を畳み込み層に入れ、特徴マップを出す</li>
 <li>image - conv_layers - feature_maps</li>
-</ul>
-</li>
-<li>特徴マップにnxn（論文ではn=3）のConv層をかけた後、FC層のような畳み込み層（kernel=1,stride=1にすることで総結合っぽくする）で物体らしさと位置（x1,x2,w,h）を出力<ul>
+<li>特徴マップにnxn（論文ではn=3）のConv層をかけた後、FC層のような畳み込み層（kernel=1,stride=1にすることで総結合っぽくする）で物体らしさと位置（x1,x2,w,h）を出力</li>
 <li>Region Proposal Network</li>
-</ul>
-</li>
-<li>1の特徴マップと2の提案領域から、BBOXを計算・分類する<ul>
+<li>1の特徴マップと2の提案領域から、BBOXを計算・分類する</li>
 <li>RoI pooling</li>
 <li>classifier</li>
-</ul>
-</li>
 </ol>
 <h2 id="_7">論文での工夫点</h2>
 <ul>
 <li>RPN部分では、そのまま学習すると負のサンプルの影響が大きいため、正負の割合が１対１になるようにサンプリングする</li>
-<li>上記のモデルの構造だと、厳密な学習ではなく近似解になる<ul>
+<li>上記のモデルの構造だと、厳密な学習ではなく近似解になる</li>
 <li>こちらの方が学習は早い</li>
 <li>論文ではRPNとFast R-CNN部分を交互に学習していた</li>
-</ul>
-</li>
 </ul>
 <h1 id="centernet">CenterNetとは</h1>
 <ul>
@@ -1514,15 +1510,11 @@
 </ul>
 <h2 id="_8">歴史</h2>
 <ul>
-<li>Heatmapベースの手法<ul>
+<li>Heatmapベースの手法</li>
 <li>Faster R-CNNなどより後</li>
 <li>アンカーの代わりにHeatmapを用いる</li>
-</ul>
-</li>
-<li>CornerNet（2018/8）が源流<ul>
+<li>CornerNet（2018/8）が源流</li>
 <li>アンカー→BBOX回帰ではなく、Heatmapで左上・右下をキーポイントとして学習する</li>
-</ul>
-</li>
 </ul>
 <h2 id="_9">モデルの構造</h2>
 <ul>
