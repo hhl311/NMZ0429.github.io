@@ -13,7 +13,6 @@
 5. [Deep Metric Learning via Adaptive Learnable Assessment](https://openaccess.thecvf.com/content_CVPR_2020/html/Zheng_Deep_Metric_Learning_via_Adaptive_Learnable_Assessment_CVPR_2020_paper.html)
     * マイニングのルールを学習ベースに置き換えエピソードベースの学習スキームを採用した
 
-
 ## 動画タスク
 
 1. [Spatiotemporal Contrastive Video Representation Learning](https://arxiv.org/abs/2008.03800)
@@ -34,8 +33,8 @@
 2. [Video Prediction via Example Guidance](https://arxiv.org/abs/2007.01738)
     * 読み終わってない、動画未来予測で初のマルチモーダルモデル
 3. [Predictive Learning: Using Future Representation Learning Variantial Autoencoder for Human Action Prediction](https://arxiv.org/pdf/1711.09265.pdf)
-   * 問題設定は完全に一致してる。RGBとOptical Flowの2ストリーム
-4.
+    * RGBとOptical Flowの2ストリーム
+
 ## 学習手法
 
 1. [Invariant Information Clustering for Unsupervised Image Classification and Segmentation](https://arxiv.org/pdf/1807.06653.pdf#page9)
@@ -49,7 +48,6 @@
 6. [AutoAugment: Learning Augmentation Policies from Data](https://arxiv.org/abs/1805.09501)
     * 学習ベースでDAを行う
 7. [What Makes Training Multi-modal Classification Networks Hard?](https://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_What_Makes_Training_Multi-Modal_Classification_Networks_Hard_CVPR_2020_paper.pdf)
-    * https://wiki.ghelia.dev/user/Gen/bed/2021/04/30/Multi-modal_Classification
 
 ## その他
 
@@ -58,4 +56,4 @@
 2. [An annotation-free whole-slide training approach to pathological classification of lung cancer types using deep learning](https://www.nature.com/articles/s41467-021-21467-y#Abs1)
     * ユニファイドメモリ（UM）メカニズムといくつかのGPUメモリ最適化手法で画像の縮小を回避する
 3. [Prototypical Contrastive Learning of Unsupervised Representations](https://arxiv.org/abs/2005.04966)
-    * EMアルゴリズムベースのクラスタリング、クラスターがまとまりすぎないので信頼度＝端座確率に使えるかも
+    * EMアルゴリズムベースのクラスタリング、クラスターが収束しずらくなる様に距離関数を変更していき過学習を抑制する

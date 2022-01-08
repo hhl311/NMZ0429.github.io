@@ -14,7 +14,7 @@
     
     
       
-        <title>Mesh RCNNのお気持ちを理解したい - Cheep Learning</title>
+        <title>強化学習フレームワークまとめ - Cheep Learning</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mesh-rcnn" class="md-skip">
+        <a href="#_1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mesh RCNNのお気持ちを理解したい
+              強化学習フレームワークまとめ
             
           </span>
         </div>
@@ -237,13 +237,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/glossary/" class="md-tabs__link">
+      <a href="../glossary/" class="md-tabs__link md-tabs__link--active">
         その他
       </a>
     </li>
@@ -301,15 +303,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../GNN/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../%E8%AB%96%E6%96%87%E8%A7%A3%E8%AA%AC/GNN/" class="md-tabs__link">
         論文解説
       </a>
     </li>
@@ -659,12 +659,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       <label class="md-nav__link" for="__nav_6">
         その他
@@ -682,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/glossary/" class="md-nav__link">
+      <a href="../glossary/" class="md-nav__link">
         機械学習用語辞典
       </a>
     </li>
@@ -694,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/multiprocess_in_python/" class="md-nav__link">
+      <a href="../multiprocess_in_python/" class="md-nav__link">
         Pythonの並列処理のまとめ
       </a>
     </li>
@@ -706,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-nav__link">
+      <a href="../python_study/" class="md-nav__link">
         Pythonのお勉強に使える書籍のまとめ
       </a>
     </li>
@@ -718,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC/" class="md-nav__link">
+      <a href="../%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC/" class="md-nav__link">
         ワークフロー
       </a>
     </li>
@@ -728,11 +730,245 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/%E5%BC%B7%E5%8C%96%E5%AD%A6%E7%BF%92%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          強化学習フレームワークまとめ
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         強化学習フレームワークまとめ
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    そもそも強化学習フレームワークって何？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    使用上の注意点
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    使えそうなフレームワーク
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rl-coach" class="md-nav__link">
+    RL Coach
+  </a>
+  
+    <nav class="md-nav" aria-label="RL Coach">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    長所
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    短所
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rllib" class="md-nav__link">
+    RLlib
+  </a>
+  
+    <nav class="md-nav" aria-label="RLlib">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    長所
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    短所
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dopamine" class="md-nav__link">
+    dopamine
+  </a>
+  
+    <nav class="md-nav" aria-label="dopamine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    長所
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    短所
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stable-baseline" class="md-nav__link">
+    Stable Baseline
+  </a>
+  
+    <nav class="md-nav" aria-label="Stable Baseline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    長所
+  </a>
+  
+    <nav class="md-nav" aria-label="長所">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    短所
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    使えなさそうなフレームワーク
+  </a>
+  
+    <nav class="md-nav" aria-label="使えなさそうなフレームワーク">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tensorforce" class="md-nav__link">
+    Tensorforce
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    長所
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    短所
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keras-rl" class="md-nav__link">
+    Keras-RL
+  </a>
+  
+    <nav class="md-nav" aria-label="Keras-RL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    長所
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    短所
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    その他
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -959,14 +1195,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" data-md-state="indeterminate" type="checkbox" id="__nav_10" checked>
       
       <label class="md-nav__link" for="__nav_10">
         論文解説
@@ -984,7 +1218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../GNN/" class="md-nav__link">
+      <a href="../../%E8%AB%96%E6%96%87%E8%A7%A3%E8%AA%AC/GNN/" class="md-nav__link">
         Graph Attention Network 解説
       </a>
     </li>
@@ -996,7 +1230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../SGD%E6%9C%80%E9%81%A9%E5%8C%96%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E3%83%87%E3%83%BC%E3%82%BF%E3%82%AF%E3%83%AC%E3%83%B3%E3%82%B8%E3%83%B3%E3%82%B0%E6%89%8B%E6%B3%95/" class="md-nav__link">
+      <a href="../../%E8%AB%96%E6%96%87%E8%A7%A3%E8%AA%AC/SGD%E6%9C%80%E9%81%A9%E5%8C%96%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E3%83%87%E3%83%BC%E3%82%BF%E3%82%AF%E3%83%AC%E3%83%B3%E3%82%B8%E3%83%B3%E3%82%B0%E6%89%8B%E6%B3%95/" class="md-nav__link">
         SGD最適化モデルに対するデータクレンジング手法
       </a>
     </li>
@@ -1008,7 +1242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fast_rcnn/" class="md-nav__link">
+      <a href="../../%E8%AB%96%E6%96%87%E8%A7%A3%E8%AA%AC/fast_rcnn/" class="md-nav__link">
         Faster R-CNN まとめ
       </a>
     </li>
@@ -1020,7 +1254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../feature_learning/" class="md-nav__link">
+      <a href="../../%E8%AB%96%E6%96%87%E8%A7%A3%E8%AA%AC/feature_learning/" class="md-nav__link">
         表現学習についてまとめのまとめのまとめ
       </a>
     </li>
@@ -1030,206 +1264,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Mesh RCNNのお気持ちを理解したい
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../%E8%AB%96%E6%96%87%E8%A7%A3%E8%AA%AC/mesh_rcnn/" class="md-nav__link">
         Mesh RCNNのお気持ちを理解したい
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    目的
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    前提
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    概要
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    背景(関連研究)
-  </a>
-  
-    <nav class="md-nav" aria-label="背景(関連研究)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#2d-object-recognition" class="md-nav__link">
-    2D  Object  Recognition
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#single-view-shape-prediction" class="md-nav__link">
-    Single-View  Shape  Prediction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multi-view-shape-prediction" class="md-nav__link">
-    Multi-View  Shape  Prediction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3d-input" class="md-nav__link">
-    3D input
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3d-dataset" class="md-nav__link">
-    3D dataset
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    手法
-  </a>
-  
-    <nav class="md-nav" aria-label="手法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lv1" class="md-nav__link">
-    Lv1.お気持ちの理解
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lv2-network" class="md-nav__link">
-    Lv2 Networkなども含めて解説
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    ボクセル占有確率と、それを二値化するための閾値を入力
-  </a>
-  
-    <nav class="md-nav" aria-label="ボクセル占有確率と、それを二値化するための閾値を入力">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lv3-loss" class="md-nav__link">
-    Lv3 Loss などの設計
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    実験
-  </a>
-  
-    <nav class="md-nav" aria-label="実験">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#baseline" class="md-nav__link">
-    baseline手法
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dataset2-patterns" class="md-nav__link">
-    dataset(2 patterns)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    評価手法
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#shapenet" class="md-nav__link">
-    shapenet の評価結果
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pix3d-dataset" class="md-nav__link">
-    pix3D dataset の評価結果
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1239,7 +1278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../paper_list/" class="md-nav__link">
+      <a href="../../%E8%AB%96%E6%96%87%E8%A7%A3%E8%AA%AC/paper_list/" class="md-nav__link">
         List of nice papers
       </a>
     </li>
@@ -1251,7 +1290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../posenet/" class="md-nav__link">
+      <a href="../../%E8%AB%96%E6%96%87%E8%A7%A3%E8%AA%AC/posenet/" class="md-nav__link">
         Posenet
       </a>
     </li>
@@ -1289,112 +1328,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    目的
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    前提
+    そもそも強化学習フレームワークって何？
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    概要
+    使用上の注意点
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    背景(関連研究)
+    使えそうなフレームワーク
   </a>
-  
-    <nav class="md-nav" aria-label="背景(関連研究)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#2d-object-recognition" class="md-nav__link">
-    2D  Object  Recognition
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#single-view-shape-prediction" class="md-nav__link">
-    Single-View  Shape  Prediction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multi-view-shape-prediction" class="md-nav__link">
-    Multi-View  Shape  Prediction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3d-input" class="md-nav__link">
-    3D input
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3d-dataset" class="md-nav__link">
-    3D dataset
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#rl-coach" class="md-nav__link">
+    RL Coach
+  </a>
+  
+    <nav class="md-nav" aria-label="RL Coach">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    手法
-  </a>
-  
-    <nav class="md-nav" aria-label="手法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lv1" class="md-nav__link">
-    Lv1.お気持ちの理解
+    長所
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#lv2-network" class="md-nav__link">
-    Lv2 Networkなども含めて解説
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
-    ボクセル占有確率と、それを二値化するための閾値を入力
-  </a>
-  
-    <nav class="md-nav" aria-label="ボクセル占有確率と、それを二値化するための閾値を入力">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lv3-loss" class="md-nav__link">
-    Lv3 Loss などの設計
+    短所
   </a>
   
 </li>
@@ -1405,50 +1376,157 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    実験
+  <a href="#rllib" class="md-nav__link">
+    RLlib
   </a>
   
-    <nav class="md-nav" aria-label="実験">
+    <nav class="md-nav" aria-label="RLlib">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#baseline" class="md-nav__link">
-    baseline手法
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dataset2-patterns" class="md-nav__link">
-    dataset(2 patterns)
+  <a href="#_7" class="md-nav__link">
+    長所
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    評価手法
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#shapenet" class="md-nav__link">
-    shapenet の評価結果
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pix3d-dataset" class="md-nav__link">
-    pix3D dataset の評価結果
+    短所
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dopamine" class="md-nav__link">
+    dopamine
+  </a>
+  
+    <nav class="md-nav" aria-label="dopamine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    長所
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    短所
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stable-baseline" class="md-nav__link">
+    Stable Baseline
+  </a>
+  
+    <nav class="md-nav" aria-label="Stable Baseline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    長所
+  </a>
+  
+    <nav class="md-nav" aria-label="長所">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    短所
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    使えなさそうなフレームワーク
+  </a>
+  
+    <nav class="md-nav" aria-label="使えなさそうなフレームワーク">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tensorforce" class="md-nav__link">
+    Tensorforce
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    長所
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    短所
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keras-rl" class="md-nav__link">
+    Keras-RL
+  </a>
+  
+    <nav class="md-nav" aria-label="Keras-RL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    長所
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    短所
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    その他
+  </a>
   
 </li>
       
@@ -1465,184 +1543,157 @@
               
                 
                 
-                <h1 id="mesh-rcnn">Mesh RCNNのお気持ちを理解したい</h1>
-<h2 id="_1">目的</h2>
-<p>Mesh R CNN について理解する</p>
-<p>Lv1. お気持ちの理解</p>
-<p>Lv2. どんなNetwork構造</p>
-<p>Lv3. loss など詳細な設計</p>
-<h2 id="_2">前提</h2>
-<p><a href="https://arxiv.org/abs/1906.02739">ICCV 2019 元論文はこちらから</a><br />
-- github はこちら<br />
-https://github.com/facebookresearch/meshrcnn</p>
-<h2 id="_3">概要</h2>
-<p><strong>2D image から mesh(3D 形状) を 獲得する手法(下図)</strong><br />
-<strong>入力から出力までEnd-to-End学習</strong></p>
-<p><img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/image-300x169.gif" /></p>
-<h2 id="_4">背景(関連研究)</h2>
-<p>3D関連の研究が近年盛ん
-様々な技術が存在するか関連する代表的なものを簡単に紹介する</p>
-<h3 id="2d-object-recognition">2D  Object  Recognition</h3>
+                <h1 id="_1">強化学習フレームワークまとめ</h1>
+<p>強化学習フレームワークは色々ある割に使っている人が少ないからか、ドキュメントが不足しがちです。 <br></p>
+<p>今回は各フレームワークの短所, 長所についてざっくりまとめてみました。<br></p>
+<p>フレームワークを使うときの一助になれば幸いです。</p>
+<h2 id="_2">そもそも強化学習フレームワークって何？</h2>
+<p>かっちりとした定義があるわけではありませんが、ここでは</p>
+<ul>
+<li>強化学習のagentのアルゴリズム（例 TRPO, A3C, ...）がすぐ使える形で実装されている</li>
+<li>強化学習を走らせたときに、学習の様子がお手軽に可視化できるようになっている（例　Tensorboard対応）</li>
+<li>自分でカスタムの環境や、エージェントを追加して学習させることができる</li>
+<li>学習のためのコードが抽象化された形で提供されており、学習を細かく実装しなくてもよい</li>
+</ul>
+<p>のどれかを満たすものとします。</p>
+<p>短くまとめると<br />
+<strong>モデルと学習の実装、学習、可視化のうちどれかを楽にしてくれるライブラリ</strong>だと言えます。</p>
+<h2 id="_3">使用上の注意点</h2>
+<p>便利な反面...  </p>
+<p><strong>バグにハマると戻ってこれない</strong></p>
+<ul>
+<li>使用者が少ないので、ドキュメントは少なくなりがち</li>
+<li>フレームワーク自体の実装が複雑になりがち</li>
+</ul>
+<p>という短所もあります。<br />
+例えば<a href="https://spinningup.openai.com/en/latest/spinningup/spinningup.html#the-right-background">OpenAI Spinning Up Document</a>にも</p>
 <blockquote>
-<p>単一画像を入力して特定の物体を検出する．Bboxによる矩形の抽出とカテゴリラベルを出力するものが一般的<br />
-mask R-CNN ではこれに加えて物体の領域を表すインスタンスセグメンテーションマスクを抽出する</p>
+<p>RL libraries frequently make choices for abstraction that are good for code reuse between algorithms, but which are unnecessary if you’re only writing a single algorithm or supporting a single use case.</p>
 </blockquote>
-<h3 id="single-view-shape-prediction">Single-View  Shape  Prediction</h3>
-<blockquote>
-<p>単一画像を3次元再構成する．3Dのpose や既知の形状の向きを推定するものが一般的<br />
-</p>
-</blockquote>
-<h3 id="multi-view-shape-prediction">Multi-View  Shape  Prediction</h3>
-<blockquote>
-<p>複数カメラによる画像から３次元再構成を行う．mesh R-CNN では扱わないが，この分野の研究は近年盛ん</p>
-</blockquote>
-<h3 id="3d-input">3D input</h3>
-<blockquote>
-<p>３次元画像を入力してsemantic label などを出力するタスク<br />
-RGB-D imagesやpoint cloud などを入力するのが一般的</p>
-</blockquote>
-<h3 id="3d-dataset">3D dataset</h3>
-<blockquote>
-<p>imagenet や COCO datasetにより  2D分野は大幅な発展を遂げた<br />
-3D dataset は 2D に比べてアノテーションが困難である問題からいまだ発展途上の領域である<br />
-ShapeNet, Pix3D, Pascal3D など様々なものが登場しているが合成データであるものや矩形のみで形状の注釈がないなどデータセット特有の問題なども多い</p>
-</blockquote>
-<h2 id="_5">手法</h2>
-<h3 id="lv1">Lv1.お気持ちの理解</h3>
-<p>大まかなアーキテクチャは以下図に示すように，
-<strong>物体の検出 &rarr; 物体のboxel化 &rarr; meshに変換 &rarr; meshを改良(refinement)</strong>  </p>
-<p>のstep で構成されると思って良い．</p>
-<p><img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/image-5-300x211.png" /></p>
-<hr />
-<h3 id="lv2-network">Lv2 Networkなども含めて解説</h3>
-<p>下図に提案システムの詳細な流れを示す．  </p>
-<p>大まかな流れはLv1 で説明したがもう少し詳細に述べる．  </p>
-<p>まず，物体検出部分では従来のSoTA model である <strong>mask R-CNN</strong> を用いている<br />
-&rarr; <strong>カテゴリラベル, bbox, segmentation mask</strong> を出力<br />
-backbone は resnet50(pre-trained by imagenet)  </p>
-<p>3D 形状を予測するために，<strong>Voxel Branch と Mesh Refinement Branch</strong> を用いる</p>
-<p>名前の通りではあるが，  </p>
-<pre><code>- Boxel Branch .. object の大まかな 3次元ボクセル化を推定し，初期三角mesh に変換
-- Mesh Refinement Branch .. グラフ畳み込み層を使用して、この初期メッシュの頂点位置を調整(meshを整える)
-</code></pre>
-<p>と言った役割がある．  </p>
+<p>と記されています。</p>
+<p><strong>高機能、高抽象度になればなるほど、フレームワーク内部の実装は複雑になってゆく</strong>ので</p>
 <ul>
-<li>Voxel Branch  <ul>
-<li>各object の形状をボトムアップで予測</li>
+<li>そもそもフレームワークは必要なのか？</li>
+<li>どの程度までフレームワークにやってもらうのか？</li>
 </ul>
-</li>
-<li>気持ちとしては，mask R-CNN の mask branch と似たような機能</li>
-<li>2D 平面の M * M &rarr; 3D な G * G * G の形状を予測</li>
-<li>Loss については後述(Lv3 にて)</li>
+<p>ということを考慮してフレームワークを選ぶことをお勧めします。</p>
+<h2 id="_4">使えそうなフレームワーク</h2>
+<h2 id="rl-coach"><a href="https://ray.readthedocs.io/en/latest/rllib.html#rllib-in-60-seconds">RL Coach</a></h2>
+<p>TensorflowとMXnetをサポートするインテル謹製のフレームワーク。<br></p>
+<h3 id="_5">長所</h3>
+<ol>
 <li>
-<p>(補足) 画像と予測値とのピクセル単位の対応関係を維持することは、3Dではカメラから離れるにつれて物体が小さくなるため複雑である．それを回避するためにカメラ特有の固有行列を利用して理想的な形状にする工夫を行なっている</p>
+<p>実装済みのアルゴリズムが非常に多い<br>
+   <img alt="rl_coach.png" src="../imgs/rl_coach.png" /></p>
 </li>
 <li>
-<p>Cubify(ここが肝っぽい)</p>
-<ul>
-<li>Voxel to Mesh</li>
-<li>目的は，<strong>ボクセル予測値を三角形のメッシュに変換する</strong></li>
-<li>
-<h2 id="_6"><strong>ボクセル占有確率と、それを二値化するための閾値を入力</strong></h2>
-</li>
-</ul>
+<p>open AI gym含む対応済みの学習環境が多い(<a href="https://github.com/NervanaSystems/coach#supported-environments">https://github.com/NervanaSystems/coach#supported-environments</a>) <br></p>
 </li>
 <li>
-<p>Mesh Refinement Branch</p>
-<ul>
-<li>目的は，<strong>粗い形状(voxel化)を滑らかにすること</strong></li>
-<li>処理の流れは大きく3つで構成(vertex alignment, graph convlution, vertex refinement)</li>
-<li>この3つを繰り返していくことで頂点が更新されていく</li>
-<li>なお，各レイヤーでは<strong>各メッシュ頂点の3D位置viと特徴ベクトルfi</strong>を持つ</li>
-<li><strong>vertex alignment</strong><ul>
-<li>各メッシュ頂点に対して画像整列された特徴ベクトルを生成</li>
-<li>カメラの固有行列を使用して，各頂点を画像平面に投影</li>
-<li>特徴マップが与えられると、投影された頂点の位置を示す双線形補間された画像特徴量を計算</li>
-</ul>
-</li>
-<li><strong>graph convlution</strong></li>
-<li>メッシュの辺に沿って情報を伝播
-<img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/image-6-300x27.png" /></li>
-<li>GCNにより ，局所的なメッシュ領域の情報を集約</li>
-<li><strong>vertex refinement</strong>
-    <img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/image-7.png" /><ul>
-<li>メッシュ形状が更新され、トポロジーが固定</li>
-</ul>
-</li>
-<li>Loss については後述(Lv3にて)</li>
-</ul>
-</li>
-</ul>
-<p><img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/image-8-300x120.png" /></p>
-<hr />
-<h3 id="lv3-loss">Lv3 Loss などの設計</h3>
-<p><strong>提案システムはどのように最適化されるのかを説明する</strong>  </p>
-<ul>
-<li>
-<p>Voxel Loss</p>
-<ul>
-<li>Voxel Branchは、予測されたボクセル占有確率と真のボクセル占有率との間の2値クロスエントロピーを最小化するように訓練</li>
-</ul>
+<p><a href="https://github.com/NervanaSystems/coach/tree/master/rl_coach/presets">preset</a>という機能により、モデルに渡すハイパーパラメータのみを書いたファイルを作れる <br>
+   複数のpresetを書いておけば、複数のハイパーパラメータをコードの修正をせずに試すことができる<br></p>
 </li>
 <li>
-<p>Mesh Loss</p>
+<p>学習中のエージェントの行動をリアルタイムで表示することができる（<a href="https://nervanasystems.github.io/coach/usage.html#rendering-the-environment）">https://nervanasystems.github.io/coach/usage.html#rendering-the-environment）</a></p>
+</li>
+<li>
+<p><a href="https://nervanasystems.github.io/coach/dashboard.html#tracking-statistics">dashboard</a>機能によって詳細な学習結果の可視化ができる</p>
+</li>
+<li>マルチエージェント学習のときは、全エージェントの学習結果を一つのグラフにまとめて表示できる</li>
+<li>同じアルゴリズムで実験を複数行ったとき、それらの学習曲線の平均を取ったグラフを自動で表示できる<br>
+     　-&gt; これは学習が安定しにくいときに、モデルの性能を見るのに役立つ</li>
+</ol>
+<h3 id="_6">短所</h3>
+<ol>
+<li>全体的に実装が複雑なので、自分で新たにエージェントを追加するのが難しい <br></li>
+<li>エージェントを分散させるのが後述のRLlibより難しく、さらにAWSのS3を使わなければならない</li>
+<li>前述の<a href="https://github.com/NervanaSystems/coach/blob/master/img/dashboard.gif">dashboard</a>が使いにくい</li>
+</ol>
+<h2 id="rllib"><a href="https://ray.readthedocs.io/en/latest/rllib.html">RLlib</a></h2>
+<p>全フレームワークをサポートしているエージェントの分散化に強いフレームワーク <br>
+Tensorflow, Pytorchだと、エージェントの実装が少し楽になる。</p>
+<h3 id="_7">長所</h3>
+<ol>
+<li>個々のワーカを実装するだけでマルチエージェント学習が組める  </li>
+<li>マルチエージェント学習の「ワーカが学習 -&gt; パラメータ更新」という処理を<a href="https://ray.readthedocs.io/en/latest/rllib-concepts.html#trainers">Trainer</a>がやってくれる</li>
+<li>
+<p>マルチエージェント未対応の深層学習フレームワークでもマルチエージェント学習が可能<br> </p>
+</li>
+<li>
+<p>分散化を用い、自動でハイパーパラメータのチューニングが可能（<a href="https://ray.readthedocs.io/en/latest/tune.html">tune</a>ライブラリ） <br></p>
+</li>
+<li>
+<p>Population Based Trainingなどのハイパーパラメータ調整のSOTAなアルゴリズムも使える</p>
+</li>
+<li>
+<p>学習用の環境はopen AI gym形式で書けば追加できる <br></p>
+</li>
+<li>
+<p>可視化はtensorboardを使える</p>
+</li>
+</ol>
+<h3 id="_8">短所</h3>
+<ol>
+<li>内部の実装が複雑で、自分で新たにエージェントを追加するのが難しい <br></li>
+<li>使われているRayというライブラリ独特の分散処理表現を習得しなければならない <br></li>
+</ol>
+<h2 id="dopamine"><a href="https://github.com/google/dopamine">dopamine</a></h2>
+<p>Google発の強化学習フレームワーク（ただしgoogle公式のプロジェクトではない）</p>
+<h3 id="_9">長所</h3>
+<ol>
+<li>学習中の詳細なログ（学習曲線、リプレイ用のバッファ、モデルのパラメータ）をginを使ってmemory efficientに記録してくれる <br></li>
+<li>モデルの行動のリプレイ動画がかんたんに作れる <br></li>
+</ol>
+<h3 id="_10">短所</h3>
+<ol>
+<li>実装済みのエージェントのアルゴリズムが４つしかない（DQN, rainbow, C51, IQN） <br></li>
+<li>ドキュメント不足 <br></li>
+<li>対応している環境がAtariしかなく、環境の追加方法についてのドキュメントがないので、自分で環境を追加するのは骨が折れる <br></li>
+<li>contributerが４人しかおらず、コードの大半をそのうちの一人が書いているので先行きが不安</li>
+</ol>
+<p>（追記: 昨年12月からコミットがないです。）
+<br></p>
+<h2 id="stable-baseline"><a href="https://github.com/hill-a/stable-baselines">Stable Baseline</a></h2>
+<p>tensorflowに対応している、openAI baselinesのフォーク。<br />
+フレームワークというよりもモデルの実装集</p>
+<h3 id="_11">長所</h3>
+<ol>
+<li>scikit learnにAPIが似せてあるため、使いやすい <br></li>
+<li>基本的なモデルは実装済み <br>
+    <img alt="stable_baseline" src="../imgs/stable_baseline.png" /></li>
+<li>エージェントのアルゴリズムの実装がコメントを多用してわかりやすく書かれており、改造しやすい <br></li>
+<li>マルチプロセス化にも対応</li>
+</ol>
+<h4 id="_12">短所</h4>
+<ol>
+<li>openAI gymがサポートしている環境しかサポートしていないので、他の環境は自分でラッパーを書かなければならない<br></li>
+<li>実験のためにコードを書かなければならない</li>
+</ol>
+<h2 id="_13">使えなさそうなフレームワーク</h2>
+<h3 id="tensorforce"><a href="https://github.com/tensorforce/tensorforce">Tensorforce</a></h3>
+<p>名前の通りTensorflowに対応したフレームワーク。</p>
+<h3 id="_14">長所</h3>
+<p>モジュール化がきちんとなされており、勉強したり書いたりしやすい</p>
+<h3 id="_15">短所</h3>
+<ol>
+<li>あまりエージェントのアルゴリズムは実装されていないので、自分で書かなければならない<br></li>
+<li>ドキュメントの量や詳しさが少し物足りない</li>
+</ol>
+<h2 id="keras-rl"><a href="https://github.com/keras-rl/keras-rl">Keras-RL</a></h2>
+<p>名前の通りKerasに対応したフレームワーク。</p>
+<h3 id="_16">長所</h3>
+<p>そもそもドキュメントがなさすぎて何が長所なのかすらよくわからない</p>
+<h3 id="_17">短所</h3>
+<ol>
+<li>ドキュメントが信じられないくらい少ない。本当に少ない。（<a href="https://keras-rl.readthedocs.io/en/latest/core）">https://keras-rl.readthedocs.io/en/latest/core）</a> <br></li>
+<li>あまりエージェントのアルゴリズムは実装されておらず、自分で書かなければならない<br></li>
+</ol>
+<h2 id="_18">その他</h2>
 <ul>
-<li>有限の点集合上で定義された損失関数を使用</li>
-<li>point cloud によるメッシュを、その表面を密にサンプリングすることで表現</li>
-<li>&rarr; 点群の損失を形状の損失に近似</li>
-<li>大きく３種類のLossを定義</li>
-<li><strong>Chamfer Loss</strong><ul>
-<li>point cloud P, Q が与えられた時，以下の式で定義
-<img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/image-9-300x30.png" /></li>
-<li>一番近い頂点との距離を計算</li>
+<li><a href="https://winderresearch.com/a-comparison-of-reinforcement-learning-frameworks-dopamine-rllib-keras-rl-coach-trfl-tensorforce-coach-and-more/">A Comparison of Reinforcement Learning Frameworks: Dopamine, RLLib, Keras-RL, Coach, TRFL, Tensorforce, Coach and more </a> <br></li>
+<li><a href="https://www.slideshare.net/greetech/oss-128905651">OSS強化学習フレームワークの比較</a></li>
+<li><a href="https://medium.com/@vermashresth/a-primer-on-deep-reinforcement-learning-frameworks-part-1-6c9ab6a0f555">A Primer on Deep Reinforcement Learning Frameworks Part 1</a></li>
 </ul>
-</li>
-<li><strong>Normal Loss</strong><ul>
-<li>法線up, uq の内積を計算</li>
-<li><img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/image-10-300x32.png" /></li>
-<li>頂点q の接平面状に 頂点p と隣接頂点が存在すると小さくなる</li>
-</ul>
-</li>
-<li><strong>Edgde Loss</strong><ul>
-<li><img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/image-11-300x33.png" /></li>
-<li>ある頂点と隣接頂点との距離を計算して正規化する</li>
-<li>(補足) Edgde Loss の 有無による形状の比較を以下に示す．なしの方がきれいに生成できているが，不規則なサイズの面と多くの自己交差を持つなどアプリケーションにとって実用的でないことが懸念される</li>
-<li><img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/image-12-300x206.png" /></li>
-</ul>
-</li>
-<li>mesh refinement branch では上記の3つの損失の加重和を最適化する</li>
-</ul>
-</li>
-</ul>
-<hr />
-<h2 id="_7">実験</h2>
-<p>学習は画像とmesh のペアを用いた教師あり学習  </p>
-<h3 id="baseline">baseline手法</h3>
-<ul>
-<li>N3MR ... 3D の教師なしで微分可能なレンダラーを介してmeshを学習する弱教師あり学習</li>
-<li>3D-R2N2 ... ボクセルを推定</li>
-<li>MVD ... ボクセルを推定</li>
-<li>PSG ... point cloud を推定</li>
-<li>Pixel2Mesh ... 初期楕円体を変形・細分化してメッシュを推定</li>
-<li>GEOMetrics　... Pixel2Mesh を 適応的な面細分化で拡張したモデル<pre><code>なお，boxel_only な手法は 提案手法におけるMesh Refinement Branch を除いたもの    
-mesh_only な手法は Voxel Branch を除いたものと解釈して比較することが可能である
-</code></pre>
-</li>
-</ul>
-<h3 id="dataset2-patterns">dataset(2 patterns)</h3>
-<p>ShapeNet ... mesh予測におけるベンチマークのdataset
-Pix3D dataset ... 実画像も含んだより難しいdataset</p>
-<h3 id="_8">評価手法</h3>
-<p>予測メッシュと正解メッシュの表面からランダムで一様に１万点をサンプリングする<br />
-&rarr; それらの点群における <strong>chamfer distance(Lower is better), normal consistency, および様々な距離閾値でのF1-score</strong>を算出
-(precision .. GT内の予測点の割合,  recall .. 予測内のGTの割合)<br />
-ただし，これらは物体の絶大的な大きさに依存してしまうため，rescaleした上で評価している</p>
-<h3 id="shapenet">shapenet の評価結果</h3>
-<p><img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/image-13-300x173.png" /></p>
-<p><img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/image-14-300x214.png" /></p>
-<h3 id="pix3d-dataset">pix3D dataset の評価結果</h3>
-<p><img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/image-15-300x116.png" /></p>
-<p><img alt="" src="http://namazu.tokyo/wp-content/uploads/2021/02/image-16-300x67.png" /></p>
                 
               
               
