@@ -188,7 +188,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/image/" class="md-tabs__link">
+      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/a_nlp/" class="md-tabs__link">
         100本ノック
       </a>
     </li>
@@ -209,7 +209,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../PyTorch/PyTorch/dp/" class="md-tabs__link">
+      <a href="../../PyTorch/PyTorch/a_pytorch/" class="md-tabs__link">
         PyTorch
       </a>
     </li>
@@ -406,7 +406,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/image/" class="md-nav__link">
+      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/a_nlp/" class="md-nav__link">
+        自然言語処理100本ノックまとめ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/b_image/" class="md-nav__link">
         画像処理100本ノック答え
       </a>
     </li>
@@ -418,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/numpy/" class="md-nav__link">
+      <a href="../../100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF/c_numpy/" class="md-nav__link">
         Numpy100本ノック答え
       </a>
     </li>
@@ -481,8 +493,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyTorch/PyTorch/dp/" class="md-nav__link">
-        PyTorchの分散計算処理を使う
+      <a href="../../PyTorch/PyTorch/a_pytorch/" class="md-nav__link">
+        pytorchによるディープラーニング実装の流れ
       </a>
     </li>
   
@@ -493,8 +505,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyTorch/PyTorch/pytorch/" class="md-nav__link">
-        pytorchによるディープラーニング実装の流れ
+      <a href="../../PyTorch/PyTorch/dp/" class="md-nav__link">
+        PyTorchの分散計算処理を使う
       </a>
     </li>
   
@@ -1176,6 +1188,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vision_transformer/" class="md-nav__link">
+        Vision Transformer
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -1303,30 +1327,32 @@
                 
                 <h1 id="sgd">SGD最適化モデルに対するデータクレンジング手法</h1>
 <h2 id="data-cleansing-for-models-trained-with-sgd">Data Cleansing for Models Trained with SGD</h2>
-<p>https://arxiv.org/abs/1906.08473</p>
-<p>github実装<br>
-https://github.com/sato9hara/sgd-influence</p>
+<p><a href="https://arxiv.org/abs/1906.08473">https://arxiv.org/abs/1906.08473</a></p>
+<p>github実装
+<a href="https://github.com/sato9hara/sgd-influence">https://github.com/sato9hara/sgd-influence</a></p>
 <h3 id="_1">概要</h3>
 <p>学習がうまくいかなかったときに元データを分析することがあるが、データのError Analysisをする際に、どのインスタンス(データセット)が学習に強く影響しているのかを考察するためにはドメイン知識が必要。
 この論文では、学習に悪影響を及ぼしているインスタンスをドメイン知識なしでCleanseする方法を提示している。</p>
-<p>Keyword: 
-- influence estimation
-- counterfactual SGD
-- Linear Influence Estimation (LIE)
-- Kendall's tau
-- Jaccard index</p>
+<p>Keyword: </p>
+<ul>
+<li>influence estimation</li>
+<li>counterfactual SGD</li>
+<li>Linear Influence Estimation (LIE)</li>
+<li>Kendall's tau</li>
+<li>Jaccard index</li>
+</ul>
 <h3 id="2-preliminaries">2. Preliminaries</h3>
 <p>SGDのおさらい</p>
 <h3 id="3-sgd-influence">3. SGD-Influence</h3>
-<p>training step <span class="arithmatex">\(t\)</span>において、インスタンス<span class="arithmatex">\(z_{j}\)</span>を除いた時のgradientを<span class="arithmatex">\(\theta_{-j}^{[t]}\)</span>としたとき、SGD-influenceを以下のように定義する。
-<span class="arithmatex">\(<span class="arithmatex">\(\theta_{-j}^{[t]} - \theta^{[t]}\)</span>\)</span>
-つまり、j番目のインスタンスをdropした時の<span class="arithmatex">\(\theta\)</span>と何もしていない時の<span class="arithmatex">\(\theta\)</span>の差が大きい場合、そのインスタンスの学習への影響が大きいと言える。
+<p>training step <span class="arithmatex">\(t\)</span>において、インスタンス<span class="arithmatex">\(z_{j}\)</span>を除いた時のgradientを<span class="arithmatex">\(\\theta_{-j}^{[t]}\)</span>としたとき、SGD-influenceを以下のように定義する。
+<span class="arithmatex">\(<span class="arithmatex">\(\\theta\_{-j}^{[t]} - \\theta^{[t]}\)</span>\)</span>
+つまり、j番目のインスタンスをdropした時の<span class="arithmatex">\(\\theta\)</span>と何もしていない時の<span class="arithmatex">\(\\theta\)</span>の差が大きい場合、そのインスタンスの学習への影響が大きいと言える。
 このように、結果からデータを振り返る通常とは逆の視点で使っているのでこれをCounterfactual SGD（反実仮想: もしなかったらどうなるか）と呼んでいる。</p>
 <p>Linear Influence Estimation (LIE)</p>
 <div class="arithmatex">\[
-L_{-j}^{[T]}(u) = \langle u, \theta_{-j}^{[t]} - \theta^{[t]}\rangle
+L_{-j}^{[T]}(u) = \\langle u, \\theta_{-j}^{[t]} - \\theta^{[t]}\\rangle
 \]</div>
-<p><span class="arithmatex">\(u\)</span>に prediction functionの1階微分<span class="arithmatex">\(\nabla_{\theta}f(x,\theta)\)</span>や、loss関数の1階微分<span class="arithmatex">\(\nabla_{\theta}l(x,\theta)\)</span>を入れて用いる。後者では、インスタンス<span class="arithmatex">\(z_i\)</span>が学習(loss)に及ぼす影響を測れる</p>
+<p><span class="arithmatex">\(u\)</span>に prediction functionの1階微分<span class="arithmatex">\(\\nabla_{\\theta}f(x,\\theta)\)</span>や、loss関数の1階微分<span class="arithmatex">\(\\nabla_{\\theta}l(x,\\theta)\)</span>を入れて用いる。後者では、インスタンス<span class="arithmatex">\(z_i\)</span>が学習(loss)に及ぼす影響を測れる</p>
 <p>実際は、テイラー展開で近似して</p>
 <p>$$
 L_{-j}^{[T]}(\nabla_{\theta}l(x,\theta)) \approx \nabla_{\theta}l(x,\theta_{-j}^{[t]}) - \nabla_{\theta}l(x,\theta^{[t]})
@@ -1335,16 +1361,18 @@ $$
 <p>ただし、正直に計算してしまうとインスタンスの個数N回のSGD計算をやることになり計算コストが高いので効率的に行う方法を本論文で提案した。</p>
 <h3 id="4-estimating-sgd-influence">4. Estimating SGD-Influence</h3>
 <p>今のところよくわからない。
-変形すると<span class="arithmatex">\(\Delta\theta_{-j}\)</span>(2階微分)になる。</p>
+変形すると<span class="arithmatex">\(\\Delta\\theta\_{-j}\)</span>(2階微分)になる。</p>
 <p>Eq(2) は漸化式繰り返し使って変形している\
 Eq(3), (4)は、この辺の微積分の連続性の概念を元に不等式が成立しているっぽい。
-https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%97%E3%82%B7%E3%83%83%E3%83%84%E9%80%A3%E7%B6%9A</p>
+<a href="https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%97%E3%82%B7%E3%83%83%E3%83%84%E9%80%A3%E7%B6%9A">https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%97%E3%82%B7%E3%83%83%E3%83%84%E9%80%A3%E7%B6%9A</a></p>
 <h3 id="5-proposed-method-for-lie">5. Proposed Method for LIE</h3>
-<p>計算コスト本来なら<span class="arithmatex">\(O(p^2)\)</span> かかるところを <span class="arithmatex">\(O(TM\delta)\)</span>にできている
-- p: データの次元?
-- T: total SGD steps
-- M: the largest batch size in SGD
-- <span class="arithmatex">\(\delta\)</span>: complexity for computing the parameter gradient (どのOptimizerを使うかで決まる?)</p>
+<p>計算コスト本来なら<span class="arithmatex">\(O(p^2)\)</span> かかるところを <span class="arithmatex">\(O(TM\\delta)\)</span>にできている</p>
+<ul>
+<li>p: データの次元?</li>
+<li>T: total SGD steps</li>
+<li>M: the largest batch size in SGD</li>
+<li><span class="arithmatex">\(\\delta\)</span>: complexity for computing the parameter gradient (どのOptimizerを使うかで決まる?)</li>
+</ul>
 <h3 id="6-related-studies">6. Related Studies</h3>
 <p>過去の同様のアプローチとの違い</p>
 <ol>
