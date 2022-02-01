@@ -1,0 +1,1912 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.0.6">
+    
+    
+      
+        <title>自然言語処理100本ノックまとめ - Cheep Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2c0c5eaf.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjp.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:600,800">
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-196492429-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#100" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="Cheep Learning" class="md-header__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cheep Learning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              自然言語処理100本ノックまとめ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="クリア" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Welcome !!
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../intro/" class="md-tabs__link">
+      Artificial Intelligenceを学ぶ方へ
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        100本ノック
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../PyTorch/PyTorch/a_pytorch/" class="md-tabs__link">
+        PyTorch
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../UofT/game_theory/" class="md-tabs__link">
+        UofT
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/glossary/" class="md-tabs__link">
+        その他
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/heroku_st/" class="md-tabs__link">
+        ツール
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/3dvision/" class="md-tabs__link">
+        深層学習
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E7%B5%B1%E8%A8%88%E3%83%A2%E3%83%87%E3%83%AB/eval_rec/" class="md-tabs__link">
+        統計モデル
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E8%AB%96%E6%96%87%E8%A7%A3%E8%AA%AC/GNN/" class="md-tabs__link">
+        論文解説
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Cheep Learning" class="md-nav__button md-logo" aria-label="Cheep Learning" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Cheep Learning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Welcome !!
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/" class="md-nav__link">
+        Artificial Intelligenceを学ぶ方へ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        100本ノック
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="100本ノック" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          100本ノック
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          自然言語処理100本ノックまとめ
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        自然言語処理100本ノックまとめ
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    準備（1章）
+  </a>
+  
+    <nav class="md-nav" aria-label="準備（1章）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#n-gram" class="md-nav__link">
+    n-gram
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unix2" class="md-nav__link">
+    UNIXコマンド（2章）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-regex" class="md-nav__link">
+    正規表現（3章 regex）
+  </a>
+  
+    <nav class="md-nav" aria-label="正規表現（3章 regex）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsonlines" class="md-nav__link">
+    jsonlines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regex" class="md-nav__link">
+    regex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    キャプチャ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-mecab" class="md-nav__link">
+    形態素解析（4章 MeCab）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-cabocha" class="md-nav__link">
+    係り受け解析（5章 CaboCha）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-pytorch" class="md-nav__link">
+    機械学習（6章 pytorch）
+  </a>
+  
+    <nav class="md-nav" aria-label="機械学習（6章 pytorch）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bag-of-words" class="md-nav__link">
+    Bag of Words
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataset" class="md-nav__link">
+    Dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataloader" class="md-nav__link">
+    DataLoader
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nnmoduleforward" class="md-nav__link">
+    nn.Module()とforward
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loss" class="md-nav__link">
+    損失関数 loss
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizer" class="md-nav__link">
+    最適化手法 optimizer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ロジスティック回帰
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    性能評価
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    混同行列
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    再現率(陽性の中での正解率)、適合率（陽性と予測した時の正解率）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    単語ベクトル（7章）
+  </a>
+  
+    <nav class="md-nav" aria-label="単語ベクトル（7章）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    意味的アナロジー、文法的アナロジー
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    ニューラルネット（8章）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rnnlstm9" class="md-nav__link">
+    RNN(LSTM)（9章）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-fairseq" class="md-nav__link">
+    機械翻訳（10章 fairseq）
+  </a>
+  
+    <nav class="md-nav" aria-label="機械翻訳（10章 fairseq）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transformer" class="md-nav__link">
+    Transformer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bleu" class="md-nav__link">
+    BLEUスコア
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    ビームサーチ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    サブワード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    機械翻訳の結果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../b_image/" class="md-nav__link">
+        画像処理100本ノック答え
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c_numpy/" class="md-nav__link">
+        Numpy100本ノック答え
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        PyTorch
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PyTorch" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          PyTorch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" data-md-state="indeterminate" type="checkbox" id="__nav_4_1" checked>
+      
+      <label class="md-nav__link" for="__nav_4_1">
+        PyTorch
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PyTorch" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          PyTorch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch/a_pytorch/" class="md-nav__link">
+        pytorchによるディープラーニング実装の流れ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch/dp/" class="md-nav__link">
+        PyTorchの分散計算処理を使う
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch/video/" class="md-nav__link">
+        PyTorch Dataset API で動画データを扱う方法
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2" checked>
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        PyTorch Lightning
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PyTorch Lightning" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          PyTorch Lightning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/checkpoint/" class="md-nav__link">
+        PyTorch LightningのCheckpointCallbackの便利機能
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/data_module/" class="md-nav__link">
+        【PyTorch Lightning】LightningDataModuleについて
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/lightning_bolts/" class="md-nav__link">
+        PyTorch Lightning Boltsの使い方
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyTorch/PyTorch%20Lightning/pytorchvideo/" class="md-nav__link">
+        PyTorchVideo 使い方
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        UofT
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="UofT" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          UofT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UofT/game_theory/" class="md-nav__link">
+        Game theory
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UofT/note/" class="md-nav__link">
+        Note
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        その他
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="その他" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          その他
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/glossary/" class="md-nav__link">
+        機械学習用語辞典
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/multiprocess_in_python/" class="md-nav__link">
+        Pythonの並列処理のまとめ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/python_study/" class="md-nav__link">
+        Pythonのお勉強に使える書籍のまとめ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC/" class="md-nav__link">
+        ワークフロー
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%81%9D%E3%81%AE%E4%BB%96/%E5%BC%B7%E5%8C%96%E5%AD%A6%E7%BF%92%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF/" class="md-nav__link">
+        強化学習フレームワークまとめ
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        ツール
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ツール" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          ツール
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/heroku_st/" class="md-nav__link">
+        StreamlitアプリをHerokuでティプロイする
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/plantuml/" class="md-nav__link">
+        PlantUMLのススメ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%84%E3%83%BC%E3%83%AB/tmux/" class="md-nav__link">
+        tmuxはええぞ
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" data-md-state="indeterminate" type="checkbox" id="__nav_8" checked>
+      
+      <label class="md-nav__link" for="__nav_8">
+        深層学習
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="深層学習" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          深層学習
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/3dvision/" class="md-nav__link">
+        3D vision
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/lstm/" class="md-nav__link">
+        【もうやりたくない】RNNとLSTMの理解とNumPyによる実装
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92/video_task/" class="md-nav__link">
+        動画を使った深層学習
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" data-md-state="indeterminate" type="checkbox" id="__nav_9" checked>
+      
+      <label class="md-nav__link" for="__nav_9">
+        統計モデル
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="統計モデル" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          統計モデル
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%B5%B1%E8%A8%88%E3%83%A2%E3%83%87%E3%83%AB/eval_rec/" class="md-nav__link">
+        推薦システムの評価指標
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%B5%B1%E8%A8%88%E3%83%A2%E3%83%87%E3%83%AB/method/" class="md-nav__link">
+        推薦モデル
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%B5%B1%E8%A8%88%E3%83%A2%E3%83%87%E3%83%AB/silimarity/" class="md-nav__link">
+        サンプル間の類似性指標
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%B5%B1%E8%A8%88%E3%83%A2%E3%83%87%E3%83%AB/use_case/" class="md-nav__link">
+        学習ベース推薦システムの活用事例
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" data-md-state="indeterminate" type="checkbox" id="__nav_10" checked>
+      
+      <label class="md-nav__link" for="__nav_10">
+        論文解説
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="論文解説" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          論文解説
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AB%96%E6%96%87%E8%A7%A3%E8%AA%AC/GNN/" class="md-nav__link">
+        Graph Attention Network 解説
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AB%96%E6%96%87%E8%A7%A3%E8%AA%AC/SGD%E6%9C%80%E9%81%A9%E5%8C%96%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E3%83%87%E3%83%BC%E3%82%BF%E3%82%AF%E3%83%AC%E3%83%B3%E3%82%B8%E3%83%B3%E3%82%B0%E6%89%8B%E6%B3%95/" class="md-nav__link">
+        SGD最適化モデルに対するデータクレンジング手法
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AB%96%E6%96%87%E8%A7%A3%E8%AA%AC/fast_rcnn/" class="md-nav__link">
+        Faster R-CNN まとめ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AB%96%E6%96%87%E8%A7%A3%E8%AA%AC/feature_learning/" class="md-nav__link">
+        表現学習についてまとめのまとめのまとめ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AB%96%E6%96%87%E8%A7%A3%E8%AA%AC/mesh_rcnn/" class="md-nav__link">
+        Mesh RCNNのお気持ちを理解したい
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AB%96%E6%96%87%E8%A7%A3%E8%AA%AC/paper_list/" class="md-nav__link">
+        List of nice papers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AB%96%E6%96%87%E8%A7%A3%E8%AA%AC/posenet/" class="md-nav__link">
+        Posenet
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AB%96%E6%96%87%E8%A7%A3%E8%AA%AC/vision_transformer/" class="md-nav__link">
+        Vision Transformer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    準備（1章）
+  </a>
+  
+    <nav class="md-nav" aria-label="準備（1章）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#n-gram" class="md-nav__link">
+    n-gram
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unix2" class="md-nav__link">
+    UNIXコマンド（2章）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-regex" class="md-nav__link">
+    正規表現（3章 regex）
+  </a>
+  
+    <nav class="md-nav" aria-label="正規表現（3章 regex）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsonlines" class="md-nav__link">
+    jsonlines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regex" class="md-nav__link">
+    regex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    キャプチャ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-mecab" class="md-nav__link">
+    形態素解析（4章 MeCab）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-cabocha" class="md-nav__link">
+    係り受け解析（5章 CaboCha）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-pytorch" class="md-nav__link">
+    機械学習（6章 pytorch）
+  </a>
+  
+    <nav class="md-nav" aria-label="機械学習（6章 pytorch）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bag-of-words" class="md-nav__link">
+    Bag of Words
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataset" class="md-nav__link">
+    Dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataloader" class="md-nav__link">
+    DataLoader
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nnmoduleforward" class="md-nav__link">
+    nn.Module()とforward
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loss" class="md-nav__link">
+    損失関数 loss
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizer" class="md-nav__link">
+    最適化手法 optimizer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ロジスティック回帰
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    性能評価
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    混同行列
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    再現率(陽性の中での正解率)、適合率（陽性と予測した時の正解率）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    単語ベクトル（7章）
+  </a>
+  
+    <nav class="md-nav" aria-label="単語ベクトル（7章）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    意味的アナロジー、文法的アナロジー
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    ニューラルネット（8章）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rnnlstm9" class="md-nav__link">
+    RNN(LSTM)（9章）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-fairseq" class="md-nav__link">
+    機械翻訳（10章 fairseq）
+  </a>
+  
+    <nav class="md-nav" aria-label="機械翻訳（10章 fairseq）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transformer" class="md-nav__link">
+    Transformer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bleu" class="md-nav__link">
+    BLEUスコア
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    ビームサーチ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    サブワード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    機械翻訳の結果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="100">自然言語処理100本ノックまとめ</h1>
+<p>自然言語処理100本ノックで得られた知見のメモ。</p>
+<h2 id="1">準備（1章）</h2>
+<h3 id="n-gram">n-gram</h3>
+<p>文字列を"n"個の文字（や単語）に分割すること。</p>
+<p>文字で分割　N=2 bigram</p>
+<div class="highlight"><pre><span></span><code><span class="s1">&#39;今日&#39;</span>, <span class="s1">&#39;日は&#39;</span>, <span class="s1">&#39;はい&#39;</span>, <span class="s1">&#39;いい&#39;</span>, <span class="s1">&#39;い天&#39;</span>, <span class="s1">&#39;天気&#39;</span>, <span class="s1">&#39;気で&#39;</span>, <span class="s1">&#39;です&#39;</span>, <span class="s1">&#39;すね&#39;</span>, <span class="s1">&#39;ね。&#39;</span>
+</code></pre></div>
+<p>文字で分割　N=3 trigram</p>
+<div class="highlight"><pre><span></span><code><span class="s1">&#39;今日は&#39;</span>, <span class="s1">&#39;日はい&#39;</span>, <span class="s1">&#39;はいい&#39;</span>, <span class="s1">&#39;いい天&#39;</span>, <span class="s1">&#39;い天気&#39;</span>, <span class="s1">&#39;天気で&#39;</span>, <span class="s1">&#39;気です&#39;</span>, <span class="s1">&#39;ですね&#39;</span>, <span class="s1">&#39;すね。&#39;</span>
+</code></pre></div>
+<p>自然言語処理の前処理に使用したり、機械翻訳の評価指数であるBLEUスコアにも使われる。日本語では、文章を単語毎に分ける形態素解析と比べて未知語にも対応できる利点がある。辞書を作る手間が省けて、共起表現を含んだ分割ができるので、地味に今でもよく使われているみたいです。（ただしノイズも多い）</p>
+<h2 id="unix2">UNIXコマンド（2章）</h2>
+<p>簡単なファイル操作はpython使うより手軽でとても便利。</p>
+<div class="highlight"><pre><span></span><code>wc -l <span class="o">{</span>file<span class="o">}</span> <span class="c1"># 行数を出す。word count(wc) lは多分line。</span>
+<span class="c1"># 1100　など</span>
+sed <span class="s1">&#39;s/\t/ /g&#39;</span> <span class="o">{</span>file<span class="o">}</span>  <span class="c1"># ファイル書き換え。 Stream EDitor(sed).</span>
+<span class="c1"># fileのタブを空白に置き換わる</span>
+</code></pre></div>
+<h2 id="3-regex">正規表現（3章 regex）</h2>
+<h3 id="json">json</h3>
+<p>データセットを読み込むのにpythonのjsonライブラリーを使用した。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="n">dic</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="s1">&#39;{&quot;bar&quot;:[&quot;baz&quot;, null, 1.0, 2]}&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">dic</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># out</span>
+<span class="c1">#&lt;class &#39;dict&#39;&gt;</span>
+<span class="c1">#{&#39;bar&#39;: [&#39;baz&#39;, None, 1.0, 2]}</span>
+</code></pre></div>
+<blockquote>
+<p>loads, dumpsのsは3単現ではなくstringを意味します。</p>
+</blockquote>
+<p><a href="https://qiita.com/hi-asano/items/8e303425052781d95f09">らしい。</a></p>
+<h3 id="jsonlines">jsonlines</h3>
+<p>要素毎に改行が入ったjsonlフォーマットで保存すると見やすい。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="s2">&quot;filename.jsonl&quot;</span><span class="p">,</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;records&#39;</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="c1"># {&quot;col1&quot;:1,&quot;col2&quot;:&quot;a&quot;}</span>
+<span class="c1"># {&quot;col1&quot;:2,&quot;col2&quot;:&quot;x&quot;}</span>
+<span class="c1"># {&quot;col1&quot;:3,&quot;col2&quot;:&quot;\u3042&quot;}</span>
+</code></pre></div>
+<h3 id="regex">regex</h3>
+<p>文字列のパターンを記号で指定する手法。
+以下の様にすると<a href="https://qiita.com/hi-asano/items/8e303425052781d95f09">可読性が上がるな</a>と思った。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        \[\[        # [[</span>
+<span class="s2">        ([^|]+\|)*  # 記事名|　無かったり繰り返されたり</span>
+<span class="s2">        ([^]]+)     # 表示文字 patternにマッチした部分をこいつに置換する</span>
+<span class="s2">        \]\]        # ]]</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="_1">キャプチャ</h3>
+<p>( ) でマッチした文字列を、\1, \2, ... \nで順番に抽出することができる。</p>
+<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;2016-05-08&quot;</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\d+)-(\d+)-(\d+)&#39;</span><span class="p">)</span>
+<span class="n">pattern</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\1年\2月\3日&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+<span class="c1"># =&gt; 2016年05月08日</span>
+</code></pre></div>
+<h2 id="4-mecab">形態素解析（4章 MeCab）</h2>
+<p>英語と違い、日本語の自然言語処理では単語間の区切りが明確でないです。英語なら単純にスペースで区切って"Hello World."→["hello", "world"]できますが。
+MeCabは日本語の文章を単語に分けることができます。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">MeCab</span>
+<span class="n">wakati</span> <span class="o">=</span> <span class="n">MeCab</span><span class="o">.</span><span class="n">Tagger</span><span class="p">(</span><span class="s2">&quot;-Owakati&quot;</span><span class="p">)</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">wakati</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;ここではきものを脱いでください&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+<span class="c1">#ここ で は きもの を 脱い で ください</span>
+</code></pre></div>
+<p>もっと早く動作するginzaというのもあるようです。
+<a href="https://www.ogis-ri.co.jp/otc/hiroba/technical/similar-document-search/part4.html">ginza,spacyの解説</a></p>
+<h2 id="5-cabocha">係り受け解析（5章 CaboCha）</h2>
+<p>単語間の修飾関係など、係りかたを解析できます。重要語抽出を<a href="https://www.ogis-ri.co.jp/otc/hiroba/technical/similar-document-search/part5.html">グラフ的に解く</a>（多くのグラフが集まっているほど重要）場合などに使われます。ここでもginza使えます。</p>
+<div class="highlight"><pre><span></span><code>  番号  文節          係り先
+------  ----------  --------
+     <span class="m">0</span>  吾輩は             <span class="m">5</span>
+     <span class="m">1</span>  ここで             <span class="m">2</span>
+     <span class="m">2</span>  始めて             <span class="m">3</span>
+     <span class="m">3</span>  人間という         <span class="m">4</span>
+     <span class="m">4</span>  ものを             <span class="m">5</span>
+     <span class="m">5</span>  見た。            -1
+</code></pre></div>
+<p><img alt="image.png" src="../nlp/1.png" /></p>
+<h2 id="6-pytorch">機械学習（6章 pytorch）</h2>
+<p>英語のニュースのタイトルからそのカテゴリー（business, scienceなど4種類）を分類する問題を、ロジスティック回帰を用いて挑みました。特徴量は単語カウント（Bag of Words）を用いました。</p>
+<h3 id="bag-of-words">Bag of Words</h3>
+<p>単語の種類を次元の数として、ある文章に出現する単語の回数をカウントしてベクトルとします。
+単語の順序は反映されません。単純ながらも、文書のカテゴリー分類などでそこそこ精度を出せます。</p>
+<h3 id="dataset">Dataset</h3>
+<p>問題と答え(label)のペアを読み込むクラス。前処理を含む。
+train,validation,testについて作成する。</p>
+<h3 id="dataloader">DataLoader</h3>
+<p>Datasetからどのようにデータを取り出すかを決めるクラス。バッチ(複数のデータを一気に学習させるため、まとめたもの)を作る。</p>
+<ul>
+<li>DataLoaderにおいて、単語は<strong>ベクトルでなくID</strong>で表現する。
+  これは、ベクトル表現で単語データを持つとメモリを大量消費するから。モデルのemmbeder層でID→ベクトルに変換させたりします。</li>
+</ul>
+<h3 id="nnmoduleforward">nn.Module()とforward</h3>
+<p>ネットワーク層を担うこのモジュールは、以下のようなフォーマットを基本とする。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
+
+<span class="k">class</span> <span class="nc">Model</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>  <span class="c1"># nn.Module()でないことに注意</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">arg</span><span class="o">*</span><span class="p">):</span>     <span class="c1"># コントラクタと呼ぶ。 Model()を宣言した時、最初に一度だけ実行される関数。arg*がModel()の「引数」</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>   <span class="c1"># 継承元クラスのコントラクタが破棄されないよう継承する。</span>
+        <span class="c1"># ここにネットワーク層を記述する。net1,2,3,..など。以下はconvolution層が2層の場合。</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>  <span class="c1"># ↑でself.conv1,2の他に、</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv2</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="c1"># nn.Moduleのコントラクタで宣言している変数(self.trainingなど)も使える。</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>  <span class="c1"># nn.Moduleの__call__関数により、Model()(x)で実行される。</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv1</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv2</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>  <span class="c1"># forwardのreturnがModel()()のreturn</span>
+</code></pre></div>
+<h3 id="loss">損失関数 loss</h3>
+<p>ネットワークモデルがだした予測と、実際の答えの解離を出す。</p>
+<h3 id="optimizer">最適化手法 optimizer</h3>
+<p>重みの更新を行う。
+modelの重みをmodel.parameters()で渡す。
+重みはModel.conv1.weightとかに保存されてる。</p>
+<h3 id="_2">ロジスティック回帰</h3>
+<p>パーセプトロンは、y=ax+bを損失関数（ヒンジ損失）と最適化アルゴリズムにより重みaやバイアスbを最適化（つまり学習）させる。活性化関数は2値（[0,1]や[-1,1]）を出力するステップ関数が使われる。<br />
+<strong>ヒンジ損失：（真の値）-（予測値）^2</strong></p>
+<p>これに対し、ロジスティック回帰は活性化がシグモイド関数で、
+損失関数が交差エントロピー誤差関数で、
+過学習を防ぐための罰則化項が加わっている。</p>
+<p>パーセプトロンでも、ロジスティック回帰でも、線形分離可能な対象を分離するアルゴリズムである。（線で区切って、上か下かで分類）</p>
+<p><img alt="image.png" src="../nlp/2.png" /></p>
+<p>図の引用wiki</p>
+<h3 id="_3">性能評価</h3>
+<h3 id="_4">混同行列</h3>
+<p>機械学習モデルの予測（x）と実際の答え（y）の実測値（回数n）をプロットしたもの。
+左上から右下へ斜めに数字が集まっているほど精度が良い。</p>
+<p><img alt="image.png" src="../nlp/3.png" /></p>
+<h2 id="_5">再現率(陽性の中での正解率)、適合率（陽性と予測した時の正解率）</h2>
+<p><img alt="image.png" src="../nlp/4.png" />
+引用　<a href="https://mathwords.net/kensa">https://mathwords.net/kensa</a></p>
+<p>マイクロ平均：ラベルのクラスを無視した（下記b,t,e,mを区別しない）平均</p>
+<p>マクロ平均：ラベルのクラス毎の確率の和/クラス数によって出される平均</p>
+<p><a href="https://datascience.stackexchange.com/questions/15989/micro-average-vs-macro-average-performance-in-a-multiclass-classification-settin">https://datascience.stackexchange.com/questions/15989/micro-average-vs-macro-average-performance-in-a-multiclass-classification-settin</a></p>
+<p>文章をb,t,e,mに分類するタスクがあったとして、以下の様になる。
+<img alt="image.png" src="../nlp/5.png" /></p>
+<h2 id="7">単語ベクトル（7章）</h2>
+<p>単語→ベクトルを出力する学習済みモデルを用いました。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">gensim.models</span> <span class="kn">import</span> <span class="n">KeyedVectors</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">KeyedVectors</span><span class="o">.</span><span class="n">load_word2vec_format</span><span class="p">(</span><span class="s1">&#39;GoogleNews-vectors-negative300.bin.gz&#39;</span><span class="p">,</span> <span class="n">binary</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">model</span><span class="p">[</span><span class="s2">&quot;United_States&quot;</span><span class="p">]</span>  <span class="c1"># model[単語]</span>
+</code></pre></div>
+<p>word2vecではCBOWやskip-gramというアルゴリズムがあります。文章中のある文字を隠して、機械学習モデルに隠した文字を当てさせるという問題を解かせ、モデルに単語を突っ込んだときの重みを単語ベクトルとして利用しています。
+RGB表記だと色の近さが分かるように、(ターコイズ=(0,183,206)とシアン=(0,174,239))
+単語の意味の近さが分かるようになります。(コサイン類似度など)</p>
+<h3 id="_6">意味的アナロジー、文法的アナロジー</h3>
+<p>意味的アナロジー（semantic analogy）：単語の意味関係からの類推。man + queen = king</p>
+<p>文法的アナロジー（syntactic analogy）：単語の文法関係　　〃　　。「eat →  ate」 なら「cook → cooked」</p>
+<h2 id="8">ニューラルネット（8章）</h2>
+<p>ニューラルネット：活性化関数を変更したパーセプトロンを多層にしたもの。
+（ステップ関数→シグモイド関数、ReLU関数など）</p>
+<p>今回は特徴量として、文章データを単語ベクトルの平均として扱った。
+文章を直接ベクトル化する方法もある。(bertモデルや<a href="https://nykergoto.hatenablog.jp/entry/2019/02/24/%E6%96%87%E7%AB%A0%E3%81%AE%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF%E3%83%A2%E3%83%87%E3%83%AB%3A_Sparse_Composite_Document_Vectors_%E3%81%AE%E5%AE%9F%E8%A3%85">SCDV</a>(Sparse Composite Document Vector)　など)</p>
+<h2 id="rnnlstm9">RNN(LSTM)（9章）</h2>
+<p>文章中の単語間の順序を考慮することができます。しかし、RNNで使う隠れ状態ベクトルhは直前の単語ベクトルの影響を大きく受けるので、文中の単語ベクトルを任意の重みで参照できる、Self-Attentionの方が好まれます。
+<a href="https://qiita.com/t_Signull/items/21b82be280b46f467d1b">https://qiita.com/t_Signull/items/21b82be280b46f467d1b</a>
+<img alt="image.png" src="../nlp/6.png" />
+ただし<img alt="image.png" src="../nlp/7.png" />NLP100Knockから引用</p>
+<h2 id="10-fairseq">機械翻訳（10章 fairseq）</h2>
+<p>(fairseq-trainにはpytorch1.4&gt;とGPUが必要)</p>
+<p>Facebook AI Research Sequence-to-Sequence Toolkitらしいです。機械翻訳の
+LSTM, Transformer, Bert_baseなどのモデルをコマンドラインで学習させることができます。</p>
+<div class="highlight"><pre><span></span><code>fairseq-preprocess <span class="c1"># 辞書作ったりバイナリー化。</span>
+faiseq-train <span class="c1"># GPUを使用して学習。tensorboard用ログも保存できる。CPUの引数もある？</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">fairseq.models.transformer</span> <span class="kn">import</span> <span class="n">TransformerModel</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">TransformerModel</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">&#39;path/to/checkpoint_dir&#39;</span><span class="p">,</span> <span class="n">checkpoint_file</span> <span class="o">=</span> <span class="s1">&#39;model.pt&#39;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;Hello world.&quot;</span><span class="p">)</span>
+<span class="c1"># 世界の皆さんこんにちは。(日本語→英語の機械翻訳モデルの場合)</span>
+</code></pre></div>
+<h3 id="transformer">Transformer</h3>
+<p>私たちは日本語→英語に翻訳を行うとき、（猫→cat）などのように、特定の単語から翻訳を行います。
+RNNの隠れ状態ベクトルは直前の単語の影響を強く受けたもので、直前でなく特定の単語の影響を強く受けたベクトルの方が好ましいです。
+また、RNNはGPUをフルに使うことができません。
+このような問題を解消するAttentionという技術を使用したモデルがTransformerです。
+入力された文章の単語ベクトル(緑)、Attention(黄色)、翻訳された単語(オレンジ)
+<img alt="image.png" src="../nlp/8.png" />
+この辺がAttentionの説明わかりやすかった。
+<a href="https://qiita.com/Kosuke-Szk/items/d49e2127bf95a1a8e19f">https://qiita.com/Kosuke-Szk/items/d49e2127bf95a1a8e19f</a></p>
+<h3 id="bleu">BLEUスコア</h3>
+<blockquote>
+<p>人間が翻訳した文章に似ていれば似ているほど、機械が生成した文は正しそうだという前提に基づいています。
+翻訳した文章のn-gramと正解文章のn-gramの差が少ないかをスコアにします。基本的には4-gramがよく使われます。
+100に近いほど性能がよく、Transformerで20くらい出るみたいです。
+<a href="https://to-in.com/blog/102282">https://to-in.com/blog/102282</a></p>
+<div class="highlight"><pre><span></span><code>fairseq-score --sys translated.spacy --ref test.spacy.en
+<span class="c1">#Namespace(ignore_case=False, order=4, ref=&#39;test.spacy.en&#39;, sacrebleu=False, sentence_bleu=False, sys=&#39;98_2.out.spacy&#39;)</span>
+<span class="c1">#BLEU4 = 11.07, 36.2/14.0/7.2/4.1 (BP=1.000, ratio=1.129, syslen=31201, reflen=27625)</span>
+</code></pre></div>
+<p>BLEUスコアは同義語でも間違いにしてしまいますが、<a href="https://ai-scholar.tech/articles/natural-language-processing/bleu-score-bertscore-bert-n-gram-natural-language-processing">BERTスコア</a>というものは文章ベクトルを比較するので、対応できると言われています。</p>
+</blockquote>
+<h3 id="_7">ビームサーチ</h3>
+<p>幅優先探索を、指定したビーム幅分だけ更に探索していく。
+文章の機械翻訳で、正解率が高い単語から始まる文だけ（ビーム幅分）を検討することにより、
+計算量を減らすことができる。</p>
+<div class="highlight"><pre><span></span><code><span class="nv">N</span><span class="o">=</span><span class="m">5</span> <span class="c1"># ビーム幅</span>
+fairseq-interactive --path checkpoint.pt --beam <span class="nv">$N</span> data
+</code></pre></div>
+<h3 id="_8">サブワード</h3>
+<p>低頻度で現れる単語を、数文字単位に分割する方法。
+従来の単語に分割する前処理に比べ、文字単位に分割すれば
+語彙数を抑えて計算量を少なくしつつ
+未知語がなくなるという利点がある。
+<a href="https://qiita.com/NLPingu/items/78f11ec4c3b777f56f11">https://qiita.com/NLPingu/items/78f11ec4c3b777f56f11</a></p>
+<p>word2vecにサブワードなどを取り入れたものがfastextらしい。</p>
+<div class="highlight"><pre><span></span><code>subword-nmt learn-bpe -s <span class="m">3000</span> &lt; wakati_wagahai.txt &gt; codes.txt
+subword-nmt apply-bpe -c codes.txt &lt; wakati_wagahai.txt &gt; subword_wagahai.txt
+<span class="c1"># The rain@@ y season began in the southern area of Kyushu around May@@ .@@ 31 (F@@ ri@@ ) as norm@@ al.</span>
+<span class="c1"># rain@@ yは元々rainy一語であったことを示している。</span>
+</code></pre></div>
+<p>単語→数文字がサブワードである一方、
+文章→数文字は<a href="https://qiita.com/taku910/items/7e52f1e58d0ea6e7859c">SentencePiece</a>という。最近の機械学習モデルのstate of the art(精度新記録)はこれが使われているとか。</p>
+<h3 id="_9">機械翻訳の結果</h3>
+<p>fairseq を用いて日本語の古文→英語の翻訳を学習させた Transformer モデル(.pt)を flask を使用して使えるようにしました。</p>
+<p>精度は微妙です...</p>
+<p><img alt="image.png" src="../nlp/10.png" /></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tracking", "navigation.expand"], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a1c7c35e.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
