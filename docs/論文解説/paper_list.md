@@ -1,4 +1,4 @@
-# List of nice papers
+# 読んだ論文まとめ（随時更新）
 
 ## 距離学習
 

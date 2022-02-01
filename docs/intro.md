@@ -1,10 +1,9 @@
 # Artificial Intelligenceを学ぶ方へ
 
-* AIは様々な分野にまたがって研究されているので全体像を俯瞰するのが難しい。
-以下pdfでAIがどの様な分野で研究されているかなんとなくわかるかも  
-[Conference map](https://www.kamishima.net/archive/MLDMAImap.pdf)
+* AIという分野は他の多くの研究分野と密接に関係しており全体像を把握するのは意外と難しいです。以下のロードマップをみるとなんとなく全体像がわかるかも。  
+  [Conference map](https://www.kamishima.net/archive/MLDMAImap.pdf)
 
-* もっと詳しく知りたい方は下記のスライドを一瞥してみるといいでしょう、こちらは一般社団法人人工知能学会が作成したAI研究の俯瞰図とその詳細です。  
+* より詳しく知りたい方は下記のスライドを一瞥してみるといいでしょう、こちらは一般社団法人人工知能学会が作成したAI研究のあらましとその詳細です。  
   [AI研究初学者と異分野研究者のための AI研究の俯瞰図](https://www.ai-gakkai.or.jp/pdf/aimap/AIMap_JP_20190606.pdf)
 
 ## 機械学習の学習のすゝめ
@@ -16,36 +15,47 @@
 
 ## Python + 必要なスキルの学習
 
-トピック毎の100本ノックをするのがおすすめ
+100本ノックシリーズで基本処理を反復練習しよう
 
 ### 言語処理 100本ノック
-   - 言語処理 100本ノック 2020: https://nlp100.github.io/ja/ ← NEW!
-   - 言語処理 100本ノック 2015: http://www.cl.ecei.tohoku.ac.jp/nlp100/  → [答えと解説](https://qiita.com/segavvy/items/fb50ba8097d59475f760)
-   - 言語処理だけでなく一部UNIX基本, 機械学習も含む
-   - 関連: [言語処理100本ノックを解き始める前に](https://gist.github.com/reiyw/9155edf600e85417e82d2e4e4bc9e637)
+
+* 言語処理 100本ノック 2020: <https://nlp100.github.io/ja/> ← NEW!
+* 言語処理 100本ノック 2015: <http://www.cl.ecei.tohoku.ac.jp/nlp100/>  → [答えと解説](https://qiita.com/segavvy/items/fb50ba8097d59475f760)
+* 言語処理だけでなく一部UNIX基本, 機械学習も含む
+* 関連: [言語処理100本ノックを解き始める前に](https://gist.github.com/reiyw/9155edf600e85417e82d2e4e4bc9e637)
+
 ### 画像処理 100本ノック
-- https://github.com/yoyoyo-yo/Gasyori100knock
+
+* <https://github.com/yoyoyo-yo/Gasyori100knock>
 
 ### ディープラーニング ∞本ノック
-- https://github.com/yoyoyo-yo/DeepLearningMugenKnock
+
+* <https://github.com/yoyoyo-yo/DeepLearningMugenKnock>
 
 ### numpy100本ノック
-- https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises.md
+
+* <https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises.md>
 
 ### pandas100本ノック
-- https://www.kaggle.com/python10pm/pandas-100-tricks
+
+* <https://www.kaggle.com/python10pm/pandas-100-tricks>
 
 ### データサイエンス100本ノック
-- https://github.com/The-Japan-DataScientist-Society/100knocks-preprocess
 
-## YouTubeコンテンツ
+* <https://github.com/The-Japan-DataScientist-Society/100knocks-preprocess>
 
-動画で概要を掴めるナイスなチャンネル等
+## YouTube
 
-- Sony Neural Network Console
-    - [Deep Learning 入門再生リスト](https://www.youtube.com/playlist?list=PLg1wtJlhfh23pjdFv4p8kOBYyTRvzseZ3)
-    - [Deep Learning入門：Deep Learningでできること](https://www.youtube.com/watch?v=FwuBbj8F6cI)
-    - [Deep Learning入門：ニューラルネットワーク設計の基礎](https://www.youtube.com/watch?v=O3qm6qZooP0)
+* Sony Neural Network Console
+  * [Deep Learning 入門再生リスト](https://www.youtube.com/playlist?list=PLg1wtJlhfh23pjdFv4p8kOBYyTRvzseZ3)
+  * [Deep Learning入門：Deep Learningでできること](https://www.youtube.com/watch?v=FwuBbj8F6cI)
+  * [Deep Learning入門：ニューラルネットワーク設計の基礎](https://www.youtube.com/watch?v=O3qm6qZooP0)
 
-- Alcia Solid Project
-- スタビじbyウマたん
+* Alcia Solid Project
+  * [Youtube channel](https://www.youtube.com/channel/UC2lJYodMaAfFeFQrGUwhlaQ)
+
+* スタビじbyウマたん
+  * [Youtube channel](https://www.youtube.com/channel/UC0J7Yk_O3g1-x-xD7xxAE8Q)
+
+* カレーちゃん（Kaggler)
+  * [Youtube channel](https://www.youtube.com/c/kaggle_curry)

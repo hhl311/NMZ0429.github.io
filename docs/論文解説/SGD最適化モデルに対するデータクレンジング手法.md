@@ -12,7 +12,7 @@ github実装
 学習がうまくいかなかったときに元データを分析することがあるが、データのError Analysisをする際に、どのインスタンス(データセット)が学習に強く影響しているのかを考察するためにはドメイン知識が必要。
 この論文では、学習に悪影響を及ぼしているインスタンスをドメイン知識なしでCleanseする方法を提示している。
 
-Keyword: 
+Keyword:
 
 * influence estimation
 * counterfactual SGD

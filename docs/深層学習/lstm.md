@@ -1,21 +1,26 @@
 # 【もうやりたくない】RNNとLSTMの理解とNumPyによる実装
+
 ニューラルネットワークを用いた系列データを学習する方法について書きます。系列データの学習には、単語予測や天気予測など様々な応用先があります。
 
 この流れで解説していきたいと思います。
-- ニューラルネットワークでは、カテゴリー変数の表現の仕方
-- RNNの実装の仕方
-- LSTMの実装の仕方
-- PyTorchを使ったLSTMの実装の仕方
+
+* ニューラルネットワークでは、カテゴリー変数の表現の仕方
+* RNNの実装の仕方
+* LSTMの実装の仕方
+* PyTorchを使ったLSTMの実装の仕方
 
 ## 時系列データの表現の仕方
+
 時系列データをニューラルネットワークに入力するには、何かしらの方法で時系列データをニューラルネットワークに入力できる形に表現する必要があります。ここでは、one-hot encodingを使用していきたいと思います。
 
 ### 単語に対するone-hot encoding
+
 単語をone-hot vectorに変換します。しかし、単語の量が膨大になるとone-hot vectorの大きさも膨大になるので、工夫を行います。
 
 使用頻度の高いk個の単語を残しそれ以外の単語はUNKとして、one-hot vectorに変換します。
 
 ## データセットの生成
+
 a b a EOS,
 
 a a b b a a EOS,
@@ -50,6 +55,7 @@ sequences = generate_dataset()
 ```
 
 ## 系列データの単語とその出現頻度を調べる
+
 one-hot encodingをするために、系列データの単語とその出現頻度を格納している辞書を作ります。
 
 defaultdictを使うことで、辞書のvalueの値を任意に初期化できるみたいです。
@@ -94,6 +100,7 @@ word_to_idx, idx_to_word, num_sequences, vocab_size = sequences_to_dicts(sequenc
 ```
 
 ## データセットの分割
+
 系列データをtraining, validation, testに分割します。
 それぞれ、80%, 10%, 10%です。
 系列データsequencesの分割には、スライスを使っています。
@@ -103,7 +110,7 @@ word_to_idx, idx_to_word, num_sequences, vocab_size = sequences_to_dicts(sequenc
 startとgoalは省略することができます。
 
 `l[:goal]`はl[0]からl[goal-1]まで、
-`l[start:]`はl[start]からl[l.size()-1] (最後)まで抽出できます。
+`l[start:]`はl[start]からl[l.size()-1](最後)まで抽出できます。
 `l[:]`は全部抽出します。
 
 `l[-n:]`は最後から数えてn個の要素を抽出します。
@@ -168,6 +175,7 @@ training_set, validation_set, test_set = create_datasets(sequences, Dataset)
 ```
 
 ## one-hot vector化
+
 系列データに現れる単語を頻度に基づいてone-hot vectorに変換します。
 
 ```Python:
@@ -193,21 +201,24 @@ def one_hot_encode_sequence(sequence, vocab_size):
 ```
 
 ## RNNの導入
+
 Recurrent neural network (RNN)は、系列データの分析が得意です。RNNは、前の状態で使った計算結果を現在の状態に利用することができます。ネットワークの概要図は以下の通りです。
 
 ![](http://namazu.tokyo/wp-content/uploads/2021/03/fa2a16de005afd238a1253353bbbb4fe-300x100.png)
 
-- xは入力である系列データ
-- Uは入力に対する重み行列
-- Vはメモリーに対する重み行列
-- Wは出力を計算するための隠れ状態に対する重み行列
-- hは時間ごとの隠れ状態(メモリー)
-- oは出力
+* xは入力である系列データ
+* Uは入力に対する重み行列
+* Vはメモリーに対する重み行列
+* Wは出力を計算するための隠れ状態に対する重み行列
+* hは時間ごとの隠れ状態(メモリー)
+* oは出力
 
 ## RNNの実装
+
 NumPyを使って、RNNの実装をforward pass, backward pass, optimization, training loopの順でやります。
 
 ### RNNの初期化
+
 ネットワークを初期化する関数を定義します。
 
 ```Python:
@@ -260,6 +271,7 @@ def init_rnn(hidden_size, vocab_size):
 ```
 
 ### 活性化関数の実装
+
 sigmoid,tanh, softmaxの実装をしました。
 オーバーフロー対策に入力xに微少量を足しています。
 また、backward pass用に微分も計算しています。
@@ -295,9 +307,10 @@ def softmax(x, derivative=False):
 ```
 
 ### forward passの実装
-- h = tanh(Ux + Vh + b_hidden)
-- o = softmax(Wh + b_out)
-RNNのforward passは上式で表されるので、実装は以下の通りです。
+
+* h = tanh(Ux + Vh + b_hidden)
+* o = softmax(Wh + b_out)
+  RNNのforward passは上式で表されるので、実装は以下の通りです。
 
 ```Python:
 def forward_pass(inputs, hidden_state, params):
@@ -316,6 +329,7 @@ def forward_pass(inputs, hidden_state, params):
 ```
 
 ### backward passの実装
+
 forward passで損失の勾配を計算するのは時間がかかるので、逆誤差伝播法(backpropagation)を用いて勾配を計算するbackward passを実装します。
 
 勾配爆発対策用の勾配をクリップする関数を作ります。
@@ -393,6 +407,7 @@ def backward_pass(inputs, outputs, hidden_states, targets, params):
 ```
 
 ### optimization
+
 勾配降下法を用いて、RNNのパラメータを更新します。今回は確率的勾配降下法(SGD)を使用します。
 
 ```Python:
@@ -403,7 +418,9 @@ def update_paramaters(params, grads, lr=1e-3):
 
     return params
 ```
+
 ### 学習
+
 実装したRNNの学習を行います。LossのグラフはTensorBoardを使用して描画しました。
 
 ```Python:
@@ -474,9 +491,11 @@ Lossのグラフです。綺麗にプロットできています。赤がtrain, 
 あまり上手く学習できていないことがわかります。隠れ層の次元が少ないことやループが少ないことやパラメータの初期値が合ってないことが原因でしょうか?
 
 ### テスト
+
 学習したRNNのテストをします。適当に文章を生成し、それに対して次のwordを予測します。
 
 Pythonでは、`list[-1]`で一番後ろの値を取得することができるみたいです。
+
 ```Python:
 def freestyle(params, sentence='', num_generate=10):
     sentence = sentence.split(' ')#空白で区切る
@@ -535,14 +554,16 @@ Predicted sequence: ['a', 'UNK', 'UNK', 'UNK', 'UNK', 'UNK', 'UNK', 'UNK', 'UNK'
 Example 4: r n n
 Predicted sequence: ['r', 'n', 'n', 'UNK', 'UNK', 'UNK', 'UNK', 'UNK', 'UNK', 'UNK', 'UNK', 'UNK', 'UNK', 'UNK']
 ```
+
 ## LSTMの導入
+
 RNNは、ギャップが大きくなるにつれて情報を関連づけて学習するのが難しくなります。
 このような長期依存性を学習できるようにしたのが、Long Short Term Memory(LSTM)です。LSTMは、RNNの派生で同じように繰り返しモジュールになっています。
 
 ![](http://namazu.tokyo/wp-content/uploads/2021/03/93056c52056f15d863e0d4fb0cc89948-300x113.png)
 
-
 ### LSTMの仕組み
+
 LSTMは、忘却ゲート層、入力ゲート層、出力ゲート層の3つで構成されています。
 LSTMはセルと呼ばれるメモリーが情報を保持しています。Cがセル、xが入力、hが出力、Wが重み、bがバイアスです。
 
@@ -563,9 +584,11 @@ LSTMはセルと呼ばれるメモリーが情報を保持しています。Cが
 ![](http://namazu.tokyo/wp-content/uploads/2021/03/dea185317c8a1cbc486670eb6aae4ef5-300x93.png)
 
 ## LSTMの実装
+
 NumPyを使って、LSTMの実装をforward pass, backward pass, optimization, training loopの順でやります。
 
 ### LSTMの初期化
+
 ネットワークを初期化する関数を定義します。
 
 ```Python:
@@ -604,6 +627,7 @@ def init_lstm(hidden_size, vocab_size, z_size):
 ```
 
 ### forward passの実装
+
 LSTMの仕組みにあるデータの流れ通りに実装します。
 
 ```Python:
@@ -665,7 +689,9 @@ def forward(inputs, h_prev, C_prev, p):
 
     return z_s, f_s, i_s, g_s, C_s, o_s, h_s, v_s, output_s
 ```
+
 ### backward passの実装
+
 損失を求めて、逆誤差伝播法でそれぞれのパラメータで微分した損失の勾配を求めます。
 
 ```Python:
@@ -746,6 +772,7 @@ def backward(z, f, i, g, C, o, h, v, outputs, targets, p = params):
 ```
 
 ### 学習
+
 実装したLSTMの学習を行います。LossのグラフはTensorBoardを使用して描画しました。
 
 ```Python:
@@ -813,9 +840,11 @@ writer.close()
 Lossのグラフです。綺麗にプロットできています。赤がtrain, 青がvalを表しています。 RNNと比較すると、学習が進むにつれてLossがしっかりと下がっているので安定しています。
 
 ## PyTorchを用いたLSTMの実装
+
 フレームワークを使ってLSTMの実装を行います。
 
 ### LSTMの定義
+
 まず、LSTMのネットワークを定義します。
 
 ```Python:
@@ -841,6 +870,7 @@ class MyLSTM(nn.Module):
 ```
 
 ### 学習
+
 学習するためのループを書きます。
 ロス関数はクロスエントロピー誤差を、optimizerはSGDを用いました。
 numpyを用いたときと同様です。
@@ -923,12 +953,14 @@ Lossのグラフです。綺麗にプロットできています。赤がtrain, 
 先ほどのnumpyで実装したLSTMより、ロスがしっかりと下がっています。フレームワークを使った方がよいですね。
 
 ## まとめ
+
 今回はRNNとLSTMを理解するために、numpyの実装をして軽い実験を行いました。また、PyTorchを用いてLSTMの実装を行いました。
 
 ## 参考文献
-[https://masamunetogetoge.com/gradient-vanish]()
-[https://qiita.com/naoaki0802/items/7a11cded96f3a6165d01]()
-[http://kento1109.hatenablog.com/entry/2019/07/06/182247]()
-[https://qiita.com/KojiOhki/items/89cd7b69a8a6239d67ca]()
-https://qiita.com/t_Signull/items/21b82be280b46f467d1b
-https://qiita.com/tanuk1647/items/276d2be36f5abb8ea52e
+
+[https://masamunetogetoge.com/gradient-vanish](<>)
+[https://qiita.com/naoaki0802/items/7a11cded96f3a6165d01](<>)
+[http://kento1109.hatenablog.com/entry/2019/07/06/182247](<>)
+[https://qiita.com/KojiOhki/items/89cd7b69a8a6239d67ca](<>)
+<https://qiita.com/t_Signull/items/21b82be280b46f467d1b>
+<https://qiita.com/tanuk1647/items/276d2be36f5abb8ea52e>

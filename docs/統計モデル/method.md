@@ -962,7 +962,7 @@ $$
 
 
 
-# 参考文献
+## 参考文献
 
 - 推薦システム全般のこと：http://www.kamishima.net/archive/recsysdoc.pdf
 - 協調フィルタリングの分類など：https://eulerdijkstra.hatenadiary.org/entry/20130407/1365349866

@@ -1,82 +1,93 @@
 # 3D vision
 
-  [Lecture video][538a98dd]
+  [テキサス大学の深層学習に関する授業][538a98dd]
 
-  [538a98dd]: https://www.youtube.com/watch?v=S1_nCdLUQQ8&list=PL5-TkQAfAZFbzxjBHtzdVCWE0Zbhomg7r&index=17 "Lecture17"
+[538a98dd]: https://www.youtube.com/watch?v=S1_nCdLUQQ8&list=PL5-TkQAfAZFbzxjBHtzdVCWE0Zbhomg7r&index=17 "Lecture17"
 
   ※この動画では教師あり学習のみ扱う、
   主なタスクは
-  1. 物体の形を推論する（深度推定）
-  2. 物体のクラス分類
+  1\. 物体の形を推論する（深度推定）
+  2\. 物体のクラス分類
 
 ## まとめ：気をつけること4つ！
-  1. データ構造
 
-      下記にまとめるがどんなデータ構造で3Dを表すかで分類問題でも手法が全く異なる、みんな違ってみんな良い。
+1. データ構造
 
-  2. 距離の定義
+   下記にまとめるがどんなデータ構造で3Dを表すかで分類問題でも手法が全く異なる、みんな違ってみんな良い。
 
-      3Dデータをどうやって比べるか。
-      Chamfer距離、ユークリッド距離、F1ロス等、上手く選ぼう。IoUは使っちゃ駄目です。
+2. 距離の定義
 
-  3. カメラの仕様
+   3Dデータをどうやって比べるか。
+   Chamfer距離、ユークリッド距離、F1ロス等、上手く選ぼう。IoUは使っちゃ駄目です。
 
-      正準座標 : どの向きで撮影したかではなく対象の向きによって座標軸を定義する（例えば、画像の人間の向いてる方を+Zなど）。上手く学習できればカメラアングル等の問題が解決できるが過学習する可能性が高い。
+3. カメラの仕様
 
-      視点座標 : カメラ基準で座標軸を決める、キネクトが向いてる方が+Z。実装が楽。
+   正準座標 : どの向きで撮影したかではなく対象の向きによって座標軸を定義する（例えば、画像の人間の向いてる方を+Zなど）。上手く学習できればカメラアングル等の問題が解決できるが過学習する可能性が高い。
 
-  4. データセット
+   視点座標 : カメラ基準で座標軸を決める、キネクトが向いてる方が+Z。実装が楽。
 
-      ShapeNet : 合成されたCADデータ、動かして遊べるが背景がないので現実的な推論の訓練には向かない。何故か椅子と車と飛行機が多い。
+4. データセット
 
-      Pix3D : 現実のRGB　＋　Dになっておりセグメンテーションの訓練にも使える。データ数の少なさと位置画像につき1物体しかアノテーションされてないという弱点も。
+   ShapeNet : 合成されたCADデータ、動かして遊べるが背景がないので現実的な推論の訓練には向かない。何故か椅子と車と飛行機が多い。
+
+   Pix3D : 現実のRGB　＋　Dになっておりセグメンテーションの訓練にも使える。データ数の少なさと位置画像につき1物体しかアノテーションされてないという弱点も。
 
 ## 3Dデータ構造
+
   3Dデータの表し方は
-  1. Depth Map `(H x W)`
+  1\. Depth Map `(H x W)`
 
-       各ピクセルとカメラとの距離の行列（RGB-D image often called 2.5D）。
-       隠れたオブジェクトには無力。
-  2. Voxel Grid (`V x V x V)`
+```
+   各ピクセルとカメラとの距離の行列（RGB-D image often called 2.5D）。
+   隠れたオブジェクトには無力。
+```
 
-       3次元行列で対応する位置に物体が存在するかどうかを示すマインクラフト的なもの解像度が高い必要がありメモリー消費も激しいため**Oct-tree**や**Nested Shape Layers**等の改良版がある
+2. Voxel Grid (`V x V x V)`
 
-  3. Implicit surface `(R^3 -> {0, 1})`
+    3次元行列で対応する位置に物体が存在するかどうかを示すマインクラフト的なもの解像度が高い必要がありメモリー消費も激しいため**Oct-tree**や**Nested Shape Layers**等の改良版がある
 
-      座標を変数として、その座標に物体があるかを返す関数。推測する時はその座標に物体がある確率を返す色を推測する。関数なので、一つの３Dデータから座標をサンプリングしてアウトプットが正しいか学習するというシンプルな手法で学習できる
+3. Implicit surface `(R^3 -> {0, 1})`
 
-  4. PointCloud `(P x 3)`
+   座標を変数として、その座標に物体があるかを返す関数。推測する時はその座標に物体がある確率を返す色を推測する。関数なので、一つの３Dデータから座標をサンプリングしてアウトプットが正しいか学習するというシンプルな手法で学習できる
 
-      座標の集合。
-      メモリー消費を抑えつつ物体の形を捉えるが物体の表面がボコボコしてるという弱点がある。
-      シンプルに扱える為学習時はこれを使うことも多いが物体を表現する時はボコボコをレンダーする処理が必要
+4. PointCloud `(P x 3)`
 
-  5. Mesh
+   座標の集合。
+   メモリー消費を抑えつつ物体の形を捉えるが物体の表面がボコボコしてるという弱点がある。
+   シンプルに扱える為学習時はこれを使うことも多いが物体を表現する時はボコボコをレンダーする処理が必要
 
-      V個の点を三角形を構成するようにつないだグラフ。
-      点の数を増やすことで物体を現実に近い形で表現できる（どんどん表面がスムーズになる）。
-      三角形の部分にテクスチャ貼ったりできる。
+5. Mesh
+
+   V個の点を三角形を構成するようにつないだグラフ。
+   点の数を増やすことで物体を現実に近い形で表現できる（どんどん表面がスムーズになる）。
+   三角形の部分にテクスチャ貼ったりできる。
 
 ## タスク
 
 ### 1. Predicting Depth Maps
+
   RGB + Depth Map の4チャンネル画像を学習し、RGBチャンネルのみでDepth Mapを推測するタスク。
   最初は全結合CNNを使っていたがRGB画像内の**小さい物体が、遠近法で小さいのか近くにあるがマジで小さいのかわからない**という問題があった。対策として考えられたのが**スケール不変性を持つRMS**を誤差関数にすることだった。
 
   このロスでは、ネットワークがある物体の距離を間違えて推定したとしても、**その物体の特徴が一致していれば誤差を0として計算する**。正確には、推測したdepthmap`y`とgrand truthを`t`として
-  ```
-  y * x = t where t is a scaler
-  ```
+
+```
+y * x = t where t is a scaler
+```
+
   を満たすスカラー`x`が存在すれば正解とする、多分画像内の相対的な位置が正しければおk的な理論っぽい。
 
 ##### 1-2. Predicting Surface Normals
+
 ピクセル毎にノーマルベクターを推定するタスク。物体の向きやねじれを正確に捉える
 
 ### 2. Classify Voxel Grid
+
   ボクセルグリッドがどんな物体なのか分類するタスク。
   ボクセルの処理には３DCNNを使う。2Dでフィルターをアプライするように、三次元空間に長方形のフィルターをアプライしていく。チャンネル数が増える毎にボクセルが小さくなっていき、最後にFC層で処理する。
 
 ### 2-2. Generating Voxel
+
   RGB画像からVoxel gridを推測するタスク。
   当初は2DCNNで画像をフラットにし3DCNNでアップサンプリングしていた。
   3Dの特徴量マップは計算量がやばかった為、**Voxel TUbe**というアップサンプリングを2DCNNで代替するする手法ができた。
@@ -84,33 +95,37 @@
   こっちの方が早いが**相対的な位置は正しいが物体全体がズレる可能性がある**(物体の形は捉えるが、センサーからどれくらい離れているかを間違える)。
 
 ### 3. Classify PointCloud Inputs
+
   PointCloudでは点の順番は関係ないので各点をMLPに入れてAffineで分類できる。
   MLPの出力をMaxpoolでサンプリングしてクラス数のベクターに落とし込む。
 
 ### 3-1. Predicting PointCloud Outputs
+
   PointCloudを予測する為に、ふたつのPointCloud（出力と教師データ）を比べるロス関数が必要になる。
   **Chamfer**ロス関数とよばれて、アルゴリズム的には
 
-  ```python
-  Y = predicted_point_cloud
-  T = correct_point_cloud
+```python
+Y = predicted_point_cloud
+T = correct_point_cloud
 
-  sum_A, sum_B = 0, 0
-  for each_point in Y:
-      y = the_point_in_Y
-      x = the_closet_neighbour_of_y_in_T
+sum_A, sum_B = 0, 0
+for each_point in Y:
+    y = the_point_in_Y
+    x = the_closet_neighbour_of_y_in_T
 
-      sum_A += square_of(y - x)
+    sum_A += square_of(y - x)
 
-  # Do the same thing for each point in T
-  # Add it to sum_B
+# Do the same thing for each point in T
+# Add it to sum_B
 
-  Loss = sum_A + sum_B
+Loss = sum_A + sum_B
 
-  ```
+```
+
   Chamferロスが最小になるようにネットワークを調整しましょう。
 
 ### 4. Predicting Meshes
+
   RGB画像から物体のメッシュを作成するタスク。
   粘土みたいなメッシュをちょっと整形するのを繰り返して目標に近づける.
   メッシュを処理するレイヤーとして**グラフ畳み込み**がある。
@@ -122,17 +137,18 @@
   問題としてChamferロスが外れ値に敏感なのでChamferロスをそのまま計算するとロスがデカすぎることがあった。そこで点どうしの比較をF1ロスで計算する手法が撮られている。
 
 ## 強いモデル
+
   **Mesh R-CNN**がおすすめらしい。構造としてはMask R-CNNで2Dのセグメンテーションをし、それを元に各区オブジェクトのメッシュをPredicting Meshesの項の手法で作っていく。
 
   実はグラフ畳み込みによるメッシュの作成は、**メッシュの初期状態に依存しやすい**という問題があり、それを防ぐ為にGenerating Voxelの項に書いた手法でメッシュの初期化を行う。
 
-  ```python
-  [Bounding_box, Category_label, Instance_segment] = Mask_RCNN(single_RGB_image)
+```python
+[Bounding_box, Category_label, Instance_segment] = Mask_RCNN(single_RGB_image)
 
-  initial_mesh = Voxel_prediction(Bounding_box, Category_label, Instance_segment)
+initial_mesh = Voxel_prediction(Bounding_box, Category_label, Instance_segment)
 
-  while not good:
-    initial_mesh = Graph_Conv(initial_mesh)
+while not good:
+  initial_mesh = Graph_Conv(initial_mesh)
 
-  # 正確には上記のアルゴリズムを各バウンディング毎に行う。
-  ```
+# 正確には上記のアルゴリズムを各バウンディング毎に行う。
+```
